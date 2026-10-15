@@ -1,0 +1,104 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Forme from "../../components/Forme.astro";
+import { PARCOURS } from "../../parcours";
+
+export async function getStaticPaths() {
+  const lecons = await getCollection("lecons");
+  return lecons.map((l) => ({ params: { slug: l.id }, props: { lecon: l } }));
+}
+
+const { lecon } = Astro.props;
+const { Content } = await render(lecon);
+const d = lecon.data;
+const p = PARCOURS[d.parcours];
+const base = import.meta.env.BASE_URL;
+const sources = [...d.sources].sort((a, b) => Number(b.primaire) - Number(a.primaire));
+const primaires = d.sources.filter((s) => s.primaire).length;
+---
+<Base titre={`${d.titre} · Leçons de pouvoir`} description={d.resume}>
+  <article data-parcours={d.parcours} data-pagefind-body>
+    <header class="hero">
+      <Forme nom={p.forme} class="hero-forme" />
+      <div class="wrap">
+        <a class="chip tone" href={`${base}#${d.parcours}`}>{p.nom}</a>
+        <h1>{d.titre}</h1>
+        <p class="lede">{d.resume}</p>
+        <div class="meta">
+          <span class="chip">{d.lecture_min} min</span>
+          <span class="chip">{d.sources.length} sources, dont {primaires} primaires</span>
+          {d.verifie_le
+            ? <span class="chip">Vérifiée le {d.verifie_le}</span>
+            : <span class="chip warn-chip">Relecture humaine en cours</span>}
+        </div>
+        <div class="actions">
+          <a class="btn" href={`${base}pdf/${lecon.id}.pdf`} download>Télécharger le PDF</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap prose">
+      {!d.verifie_le && (
+        <p class="warn no-print">
+          Brouillon : chaque fait est relié à sa source, mais la relecture humaine, chiffre par chiffre, n'est pas encore faite.
+        </p>
+      )}
+
+      <Content />
+
+      {d.images.length > 0 && (
+        <section>
+          <h2>Crédits images</h2>
+          <ul>{d.images.map((i) => <li>{i.legende} : {i.auteur}, <a href={i.url}>{i.licence}</a></li>)}</ul>
+        </section>
+      )}
+
+      <section class="sources">
+        <h2>Sources</h2>
+        <ol>
+          {sources.map((s) => (
+            <li>
+              {s.primaire && <span class="chip tone">Primaire</span>}
+              <span>{s.auteur}, <a href={s.url}><cite>{s.titre}</cite></a>. Consulté le {s.consulte}.</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    margin: 12px 12px 0;
+    padding: 2.4rem 0 2.6rem;
+    border-radius: var(--r-xl);
+    background: var(--tone-container);
+    color: var(--on-tone-container);
+  }
+  .hero .wrap { position: relative; }
+  .hero .lede { color: inherit; opacity: 0.88; }
+  .hero .chip:not(.tone):not(.warn-chip) { background: color-mix(in srgb, var(--bg) 55%, transparent); color: inherit; }
+  .hero .btn { background: var(--tone); color: var(--bg); }
+  :global(.hero-forme) {
+    position: absolute;
+    width: min(22rem, 70vw);
+    right: max(-6rem, calc(50% - 32rem));
+    top: -4rem;
+    fill: var(--tone);
+    opacity: 0.14;
+    animation: tourne 60s linear infinite;
+  }
+  @keyframes tourne { to { transform: rotate(360deg); } }
+  .sources { font: 0.9rem/1.5 var(--sans); }
+  .sources ol { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
+  .sources li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; padding: 0.7rem 0.9rem; border-radius: var(--r-m); background: var(--surface); }
+  .sources .chip { font-size: 0.7rem; padding: 0.15rem 0.55rem; }
+  @media print {
+    .hero { margin: 0; padding: 0; background: none; color: inherit; }
+    .sources li { background: none; padding: 0.2rem 0; }
+  }
+</style>
