@@ -1,0 +1,45 @@
+---
+// A ranked stack (hierarchy of norms, chain of command): top level narrowest, widening downwards.
+interface Niveau {
+  nom: string;
+  exemples: string; // HTML allowed
+}
+interface Props {
+  niveaux: Niveau[];
+  legende?: string;
+}
+const { niveaux, legende } = Astro.props;
+const n = niveaux.length;
+---
+<figure class="pyramide callout">
+  <ol>
+    {niveaux.map((v, i) => (
+      <li style={`--w:${55 + (45 * i) / Math.max(1, n - 1)}%; --o:${1 - (0.55 * i) / Math.max(1, n - 1)}`}>
+        <strong>{v.nom}</strong>
+        <span set:html={v.exemples} />
+      </li>
+    ))}
+  </ol>
+  {legende && <figcaption>{legende}</figcaption>}
+</figure>
+
+<style>
+  .pyramide { margin: 2rem 0; font-family: var(--sans); }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; justify-items: center; }
+  li {
+    position: relative;
+    width: var(--w);
+    padding: 0.7rem 1rem;
+    border-radius: var(--r-m);
+    text-align: center;
+    color: var(--on-tone-container);
+    background: color-mix(in srgb, var(--tone) calc(var(--o) * 45%), var(--tone-container));
+    transition: transform 0.4s var(--spring);
+  }
+  li:first-child { border-radius: var(--r-xl) var(--r-xl) var(--r-m) var(--r-m); color: var(--bg); background: var(--tone); }
+  li:hover { transform: scale(1.02); }
+  strong { display: block; font: 750 1rem/1.25 var(--display); }
+  span { display: block; font-size: 0.82rem; line-height: 1.35; margin-top: 0.15rem; opacity: 0.92; }
+  figcaption { margin-top: 0.7rem; font-size: 0.8rem; color: var(--ink-3); text-align: center; }
+  @media (max-width: 520px) { li { width: 100%; } }
+</style>

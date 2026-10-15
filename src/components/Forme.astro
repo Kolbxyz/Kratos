@@ -1,0 +1,9 @@
+---
+import { FORMES, type NomForme } from "../formes";
+interface Props {
+  nom: NomForme;
+  class?: string;
+}
+const { nom, class: cls } = Astro.props;
+---
+<svg class:list={["forme", cls]} viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d={FORMES[nom]} /></svg>

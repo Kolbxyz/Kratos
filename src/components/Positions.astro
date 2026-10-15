@@ -1,0 +1,45 @@
+---
+// Side-by-side doctrines (thinkers, schools, legal orders). Each card keeps its own shape so the
+// comparison reads at a glance; colours come from the series palette, text stays in ink tokens.
+import Forme from "./Forme.astro";
+import type { NomForme } from "../formes";
+interface Position {
+  titre: string;
+  sous_titre?: string;
+  forme?: NomForme;
+  points: string[]; // HTML allowed (strong, em)
+}
+interface Props {
+  items: Position[];
+}
+const { items } = Astro.props;
+const formes: NomForme[] = ["biscuit", "trefle", "gemme", "fleur", "soleil", "arche"];
+const teintes = ["var(--series-1)", "var(--series-2)", "var(--series-3)"];
+---
+<div class="positions callout" style={`--n:${items.length}`}>
+  {items.map((p, i) => (
+    <section class="position" style={`--c:${teintes[i % teintes.length]}`}>
+      <div class="tete">
+        <Forme nom={p.forme ?? formes[i % formes.length]} class="pos-forme" />
+        <div>
+          <h3>{p.titre}</h3>
+          {p.sous_titre && <p class="sous">{p.sous_titre}</p>}
+        </div>
+      </div>
+      <ul>{p.points.map((pt) => <li set:html={pt} />)}</ul>
+    </section>
+  ))}
+</div>
+
+<style>
+  .positions { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.75rem; margin: 2rem 0; font-family: var(--sans); }
+  .position { padding: 1.1rem 1.1rem 0.9rem; border-radius: var(--r-l); background: var(--surface); border-top: 6px solid var(--c); transition: border-radius 0.45s var(--spring); }
+  .position:hover { border-radius: var(--r-s) var(--r-xl) var(--r-s) var(--r-xl); }
+  .tete { display: flex; align-items: center; gap: 0.7rem; }
+  :global(.pos-forme) { flex: none; width: 2.4rem; fill: var(--c); }
+  h3 { margin: 0; font-size: 1.12rem; }
+  .sous { margin: 0.1rem 0 0; font-size: 0.8rem; color: var(--ink-3); }
+  ul { margin: 0.8rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; line-height: 1.45; }
+  li { margin: 0.35rem 0; }
+  li::marker { color: var(--c); }
+</style>

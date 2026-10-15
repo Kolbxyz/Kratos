@@ -1,0 +1,18 @@
+---
+import Forme from "./Forme.astro";
+---
+<aside class="retenir callout">
+  <h2><Forme nom="fleur" class="retenir-forme" />À retenir</h2>
+  <slot />
+</aside>
+
+<style>
+  .retenir { margin: 3rem 0; padding: 1.4rem 1.4rem 1.2rem; background: var(--tone-container); color: var(--on-tone-container); border-radius: var(--r-xl) var(--r-s) var(--r-xl) var(--r-xl); font-family: var(--sans); }
+  h2 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.8rem; font-size: 1.35rem; }
+  h2::before { display: none; }
+  :global(.retenir-forme) { width: 2rem; fill: var(--tone); }
+  .retenir :global(ol) { list-style: none; counter-reset: r; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+  .retenir :global(li) { counter-increment: r; display: grid; grid-template-columns: 2rem 1fr; gap: 0.7rem; align-items: start; font-size: 0.98rem; line-height: 1.45; }
+  .retenir :global(li::before) { content: counter(r); display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50% 50% 50% 12%; background: var(--tone); color: var(--bg); font: 800 0.95rem/1 var(--display); }
+  .retenir :global(strong) { background: none; }
+</style>

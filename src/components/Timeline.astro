@@ -1,0 +1,20 @@
+---
+interface Props {
+  items: { date: string; texte: string }[];
+}
+const { items } = Astro.props;
+---
+<ol class="timeline callout">
+  {items.map((i) => <li><span class="date">{i.date}</span><span class="texte" set:html={i.texte} /></li>)}
+</ol>
+
+<style>
+  .timeline { list-style: none; padding: 0.4rem 0 0; margin: 1.8rem 0; position: relative; font-family: var(--sans); }
+  .timeline::before { content: ""; position: absolute; left: 0.55rem; top: 0.8rem; bottom: 0.8rem; width: 3px; border-radius: 3px; background: var(--tone-container); }
+  li { position: relative; padding: 0 0 1.2rem 2.2rem; font-size: 0.97rem; line-height: 1.5; }
+  li::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 1.15rem; height: 1.15rem; border-radius: 35%; background: var(--tone); transform: rotate(45deg) scale(0.8); transition: transform 0.5s var(--spring); }
+  li:hover::before { transform: rotate(135deg) scale(1); }
+  .date { display: inline-block; margin-bottom: 0.3rem; padding: 0.15rem 0.65rem; border-radius: 999px; background: var(--tone-container); color: var(--on-tone-container); font: 750 0.82rem/1.4 var(--display); }
+  .texte { display: block; }
+  .texte :global(strong) { color: var(--tone); }
+</style>

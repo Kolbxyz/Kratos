@@ -1,0 +1,146 @@
+---
+// Rendered to static SVG at build time so the chart is identical on screen, without JavaScript and in the PDF.
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import * as Plot from "@observablehq/plot";
+import { csvParse, autoType } from "d3-dsv";
+import { parseHTML } from "linkedom";
+
+interface Props {
+  src: string; // path under data/, e.g. "dette/dette-pib"
+  kind: "line" | "barX";
+  x: string;
+  y: string;
+  series?: string;
+  titre: string;
+  unite: string;
+  label?: string; // tooltip label for the value
+  seuil?: number; // reference value drawn as a dashed rule (e.g. a treaty target)
+  seuilLabel?: string;
+}
+const { src, kind, x, y, series, titre, unite, label = unite, seuil, seuilLabel } = Astro.props;
+
+// Builds always run from the project root; import.meta.url points into the bundle, not the source tree.
+const root = join(process.cwd(), "data");
+const rows = csvParse(readFileSync(join(root, `${src}.csv`), "utf8"), autoType);
+const source = JSON.parse(readFileSync(join(root, `${src}.source.json`), "utf8"));
+const fmt = (v: number) => v.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
+
+// Order follows first appearance in the CSV so colours stay attached to the entity, not to its rank.
+const names = series ? [...new Set(rows.map((r) => r[series]))] : [];
+const colors = ["var(--series-1)", "var(--series-2)", "var(--series-3)"];
+if (names.length > colors.length) throw new Error(`${src}: ${names.length} séries, maximum ${colors.length}`);
+
+const { document } = parseHTML("<!doctype html><html><body></body></html>");
+
+// End-of-line labels only when they cannot collide; otherwise the legend alone carries identity.
+const ys = rows.map((r) => r[y] as number);
+const span = Math.max(...ys) - Math.min(0, ...ys);
+const lasts = names.map((n) => rows.filter((r) => r[series!] === n).at(-1)![y] as number).sort((a, b) => a - b);
+const labelsFit = lasts.every((v, i) => i === 0 || v - lasts[i - 1] > span * 0.07);
+
+// Two renders instead of one scaled SVG: scaling a desktop chart down to a phone shrinks the text below legibility.
+function render(width: number) {
+  const narrow = width < 500;
+  const common = {
+    document,
+    width,
+    style: { background: "transparent", fontFamily: "Inter, system-ui, sans-serif", fontSize: "12px", overflow: "visible" },
+    // Category labels sit left of the bars: size the margin to the longest one so nothing is clipped.
+    marginLeft: kind === "barX" ? Math.min(narrow ? 150 : 210, 16 + 6.6 * Math.max(...rows.map((r) => String(r[y]).length))) : 40,
+  };
+  if (kind === "line") {
+    const endLabels = series && labelsFit && !narrow;
+    return Plot.plot({
+      ...common,
+      height: narrow ? 260 : 340,
+      marginRight: endLabels ? 80 : 16,
+      x: { label: null, tickFormat: "d", ticks: narrow ? 5 : undefined },
+      y: { label: unite, grid: true, zero: true },
+      color: { domain: names, range: colors },
+      marks: [
+        Plot.ruleY([0], { stroke: "currentColor", strokeOpacity: 0.3 }),
+        ...(seuil != null ? [
+          Plot.ruleY([seuil], { stroke: "currentColor", strokeDasharray: "4 4", strokeOpacity: 0.7 }),
+          Plot.text([seuil], { y: (d) => d, frameAnchor: "left", text: () => seuilLabel ?? "", dy: -8, dx: 4, textAnchor: "start", fill: "currentColor", fontWeight: 600 }),
+        ] : []),
+        Plot.lineY(rows, { x, y, stroke: series ?? "var(--series-1)", strokeWidth: 2 }),
+        Plot.dot(rows, {
+          x, y, r: 6, fill: "transparent", stroke: "none",
+          title: (d) => `${series ? d[series] + ", " : ""}${d[x]} : ${fmt(d[y])} ${label}`,
+        }),
+        ...(endLabels
+          ? [Plot.text(rows, Plot.selectLast({
+              x, y, z: series, text: series, dx: 6, textAnchor: "start", fill: "currentColor", fontWeight: 600,
+            }))]
+          : []),
+      ],
+    }).outerHTML;
+  }
+  return Plot.plot({
+    ...common,
+    height: rows.length * 24 + (seuil != null ? 64 : 40),
+    marginBottom: seuil != null ? 28 : undefined,
+    marginRight: 40,
+    x: { label: unite, grid: true, axis: "top", ticks: narrow ? 4 : undefined },
+    y: { label: null, domain: rows.map((r) => r[y]) },
+    marks: [
+      Plot.barX(rows, {
+        x, y, fill: "var(--series-1)", rx: 3, insetTop: 2, insetBottom: 2,
+        title: (d) => `${d[y]}${d.periode ? ` (${d.periode})` : ""} : ${fmt(d[x])} ${label}`,
+      }),
+      Plot.text(rows, { x, y, text: (d) => fmt(d[x]), dx: 6, textAnchor: "start", fill: "currentColor" }),
+      Plot.ruleX([0], { stroke: "currentColor" }),
+      ...(seuil != null ? [
+        Plot.ruleX([seuil], { stroke: "currentColor", strokeDasharray: "4 4", strokeOpacity: 0.8 }),
+        Plot.text([seuil], { x: (d) => d, frameAnchor: "bottom", text: () => seuilLabel ?? "", dy: 14, fill: "currentColor", fontWeight: 600 }),
+      ] : []),
+    ],
+  }).outerHTML;
+}
+const svgWide = render(680);
+const svgNarrow = render(340);
+
+const cols = Object.keys(rows[0]);
+---
+<figure class="chart">
+  <figcaption class="chart-title">{titre}</figcaption>
+  {series && (
+    <ul class="legend" aria-label="Légende">
+      {names.map((n, i) => <li><span class="swatch" style={`background:${colors[i]}`}></span>{n}</li>)}
+    </ul>
+  )}
+  <div class="chart-svg wide" set:html={svgWide} />
+  <div class="chart-svg narrow" set:html={svgNarrow} />
+  <p class="chart-source">
+    Source : <a href={source.url}>{source.producteur}</a>, {source.jeu}. Consulté le {source.consulte}.
+    {source.traitement && <> {source.traitement}</>}
+  </p>
+  <details class="no-print">
+    <summary>Voir les données</summary>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{cols.map((c) => <th class={typeof rows[0][c] === "number" ? "num" : ""}>{c}</th>)}</tr></thead>
+        <tbody>
+          {rows.map((r) => <tr>{cols.map((c) => <td class={typeof r[c] === "number" ? "num" : ""}>{typeof r[c] === "number" && c !== "annee" ? fmt(r[c]) : r[c]}</td>)}</tr>)}
+        </tbody>
+      </table>
+    </div>
+  </details>
+</figure>
+
+<style>
+  .chart { margin: 2rem 0; padding: 1.2rem 1.2rem 1rem; background: var(--surface); border-radius: var(--r-l); }
+  .chart-title { font: 750 1.08rem/1.3 var(--display); margin-bottom: 0.6rem; }
+  .chart-svg :global(svg) { width: 100%; height: auto; color: var(--ink-2); }
+  .narrow { display: none; }
+  @media (max-width: 560px) { .wide { display: none; } .narrow { display: block; } }
+  @media print { .wide { display: block !important; } .narrow { display: none !important; } }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; list-style: none; padding: 0; margin: 0 0 0.5rem; font: 0.85rem var(--sans); color: var(--ink-2); }
+  .swatch { display: inline-block; width: 12px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  .chart-source { font: 0.8rem/1.4 var(--sans); color: var(--ink-3); margin: 0.6rem 0 0; }
+  details { margin-top: 0.8rem; font-family: var(--sans); font-size: 0.85rem; }
+  summary { display: inline-block; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 999px; background: var(--surface-2); font-weight: 600; }
+  summary:hover { background: var(--tone-container); color: var(--on-tone-container); }
+  .table-scroll { max-height: 18rem; overflow: auto; margin-top: 0.5rem; }
+</style>

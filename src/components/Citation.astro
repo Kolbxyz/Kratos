@@ -1,0 +1,31 @@
+---
+// A quote without an exact reference is not allowed: auteur, oeuvre and reference are all required.
+interface Props {
+  auteur: string;
+  oeuvre: string;
+  annee: string | number;
+  reference: string;
+  url?: string;
+}
+const { auteur, oeuvre, annee, reference, url } = Astro.props;
+---
+<figure class="citation callout">
+  <span class="guillemet" aria-hidden="true">«</span>
+  <blockquote><slot /></blockquote>
+  <figcaption>
+    <span class="auteur">{auteur}</span>
+    <span>{url ? <a href={url}><cite>{oeuvre}</cite></a> : <cite>{oeuvre}</cite>}, {annee}. {reference}.</span>
+  </figcaption>
+</figure>
+
+<style>
+  .citation { position: relative; margin: 2.2rem 0; padding: 1.4rem 1.4rem 1.2rem 4.2rem; border-radius: var(--r-l); background: var(--surface); }
+  .guillemet { position: absolute; left: 0.9rem; top: 1.1rem; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 40% 60% 55% 45%; background: var(--tone); color: var(--bg); font: 900 1.5rem/1 var(--display); }
+  blockquote { margin: 0; padding: 0; background: none; font-size: 1.2rem; line-height: 1.5; font-style: italic; color: var(--ink); }
+  blockquote :global(p) { margin: 0.3em 0; }
+  figcaption { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 0.8rem; font: 0.85rem/1.4 var(--sans); color: var(--ink-2); }
+  .auteur { font-weight: 700; color: var(--ink); }
+  @media (max-width: 480px) {
+    .citation { padding: 3.8rem 1.1rem 1.1rem; }
+  }
+</style>

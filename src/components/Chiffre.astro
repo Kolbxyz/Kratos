@@ -1,0 +1,56 @@
+---
+// A highlighted fact. Source, link and period are mandatory: a key figure is never shown without them.
+import Forme from "./Forme.astro";
+import type { NomForme } from "../formes";
+interface Props {
+  valeur: string;
+  label: string;
+  source: string;
+  url: string;
+  date: string;
+  forme?: NomForme;
+}
+const { valeur, label, source, url, date, forme = "biscuit" } = Astro.props;
+---
+<figure class="chiffre callout">
+  <Forme nom={forme} class="chiffre-forme" />
+  <p class="valeur">{valeur}</p>
+  <p class="label">{label}</p>
+  <figcaption><a href={url}>{source}</a>, {date}</figcaption>
+</figure>
+
+<style>
+  .chiffre {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 1.1rem 1.2rem 1rem;
+    border-radius: var(--r-l);
+    background: var(--tone-container);
+    color: var(--on-tone-container);
+    font-family: var(--sans);
+    transition: border-radius 0.5s var(--spring);
+  }
+  .chiffre:hover { border-radius: var(--r-xl) var(--r-s) var(--r-xl) var(--r-s); }
+  :global(.chiffre-forme) {
+    position: absolute;
+    width: 7.5rem;
+    right: -2.2rem;
+    top: -2.2rem;
+    fill: var(--tone);
+    opacity: 0.16;
+    transition: transform 0.8s var(--spring);
+  }
+  .chiffre:hover :global(.chiffre-forme) { transform: rotate(40deg) scale(1.08); }
+  .valeur {
+    position: relative;
+    margin: 0;
+    font: 800 clamp(2.2rem, 7vw, 3rem)/1 var(--display);
+    font-stretch: 112%;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .label { position: relative; margin: 0.45rem 0 0.7rem; font-size: 0.95rem; line-height: 1.35; font-weight: 600; }
+  figcaption { position: relative; font-size: 0.78rem; line-height: 1.35; opacity: 0.85; }
+  figcaption a { color: inherit; }
+</style>
