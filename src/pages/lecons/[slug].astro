@@ -10,7 +10,9 @@ export async function getStaticPaths() {
 }
 
 const { lecon } = Astro.props;
-const { Content } = await render(lecon);
+const { Content, headings } = await render(lecon);
+// Long lessons are split into chapters (h2); a table of contents appears once there are enough of them.
+const chapitres = headings.filter((h) => h.depth === 2);
 const d = lecon.data;
 const p = PARCOURS[d.parcours];
 const base = import.meta.env.BASE_URL;
@@ -45,7 +47,28 @@ const primaires = d.sources.filter((s) => s.primaire).length;
         </p>
       )}
 
+      {chapitres.length >= 5 && (
+        <nav class="sommaire callout" aria-label="Sommaire">
+          <h2>Sommaire</h2>
+          <ol>{chapitres.map((c) => <li><a href={`#${c.slug}`}>{c.text}</a></li>)}</ol>
+        </nav>
+      )}
+
       <Content />
+
+      {d.lectures.length > 0 && (
+        <section class="lectures">
+          <h2>Pour aller plus loin</h2>
+          <ul>
+            {d.lectures.map((l) => (
+              <li>
+                <span class="titre">{l.auteur}, {l.url ? <a href={l.url}><cite>{l.titre}</cite></a> : <cite>{l.titre}</cite>} ({l.annee})</span>
+                <span class="pourquoi">{l.pourquoi}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {d.images.length > 0 && (
         <section>
@@ -93,12 +116,23 @@ const primaires = d.sources.filter((s) => s.primaire).length;
     animation: tourne 60s linear infinite;
   }
   @keyframes tourne { to { transform: rotate(360deg); } }
+  .sommaire { margin: 1.5rem 0 2.5rem; padding: 1.2rem 1.4rem; border-radius: var(--r-l); background: var(--surface); font-family: var(--sans); }
+  .sommaire h2 { margin: 0 0 0.6rem; font-size: 1.1rem; }
+  .sommaire h2::before { display: none; }
+  .sommaire ol { margin: 0; padding-left: 1.6rem; columns: 2 18rem; column-gap: 2rem; }
+  .sommaire li { margin: 0.25rem 0; break-inside: avoid; font-size: 0.95rem; }
+  .sommaire a { color: inherit; text-decoration-color: var(--tone); }
+  .lectures { font: 0.95rem/1.5 var(--sans); }
+  .lectures ul { list-style: none; padding: 0; display: grid; gap: 0.6rem; }
+  .lectures li { display: grid; gap: 0.2rem; padding: 0.8rem 1rem; border-radius: var(--r-m); border-left: 4px solid var(--tone); background: var(--surface); }
+  .lectures .titre { font-weight: 650; }
+  .lectures .pourquoi { color: var(--ink-2); font-size: 0.9rem; }
   .sources { font: 0.9rem/1.5 var(--sans); }
   .sources ol { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
   .sources li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; padding: 0.7rem 0.9rem; border-radius: var(--r-m); background: var(--surface); }
   .sources .chip { font-size: 0.7rem; padding: 0.15rem 0.55rem; }
   @media print {
     .hero { margin: 0; padding: 0; background: none; color: inherit; }
-    .sources li { background: none; padding: 0.2rem 0; }
+    .sources li, .lectures li, .sommaire { background: none; padding: 0.2rem 0; }
   }
 </style>

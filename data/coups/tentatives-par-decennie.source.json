@@ -1,0 +1,8 @@
+{
+  "titre": "Tentatives de coup d'État dans le monde par décennie, selon leur issue",
+  "producteur": "Jonathan Powell (University of Central Florida) et Clayton Thyne (University of Kentucky)",
+  "jeu": "Global Instances of Coups, version du 29 août 2026 (pt_20260829.csv)",
+  "url": "https://jonathanmpowell.com/coups/",
+  "traitement": "Comptage par décennie des lignes du fichier CSV (coup = 2 : réussi, au moins 7 jours au pouvoir ; coup = 1 : échoué). La décennie 2020 couvre janvier 2020 à août 2026.",
+  "consulte": "2026-10-15"
+}

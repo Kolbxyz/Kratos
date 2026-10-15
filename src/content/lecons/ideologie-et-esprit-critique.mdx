@@ -1,0 +1,291 @@
+---
+titre: "L'idéologie, ennemie naturelle de la pensée critique"
+resume: "Une secte qui redouble de foi quand la prophétie échoue, des matheux qui calculent faux quand le sujet est politique, des experts à peine meilleurs que le hasard : pourquoi l'idéologie est notre mode par défaut."
+parcours: societe
+ordre: 3
+lecture_min: 30
+verifie_le: null
+lectures:
+  - auteur: "Jonathan Haidt"
+    titre: "The Righteous Mind (L'Esprit vertueux)"
+    annee: 2012
+    pourquoi: "Le livre de référence sur la psychologie morale des clivages politiques : l'intuition d'abord, le raisonnement ensuite, et six « récepteurs » moraux inégalement sollicités à gauche et à droite."
+  - auteur: "Hugo Mercier et Dan Sperber"
+    titre: "L'Énigme de la raison"
+    annee: 2017
+    pourquoi: "Deux chercheurs en sciences cognitives expliquent pourquoi la raison humaine sert d'abord à convaincre, et pourquoi elle fonctionne mieux à plusieurs que seule."
+  - auteur: "Leon Festinger, Henry Riecken, Stanley Schachter"
+    titre: "When Prophecy Fails (L'Échec d'une prophétie)"
+    annee: 1956
+    pourquoi: "Des psychologues infiltrent une secte qui attend la fin du monde : la naissance de la théorie de la dissonance cognitive."
+  - auteur: "Raymond Aron"
+    titre: "L'Opium des intellectuels"
+    annee: 1955
+    pourquoi: "Pourquoi des esprits brillants furent « indulgents aux plus grands crimes, pourvu qu'ils soient commis au nom des bonnes doctrines »."
+  - auteur: "Philip Tetlock"
+    titre: "Expert Political Judgment"
+    annee: 2005
+    pourquoi: "Vingt ans de prévisions d'experts notées : les hérissons idéologiques font moins bien que les renards pragmatiques."
+sources:
+  - titre: "When Prophecy Fails"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/When_Prophecy_Fails"
+    consulte: "2026-10-15"
+  - titre: "The emotional dog and its rational tail: A social intuitionist approach to moral judgment, Psychological Review, 108(4), 2001"
+    auteur: "Jonathan Haidt"
+    url: "https://doi.org/10.1037/0033-295X.108.4.814"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Righteous Mind"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/The_Righteous_Mind"
+    consulte: "2026-10-15"
+  - titre: "Moral foundations theory"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Moral_foundations_theory"
+    consulte: "2026-10-15"
+  - titre: "Why do humans reason? Arguments for an argumentative theory, Behavioral and Brain Sciences, 34(2), 2011"
+    auteur: "Hugo Mercier, Dan Sperber"
+    url: "https://doi.org/10.1017/S0140525X10000968"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Motivated numeracy and enlightened self-government, Behavioural Public Policy, 1(1), 2017"
+    auteur: "Dan Kahan, Ellen Peters, Erica Dawson, Paul Slovic"
+    url: "https://doi.org/10.1017/bpp.2016.2"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Asch conformity experiments"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Asch_conformity_experiments"
+    consulte: "2026-10-15"
+  - titre: "The Origins of Totalitarianism"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/The_Origins_of_Totalitarianism"
+    consulte: "2026-10-15"
+  - titre: "L'Opium des intellectuels"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/L%27Opium_des_intellectuels"
+    consulte: "2026-10-15"
+  - titre: "When Corrections Fail: The Persistence of Political Misperceptions, Political Behavior, 32, 2010"
+    auteur: "Brendan Nyhan, Jason Reifler"
+    url: "https://doi.org/10.1007/s11109-010-9112-2"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Elusive Backfire Effect: Mass Attitudes' Steadfast Factual Adherence, Political Behavior, 41, 2019"
+    auteur: "Thomas Wood, Ethan Porter"
+    url: "https://doi.org/10.1007/s11109-018-9443-y"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Backfire effect"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Backfire_effect"
+    consulte: "2026-10-15"
+  - titre: "Cross-Country Trends in Affective Polarization, Review of Economics and Statistics, 2024"
+    auteur: "Levi Boxell, Matthew Gentzkow, Jesse Shapiro"
+    url: "https://doi.org/10.1162/rest_a_01160"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Philip E. Tetlock"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Philip_E._Tetlock"
+    consulte: "2026-10-15"
+---
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Prologue : la nuit où le monde ne finit pas
+
+Chicago, décembre 1954. Une mère de famille, Dorothy Martin, affirme recevoir par écriture automatique des messages venus de l'espace : l'Amérique du Nord, une partie de l'Amérique centrale et l'Europe seront détruites par un déluge **avant l'aube du 21 décembre 1954**. Les croyants seront sauvés par une soucoupe volante. Autour d'elle, un petit groupe, les « Seekers ». Certains quittent ou perdent leur emploi, abandonnent leurs études, rompent avec leurs proches non croyants, donnent leur argent ou se défont de leurs biens[^prophetie].
+
+Trois chercheurs en psychologie sociale, Leon Festinger, Henry Riecken et Stanley Schachter, ont fait infiltrer le groupe par des observateurs qui se font passer pour des adeptes. Ils veulent observer ce qui se passe quand une croyance est démentie par les faits de manière indiscutable.
+
+La date passe. Aucun déluge, aucune soucoupe. Que font les croyants ? Ceux qui avaient le plus haut niveau de croyance, d'engagement et de soutien du groupe **deviennent plus convaincus encore**, se mettent à rechercher la publicité comme ils ne l'avaient jamais fait, et développent diverses rationalisations de l'absence du déluge. Seuls ceux qui croyaient moins, ou qui avaient moins accès au soutien du groupe, quittent la secte[^prophetie]. Le livre qui en sort en 1956, *When Prophecy Fails*, fonde la théorie de la **dissonance cognitive**.
+
+La leçon est dérangeante, et elle est le sujet de ce chapitre : face à un démenti, l'esprit humain ne révise pas d'abord sa croyance ; il protège d'abord **son groupe et son engagement**.
+
+<div class="chiffres">
+  <Chiffre valeur="74 %" label="des participants de l'expérience d'Asch donnent au moins une fois une réponse fausse pour s'aligner sur le groupe" source="Wikipédia, Asch conformity experiments" url="https://en.wikipedia.org/wiki/Asch_conformity_experiments" date="expériences de 1951" forme="soleil" />
+  <Chiffre valeur="284" label="experts dont les prévisions, notées pendant près de vingt ans, se révèlent à peine meilleures que le hasard" source="Wikipédia, Philip E. Tetlock" url="https://en.wikipedia.org/wiki/Philip_E._Tetlock" date="tournois de 1984 à 2003" forme="gemme" />
+  <Chiffre valeur="6 sur 12" label="pays de l'OCDE où la polarisation affective a baissé en quarante ans ; les États-Unis ont connu la plus forte hausse" source="Boxell, Gentzkow et Shapiro" url="https://doi.org/10.1162/rest_a_01160" date="étude publiée en 2024" forme="trefle" />
+</div>
+
+## L'idée centrale : l'idéologie n'est pas une maladie de la bêtise
+
+Le mot « idéologie » a mauvaise presse. On l'emploie pour désigner la pensée des autres : rigide, aveugle, partisane. On s'imagine soi-même raisonnable, ouvert aux faits. Les recherches en psychologie depuis cinquante ans racontent une autre histoire, beaucoup plus froide.
+
+Elles convergent vers trois constats :
+
+<Positions items={[
+  { titre: "L'intuition d'abord", sous_titre: "Haidt", forme: "soleil", points: [
+    "Le jugement moral et politique est rapide, automatique, émotionnel.",
+    "Le raisonnement vient ensuite, pour justifier une conclusion déjà acquise.",
+  ]},
+  { titre: "La raison sert à convaincre", sous_titre: "Mercier et Sperber", forme: "gemme", points: [
+    "La raison humaine a évolué pour argumenter, pas pour chercher la vérité seule.",
+    "D'où le biais de confirmation : on cherche les arguments de son camp.",
+  ]},
+  { titre: "Le groupe protège l'identité", sous_titre: "Kahan, Asch, Festinger", forme: "arche", points: [
+    "Quand une question devient un marqueur d'appartenance, l'intelligence sert à défendre le camp.",
+    "Plus on est compétent, plus on est habile à se tromper dans le bon sens.",
+  ]},
+]} />
+
+L'idéologie, dans ce sens, n'est pas une anomalie. C'est le **mode par défaut** d'un esprit qui a évolué pour vivre en groupe. La pensée critique n'est pas naturelle : c'est une discipline, coûteuse, qui va contre la pente.
+
+## Chapitre 1 : l'éléphant et son cavalier
+
+### Le chien émotionnel
+
+En 2001, le psychologue américain Jonathan Haidt publie dans la *Psychological Review* un article au titre provocateur : *The emotional dog and its rational tail* (« Le chien émotionnel et sa queue rationnelle »). Il y conteste les modèles dominants, selon lesquels le jugement moral résulterait d'un raisonnement. Sa thèse : le raisonnement moral est **habituellement une construction après coup**, élaborée une fois le jugement rendu. Le jugement, lui, résulte d'évaluations **rapides et automatiques** : des intuitions[^haidt2001]. C'est le chien qui remue la queue, pas l'inverse.
+
+Haidt s'appuie notamment sur le phénomène qu'il nomme la **stupéfaction morale** (*moral dumbfounding*) : on présente à des personnes des scénarios choquants mais où personne n'est lésé, et elles affirment que l'acte est immoral tout en étant incapables d'expliquer pourquoi[^mft]. L'intuition a parlé ; la raison cherche, et ne trouve pas.
+
+### L'éléphant
+
+Dans *The Righteous Mind* (2012), Haidt remplace le chien par une image devenue célèbre : l'esprit est un **éléphant** (l'intuition, l'inconscient) monté par un **cavalier** (la raison consciente). L'éléphant décide de la direction ; le cavalier croit tenir les rênes et fabrique des explications pour des décisions qu'il n'a pas prises[^righteous]. Pour convaincre quelqu'un, il faut parler à l'éléphant, pas au cavalier.
+
+### Six récepteurs moraux
+
+La deuxième partie du livre expose la **théorie des fondements moraux**, proposée par Haidt avec Craig Joseph et Jesse Graham, dans le prolongement des travaux de l'anthropologue Richard Shweder[^mft]. Comme la langue possède plusieurs récepteurs du goût, l'esprit posséderait plusieurs « récepteurs » moraux : **soin/nuisance, équité/tricherie, loyauté/trahison, autorité/subversion, sainteté/dégradation, liberté/oppression**[^righteous].
+
+Les deux premiers forment un groupe « individualisant », tourné vers la protection des personnes ; loyauté, autorité et sainteté forment un groupe « liant », tourné vers la cohésion du groupe[^mft]. Selon Haidt, républicains et démocrates américains sollicitent des « récepteurs » moraux différents, ce qui conduit à de mauvaises tactiques politiques et à des décisions médiocres[^righteous] : chaque camp ne voit pas les valeurs que l'autre défend. Pour Haidt, la religion et la politique sont des « expressions de notre nature tribale, grégaire et vertueuse »[^righteous].
+
+La théorie a été appliquée à l'explication des opinions sur le mariage homosexuel, l'avortement ou la vaccination. Elle évolue : le sixième fondement (liberté) a été ajouté en réponse aux objections de conservateurs économiques, et un fondement de l'« honneur » a été proposé en 2020 pour rendre compte des morales du Moyen-Orient[^mft].
+
+## Chapitre 2 : raisonner pour gagner
+
+Si la raison ne sert pas d'abord à trouver la vérité, à quoi sert-elle ? Hugo Mercier et Dan Sperber proposent en 2011 une réponse radicale dans la revue *Behavioral and Brain Sciences* : **la fonction du raisonnement est argumentative**. Il sert à « concevoir et évaluer des arguments destinés à persuader »[^mercier].
+
+L'hypothèse explique ce que la psychologie classait comme des défauts :
+
+- Les gens raisonnent mal dans les tests de logique abstraits, parce qu'il n'y a pas de contexte argumentatif ; placés dans une vraie discussion, ils se révèlent d'**habiles argumentateurs**.
+- Mais ces habiles argumentateurs « ne cherchent pas la vérité, mais des arguments qui soutiennent leurs vues ». C'est le **biais de confirmation**, que l'on observe même quand on raisonne seul, en anticipant d'avoir à défendre son opinion.
+- Le raisonnement motivé de cette manière peut déformer les évaluations, laisser persister des croyances fausses, et favoriser les décisions **faciles à justifier** plutôt que les meilleures[^mercier].
+
+La conséquence est capitale pour la pensée critique : la raison individuelle est biaisée par construction, mais un groupe où des avis opposés s'affrontent **corrige** ces biais, parce que chacun traque les failles des arguments de l'autre. La pensée critique est moins une vertu individuelle qu'une **institution** : le débat contradictoire, la revue par les pairs, le procès équitable.
+
+## Chapitre 3 : plus on est intelligent, mieux on se trompe
+
+L'expérience la plus troublante sur ce sujet a été publiée en 2017 par Dan Kahan, avec Ellen Peters, Erica Dawson et Paul Slovic[^kahan].
+
+Les chercheurs comparent deux explications des controverses publiques sur la science (climat, armes, vaccins) :
+
+- **La thèse du déficit** : le public se divise parce qu'il comprend mal la science et raisonne mal.
+- **La thèse de la cognition protectrice de l'identité** : le public se divise parce que l'appartenance culturelle **neutralise** les facultés de raisonnement quand le sujet engage l'identité.
+
+Le dispositif est simple. On donne aux participants un problème difficile : tirer une conclusion causale valide à partir d'un tableau de données. Une moitié reçoit les données présentées comme l'essai d'une **crème contre une éruption cutanée**. L'autre moitié reçoit exactement les mêmes chiffres, présentés comme l'effet d'une **interdiction des armes à feu**.
+
+Résultats[^kahan] :
+
+1. Pour la crème, les participants les plus à l'aise avec les chiffres réussissent nettement mieux que les autres. Rien d'étonnant.
+2. Pour les armes, les réponses se **polarisent** politiquement et deviennent **moins exactes**.
+3. Et surtout : cette polarisation **ne diminue pas** chez les participants les plus doués en calcul. **Elle augmente.** Les plus compétents utilisent leur capacité de raisonnement quantitatif de manière sélective, pour faire coïncider l'interprétation des données avec la conclusion la plus conforme à leurs opinions politiques.
+
+L'intelligence n'immunise pas contre l'idéologie. Elle fournit de meilleures armes pour la défendre.
+
+## Chapitre 4 : la pression du groupe
+
+### Asch, 1951 : nier ce qu'on voit
+
+En 1951, à Swarthmore College, le psychologue Solomon Asch réunit des groupes de huit étudiants pour une tâche « perceptive » : dire laquelle de trois lignes, A, B ou C, a la même longueur qu'une ligne de référence. Les deux autres sont nettement plus longues ou plus courtes : la réponse est évidente. Mais sept des huit participants sont des complices, qui donnent unanimement une réponse fausse sur douze essais « critiques »[^asch].
+
+Dans le groupe témoin, sans pression, le taux d'erreur est inférieur à **0,7 %**. Sous la pression du groupe, **35,7 %** des réponses s'alignent sur la réponse fausse de la majorité, et **74 %** des participants donnent au moins une fois une réponse fausse ; 12 % suivent le groupe presque à chaque fois[^asch]. Asch commente : « Que des jeunes gens intelligents et bien intentionnés soient prêts à appeler noir ce qui est blanc est une source d'inquiétude. »[^asch]
+
+L'expérience d'Asch porte sur des lignes, sans enjeu. Les opinions politiques, elles, engagent l'appartenance, l'amitié, la carrière. La pression y est d'autant plus forte.
+
+### Festinger : la dissonance
+
+La secte de Dorothy Martin illustre le mécanisme complémentaire. Quand une personne s'est fortement **engagée** (elle a vendu sa maison, rompu avec sa famille, s'est exposée publiquement), reconnaître l'erreur coûte trop cher. L'esprit réduit la **dissonance** entre la croyance et les faits en modifiant l'interprétation des faits, et en cherchant des alliés : d'où le prosélytisme soudain des Seekers après l'échec[^prophetie]. Plus un militant a investi dans une cause, plus il lui est difficile de la remettre en question.
+
+## Chapitre 5 : les idéologies totales du XXe siècle
+
+La psychologie explique pourquoi l'esprit est idéologique. L'histoire du XXe siècle montre ce que cela produit à l'échelle des États.
+
+En 1951, la philosophe Hannah Arendt publie *Les Origines du totalitarisme*, qui analyse le nazisme et le stalinisme comme une « forme nouvelle de gouvernement », essentiellement différente des oppressions antérieures. Grâce à son idéologie et à son usage structurel de la coercition, écrit-elle, « le totalitarisme a découvert un moyen de dominer et de terroriser les êtres humains de l'intérieur »[^arendt].
+
+En 1955, le philosophe Raymond Aron publie *L'Opium des intellectuels*, critique libérale et anticommuniste de l'attrait du marxisme sur l'intelligentsia française. Le titre retourne la formule de Marx sur la religion, « opium du peuple ». Aron explique son projet :
+
+<Citation auteur="Raymond Aron" oeuvre="L'Opium des intellectuels" annee="1955" reference="Préface" url="https://fr.wikipedia.org/wiki/L%27Opium_des_intellectuels">
+  Cherchant à expliquer l'attitude des intellectuels, impitoyables aux défaillances des démocraties, indulgents aux plus grands crimes, pourvu qu'ils soient commis au nom des bonnes doctrines, je rencontrai d'abord les mots sacrés : gauche, Révolution, prolétariat.
+</Citation>
+
+Aron décrit ces trois notions comme des **mythes** sur lesquels repose l'idéologie de la gauche de son temps[^aron]. Le mécanisme qu'il décrit est celui que la psychologie mesurera plus tard : un **deux poids, deux mesures** systématique, selon que l'acte sert ou dessert le camp. Rien dans ce mécanisme n'est propre à une famille politique.
+
+## Chapitre 6 : ce qui ne marche pas comme on le croit
+
+### L'effet « retour de flamme », une découverte qui ne se réplique pas
+
+En 2010, Brendan Nyhan et Jason Reifler publient une étude au titre pessimiste : *When Corrections Fail* (« Quand les corrections échouent »)[^nyhan]. Ils observent que corriger une fausse croyance politique peut, chez certains, la **renforcer** : c'est l'effet « retour de flamme » (*backfire effect*). L'idée s'est répandue partout : inutile de corriger, cela aggrave les choses.
+
+La suite est une leçon de méthode. Thomas Wood et Ethan Porter testent l'effet à grande échelle et publient en 2019 *The Elusive Backfire Effect: Mass Attitudes' Steadfast Factual Adherence* (« L'insaisissable effet retour de flamme : l'adhésion constante du public aux faits ») : corrigés, les gens tendent à **accepter les faits**, y compris contre leur camp[^wood]. Une revue de la littérature de 2020 conclut à des échecs de réplication généralisés, même dans des conditions théoriquement favorables. En 2021, Brendan Nyhan lui-même écrit que la persistance de la désinformation tient selon lui à d'autres facteurs, et que, pour la plupart des gens, les corrections ont très peu de chances d'avoir un effet négatif[^backfire].
+
+Les corrections marchent donc, modestement. Ce qui résiste n'est pas l'information : c'est l'identité. On peut faire accepter un fait à quelqu'un sans qu'il change de vote.
+
+### La polarisation n'est pas une fatalité mondiale
+
+On présente souvent la polarisation politique comme un phénomène universel, causé par Internet. Levi Boxell, Matthew Gentzkow et Jesse Shapiro mesurent la **polarisation affective** (l'hostilité envers les partisans du camp adverse) dans **douze pays de l'OCDE sur quarante ans**. Les États-Unis connaissent la plus forte hausse ; cinq pays une hausse plus faible ; **six pays une baisse**[^boxell]. Un facteur présent dans tous ces pays, comme les réseaux sociaux, ne peut pas expliquer à lui seul des évolutions de sens opposé.
+
+## Chapitre 7 : ce qui marche, mesuré
+
+### Les experts et le hasard
+
+De 1984 à 2003, le psychologue Philip Tetlock organise des tournois de prévision avec **284 experts** : responsables gouvernementaux, universitaires, journalistes, de toutes tendances, des marxistes aux libéraux. Ils produisent environ **28 000 prévisions**. Résultat : les experts ne sont souvent **qu'à peine plus exacts que le hasard**, et généralement moins bons que de simples algorithmes d'extrapolation, surtout à trois à cinq ans. Ceux qui ont **la plus forte exposition médiatique** sont particulièrement mauvais[^tetlock].
+
+Tetlock reprend la distinction d'Isaiah Berlin (1950) entre les **hérissons**, qui savent une grande chose et y ramènent tout, et les **renards**, qui savent beaucoup de petites choses. Les hérissons, c'est-à-dire les esprits idéologiques, font moins bien, surtout dans leur propre domaine d'expertise et à long terme[^tetlock].
+
+### Les superprévisionnistes
+
+À partir de 2011, Tetlock et Barbara Mellers dirigent le Good Judgment Project, qui remporte un tournoi de prévision géopolitique organisé par l'IARPA, l'agence de recherche du renseignement américain : des dizaines de milliers de participants, plus d'un million de prévisions, environ 500 questions[^tetlock]. Les découvertes les plus étonnantes :
+
+1. De **simples exercices de formation** au raisonnement probabiliste améliorent nettement l'exactitude.
+2. Les meilleurs prévisionnistes apprennent à distinguer beaucoup plus de degrés d'incertitude que l'échelle verbale à sept niveaux utilisée par les services de renseignement.
+3. Les « superprévisionnistes » sont **réguliers** dans le temps et d'un sujet à l'autre.
+4. L'agrégation des prévisions par équipes et par algorithmes fait mieux que les individus ; les estimations du projet auraient été environ **30 % meilleures que celles des analystes du renseignement**[^tetlock].
+
+La pensée critique se mesure donc, et elle s'apprend. Ses ingrédients sont connus : penser en probabilités plutôt qu'en certitudes, noter ses prévisions pour pouvoir se corriger, confronter son avis à d'autres, se méfier de la grande théorie qui explique tout.
+
+## Le débat : peut-on sortir de l'idéologie ?
+
+<Positions items={[
+  { titre: "Non, et ce n'est pas souhaitable", sous_titre: "Haidt", forme: "soleil", points: [
+    "Religion et politique expriment une nature humaine « tribale, grégaire et vertueuse ».",
+    "Une société sans idéologie n'aurait pas de projets collectifs.",
+    "Mieux vaut comprendre les fondements moraux de l'autre camp que prétendre n'en avoir aucun.",
+  ]},
+  { titre: "Oui, par des institutions", sous_titre: "Mercier, Tetlock", forme: "gemme", points: [
+    "La raison corrige ses biais dans le débat contradictoire, pas dans la solitude.",
+    "On peut entraîner le jugement et noter les prévisions.",
+    "Les corrections factuelles fonctionnent, contrairement à ce qu'on a cru.",
+  ]},
+  { titre: "Par la vigilance contre les doctrines", sous_titre: "Aron, Arendt", forme: "arche", points: [
+    "Se méfier des « mots sacrés » qui excusent tout.",
+    "Juger les crimes sans regarder au nom de quoi ils sont commis.",
+    "Refuser les systèmes qui prétendent tout expliquer.",
+  ]},
+]} />
+
+<ARetenir>
+1. L'idéologie est le mode par défaut de l'esprit humain : l'intuition juge, la raison justifie après coup (Haidt, 2001 et 2012).
+2. La raison a évolué pour argumenter et persuader ; d'où le biais de confirmation, que seul le débat contradictoire corrige (Mercier et Sperber, 2011).
+3. Sur un sujet identitaire, les personnes les plus douées en calcul se trompent davantage dans le sens de leur camp (Kahan et al., 2017).
+4. Sous pression du groupe, 74 % des participants d'Asch nient au moins une fois l'évidence ; face à un démenti, les plus engagés renforcent leur croyance (Festinger, 1956).
+5. L'effet « retour de flamme » ne se réplique pas : les corrections marchent. Les experts idéologues prévoient mal (Tetlock), mais le jugement probabiliste s'entraîne et se mesure.
+</ARetenir>
+
+[^prophetie]: Wikipédia, « When Prophecy Fails » (Dorothy Martin, les Seekers, prophétie du 21 décembre 1954, observateurs infiltrés, réactions des membres).
+[^haidt2001]: Jonathan Haidt, « The emotional dog and its rational tail », *Psychological Review*, 108(4), 2001, résumé.
+[^righteous]: Wikipédia, « The Righteous Mind » (éléphant et cavalier, six fondements, citation de Haidt : « expressions of our tribal, groupish, righteous nature »).
+[^mft]: Wikipédia, « Moral foundations theory » (stupéfaction morale, groupes individualisant et liant, applications, sixième fondement).
+[^mercier]: Hugo Mercier et Dan Sperber, « Why do humans reason? Arguments for an argumentative theory », *Behavioral and Brain Sciences*, 34(2), 2011, résumé. Originaux : « to devise and evaluate arguments intended to persuade » ; « Skilled arguers, however, are not after the truth but after arguments supporting their views. »
+[^kahan]: Dan Kahan, Ellen Peters, Erica Dawson et Paul Slovic, « Motivated numeracy and enlightened self-government », *Behavioural Public Policy*, 1(1), 2017, résumé.
+[^asch]: Wikipédia, « Asch conformity experiments ». Original : « That intelligent, well-meaning young people are willing to call white black is a matter of concern. »
+[^arendt]: Wikipédia, « The Origins of Totalitarianism ». Original : « totalitarianism has discovered a means of dominating and terrorizing human beings from within ».
+[^aron]: Wikipédia, « L'Opium des intellectuels ».
+[^nyhan]: Brendan Nyhan et Jason Reifler, « When Corrections Fail », *Political Behavior*, 32, 2010.
+[^wood]: Thomas Wood et Ethan Porter, « The Elusive Backfire Effect », *Political Behavior*, 41, 2019.
+[^backfire]: Wikipédia, « Backfire effect » (revue de 2020, position de Brendan Nyhan en 2021).
+[^boxell]: Levi Boxell, Matthew Gentzkow et Jesse Shapiro, « Cross-Country Trends in Affective Polarization », *Review of Economics and Statistics*, résumé.
+[^tetlock]: Wikipédia, « Philip E. Tetlock » (tournois de 1984 à 2003, hérissons et renards, Good Judgment Project).

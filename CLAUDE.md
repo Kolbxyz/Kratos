@@ -20,7 +20,10 @@ Ce site n'a de valeur que si chaque affirmation est vérifiable. Ces règles pas
 ## 2. Style
 
 - Aucun tiret long (—) ni demi-cadratin (–). Bloqué par `check-content`.
-- Leçon de 10 à 15 minutes : accroche, idée centrale, histoire, données, penseurs, débat, à retenir.
+- Leçon de 30 à 60 minutes (6 000 à 12 000 mots), découpée en chapitres `##` (5 ou plus : le sommaire apparaît), sous-parties `###`. Trame : accroche, idée centrale, histoire longue avec dates et chiffres, données, penseurs, débat, à retenir.
+- Ton : réaliste, froid, sans morale ajoutée. Les faits et les mécanismes, pas l'indignation.
+- Densité : chaque chapitre apporte des dates, des chiffres, des noms et au moins une source primaire ou une étude nommée (auteur, année, échantillon, résultat).
+- `lectures:` (frontmatter) : les livres de référence, avec auteur, année et ce qu'ils apportent, affichés en « Pour aller plus loin ».
 - Le débat expose les positions, il ne tranche pas.
 - Faits marquants : `<Chiffre valeur label source url date />`. Un `<Chiffre>` sans source, URL ou date ne compile pas.
 

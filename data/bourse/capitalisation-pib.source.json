@@ -1,0 +1,8 @@
+{
+  "producteur": "World Federation of Exchanges, diffusé par la Banque mondiale",
+  "jeu": "CM.MKT.LCAP.GD.ZS",
+  "url": "https://data.worldbank.org/indicator/CM.MKT.LCAP.GD.ZS",
+  "titre": "Capitalisation boursière des sociétés nationales cotées, en % du PIB",
+  "traitement": "Arrondi à deux décimales. La série française publiée par la Banque mondiale s'arrête en 2018.",
+  "consulte": "2026-10-15"
+}

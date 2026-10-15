@@ -3,10 +3,7 @@ export const PARCOURS = {
     forme: "soleil",
     nom: "Pouvoir",
     accroche: "Qui commande, au nom de quoi, et pourquoi on obéit.",
-    a_venir: [
-      "Les partis politiques : des machines à conquérir le pouvoir",
-      "La corruption du pouvoir",
-    ],
+    a_venir: [],
   },
   institutions: {
     forme: "arche",
@@ -24,6 +21,12 @@ export const PARCOURS = {
     forme: "gemme",
     nom: "Militaire et géopolitique",
     accroche: "La force armée comme instrument politique.",
+    a_venir: [],
+  },
+  societe: {
+    forme: "fleur",
+    nom: "Esprit et société",
+    accroche: "Comment les hommes pensent, croient, se rassemblent et se divisent.",
     a_venir: [],
   },
 } as const;

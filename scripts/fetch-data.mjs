@@ -141,5 +141,15 @@ await worldBankLatest("MS.MIL.XPND.GD.ZS", {
   titre: "Dépenses militaires de douze membres de l'OTAN, en % du PIB, dernière année disponible",
   traitement: "Arrondi à deux décimales. Sélection : les plus grandes armées de l'Alliance et le flanc est.",
 });
+await worldBankSeries("CM.MKT.LCAP.GD.ZS", { FRA: "France", USA: "États-Unis", DEU: "Allemagne" }, "capitalisation_pib", "data/bourse/capitalisation-pib", {
+  titre: "Capitalisation boursière des sociétés nationales cotées, en % du PIB",
+  producteur: "World Federation of Exchanges, diffusé par la Banque mondiale",
+  traitement: "Arrondi à deux décimales. La série française publiée par la Banque mondiale s'arrête en 2018.",
+});
+await worldBankSeries("SP.DYN.TFRT.IN", { FRA: "France", ITA: "Italie", KOR: "Corée du Sud" }, "enfants_par_femme", "data/societe/fecondite", {
+  titre: "Indice synthétique de fécondité (enfants par femme)",
+  producteur: "Division de la population des Nations unies et offices statistiques nationaux, diffusé par la Banque mondiale",
+  traitement: "Arrondi à deux décimales.",
+});
 await eurostatExpenditure();
 await fredFranc();

@@ -18,17 +18,27 @@ const image = z.object({
   url: z.url(),
 });
 
+// A book worth reading in full: what it argues and why it matters for the lesson.
+const lecture = z.object({
+  auteur: z.string(),
+  titre: z.string(),
+  annee: z.union([z.string(), z.number()]),
+  pourquoi: z.string(),
+  url: z.url().optional(),
+});
+
 const lecons = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "./src/content/lecons" }),
   schema: z.object({
     titre: z.string(),
     resume: z.string().max(220),
-    parcours: z.enum(["pouvoir", "institutions", "economie", "militaire"]),
+    parcours: z.enum(["pouvoir", "institutions", "economie", "militaire", "societe"]),
     ordre: z.number(),
     lecture_min: z.number().int().positive(),
     // A lesson is publishable only once a human has re-checked every figure against its source.
     verifie_le: z.iso.date().nullable(),
     images: z.array(image).default([]),
+    lectures: z.array(lecture).default([]),
     sources: z.array(source).min(3),
   }),
 });

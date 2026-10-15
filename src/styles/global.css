@@ -17,6 +17,7 @@
   --institutions: #1c5cab; --institutions-c: #d7e5fb; --on-institutions-c: #0b2a54;
   --economie: #17705a; --economie-c: #c6eedd; --on-economie-c: #06372a;
   --militaire: #b0441a; --militaire-c: #fcdccc; --on-militaire-c: #4a1803;
+  --societe: #8a5a00; --societe-c: #fbe2b6; --on-societe-c: #3a2400;
 
   --serif: "Source Serif 4", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
@@ -46,6 +47,7 @@
     --institutions: #8fbaf2; --institutions-c: #1d3d6b; --on-institutions-c: #dce8fc;
     --economie: #7fd8b5; --economie-c: #134c3d; --on-economie-c: #cdf3e3;
     --militaire: #f5a37d; --militaire-c: #5e2a12; --on-militaire-c: #fde1d3;
+    --societe: #f0bd68; --societe-c: #573806; --on-societe-c: #fdeacb;
   }
 }
 :root[data-theme="dark"] {
@@ -65,6 +67,7 @@
   --institutions: #8fbaf2; --institutions-c: #1d3d6b; --on-institutions-c: #dce8fc;
   --economie: #7fd8b5; --economie-c: #134c3d; --on-economie-c: #cdf3e3;
   --militaire: #f5a37d; --militaire-c: #5e2a12; --on-militaire-c: #fde1d3;
+  --societe: #f0bd68; --societe-c: #573806; --on-societe-c: #fdeacb;
 }
 
 /* Track context: components read --tone*, set once by the nearest [data-parcours]. */
@@ -72,6 +75,7 @@
 [data-parcours="pouvoir"] { --tone: var(--pouvoir); --tone-container: var(--pouvoir-c); --on-tone-container: var(--on-pouvoir-c); }
 [data-parcours="economie"] { --tone: var(--economie); --tone-container: var(--economie-c); --on-tone-container: var(--on-economie-c); }
 [data-parcours="militaire"] { --tone: var(--militaire); --tone-container: var(--militaire-c); --on-tone-container: var(--on-militaire-c); }
+[data-parcours="societe"] { --tone: var(--societe); --tone-container: var(--societe-c); --on-tone-container: var(--on-societe-c); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }

@@ -1,0 +1,196 @@
+annee,pays,enfants_par_femme
+1960,France,2.85
+1961,France,2.87
+1962,France,2.89
+1963,France,2.89
+1964,France,2.87
+1965,France,2.84
+1966,France,2.8
+1967,France,2.75
+1968,France,2.69
+1969,France,2.62
+1970,France,2.55
+1971,France,2.47
+1972,France,2.38
+1973,France,2.28
+1974,France,2.18
+1975,France,2.09
+1976,France,2.01
+1977,France,1.94
+1978,France,1.89
+1979,France,1.87
+1980,France,1.85
+1981,France,1.85
+1982,France,1.86
+1983,France,1.86
+1984,France,1.86
+1985,France,1.86
+1986,France,1.85
+1987,France,1.83
+1988,France,1.81
+1989,France,1.79
+1990,France,1.77
+1991,France,1.75
+1992,France,1.74
+1993,France,1.73
+1994,France,1.73
+1995,France,1.74
+1996,France,1.75
+1997,France,1.77
+1998,France,1.78
+1999,France,1.81
+2000,France,1.89
+2001,France,1.9
+2002,France,1.88
+2003,France,1.89
+2004,France,1.92
+2005,France,1.94
+2006,France,2
+2007,France,1.98
+2008,France,2.01
+2009,France,2
+2010,France,2.03
+2011,France,2.01
+2012,France,2.01
+2013,France,1.99
+2014,France,2
+2015,France,1.96
+2016,France,1.92
+2017,France,1.89
+2018,France,1.87
+2019,France,1.86
+2020,France,1.82
+2021,France,1.83
+2022,France,1.78
+2023,France,1.66
+2024,France,1.61
+1960,Italie,2.4
+1961,Italie,2.44
+1962,Italie,2.46
+1963,Italie,2.51
+1964,Italie,2.66
+1965,Italie,2.6
+1966,Italie,2.58
+1967,Italie,2.5
+1968,Italie,2.46
+1969,Italie,2.47
+1970,Italie,2.38
+1971,Italie,2.4
+1972,Italie,2.35
+1973,Italie,2.3
+1974,Italie,2.28
+1975,Italie,2.17
+1976,Italie,2.04
+1977,Italie,1.93
+1978,Italie,1.84
+1979,Italie,1.73
+1980,Italie,1.64
+1981,Italie,1.58
+1982,Italie,1.56
+1983,Italie,1.51
+1984,Italie,1.46
+1985,Italie,1.42
+1986,Italie,1.35
+1987,Italie,1.33
+1988,Italie,1.36
+1989,Italie,1.33
+1990,Italie,1.33
+1991,Italie,1.3
+1992,Italie,1.3
+1993,Italie,1.25
+1994,Italie,1.21
+1995,Italie,1.19
+1996,Italie,1.2
+1997,Italie,1.22
+1998,Italie,1.22
+1999,Italie,1.23
+2000,Italie,1.26
+2001,Italie,1.25
+2002,Italie,1.27
+2003,Italie,1.29
+2004,Italie,1.34
+2005,Italie,1.33
+2006,Italie,1.37
+2007,Italie,1.39
+2008,Italie,1.44
+2009,Italie,1.44
+2010,Italie,1.44
+2011,Italie,1.42
+2012,Italie,1.42
+2013,Italie,1.39
+2014,Italie,1.38
+2015,Italie,1.36
+2016,Italie,1.36
+2017,Italie,1.34
+2018,Italie,1.31
+2019,Italie,1.27
+2020,Italie,1.24
+2021,Italie,1.25
+2022,Italie,1.24
+2023,Italie,1.21
+2024,Italie,1.18
+1960,Corée du Sud,5.99
+1961,Corée du Sud,5.8
+1962,Corée du Sud,5.56
+1963,Corée du Sud,5.33
+1964,Corée du Sud,5.07
+1965,Corée du Sud,4.89
+1966,Corée du Sud,4.78
+1967,Corée du Sud,4.62
+1968,Corée du Sud,4.51
+1969,Corée du Sud,4.45
+1970,Corée du Sud,4.53
+1971,Corée du Sud,4.54
+1972,Corée du Sud,4.12
+1973,Corée du Sud,4.07
+1974,Corée du Sud,3.77
+1975,Corée du Sud,3.43
+1976,Corée du Sud,3
+1977,Corée du Sud,2.99
+1978,Corée du Sud,2.64
+1979,Corée du Sud,2.9
+1980,Corée du Sud,2.82
+1981,Corée du Sud,2.57
+1982,Corée du Sud,2.39
+1983,Corée du Sud,2.06
+1984,Corée du Sud,1.74
+1985,Corée du Sud,1.66
+1986,Corée du Sud,1.58
+1987,Corée du Sud,1.53
+1988,Corée du Sud,1.55
+1989,Corée du Sud,1.56
+1990,Corée du Sud,1.57
+1991,Corée du Sud,1.71
+1992,Corée du Sud,1.76
+1993,Corée du Sud,1.65
+1994,Corée du Sud,1.66
+1995,Corée du Sud,1.63
+1996,Corée du Sud,1.57
+1997,Corée du Sud,1.54
+1998,Corée du Sud,1.46
+1999,Corée du Sud,1.43
+2000,Corée du Sud,1.48
+2001,Corée du Sud,1.31
+2002,Corée du Sud,1.18
+2003,Corée du Sud,1.19
+2004,Corée du Sud,1.16
+2005,Corée du Sud,1.09
+2006,Corée du Sud,1.13
+2007,Corée du Sud,1.26
+2008,Corée du Sud,1.19
+2009,Corée du Sud,1.15
+2010,Corée du Sud,1.23
+2011,Corée du Sud,1.24
+2012,Corée du Sud,1.3
+2013,Corée du Sud,1.19
+2014,Corée du Sud,1.21
+2015,Corée du Sud,1.24
+2016,Corée du Sud,1.17
+2017,Corée du Sud,1.05
+2018,Corée du Sud,0.98
+2019,Corée du Sud,0.92
+2020,Corée du Sud,0.84
+2021,Corée du Sud,0.81
+2022,Corée du Sud,0.78
+2023,Corée du Sud,0.72
+2024,Corée du Sud,0.75

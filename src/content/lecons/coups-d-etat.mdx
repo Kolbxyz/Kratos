@@ -1,11 +1,60 @@
 ---
-titre: "Coups d'État : de Rome à Brumaire, du 2 Décembre au Sahel"
-resume: "Un empire vendu aux enchères, deux Bonaparte, quatre généraux en retraite, onze putschs africains depuis 2020, une loi martiale abrogée en six heures à Séoul : prendre le pouvoir par la force, et l'en empêcher."
+titre: "Manuel du coup d'État : de Rome à Brumaire, de Lisbonne au Sahel"
+resume: "497 tentatives depuis 1950, une sur deux réussie. Les conditions, les cibles, les heures décisives et les erreurs qui tuent : le coup d'État expliqué comme un mode d'emploi, pour comprendre comment on s'en protège."
 parcours: pouvoir
 ordre: 4
-lecture_min: 15
+lecture_min: 35
 verifie_le: null
+lectures:
+  - auteur: "Edward Luttwak"
+    titre: "Coup d'État: A Practical Handbook (Coup d'État, mode d'emploi)"
+    annee: "1968, édition révisée en 2016"
+    pourquoi: "Le manuel froid par excellence : conditions préalables, cibles, neutralisation, communication. Réédité en 2016 pour tenir compte des technologies du XXIe siècle."
+  - auteur: "Curzio Malaparte"
+    titre: "Technique du coup d'État"
+    annee: 1931
+    pourquoi: "Publié à Paris chez Grasset : le coup d'État comme problème technique plutôt que politique, et une lecture précoce de la montée de Hitler."
+  - auteur: "Naunihal Singh"
+    titre: "Seizing Power: The Strategic Logic of Military Coups"
+    annee: 2014
+    pourquoi: "Le coup d'État comme jeu de coordination : celui qui gagne est celui qui fait croire, le premier, qu'il a déjà gagné."
+  - auteur: "Karl Marx"
+    titre: "Le 18 Brumaire de Louis Bonaparte"
+    annee: 1852
+    pourquoi: "Comment un neveu sans prestige militaire répète le coup de son oncle, et ce que cela dit des classes qui le laissent faire."
 sources:
+  - titre: "Global Instances of Coups, fichier pt_20260829.csv (version du 29 août 2026)"
+    auteur: "Jonathan Powell et Clayton Thyne"
+    url: "https://jonathanmpowell.com/coups/"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Global instances of coups from 1950 to 2010: A new dataset, Journal of Peace Research, 48(2), 2011"
+    auteur: "Jonathan Powell, Clayton Thyne"
+    url: "https://doi.org/10.1177/0022343310397436"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Poverty, the Coup Trap, and the Seizure of Executive Power, World Politics, 42(2), 1990"
+    auteur: "John Londregan, Keith Poole"
+    url: "https://doi.org/10.2307/2010462"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Coup-proofing: Its Practice and Consequences in the Middle East, International Security, 24(2), 1999"
+    auteur: "James T. Quinlivan"
+    url: "https://doi.org/10.1162/016228899560202"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Coup-proofing"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Coup-proofing"
+    consulte: "2026-10-15"
+  - titre: "Coup d'État: A Practical Handbook"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Coup_d%27%C3%89tat:_A_Practical_Handbook"
+    consulte: "2026-10-15"
+  - titre: "Curzio Malaparte"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Curzio_Malaparte"
+    consulte: "2026-10-15"
   - titre: "Histoire romaine, livre LXXIV (épitomé), chapitres 11 et 17, traduction d'Earnest Cary (Loeb)"
     auteur: "Dion Cassius, publié par Bill Thayer (LacusCurtius)"
     url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/74*.html"
@@ -24,6 +73,26 @@ sources:
     url: "https://www.marxists.org/francais/marx/works/1851/12/brum3.htm"
     consulte: "2026-10-15"
     primaire: true
+  - titre: "Révolution des Œillets"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/R%C3%A9volution_des_%C5%92illets"
+    consulte: "2026-10-15"
+  - titre: "Coup d'État du 11 septembre 1973 au Chili"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Coup_d%27%C3%89tat_du_11_septembre_1973_au_Chili"
+    consulte: "2026-10-15"
+  - titre: "Coup d'État du 23 février 1981"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Coup_d%27%C3%89tat_du_23_f%C3%A9vrier_1981"
+    consulte: "2026-10-15"
+  - titre: "1991 Soviet coup attempt"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt"
+    consulte: "2026-10-15"
+  - titre: "2016 Turkish coup attempt"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/2016_Turkish_coup_attempt"
+    consulte: "2026-10-15"
   - titre: "21 avril 1961 : le putsch des généraux"
     auteur: "Hérodote"
     url: "https://www.herodote.net/21_avril_1961-evenement-19610421.php"
@@ -55,8 +124,13 @@ import Timeline from "../../components/Timeline.astro";
 import ARetenir from "../../components/ARetenir.astro";
 import Chiffre from "../../components/Chiffre.astro";
 import Positions from "../../components/Positions.astro";
+import Chart from "../../components/Chart.astro";
 
-## L'empire aux enchères
+## Avertissement
+
+Cette leçon est construite comme un mode d'emploi, à la manière du livre d'Edward Luttwak, *Coup d'État: A Practical Handbook* (1968). Le procédé n'a rien d'un encouragement. Il est le moyen le plus clair de comprendre **où se trouvent les points faibles d'un État**, et donc ce qui le protège. Chaque étape du manuel a son contre-manuel : la dernière partie de la leçon les rassemble.
+
+## Prologue : l'empire aux enchères
 
 Rome, 28 mars 193. La garde prétorienne, chargée de protéger l'empereur, vient d'assassiner l'empereur Pertinax. Au camp des prétoriens, deux candidats se présentent. Le sénateur Dion Cassius, témoin des événements, raconte la suite :
 
@@ -66,53 +140,155 @@ Rome, 28 mars 193. La garde prétorienne, chargée de protéger l'empereur, vien
 
 Les enchères montent jusqu'à 20 000 sesterces par soldat. Didius Julianus l'emporte en surenchérissant d'un coup de 5 000, en criant le chiffre et en le montrant avec ses doigts. Il régnera **soixante-six jours** avant d'être tué dans son palais[^dio].
 
-Tout est déjà là : **un coup d'État ne se gagne pas avec la majorité, mais avec ceux qui tiennent les armes.**
+Tout est déjà là : **un coup d'État ne se gagne pas avec la majorité, mais avec ceux qui tiennent les armes**, et il ne dure que si l'on tient aussi ceux qui viendront après.
 
 <div class="chiffres">
-  <Chiffre valeur="66 jours" label="règne de Didius Julianus, qui avait acheté l'empire aux prétoriens" source="Dion Cassius, livre LXXIV" url="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/74*.html" date="an 193" forme="gemme" />
-  <Chiffre valeur="11" label="coups d'État réussis en Afrique depuis 2020" source="Gabonmediatime ; Wikipédia, ceinture de coups d'État" url="https://gabonmediatime.com/afrique-deja-11-coups-detat-reussis-depuis-2020/" date="décompte de novembre 2025" forme="soleil" />
+  <Chiffre valeur="497" label="tentatives de coup d'État recensées dans le monde depuis 1950, dont 248 réussies" source="Powell et Thyne, Global Instances of Coups" url="https://jonathanmpowell.com/coups/" date="janvier 1950 à août 2026" forme="soleil" />
+  <Chiffre valeur="24" label="tentatives en Bolivie, le pays le plus touché, devant l'Argentine (20) et le Soudan (17)" source="Powell et Thyne, Global Instances of Coups" url="https://jonathanmpowell.com/coups/" date="1950 à 2026" forme="gemme" />
   <Chiffre valeur="6 h" label="durée de la loi martiale en Corée du Sud avant que le Parlement ne l'abroge" source="Wikipédia, crise de 2024" url="https://en.wikipedia.org/wiki/2024_South_Korean_martial_law_crisis" date="3-4 décembre 2024" forme="trefle" />
 </div>
 
-## L'idée centrale : qu'est-ce qu'un coup d'État ?
+## L'idée centrale : prendre l'État avec l'État
 
-Un coup d'État est la prise du pouvoir par **une partie de l'appareil d'État lui-même**, contre les règles qui organisent la succession. Ce n'est pas une révolution (venue d'en bas) ni une invasion (venue de l'extérieur). Le politologue Edward Luttwak, dans *Coup d'État, mode d'emploi* (1968), le résume : il s'agit d'infiltrer un segment de l'État, petit mais décisif, pour en prendre le contrôle et neutraliser le reste.
+Luttwak donne la définition la plus précise du phénomène :
 
-Trois éléments reviennent dans tous les cas :
+<Citation auteur="Edward Luttwak" oeuvre="Coup d'État: A Practical Handbook" annee="1968" reference="Définition du coup d'État (traduction)" url="https://en.wikipedia.org/wiki/Coup_d%27%C3%89tat:_A_Practical_Handbook">
+  Un coup d'État consiste en l'infiltration d'un segment petit mais décisif de l'appareil d'État, qui est ensuite utilisé pour retirer au gouvernement le contrôle du reste.
+</Citation>
+
+Trois traits le distinguent des autres manières de prendre le pouvoir :
+
+- **Ce n'est pas une révolution.** Une révolution mobilise la population contre l'État ; le coup utilise des **parties de l'État** contre ses dirigeants. Il cherche au contraire à ce que la population ne bouge pas.
+- **Ce n'est pas une guerre civile.** Le coup réussi est rapide et économe en violence. S'il dure, il a déjà échoué ou il se transforme en guerre.
+- **Ce n'est pas une élection.** Il viole les règles qui organisent la succession, même s'il cherche ensuite à se faire ratifier.
+
+Powell et Thyne, dont le recensement fait référence, retiennent une définition opérationnelle : « des tentatives illégales et ouvertes, par l'armée ou d'autres élites au sein de l'appareil d'État, de renverser le chef de l'exécutif en place » (traduction). Ils comptent comme **réussi** un coup dont les auteurs gardent le pouvoir au moins sept jours[^pt].
+
+<Chart
+  src="coups/tentatives-par-decennie"
+  kind="line"
+  x="decennie"
+  y="tentatives"
+  series="issue"
+  titre="Tentatives de coup d'État dans le monde par décennie, selon leur issue (1950-2026)"
+  unite="tentatives"
+/>
+
+Les années 1960 sont l'âge d'or : **123 tentatives**, dont 67 réussies. Le nombre chute ensuite jusqu'à 22 dans les années 2010. La décennie 2020, encore incomplète, en compte déjà **21 au 29 août 2026, dont 13 réussies** : la proportion de succès remonte[^pt].
+
+## Étape 1 : choisir le bon pays
+
+Tous les États ne sont pas « prenables ». Luttwak énumère des conditions préalables[^luttwak] :
+
+1. **Une situation économique dégradée**, qui crée du mécontentement et prive le régime de soutiens.
+2. **Un pouvoir concentré** entre les mains d'un parti unique ou d'une petite élite : il suffit alors de capturer peu de personnes.
+3. **L'indépendance politique** : pas de puissance étrangère qui interviendrait pour rétablir le régime.
+4. **Un État organisé**, avec une bureaucratie structurée qui continuera à fonctionner pour le nouveau maître. Un pays sans administration ne se prend pas, il se conquiert.
+
+La recherche quantitative a confirmé le premier point. En 1990, John Londregan et Keith Poole analysent 121 pays de 1950 à 1982 : la probabilité d'un coup dépend fortement du **niveau de revenu**. Les pays pauvres sont bien plus exposés. Et surtout, un coup en appelle d'autres : il laisse « un héritage d'instabilité politique », sous la forme d'une probabilité accrue de nouveaux coups. C'est le **piège du coup d'État** (*coup trap*)[^londregan].
+
+Le jeu de données de Powell et Thyne l'illustre : la Bolivie compte **24 tentatives** depuis 1950, l'Argentine 20, le Soudan 17, Haïti et le Venezuela 13 chacun[^pt]. Le premier coup est le plus difficile ; ensuite, l'armée sait qu'elle peut.
+
+## Étape 2 : recruter peu, mais les bons
+
+Il ne faut pas toute l'armée. Il faut **les unités qui peuvent agir dans la capitale dans les premières heures**, et l'assurance que les autres ne bougeront pas. Gardes présidentielles, unités blindées proches de la capitale, forces spéciales, gendarmerie : le coup se joue rarement en province.
+
+Les exemples sont constants :
+
+- **Rome, 193** : la garde prétorienne, chargée de protéger l'empereur, le tue puis vend sa succession.
+- **Niger, 26 juillet 2023** : la garde présidentielle retient le président Mohamed Bazoum[^sahel].
+- **Madrid, 23 février 1981** : un détachement de la Guardia Civil, commandé par le lieutenant-colonel Antonio Tejero, fait irruption dans l'hémicycle pendant le vote d'investiture et ordonne à tous les présents de s'allonger[^23f].
+
+Ce qui rend le recrutement difficile, c'est la **méfiance réciproque** des conjurés. Tout officier sollicité peut dénoncer le complot. Les conspirateurs doivent donc mobiliser le moins de monde possible le plus tard possible, quitte à ne prévenir les exécutants qu'au dernier moment. Lors du coup de 1981, plusieurs complots distincts coexistaient : celui de Tejero et du capitaine général Milans del Bosch, qui voulaient une dictature militaire, et celui du général Armada, qui visait un « coup en douceur » avec un gouvernement de salut public dirigé par le roi[^23f]. Des conjurés qui ne veulent pas la même chose sont des conjurés qui hésiteront.
+
+### Le contre-manuel : le *coup-proofing*
+
+Les dirigeants qui craignent un coup ont développé une panoplie de protections, étudiée par James Quinlivan, de la RAND Corporation, à partir des régimes du Moyen-Orient (1999)[^quinlivan] : placer aux postes clés des membres de sa **famille**, de son **ethnie** ou de sa **confession** ; créer des **forces parallèles** (garde républicaine, milices) qui contrebalancent l'armée régulière ; multiplier les **services de renseignement** qui se surveillent les uns les autres.
+
+Le prix est connu : une armée « protégée contre les coups » est une armée **moins efficace**, parce que la loyauté passe avant la compétence dans les nominations[^coupproofing]. Une étude de 2016 ajoute que les dirigeants qui tentent de construire une armée ethnique, ou de démanteler celle de leur prédécesseur, provoquent eux-mêmes la résistance violente des officiers[^coupproofing].
+
+## Étape 3 : neutraliser en quelques heures
+
+Luttwak insiste sur la « vitesse maximale dans la phase de transition » et la nécessité de « neutraliser complètement l'opposition avant et immédiatement après le coup ». Il recommande des équipes parallèles, chacune sur une cible[^luttwak] :
 
 <Positions items={[
-  { titre: "La force", sous_titre: "Qui tient les armes", forme: "gemme", points: [
-    "Une garde, une unité d'élite, un état-major.",
-    "Rome 193 : les prétoriens. Niger 2023 : la garde présidentielle.",
-    "Il ne faut pas toute l'armée : il faut qu'elle ne s'y oppose pas.",
+  { titre: "Les lieux de pouvoir", sous_titre: "Cibles physiques", forme: "gemme", points: [
+    "Palais présidentiel, état-major, commandement de la police.",
+    "Les prendre de l'intérieur plutôt que par l'assaut.",
+    "Contrôle physique et symbolique à la fois.",
   ]},
-  { titre: "Le récit", sous_titre: "Pourquoi ce serait légitime", forme: "soleil", points: [
-    "Sauver la République, la nation, l'ordre, la sécurité.",
-    "1799 : contre un complot jacobin. 1851 : contre une Assemblée qui « conspire ».",
-    "Sahel : contre la corruption et l'échec face aux djihadistes.",
+  { titre: "Les communications", sous_titre: "Cibles techniques", forme: "soleil", points: [
+    "Radio, télévision, centraux téléphoniques, aujourd'hui réseaux mobiles.",
+    "Empêcher le pouvoir de parler et les loyalistes de se coordonner.",
+    "Pouvoir parler soi-même.",
   ]},
-  { titre: "La ratification", sous_titre: "Faire oublier la force", forme: "arche", points: [
-    "Un plébiscite, une nouvelle constitution, une promesse d'élections.",
-    "Les Bonaparte en sont les maîtres.",
-    "Les juntes du Sahel prolongent leurs « transitions » d'année en année.",
+  { titre: "Les personnes", sous_titre: "Cibles humaines", forme: "trefle", points: [
+    "Le chef de l'exécutif d'abord, puis ceux qui peuvent le remplacer.",
+    "Petites équipes discrètes, juste avant le déclenchement.",
+    "Un dirigeant libre est un contre-coup en puissance.",
   ]},
 ]} />
 
-## Deux Bonaparte, deux coups d'État
+L'idée n'est pas neuve. Curzio Malaparte, écrivain italien, publie à Paris en 1931 *Technique du coup d'État* chez Grasset. Il y traite la prise du pouvoir comme un problème **technique** et y anticipe, à propos de Hitler, l'élimination des SA comme force politique autonome. Le livre lui vaut son renvoi du quotidien *La Stampa*[^malaparte].
 
-**18 Brumaire an VIII (9-10 novembre 1799).** Le général Bonaparte, rentré d'Égypte, s'entend avec des membres du Directoire pour renverser le régime. À Saint-Cloud, les députés du Conseil des Cinq-Cents l'accueillent aux cris de « hors-la-loi ! ». Son frère Lucien, qui préside l'assemblée, fait évacuer la salle par la troupe. Le Consulat est né.
+**Lisbonne, 25 avril 1974** est l'exécution d'école. À 22 h 55 le 24 avril, la radio Emissores Associados de Lisboa diffuse *E depois do adeus*, chanson du Portugal à l'Eurovision : c'est le premier signal convenu. Puis la diffusion de *Grândola, Vila Morena* de Zeca Afonso donne le départ aux militaires du Mouvement des forces armées pour s'emparer des points stratégiques. « En quelques heures, le pouvoir s'effondre. » Les capitaines appellent la population à rester chez elle ; des milliers de Portugais descendent pourtant dans la rue, des œillets à la main[^oeillets].
 
-Le régime fait ensuite approuver sa Constitution par plébiscite. Résultat officiel, proclamé par Lucien devenu ministre de l'Intérieur : **3 011 007 oui contre 1 562 non**. En 1972, l'historien Claude Langlois a montré que ces chiffres avaient été massivement falsifiés : il y aurait eu environ 1,55 million de oui[^an8]. Le coup d'État se prolonge jusque dans les urnes.
+**Santiago, 11 septembre 1973** montre la version brutale. Le coup intervient deux mois après une première tentative avortée, le *Tanquetazo* de juin 1973, où un régiment de chars avait attaqué le palais présidentiel de la Moneda[^chili]. Ce premier essai, raté, a servi de répétition : il a montré que les ouvriers ne s'étaient pas rassemblés pour défendre le régime, comme Allende les y appelait[^chili]. En septembre, la Moneda est assiégée, Salvador Allende se suicide ; la junte dissout le Congrès, les conseils municipaux, les syndicats et les partis[^chili].
 
-**2 décembre 1851.** Son neveu, Louis-Napoléon Bonaparte, élu président de la IIe République en 1848, ne peut pas se représenter. Le 2 décembre, jour anniversaire du sacre de Napoléon et d'Austerlitz, il dissout l'Assemblée, fait arrêter les opposants et écrase la résistance républicaine. Un plébiscite organisé sous état de siège, les 20 et 21 décembre, approuve le coup par **7 467 000 oui sur huit millions de votants**[^plebiscites]. Un an plus tard, il est empereur. Victor Hugo, exilé, publie *Napoléon le Petit*.
+## Étape 4 : faire croire que c'est déjà fait
 
-Karl Marx, la même année, ouvre *Le 18 Brumaire de Louis Bonaparte* par une phrase devenue proverbiale :
+C'est l'étape que les amateurs négligent. Le politiste Naunihal Singh, dans *Seizing Power* (2014), montre qu'un coup d'État est d'abord un **jeu de coordination**. Chaque officier, chaque unité, se demande non pas « qui a raison ? », mais « qui va gagner ? ». Personne ne veut se retrouver du côté des perdants. Le camp qui parvient à **faire croire qu'il a déjà gagné** rallie les hésitants, et sa victoire devient réelle parce qu'elle a été annoncée[^singh].
+
+D'où l'importance obsessionnelle de la radio et de la télévision. Selon Singh, le contrôle des médias permet même à de petits contingents de se présenter comme maîtres de la situation et de rendre leur victoire inévitable aux yeux du public, des neutres et même des loyalistes[^singh].
+
+Deux échecs illustrent la règle par l'inverse.
+
+**Ankara et Istanbul, 15 juillet 2016.** Une faction de l'armée turque tente de renverser Recep Tayyip Erdoğan. Les putschistes envoient une unité de forces spéciales en hélicoptère pour tuer ou capturer le président ; ils le manquent de quelques minutes. Ils ne prennent pas le contrôle des réseaux de télévision et de téléphonie mobile. Erdoğan intervient par un appel vidéo FaceTime diffusé à la télévision ; une partie de la population descend dans la rue contre les putschistes. La tentative fait **plus de 300 morts**[^turquie]. Le lendemain, Erdoğan qualifie le putsch manqué de « cadeau de Dieu » et lance une purge : au moins 40 000 personnes détenues dans les premiers jours, dont au moins 10 000 militaires et 2 745 juges[^turquie]. Luttwak attribue l'échec à l'incapacité de neutraliser Erdoğan ; Singh, à l'incapacité de contrôler le récit ; le politiste Drew Kinney répond que c'est la **résistance civile** qui a fait échouer le coup, et que les deux premiers facteurs n'ont compté que parce qu'ils l'ont rendue possible[^turquie].
+
+**Moscou, 19-21 août 1991.** Les durs du régime soviétique forment un Comité d'État pour l'état d'urgence, font retenir Mikhaïl Gorbatchev dans sa datcha, mais ne parviennent pas à arrêter Boris Eltsine, récemment élu président de la Russie. Eltsine monte sur un char et s'adresse à la foule ; contre toute attente, la scène passe au journal du soir de la télévision d'État[^moscou]. Trois jeunes hommes sont tués dans la nuit. Le coup s'effondre en trois jours.
+
+Le **contre-exemple réussi de la parole légitime** est espagnol. Le 23 février 1981, à une heure du matin, le roi Juan Carlos Ier apparaît à la télévision en uniforme de capitaine général, s'oppose au coup, défend la Constitution et relève Milans del Bosch de ses fonctions. « À partir de ce moment, le coup d'État est considéré comme avorté. » Milans del Bosch renonce à cinq heures ; Tejero tient jusqu'à midi[^23f]. Le roi, chef des armées, a fait exactement ce que Singh décrit : il a rendu visible que les putschistes avaient **déjà perdu**.
+
+## Étape 5 : raconter une histoire
+
+Un coup ne se justifie jamais comme une prise de pouvoir. Il se présente comme un **sauvetage** : de la République, de la nation, de l'ordre, contre la corruption ou contre un complot. Les récits changent peu en deux siècles :
+
+- **18 Brumaire an VIII (9-10 novembre 1799).** Le général Bonaparte, rentré d'Égypte, s'entend avec des membres du Directoire pour renverser le régime, au nom de la lutte contre un complot jacobin. À Saint-Cloud, les députés du Conseil des Cinq-Cents l'accueillent aux cris de « hors-la-loi ! ». Son frère Lucien, qui préside l'assemblée, fait évacuer la salle par la troupe. Le Consulat est né.
+- **2 décembre 1851.** Son neveu, Louis-Napoléon Bonaparte, élu président de la IIe République en 1848, ne peut pas se représenter. Le 2 décembre, jour anniversaire du sacre de Napoléon et d'Austerlitz, il dissout l'Assemblée, fait arrêter les opposants et écrase la résistance républicaine, contre une Assemblée qu'il accuse de conspirer.
+- **Sahel, depuis 2020.** Les juntes justifient leurs coups par l'échec des gouvernements civils face aux groupes djihadistes et par la corruption[^sahel].
+
+Karl Marx, en 1852, ouvre *Le 18 Brumaire de Louis Bonaparte* par une phrase devenue proverbiale :
 
 <Citation auteur="Karl Marx" oeuvre="Le 18 Brumaire de Louis Bonaparte" annee="1852" reference="Chapitre I" url="https://www.marxists.org/francais/marx/works/1851/12/brum3.htm">
   Hegel fait quelque part cette remarque que tous les grands événements et personnages historiques se répètent pour ainsi dire deux fois. Il a oublié d'ajouter : la première fois comme tragédie, la seconde fois comme farce.
 </Citation>
 
-## Quand le coup échoue : avril 1961
+## Étape 6 : faire ratifier
+
+La force prend le pouvoir ; elle ne suffit pas à le garder. Il faut ensuite **faire oublier la force** par une procédure qui ressemble au droit : plébiscite, nouvelle constitution, promesse d'élections.
+
+Les Bonaparte en sont les maîtres. Le régime né de Brumaire fait approuver sa Constitution par plébiscite. Résultat officiel, proclamé par Lucien devenu ministre de l'Intérieur : **3 011 007 oui contre 1 562 non**. En 1972, l'historien Claude Langlois a montré que ces chiffres avaient été massivement falsifiés : il y aurait eu environ 1,55 million de oui[^an8]. En 1851, un plébiscite organisé sous état de siège, les 20 et 21 décembre, approuve le coup par **7 467 000 oui sur huit millions de votants**[^plebiscites]. Un an plus tard, Louis-Napoléon est empereur.
+
+Les juntes contemporaines utilisent une autre formule : la **transition**. Elles promettent de rendre le pouvoir aux civils après une période fixée, puis la prolongent. Les militaires maliens, au pouvoir depuis août 2020, n'ont pas rendu le pouvoir aux civils[^sahel].
+
+## Étape 7 : ne pas subir le coup suivant
+
+Le piège du coup d'État décrit par Londregan et Poole s'applique d'abord à ceux qui viennent de réussir. L'officier qui a renversé un président a démontré à ses pairs que c'était possible. Il doit donc immédiatement se protéger contre eux, avec les mêmes outils de *coup-proofing* que son prédécesseur.
+
+Les données le montrent pour le Sahel[^pt] :
+
+<Timeline items={[
+  { date: "Mali", texte: "Coup le 18 août 2020, <strong>second coup</strong> le 21 mai 2021, neuf mois plus tard." },
+  { date: "Burkina Faso", texte: "Coup le 23 janvier 2022, <strong>second coup</strong> le 30 septembre 2022, huit mois plus tard." },
+  { date: "Niger", texte: "Tentative échouée le 31 mars 2021, coup réussi le 26 juillet 2023, <strong>nouvelle tentative échouée</strong> le 29 août 2026." },
+  { date: "Soudan", texte: "Tentative échouée en septembre 2021, coup réussi le 25 octobre 2021, nouvelle tentative en avril 2023." },
+]} />
+
+Le Gabon (30 août 2023), la Guinée (5 septembre 2021), le Tchad (20 avril 2021), Madagascar (12 octobre 2025) et la Guinée-Bissau (26 novembre 2025) complètent la série. Une tentative a été déjouée au Bénin le 7 décembre 2025[^pt].
+
+## Quand le coup échoue : quatre leçons
+
+### Alger, avril 1961
 
 <Timeline items={[
   { date: "21-22 avril 1961", texte: "À Alger, quatre généraux (Challe, Jouhaud, Salan, Zeller), opposés à l'autodétermination de l'Algérie, prennent le pouvoir avec des régiments parachutistes." },
@@ -122,55 +298,77 @@ Karl Marx, la même année, ouvre *Le 18 Brumaire de Louis Bonaparte* par une ph
 
 Sources : Hérodote, INA ; mise en œuvre de l'article 16 : décision n° 61-1 AR16 du Conseil constitutionnel, 23 avril 1961[^1961].
 
-La leçon de 1961 est capitale : **un coup échoue quand les exécutants refusent d'obéir.** Les généraux tenaient Alger, mais pas les appelés.
+La leçon de 1961 : **un coup échoue quand les exécutants refusent d'obéir.** Les généraux tenaient Alger, mais pas les appelés. Et de Gaulle, comme Juan Carlos vingt ans plus tard, a utilisé la télévision pour rendre l'échec visible avant qu'il ne soit complet.
 
-## Le coup d'État au XXIe siècle
+### Séoul, décembre 2024
+
+Le dernier cas ne figure pas dans le jeu de données de Powell et Thyne, car il ne s'agit pas d'un coup contre le chef de l'exécutif mais d'une tentative du chef de l'exécutif lui-même pour suspendre les autres pouvoirs, ce que les politistes appellent un **auto-coup**.
 
 <Timeline items={[
-  { date: "2020-2021", texte: "Mali (août 2020, puis mai 2021), Tchad (avril 2021), Guinée (5 septembre 2021), Soudan (25 octobre 2021)." },
-  { date: "2022", texte: "Burkina Faso : deux coups d'État, en janvier puis en septembre." },
-  { date: "2023", texte: "Niger (26 juillet), où la garde présidentielle retient le président Bazoum ; Gabon (30 août), juste après la proclamation des résultats de la présidentielle." },
-  { date: "3-4 décembre 2024", texte: "<strong>Séoul.</strong> Le président Yoon Suk Yeol proclame la loi martiale à 22 h 27. À 1 h 02, 190 députés, entrés malgré les forces spéciales, votent à l'unanimité sa levée. À 4 h 30, elle est levée." },
+  { date: "3-4 décembre 2024", texte: "Le président Yoon Suk Yeol proclame la loi martiale à 22 h 27. À 1 h 02, 190 députés, entrés malgré les forces spéciales, votent à l'unanimité sa levée. À 4 h 30, elle est levée." },
   { date: "4 avril 2025", texte: "La Cour constitutionnelle coréenne confirme la destitution de Yoon." },
-  { date: "Octobre-novembre 2025", texte: "Madagascar (12 octobre) et Guinée-Bissau (26 novembre). Une tentative est déjouée au Bénin en décembre." },
   { date: "19 février 2026", texte: "Le tribunal central de Séoul condamne Yoon à la <strong>réclusion à perpétuité</strong> pour insurrection. Il a fait appel." },
 ]} />
 
-Sources : Gabonmediatime et Wikipédia (Afrique), Wikipédia et NPR (Corée)[^actuel].
+Sources : Wikipédia et NPR[^coree].
+
+### Les quatre causes d'échec
+
+En rassemblant Alger (1961), Madrid (1981), Moscou (1991), Ankara (2016) et Séoul (2024), quatre causes reviennent :
+
+1. **Le chef n'a pas été neutralisé** : Eltsine en 1991, Erdoğan en 2016.
+2. **Les communications n'ont pas été tenues** : Eltsine au journal télévisé, Erdoğan sur FaceTime, Juan Carlos et de Gaulle à la télévision.
+3. **Les exécutants n'ont pas suivi** : les appelés d'Alger ; à Moscou, des officiers putschistes réduits à consigner leurs soldats pour empêcher les défections ; à Séoul, des forces spéciales qui n'empêchent pas les députés d'entrer.
+4. **La société s'est montrée** : la foule autour d'Eltsine à Moscou, les citoyens dans les rues turques, devant l'Assemblée coréenne.
 
 ## Ce qui protège une démocratie
 
-Le contraste entre Séoul et Niamey montre ce qui fait tenir un régime face à la force :
+Le manuel, lu à l'envers, donne la liste des protections :
 
-1. **Un Parlement qui siège** : à Séoul, les députés escaladent les grilles pour voter. Le droit l'emporte parce que l'institution se réunit physiquement.
-2. **Une armée qui hésite** : en Corée comme à Alger en 1961, des soldats exécutent les ordres mollement ou pas du tout.
-3. **Des juges qui jugent** : la destitution puis la condamnation de Yoon montrent que l'auteur d'un coup raté peut finir en prison.
-4. **Une société qui descend dans la rue** : à Séoul, des milliers de citoyens accourent devant l'Assemblée dans la nuit.
-5. **Un droit qui prévoit le pire** : en France, l'article 16 a servi en 1961 contre les putschistes, pas en leur faveur. Mais le même article pourrait servir à un président tenté de concentrer les pouvoirs (voir la leçon sur le 49.3).
+1. **Un Parlement qui peut siéger** : à Séoul, les députés escaladent les grilles pour voter. Le droit l'emporte parce que l'institution se réunit physiquement.
+2. **Une armée professionnelle et loyale à des règles plutôt qu'à des personnes**, sans tomber dans le *coup-proofing* clanique qui l'affaiblit.
+3. **Une parole légitime capable d'atteindre le pays** : un chef de l'État, un monarque, un président d'assemblée qui démontre publiquement que le coup a échoué.
+4. **Des juges qui jugent après** : la condamnation de Yoon montre que l'auteur d'un coup raté peut finir en prison. Le piège du coup se nourrit de l'impunité.
+5. **Un droit qui prévoit le pire** : en France, l'article 16 a servi en 1961 contre les putschistes. Le même article pourrait servir à un président tenté de concentrer les pouvoirs (voir la leçon sur le 49.3).
+6. **La prospérité** : Londregan et Poole l'ont mesuré, la pauvreté est le meilleur prédicteur du coup d'État.
 
 ## Le débat : peut-on justifier un coup d'État ?
 
-**Ceux qui répondent parfois oui :**
-
-- Certains coups renversent des dictatures : la révolution des Œillets au Portugal (25 avril 1974) est née d'un putsch d'officiers et a ouvert la voie à la démocratie.
-- Au Sahel, une partie de la population a d'abord soutenu des juntes promettant de chasser des gouvernements jugés corrompus.
-
-**Ceux qui répondent non :**
-
-- La plupart des juntes promettent une transition courte et restent : les militaires maliens, au pouvoir depuis 2020, n'ont pas rendu le pouvoir aux civils.
-- Un coup en appelle un autre : le Mali et le Burkina Faso ont chacun connu deux putschs en deux ans.
-- Le coup d'État installe l'idée que la force décide, ce que l'État de droit existe précisément pour empêcher.
+<Positions items={[
+  { titre: "Parfois, oui", sous_titre: "Le coup libérateur", forme: "soleil", points: [
+    "La révolution des Œillets (25 avril 1974) est née d'un putsch de capitaines et a ouvert la voie à la démocratie portugaise.",
+    "Au Sahel, une partie de la population a d'abord soutenu des juntes promettant de chasser des gouvernements jugés corrompus.",
+  ]},
+  { titre: "Non", sous_titre: "Le piège", forme: "gemme", points: [
+    "La plupart des juntes promettent une transition courte et restent.",
+    "Un coup en appelle un autre : Mali, Burkina Faso, Niger, Soudan.",
+    "Le coup installe l'idée que la force décide, ce que l'État de droit existe précisément pour empêcher.",
+  ]},
+]} />
 
 <ARetenir>
-1. Un coup d'État est la prise du pouvoir par une partie de l'État lui-même, contre les règles de succession.
-2. En 193, la garde prétorienne vend l'empire à Didius Julianus, qui règne 66 jours.
-3. Les deux Bonaparte (1799, 1851) prennent le pouvoir par la force puis le font ratifier par plébiscite, dont celui de 1800, falsifié.
-4. Le putsch d'Alger (1961) échoue en quatre jours parce que les soldats du contingent ne suivent pas.
-5. Depuis 2020, onze coups ont réussi en Afrique ; à Séoul en 2024, le Parlement a abrogé la loi martiale en six heures, et son auteur a été condamné à perpétuité.
+1. Un coup d'État est la capture d'un petit segment décisif de l'État pour retirer au gouvernement le contrôle du reste (Luttwak, 1968). Depuis 1950 : 497 tentatives, 248 réussies.
+2. Les conditions favorables : pauvreté, pouvoir concentré, absence de protecteur étranger, administration qui continue de fonctionner. Un premier coup en appelle d'autres (Londregan et Poole, 1990).
+3. Le déroulé : recruter peu, neutraliser chefs et communications en quelques heures, faire croire que la victoire est acquise (Singh, 2014), raconter un sauvetage, faire ratifier.
+4. Les échecs (Alger 1961, Madrid 1981, Moscou 1991, Ankara 2016, Séoul 2024) tiennent à un chef resté libre, des médias non tenus, des exécutants qui n'obéissent pas et une société qui descend dans la rue.
+5. Les années 1960 comptent 123 tentatives ; la décennie 2020, déjà 21 à la fin d'août 2026, concentrées au Sahel, avec une proportion de succès en hausse.
 </ARetenir>
 
 [^dio]: Dion Cassius, *Histoire romaine*, livre LXXIV, chapitre 11 (enchères à 20 000 puis 25 000 sesterces par soldat) et chapitre 17 (règne de soixante-six jours), traduction d'Earnest Cary, Loeb Classical Library.
+[^pt]: Jonathan Powell et Clayton Thyne, *Global Instances of Coups*, page de présentation (définition : « illegal and overt attempts by the military or other elites within the state apparatus to unseat the sitting executive ») et fichier du 29 août 2026, et « Global instances of coups from 1950 to 2010: A new dataset », *Journal of Peace Research*, 2011 ; décompte par décennie et par pays effectué sur le fichier (voir le jeu de données du graphique).
+[^luttwak]: Wikipédia, « Coup d'État: A Practical Handbook », qui résume les conditions préalables et cite Luttwak : « A coup consists of the infiltration of a small but critical segment of the state apparatus, which is then used to displace the government from its control of the remainder. » et « maximum speed in the transitional phase, and the need to fully neutralize the opposition both before and immediately after the coup ».
+[^londregan]: John Londregan et Keith Poole, « Poverty, the Coup Trap, and the Seizure of Executive Power », *World Politics*, 42(2), 1990, résumé.
+[^quinlivan]: James T. Quinlivan, « Coup-proofing: Its Practice and Consequences in the Middle East », *International Security*, 24(2), 1999.
+[^coupproofing]: Wikipédia, « Coup-proofing » (stratégies, coût pour l'efficacité militaire, étude de 2016 sur les armées ethniques).
+[^23f]: Wikipédia, « Coup d'État du 23 février 1981 ».
+[^malaparte]: Wikipédia, « Curzio Malaparte ».
+[^oeillets]: Wikipédia, « Révolution des Œillets ».
+[^chili]: Wikipédia, « Coup d'État du 11 septembre 1973 au Chili ».
+[^singh]: Naunihal Singh, *Seizing Power: The Strategic Logic of Military Coups*, Johns Hopkins University Press, 2014, analyse résumée dans Wikipédia, « 2016 Turkish coup attempt ».
+[^turquie]: Wikipédia, « 2016 Turkish coup attempt » (hélicoptère, appel FaceTime, plus de 300 morts, analyses de Luttwak, Singh et Kinney).
+[^moscou]: Wikipédia, « 1991 Soviet coup attempt » (Comité d'État pour l'état d'urgence, Eltsine sur le char, trois morts, soldats consignés).
+[^sahel]: Gabonmediatime, « Afrique : déjà 11 coups d'État réussis depuis 2020 » ; Wikipédia, « Ceinture de coups d'État ».
 [^an8]: Wikipédia, « Constitution of the Year VIII », qui cite l'étude de Claude Langlois parue dans les *Annales historiques de la Révolution française* en 1972.
 [^plebiscites]: Fondation Napoléon, « Les plébiscites, la difficile entrée dans la démocratie ».
 [^1961]: Hérodote, « 21 avril 1961 : le putsch des généraux » ; INA, déclaration du général de Gaulle du 23 avril 1961.
-[^actuel]: Gabonmediatime, « Afrique : déjà 11 coups d'État réussis depuis 2020 » ; Wikipédia, « Ceinture de coups d'État » ; Wikipédia, « 2024 South Korean martial law crisis » ; NPR, 19 février 2026.
+[^coree]: Wikipédia, « 2024 South Korean martial law crisis » ; NPR, 19 février 2026.

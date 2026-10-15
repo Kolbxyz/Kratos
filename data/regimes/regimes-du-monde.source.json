@@ -1,0 +1,8 @@
+{
+  "titre": "Nombre de pays par type de régime politique, 1900-2025",
+  "producteur": "V-Dem Institute (Université de Göteborg), classification Regimes of the World, traitée par Our World in Data",
+  "jeu": "Political regime, V-Dem (2026), mise à jour du 17 mars 2026",
+  "url": "https://ourworldindata.org/grapher/political-regime",
+  "traitement": "Comptage par année des pays (codes ISO, hors agrégats OWID) selon leur classe : 0 autocratie fermée et 1 autocratie électorale regroupées en « Autocraties », 2 démocratie électorale, 3 démocratie libérale.",
+  "consulte": "2026-10-15"
+}
