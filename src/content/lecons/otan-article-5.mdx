@@ -1,0 +1,138 @@
+---
+titre: "L'OTAN et l'article 5"
+resume: "Une phrase de 1949 promet que l'attaque d'un seul sera l'attaque de tous. Elle n'a servi qu'une fois, pour défendre les États-Unis. Ce qu'elle dit vraiment, ce qu'elle ne dit pas, et pourquoi tout le monde en reparle."
+parcours: militaire
+ordre: 3
+lecture_min: 12
+verifie_le: null
+sources:
+  - titre: "Le Traité de l'Atlantique Nord, Washington, 4 avril 1949 (texte et notes)"
+    auteur: "OTAN"
+    url: "https://www.nato.int/cps/fr/natohq/official_texts_17120.htm?selectedLocale=fr"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "La défense collective et l'article 5"
+    auteur: "OTAN"
+    url: "https://www.nato.int/cps/fr/natohq/topics_110496.htm?selectedLocale=fr"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Pays membres de l'OTAN"
+    auteur: "OTAN"
+    url: "https://www.nato.int/cps/fr/natohq/topics_52044.htm?selectedLocale=fr"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Hague Summit Declaration, 25 juin 2025"
+    auteur: "OTAN"
+    url: "https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2025/06/25/the-hague-summit-declaration"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Military expenditure (% of GDP), MS.MIL.XPND.GD.ZS"
+    auteur: "SIPRI, diffusé par la Banque mondiale"
+    url: "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Avis n° 3620 sur le protocole relatif au statut des quartiers généraux militaires de l'OTAN"
+    auteur: "Assemblée nationale, commission de la Défense"
+    url: "https://www.assemblee-nationale.fr/14/pdf/rapports/r3620.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+---
+import Chart from "../../components/Chart.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le jour où l'Europe a défendu l'Amérique
+
+On imagine l'article 5 comme une promesse américaine de défendre l'Europe contre l'Union soviétique. Pendant toute la guerre froide, il n'a pourtant jamais été invoqué. La première et unique fois, c'est le **12 septembre 2001**, au lendemain des attentats contre New York et Washington[^a5]. Et ce sont les Européens qui viennent au secours des États-Unis.
+
+Concrètement, des avions radar AWACS de l'OTAN patrouillent le ciel américain : 830 membres d'équipage de 13 pays alliés effectuent plus de 360 sorties. C'est la première fois que des moyens militaires de l'Alliance sont déployés pour une opération relevant de l'article 5[^a5].
+
+<div class="chiffres">
+  <Chiffre valeur="1 fois" label="où l'article 5 a été invoqué, après le 11 septembre 2001" source="OTAN, la défense collective" url="https://www.nato.int/cps/fr/natohq/topics_110496.htm?selectedLocale=fr" date="12 septembre 2001" forme="gemme" />
+  <Chiffre valeur="32" label="pays membres, après la Finlande (2023) et la Suède (2024)" source="OTAN, pays membres" url="https://www.nato.int/cps/fr/natohq/topics_52044.htm?selectedLocale=fr" date="depuis mars 2024" forme="soleil" />
+  <Chiffre valeur="5 %" label="du PIB pour la défense et la sécurité d'ici 2035, dont 3,5 % de défense au sens strict" source="Déclaration du sommet de La Haye" url="https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2025/06/25/the-hague-summit-declaration" date="25 juin 2025" forme="trefle" />
+</div>
+
+## Ce que dit l'article 5, mot à mot
+
+> « Les parties conviennent qu'une attaque armée contre l'une ou plusieurs d'entre elles survenant en Europe ou en Amérique du Nord sera considérée comme une attaque dirigée contre toutes les parties, et en conséquence elles conviennent que, si une telle attaque se produit, chacune d'elles, dans l'exercice du droit de légitime défense, individuelle ou collective, reconnu par l'article 51 de la Charte des Nations Unies, assistera la partie ou les parties ainsi attaquées en prenant aussitôt, individuellement et d'accord avec les autres parties, **telle action qu'elle jugera nécessaire**, y compris l'emploi de la force armée, pour rétablir et assurer la sécurité dans la région de l'Atlantique Nord. »
+>
+> Traité de l'Atlantique Nord, Washington, 4 avril 1949, article 5, alinéa 1.
+
+Lisez bien la fin. L'article 5 n'oblige **pas** à entrer en guerre. Chaque allié s'engage à assister l'attaqué par « telle action qu'elle jugera nécessaire », ce qui peut aller de l'envoi de troupes à une simple aide matérielle.
+
+**La force de l'article 5 ne vient donc pas de son texte, mais de la crédibilité de ceux qui le signent.** C'est la même logique que la dissuasion nucléaire.
+
+## Ce que l'article 5 ne couvre pas
+
+L'article 6 du traité définit le territoire protégé : l'Europe, l'Amérique du Nord, la Turquie, et les îles de l'Atlantique Nord **au nord du tropique du Cancer**. Conséquences étonnantes :
+
+<Positions items={[
+  { titre: "Couvert en 1949, plus aujourd'hui", forme: "arche", points: [
+    "Le traité mentionnait expressément les « départements français d'Algérie ».",
+    "Le 16 janvier 1963, le Conseil de l'Atlantique Nord a constaté que ces clauses étaient devenues inapplicables au 3 juillet 1962, date de l'indépendance.",
+  ]},
+  { titre: "Jamais couvert", forme: "gemme", points: [
+    "Les Antilles, la Guyane, La Réunion, Mayotte, la Polynésie et la Nouvelle-Calédonie, toutes au sud du tropique du Cancer.",
+    "Les Malouines non plus : l'article 5 ne pouvait pas s'appliquer à la guerre de 1982 entre le Royaume-Uni et l'Argentine, l'archipel étant dans l'Atlantique Sud.",
+  ]},
+]} />
+
+Sources : article 6 du traité et ses notes officielles[^traite].
+
+## Histoire : une alliance qui survit à sa raison d'être
+
+<Timeline items={[
+  { date: "4 avril 1949", texte: "Douze pays signent le traité à Washington, dont la France. Il entre en vigueur le 24 août 1949." },
+  { date: "1966", texte: "De Gaulle retire la France du commandement militaire intégré. Elle reste membre de l'Alliance." },
+  { date: "1991", texte: "Dissolution de l'URSS et du pacte de Varsovie. L'OTAN perd son adversaire, mais pas ses membres." },
+  { date: "12 septembre 2001", texte: "Première et unique invocation de l'<strong>article 5</strong>, après les attentats du 11 septembre." },
+  { date: "Avril 2009", texte: "Retour de la France dans les structures militaires intégrées." },
+  { date: "2014", texte: "Annexion de la Crimée par la Russie. Au sommet du pays de Galles, les alliés se fixent un repère : 2 % du PIB pour la défense." },
+  { date: "2023-2024", texte: "Après l'invasion de l'Ukraine, la Finlande (2023) puis la Suède (2024), neutres depuis des décennies, adhèrent." },
+  { date: "25 juin 2025", texte: "Sommet de La Haye : objectif de <strong>5 % du PIB</strong> d'ici 2035, dont 3,5 % pour la défense proprement dite." },
+]} />
+
+## Les données : qui paie ?
+
+<Chart
+  src="otan/depenses-militaires-allies"
+  kind="barX"
+  x="depenses_pib"
+  y="pays"
+  titre="Dépenses militaires de douze alliés, en % du PIB, 2025"
+  unite="% du PIB"
+  seuil={3.5}
+  seuilLabel="Objectif 2035 : 3,5 %"
+/>
+
+- **Le flanc est mène** : la Pologne (4,5 %), l'Estonie (3,4 %) et la Lituanie (3,1 %), voisines de la Russie ou du Bélarus, sont avec les États-Unis les seules de cet échantillon au-dessus de 3 %.
+- **Les États-Unis (3,1 %) restent au-dessus de leurs alliés d'Europe occidentale**, ce qui nourrit depuis des années le reproche américain de « passager clandestin ».
+- **La France (2,0 %) est sous l'objectif de 3,5 %** fixé pour 2035, comme l'Allemagne, l'Italie et l'Espagne. Il lui manque 1,5 point de PIB.
+
+## Le débat : l'article 5 tient-il encore ?
+
+**Ceux qui doutent :**
+
+- La formule « telle action qu'elle jugera nécessaire » laisse chaque allié libre de sa réponse. Une garantie floue peut tenter un agresseur de tester l'Alliance.
+- Plusieurs présidents américains, Donald Trump le plus ouvertement, ont conditionné l'engagement des États-Unis à l'effort de défense des Européens.
+- La dissuasion avancée française (voir la leçon sur la dissuasion) est aussi une réponse à ce doute.
+
+**Ceux qui y croient :**
+
+- En 76 ans, aucun allié n'a été envahi.
+- Les troupes alliées stationnées sur le flanc est (Pologne, États baltes, Roumanie) rendent une attaque contre un allié automatiquement une attaque contre des soldats de plusieurs pays.
+- Deux pays neutres depuis des décennies, la Finlande et la Suède, ont jugé en 2022 que l'article 5 valait d'abandonner leur neutralité.
+
+<ARetenir>
+1. L'article 5 considère l'attaque d'un allié comme une attaque contre tous, mais laisse chacun choisir « telle action qu'il jugera nécessaire ».
+2. Il n'a été invoqué qu'une fois, le 12 septembre 2001, pour défendre les États-Unis.
+3. Il ne couvre que le territoire au nord du tropique du Cancer : pas les outre-mer français du Sud, pas les Malouines.
+4. L'OTAN compte 32 membres depuis l'adhésion de la Suède en 2024.
+5. Objectif fixé à La Haye en 2025 : 5 % du PIB d'ici 2035, dont 3,5 % de défense au sens strict. La France est à 2,0 % en 2025.
+</ARetenir>
+
+[^a5]: OTAN, « La défense collective et l'article 5 » : invocation « pour la première et unique fois de son histoire » après le 11 septembre 2001 ; opération de patrouille aérienne (830 membres d'équipage de 13 pays, plus de 360 sorties).
+[^traite]: OTAN, Traité de l'Atlantique Nord, article 6 et notes 1 et 2 : modification par le protocole d'accession de la Grèce et de la Turquie (22 octobre 1951) ; constat du Conseil de l'Atlantique Nord du 16 janvier 1963 concernant les anciens départements français d'Algérie.

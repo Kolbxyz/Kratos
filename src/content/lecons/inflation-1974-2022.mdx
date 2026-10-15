@@ -1,0 +1,163 @@
+---
+titre: "L'inflation : 1974 et 2022"
+resume: "Deux chocs énergétiques à cinquante ans d'écart, deux flambées des prix, deux réponses opposées. Pourquoi l'inflation française a atteint 13,7 % en 1974 et seulement 5,2 % en 2022."
+parcours: economie
+ordre: 5
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "Inflation, consumer prices (annual %), FP.CPI.TOTL.ZG"
+    auteur: "Banque mondiale"
+    url: "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Great Inflation"
+    auteur: "Federal Reserve History"
+    url: "https://www.federalreservehistory.org/essays/great-inflation"
+    consulte: "2026-10-15"
+  - titre: "La flambée des prix de l'énergie : un effet sur l'inflation réduit de moitié par le « bouclier tarifaire » (Insee Analyses n° 75)"
+    auteur: "Insee"
+    url: "https://www.insee.fr/fr/statistiques/6524161"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Annual inflation up to 10.6% in the euro area (Euro indicators, 17 novembre 2022)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-17112022-ap"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Monetary policy decisions, 21 juillet 2022"
+    auteur: "Banque centrale européenne"
+    url: "https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.mp220721~53e5bdd317.en.html"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Economic Consequences of the Peace (1919), chapitre VI"
+    auteur: "John Maynard Keynes, Projet Gutenberg"
+    url: "https://www.gutenberg.org/cache/epub/15776/pg15776.txt"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Dossier : les années Mitterrand (dévaluations, désindexation des salaires)"
+    auteur: "Hérodote"
+    url: "https://www.herodote.net/dossier-74.php"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## L'impôt que personne ne vote
+
+En 1919, au lendemain de la Première Guerre mondiale, Keynes décrit dans un pamphlet célèbre le danger qui guette l'Europe ruinée. Ce n'est pas une révolution, c'est la planche à billets :
+
+<Citation auteur="John Maynard Keynes" oeuvre="Les Conséquences économiques de la paix" annee="1919" reference="Chapitre VI (traduction)" url="https://www.gutenberg.org/cache/epub/15776/pg15776.txt">
+  Par un processus continu d'inflation, les gouvernements peuvent confisquer, secrètement et sans être vus, une part importante de la richesse de leurs citoyens. Par cette méthode, non seulement ils confisquent, mais ils confisquent arbitrairement ; et, tandis que le processus appauvrit beaucoup de gens, il en enrichit en réalité quelques-uns.
+</Citation>
+
+Quatre ans plus tard, l'Allemagne de Weimar connaît l'hyperinflation. L'inflation n'est jamais seulement un chiffre : c'est un **transfert de richesse** des épargnants vers les débiteurs, des salariés mal protégés vers ceux qui fixent les prix. C'est pourquoi elle renverse des gouvernements.
+
+<div class="chiffres">
+  <Chiffre valeur="13,7 %" label="d'inflation en France en 1974, au premier choc pétrolier" source="Banque mondiale, FP.CPI.TOTL.ZG" url="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG" date="année 1974" forme="soleil" />
+  <Chiffre valeur="10,6 %" label="d'inflation dans la zone euro, record depuis la création de l'euro" source="Eurostat" url="https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-17112022-ap" date="octobre 2022" forme="trefle" />
+  <Chiffre valeur="3,1 pts" label="d'inflation évités en France par le « bouclier tarifaire »" source="Insee Analyses n° 75" url="https://www.insee.fr/fr/statistiques/6524161" date="T2 2021 à T2 2022" forme="biscuit" />
+</div>
+
+## L'idée centrale : d'où vient l'inflation ?
+
+Les économistes distinguent trois mécanismes, souvent mêlés :
+
+<Positions items={[
+  { titre: "Par la monnaie", sous_titre: "Inflation monétaire", forme: "biscuit", points: [
+    "Trop de monnaie pour trop peu de biens.",
+    "Cas extrême : l'Allemagne de 1923, le Zimbabwe des années 2000.",
+    "Remède : resserrer la création monétaire.",
+  ]},
+  { titre: "Par les coûts", sous_titre: "Inflation importée", forme: "gemme", points: [
+    "Un intrant essentiel (pétrole, gaz) renchérit brutalement.",
+    "Les entreprises répercutent la hausse sur leurs prix.",
+    "C'est le point de départ de 1973 comme de 2022.",
+  ]},
+  { titre: "Par la spirale", sous_titre: "Prix et salaires", forme: "trefle", points: [
+    "Les salaires suivent les prix, les prix suivent les salaires.",
+    "Les anticipations s'installent : chacun augmente parce qu'il s'attend à ce que tout augmente.",
+    "C'est ce qui transforme un choc en inflation durable.",
+  ]},
+]} />
+
+Toute la différence entre 1974 et 2022 tient dans le troisième mécanisme : **la spirale s'est déclenchée la première fois, pas la seconde.**
+
+## 1973-1983 : la grande inflation
+
+<Timeline items={[
+  { date: "Octobre 1973", texte: "Embargo pétrolier arabe. En quelques mois, le prix du brut est <strong>multiplié par quatre</strong>." },
+  { date: "1974", texte: "L'inflation française atteint <strong>13,7 %</strong>. Les salaires, souvent indexés sur les prix, suivent : la spirale est lancée." },
+  { date: "1979", texte: "Révolution iranienne : second choc pétrolier, le prix du pétrole est multiplié par trois. Paul Volcker prend la tête de la Réserve fédérale américaine." },
+  { date: "1980-1981", texte: "Volcker relève les taux d'intérêt jusqu'à provoquer une récession : l'inflation américaine reflue. En France, elle reste au-dessus de 13 %." },
+  { date: "1982-1983", texte: "Le gouvernement Mauroy, avec Jacques Delors aux Finances, bloque prix et salaires puis met fin à l'indexation automatique des salaires sur les prix. L'inflation française tombe à 5,8 % en 1985." },
+]} />
+
+Sources : Federal Reserve History (chocs pétroliers, Volcker), Hérodote (désindexation), Banque mondiale (taux d'inflation)[^grande].
+
+## 2022 : le retour
+
+<Chart
+  src="economie/inflation"
+  kind="line"
+  x="annee"
+  y="inflation"
+  series="pays"
+  titre="Inflation (prix à la consommation), variation annuelle en %, 1960-2025"
+  unite="%"
+  seuil={2}
+  seuilLabel="Cible de la BCE : 2 %"
+/>
+
+Lecture :
+
+- **Les deux bosses des années 1970** sont nettes en France et aux États-Unis : 13,7 % en France en 1974, 13,6 % aux États-Unis en 1980.
+- **L'Allemagne (alors la RFA) culmine à 7,0 %** en 1973. Sa banque centrale, la Bundesbank, est déjà indépendante du gouvernement.
+- **En 2022, le classement s'inverse** : l'Allemagne (6,9 %) dépasse la France (5,2 %), alors que les deux subissent le même choc gazier après l'invasion de l'Ukraine.
+
+Pourquoi la France s'en sort-elle mieux en 2022 ? Pour deux raisons :
+
+1. **Le bouclier tarifaire** : le gouvernement gèle les tarifs réglementés du gaz et plafonne la hausse de l'électricité. Selon l'Insee, l'inflation entre mi-2021 et mi-2022 aurait été **3,1 points plus élevée** sans ces mesures[^insee]. Le coût est reporté sur le budget de l'État, donc sur la dette.
+2. **Pas de spirale** : depuis 1983, les salaires ne sont plus indexés automatiquement sur les prix (seul le SMIC l'est). Les salaires réels ont donc baissé temporairement, au lieu d'alimenter la hausse.
+
+La Banque centrale européenne, elle, relève ses trois taux directeurs le 21 juillet 2022 de 0,50 point[^bce]. L'inflation française revient à 2,0 % en 2024 et à 0,9 % en 2025.
+
+## Ce que dit Volcker
+
+Le président de la Fed, qui a cassé l'inflation américaine au prix d'une récession, résumait ainsi sa philosophie en 1980 :
+
+<Citation auteur="Paul Volcker" oeuvre="Déclaration citée par Federal Reserve History" annee="1980" reference="Début 1980 (traduction)" url="https://www.federalreservehistory.org/essays/great-inflation">
+  Ma philosophie de base est qu'avec le temps, nous n'avons pas d'autre choix que de traiter l'inflation, parce qu'avec le temps, l'inflation et le chômage vont ensemble.
+</Citation>
+
+C'est le contraire de l'idée dominante des années 1960, selon laquelle on pouvait acheter moins de chômage au prix d'un peu plus d'inflation.
+
+## Le débat : qui doit payer un choc d'inflation ?
+
+**Le bouclier tarifaire (choix français de 2022) :**
+
+- Il protège immédiatement les ménages, surtout les plus modestes et les plus âgés, selon l'Insee.
+- Il casse les anticipations : sans flambée visible, pas de spirale.
+- Mais son coût est porté par le budget de l'État, donc par la dette, et il subventionne aussi les ménages aisés et la consommation d'énergie fossile.
+
+**Le choc monétaire (choix de Volcker en 1980) :**
+
+- Il traite la cause en freinant toute l'économie, sans subventionner.
+- Mais il passe par une récession et du chômage, qui frappent d'abord les plus fragiles.
+- Il ne peut rien contre la hausse du prix du gaz elle-même : la banque centrale ne produit pas d'énergie.
+
+<ARetenir>
+1. L'inflation transfère la richesse des créanciers et des salariés mal protégés vers les débiteurs : c'est un enjeu politique, pas seulement technique.
+2. 1974 et 2022 partent du même type de choc : une flambée du prix de l'énergie.
+3. En 1974, l'indexation des salaires déclenche une spirale : 13,7 % d'inflation en France. En 2022 : 5,2 %.
+4. La désindexation des salaires (1982-1983) et le bouclier tarifaire (3,1 points évités selon l'Insee) expliquent l'écart.
+5. En 2022, l'Allemagne (6,9 %) dépasse la France, l'inverse des années 1970. L'inflation française revient à 0,9 % en 2025.
+</ARetenir>
+
+[^grande]: Federal Reserve History, « The Great Inflation » : embargo d'octobre 1973 et prix du brut multiplié par quatre ; second choc de 1979 multipliant le prix par trois ; nomination de Paul Volcker en 1979. Hérodote, dossier sur les années Mitterrand : blocage des prix et des salaires en juin 1982, fin de l'indexation automatique des salaires.
+[^insee]: Insee, « La flambée des prix de l'énergie : un effet sur l'inflation réduit de moitié par le "bouclier tarifaire" », Insee Analyses n° 75, septembre 2022.
+[^bce]: Banque centrale européenne, décisions de politique monétaire du 21 juillet 2022 : hausse des trois taux directeurs de 50 points de base.

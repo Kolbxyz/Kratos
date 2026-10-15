@@ -1,0 +1,146 @@
+---
+titre: "Kelsen et la hiérarchie des normes"
+resume: "Pourquoi une loi votée par le Parlement peut-elle être annulée ? Parce qu'un juriste viennois a imaginé, en 1920, une pyramide où chaque règle tire sa force de celle du dessus."
+parcours: institutions
+ordre: 2
+lecture_min: 12
+verifie_le: null
+sources:
+  - titre: "Constitution du 4 octobre 1958, texte intégral en vigueur (articles 55, 61, 61-1, 88-1)"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 71-44 DC du 16 juillet 1971, Liberté d'association"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/1971/7144DC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 85-197 DC du 23 août 1985, Loi sur l'évolution de la Nouvelle-Calédonie"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/1985/85197DC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 2023-863 DC du 25 janvier 2024, communiqué de presse (loi immigration)"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Hans Kelsen (biographie, œuvres et controverse avec Carl Schmitt)"
+    auteur: "Wikipédia (versions française et anglaise)"
+    url: "https://en.wikipedia.org/wiki/Hans_Kelsen"
+    consulte: "2026-10-15"
+  - titre: "Hans Kelsen"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Hans_Kelsen"
+    consulte: "2026-10-15"
+---
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Pyramide from "../../components/Pyramide.astro";
+import Positions from "../../components/Positions.astro";
+
+## Une loi votée, puis effacée
+
+Décembre 2023 : après des mois de bataille, le Parlement adopte la loi « pour contrôler l'immigration, améliorer l'intégration ». Elle compte 86 articles. Le 25 janvier 2024, neuf membres du Conseil constitutionnel, que personne n'a élus, en censurent **35**[^imm]. Trente-deux parce qu'ils n'avaient aucun lien avec le texte d'origine (des « cavaliers législatifs »), trois sur le fond.
+
+<div class="chiffres">
+  <Chiffre valeur="35 / 86" label="articles de la loi immigration censurés, totalement ou partiellement" source="Conseil constitutionnel, décision 2023-863 DC" url="https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse" date="25 janvier 2024" forme="arche" />
+  <Chiffre valeur="1920" label="première cour constitutionnelle spécialisée d'Europe, en Autriche, pensée par Kelsen" source="Wikipédia, Hans Kelsen" url="https://en.wikipedia.org/wiki/Hans_Kelsen" date="Constitution autrichienne de 1920" forme="gemme" />
+</div>
+
+Comment une assemblée élue peut-elle être désavouée par un juge ? La réponse tient en une image, celle d'une pyramide, et en un nom : Hans Kelsen.
+
+## L'idée centrale : chaque règle tire sa validité d'une règle supérieure
+
+Né à Prague en 1881, professeur à Vienne, Kelsen veut faire du droit une science « pure », débarrassée de la morale et de la politique. Sa question est simple : **pourquoi une règle est-elle obligatoire ?** Pas parce qu'elle est juste, répond-il, mais parce qu'elle a été produite **conformément à une règle supérieure** qui habilite son auteur.
+
+- Un arrêté du préfet est valide parce qu'un décret l'autorise.
+- Le décret est valide parce qu'une loi ou la Constitution le permet.
+- La loi est valide parce que la Constitution organise le Parlement.
+- Et la Constitution ? Kelsen suppose une **norme fondamentale** (*Grundnorm*), une hypothèse logique qui ferme la chaîne.
+
+Le droit forme donc un **ordre hiérarchisé**. Une règle inférieure contraire à une règle supérieure est un défaut de l'édifice, et il faut un juge pour le réparer. Appliqué au droit français actuel, cela donne :
+
+<Pyramide
+  niveaux={[
+    { nom: "Bloc de constitutionnalité", exemples: "Constitution de 1958, Déclaration de 1789, Préambule de 1946, Charte de l'environnement (2004)" },
+    { nom: "Traités et droit de l'Union", exemples: "Supérieurs aux lois depuis l'article 55 de la Constitution" },
+    { nom: "Lois et ordonnances ratifiées", exemples: "Votées par le Parlement (article 34)" },
+    { nom: "Règlements", exemples: "Décrets du Premier ministre et du président (article 37)" },
+    { nom: "Actes administratifs", exemples: "Arrêtés ministériels, préfectoraux, municipaux" },
+  ]}
+  legende="La hiérarchie des normes en France. Sources : Constitution, articles 34, 37, 55 ; décision 71-44 DC."
+/>
+
+<p class="note">La place exacte des traités face à la Constitution est disputée : pour le Conseil d'État et le Conseil constitutionnel, la Constitution reste au sommet de l'ordre interne ; pour la Cour de justice de l'Union, le droit européen prime sur tout droit national. C'est l'objet de la leçon « De Costa à Nicolo ».</p>
+
+## 1920 : le juge qui contrôle la loi
+
+Kelsen ne se contente pas de théoriser. Il participe à la rédaction de la **Constitution autrichienne de 1920**, qui crée une juridiction inédite : une **Cour constitutionnelle** spécialisée, seule habilitée à annuler une loi contraire à la Constitution. Il y siège lui-même comme juge[^kelsen].
+
+C'est le « modèle européen », opposé au modèle américain où n'importe quel juge peut écarter une loi inconstitutionnelle (depuis l'arrêt *Marbury v. Madison*, 1803). Après 1945, l'Allemagne (1951), l'Italie (1956), puis l'Espagne et le Portugal après leurs dictatures adoptent le modèle kelsénien.
+
+## Le grand duel : qui doit garder la Constitution ?
+
+En 1931, sous la république de Weimar, le juriste Carl Schmitt publie *Der Hüter der Verfassung* (« Le gardien de la Constitution ») : le vrai gardien, dit-il, doit être le président du Reich, au-dessus des partis. Kelsen réplique la même année par *Qui doit être le gardien de la Constitution ?*[^kelsen].
+
+<Positions items={[
+  { titre: "Hans Kelsen", sous_titre: "Wer soll der Hüter der Verfassung sein?, 1931", forme: "arche", points: [
+    "Le gardien doit être un <strong>juge</strong>, indépendant des partis et du pouvoir exécutif.",
+    "Une Constitution sans sanction juridictionnelle n'est qu'un vœu.",
+    "La démocratie, c'est aussi la protection de la minorité contre la majorité.",
+  ]},
+  { titre: "Carl Schmitt", sous_titre: "Der Hüter der Verfassung, 1931", forme: "gemme", points: [
+    "Le gardien doit être le <strong>chef de l'État</strong>, incarnation de l'unité du peuple.",
+    "Un tribunal qui tranche des questions politiques devient un acteur politique.",
+    "Dans la crise, la décision compte plus que la norme.",
+  ]},
+]} />
+
+L'histoire tranche brutalement. En 1933, Hitler gouverne par décrets présidentiels, Schmitt adhère au parti nazi, et Kelsen, d'origine juive, perd sa chaire à Cologne. Il émigre, enseigne à Genève puis à Berkeley, où il meurt en 1973[^kelsen]. Après la guerre, c'est son modèle, et non celui de Schmitt, que reprennent les démocraties européennes.
+
+## La France, convertie tardivement
+
+La tradition républicaine française se méfie des juges depuis 1789 : la loi, « expression de la volonté générale » (article 6 de la Déclaration), ne saurait être contrôlée. En 1958, le Conseil constitutionnel est d'abord pensé pour **protéger le gouvernement contre le Parlement**, pas les citoyens contre la loi.
+
+<Timeline items={[
+  { date: "4 octobre 1958", texte: "La Constitution crée le Conseil constitutionnel. Il contrôle les lois avant leur promulgation, sur saisine de quatre autorités seulement." },
+  { date: "16 juillet 1971", texte: "Décision <strong>Liberté d'association</strong> : le Conseil s'appuie sur le Préambule pour censurer une loi. Les droits fondamentaux entrent au sommet de la pyramide." },
+  { date: "29 octobre 1974", texte: "Révision : 60 députés ou 60 sénateurs peuvent saisir le Conseil. L'opposition obtient une arme." },
+  { date: "23 août 1985", texte: "Le Conseil formule la doctrine kelsénienne en une phrase (voir ci-dessous)." },
+  { date: "1er mars 2010", texte: "Entrée en vigueur de la <strong>question prioritaire de constitutionnalité</strong> : tout justiciable peut contester une loi déjà appliquée." },
+]} />
+
+<Citation auteur="Conseil constitutionnel" oeuvre="Décision n° 85-197 DC" annee="1985" reference="23 août 1985, considérant 27" url="https://www.conseil-constitutionnel.fr/decision/1985/85197DC.htm">
+  La loi votée [...] n'exprime la volonté générale que dans le respect de la Constitution.
+</Citation>
+
+Cette phrase renverse deux siècles de culture politique : la souveraineté de la loi cède devant la hiérarchie des normes.
+
+## Le débat : gouvernement des juges ?
+
+**Pour le contrôle de constitutionnalité :**
+
+- Sans juge, la Constitution n'est qu'une déclaration d'intentions : une majorité pourrait voter n'importe quoi.
+- Il protège les droits des minorités, que la majorité du moment peut être tentée d'écraser.
+- Le dernier mot reste au peuple : une décision du Conseil peut être contournée par une révision de la Constitution.
+
+**Contre ses excès :**
+
+- Neuf membres nommés, non élus, peuvent annuler le travail de 925 parlementaires élus.
+- Les normes constitutionnelles sont rédigées en termes généraux (« égalité », « dignité », « fraternité ») : les interpréter revient à faire des choix politiques, ce que redoutait Schmitt.
+- Les nominations, faites par le président de la République et les présidents des deux assemblées, sont politiques.
+
+<ARetenir>
+1. Pour Kelsen, une norme est valide parce qu'elle a été produite conformément à une norme supérieure, pas parce qu'elle est juste.
+2. Le droit forme une pyramide : Constitution, traités, lois, règlements, actes administratifs.
+3. En 1920, Kelsen conçoit en Autriche la première cour constitutionnelle spécialisée, modèle repris dans l'Europe d'après-guerre.
+4. En France, la décision de 1971 fait entrer les droits fondamentaux dans le contrôle, et la QPC l'ouvre aux citoyens depuis 2010.
+5. Le 25 janvier 2024, le Conseil censure 35 des 86 articles de la loi immigration.
+</ARetenir>
+
+[^imm]: Conseil constitutionnel, communiqué de presse de la décision n° 2023-863 DC du 25 janvier 2024 : 32 articles censurés comme cavaliers législatifs, 3 censurés au fond, partiellement ou totalement.
+[^kelsen]: Biographie : Wikipédia, articles « Hans Kelsen » (français et anglais), qui citent notamment Hans Kelsen, *Reine Rechtslehre*, Vienne, 1934 (2e éd. 1960), et *Wer soll der Hüter der Verfassung sein?*, 1931 (trad. française : *Qui doit être le gardien de la Constitution ?*, Michel Houdiard, 2006).

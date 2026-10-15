@@ -1,0 +1,151 @@
+---
+titre: "Qui détient la dette française ?"
+resume: "La dette publique dépasse 115 % du PIB. Mais à qui la France doit-elle cet argent, et pourquoi la réponse change tout au rapport de force entre un État et les marchés ?"
+parcours: economie
+ordre: 1
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "Dette publique brute au sens de Maastricht (gov_10dd_edpt1)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Bulletin mensuel n° 434, juillet 2026 : détention de la dette négociable de l'État au 1er trimestre 2026 (données Banque de France)"
+    auteur: "Agence France Trésor"
+    url: "https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/434_Bulletin%20mensuel%20juillet%202026.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Programme d'achats d'actifs (APP)"
+    auteur: "Banque centrale européenne"
+    url: "https://www.ecb.europa.eu/mopo/implement/app/html/index.fr.html"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Amendement n° 10 au projet de loi n° 2694 (exposé sommaire citant les données de l'Agence France Trésor)"
+    auteur: "Assemblée nationale"
+    url: "https://www.assemblee-nationale.fr/dyn/17/amendements/2694/AN/10"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Wealth of Nations, livre V, chapitre 3 : Of Public Debts"
+    auteur: "Adam Smith, sur Wikisource"
+    url: "https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_V/Chapter_3"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Growth in a Time of Debt (NBER Working Paper 15639)"
+    auteur: "Carmen Reinhart et Kenneth Rogoff"
+    url: "https://www.nber.org/papers/w15639"
+    consulte: "2026-10-15"
+  - titre: "Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff"
+    auteur: "Thomas Herndon, Michael Ash et Robert Pollin, Cambridge Journal of Economics"
+    url: "https://doi.org/10.1093/cje/bet075"
+    consulte: "2026-10-15"
+  - titre: "Public Debt and Low Interest Rates"
+    auteur: "Olivier Blanchard, American Economic Review"
+    url: "https://doi.org/10.1257/aer.109.4.1197"
+    consulte: "2026-10-15"
+  - titre: "Are Government Bonds Net Wealth?"
+    auteur: "Robert Barro, Journal of Political Economy"
+    url: "https://doi.org/10.1086/260266"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+
+## Plus d'un euro sur deux vient de l'étranger
+
+Au 31 mars 2026, **57,5 %** des titres de dette négociable de l'État français étaient détenus par des non-résidents[^aft]. Fin 2025, cette part était de 56,0 %[^aft2025]. Plus de la moitié des obligations émises par Paris appartient donc à des investisseurs étrangers.
+
+<div class="chiffres">
+  <Chiffre valeur="115,6 %" label="du PIB : dette publique brute de la France" source="Eurostat, gov_10dd_edpt1" url="https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table" date="année 2025" forme="biscuit" />
+  <Chiffre valeur="57,5 %" label="de la dette négociable de l'État détenue par des non-résidents" source="Agence France Trésor, bulletin n° 434" url="https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/434_Bulletin%20mensuel%20juillet%202026.pdf" date="1er trimestre 2026" forme="fleur" />
+</div>
+
+Le reste se répartit ainsi : 20,6 % pour les autres résidents, essentiellement l'Eurosystème (la Banque de France), 10,5 % pour les banques françaises, 9,6 % pour les assureurs français et 1,8 % pour les fonds (OPCVM) français[^aft]. Un État qui doit au reste du monde ne négocie pas avec les mêmes interlocuteurs qu'un État qui doit à ses propres épargnants.
+
+Pour comprendre la dette, il faut donc poser deux questions : combien, et à qui ?
+
+## L'idée centrale : la dette est un flux, pas un stock
+
+Le chiffre qui fait les titres, la dette rapportée au PIB, est un stock. Mais ce qui le fait bouger, ce sont trois flux :
+
+1. **Le solde primaire** : recettes moins dépenses, *hors* intérêts. S'il est négatif, l'État emprunte pour fonctionner.
+2. **Le taux d'intérêt moyen (r)** payé sur la dette existante.
+3. **La croissance nominale du PIB (g)**, inflation comprise.
+
+D'une année sur l'autre, le ratio de dette augmente d'environ (r − g) × dette, moins le solde primaire. C'est l'« effet boule de neige » : si les taux dépassent la croissance, la dette grossit d'elle-même, même avec un budget à l'équilibre hors intérêts. Si la croissance dépasse les taux, elle fond toute seule.
+
+Cette inégalité, **r contre g**, est l'une des questions centrales de la macroéconomie depuis vingt ans.
+
+## Les données : la France a changé de catégorie
+
+<Chart
+  src="dette/dette-pib"
+  kind="line"
+  x="annee"
+  y="dette_pib"
+  series="pays"
+  titre="Dette publique brute, en % du PIB, 1995-2025"
+  unite="% du PIB"
+/>
+
+Ce graphique raconte trois histoires :
+
+- **En 1995, France et Allemagne étaient au coude à coude**, autour de 55 à 58 % du PIB. En 2025, l'écart dépasse 50 points : 115,6 % contre 63,5 %.
+- **Chaque crise fait monter la marche, aucune reprise ne la fait redescendre.** La crise financière de 2008-2009, puis le Covid en 2020 (114,9 %), ont fait bondir la dette française, qui n'est jamais revenue au niveau d'avant.
+- **L'Italie reste au-dessus**, mais l'écart avec la France s'est nettement réduit, de 61,3 points en 1995 à 21,5 points en 2025.
+
+Le traité de Maastricht (1992) fixe deux repères pour les pays de l'Union : un déficit public inférieur à 3 % du PIB et une dette inférieure à **60 %**. La France n'est plus repassée sous ce second seuil depuis 2002.
+
+## Histoire : comment la dette a changé de mains
+
+<Timeline items={[
+  { date: "8 février 2001", texte: "Un arrêté crée l'<strong>Agence France Trésor</strong>, chargée de gérer la dette et la trésorerie de l'État." },
+  { date: "9 mars 2015", texte: "L'Eurosystème commence ses achats nets de titres publics (programme PSPP). Via la Banque de France, il devient l'un des plus gros détenteurs d'obligations françaises." },
+  { date: "Mars 2020", texte: "La BCE lance un programme d'urgence face à la pandémie (PEPP) : les achats de dette publique s'accélèrent." },
+  { date: "Juillet 2023", texte: "L'Eurosystème cesse de réinvestir les titres du programme d'achats arrivés à échéance. Les investisseurs privés, souvent étrangers, prennent le relais." },
+]} />
+
+Dates : Banque centrale européenne et Journal officiel[^bce].
+
+Le retrait de la banque centrale se lit dans les chiffres : entre fin 2025 et le 1er trimestre 2026, la part des non-résidents passe de 56,0 % à 57,5 %[^aft], et les assureurs français ne détiennent plus que 9,6 % de la dette négociable de l'État.
+
+## Ce qu'en disent les penseurs
+
+L'inquiétude n'est pas nouvelle. En 1776, Adam Smith observe déjà les finances des monarchies européennes :
+
+<Citation auteur="Adam Smith" oeuvre="The Wealth of Nations" annee="1776" reference="Livre V, chapitre 3, « Of Public Debts » (traduction)" url="https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_V/Chapter_3">
+  Les progrès des dettes énormes qui accablent aujourd'hui, et qui finiront probablement par ruiner, toutes les grandes nations d'Europe ont été assez uniformes.
+</Citation>
+
+<p class="note">Texte original : « The progress of the enormous debts which at present oppress, and will in the long run probably ruin, all the great nations of Europe, has been pretty uniform. »</p>
+
+Deux siècles et demi plus tard, aucune de ces nations n'a été « ruinée » par sa dette au sens où Smith l'entendait, mais plusieurs ont connu des défauts, des crises de change ou des inflations destructrices. Le débat porte sur les conditions, pas sur le principe.
+
+## Le débat : quel niveau est dangereux ?
+
+**L'école de l'alerte.** En 2010, Carmen Reinhart et Kenneth Rogoff publient une étude célèbre : au-delà de 90 % du PIB, la croissance des pays avancés chuterait nettement[^rr]. Le chiffre devient un argument politique majeur des politiques d'austérité en Europe. Robert Barro avait par ailleurs formalisé dès 1974 l'idée d'**équivalence ricardienne** : les ménages, anticipant les impôts futurs nécessaires pour rembourser, épargneraient davantage, ce qui annulerait l'effet de relance de la dette[^barro].
+
+**Le coup de théâtre de 2013.** Trois chercheurs de l'université du Massachusetts, Thomas Herndon, Michael Ash et Robert Pollin, reprennent les données de Reinhart et Rogoff. Ils y trouvent une erreur de tableur, des pays exclus et une pondération discutable. Une fois corrigés, les résultats ne montrent plus de seuil brutal à 90 %[^hap].
+
+**L'école de la soutenabilité.** En 2019, Olivier Blanchard, ancien économiste en chef du FMI, souligne que lorsque r reste durablement inférieur à g, une dette publique peut avoir un coût budgétaire faible, voire nul[^blanchard]. Mais cet argument dépend des taux. Depuis la remontée de 2022, l'écart s'est réduit pour la France.
+
+**Ce qui fait consensus :** il n'existe pas de seuil magique. Le danger dépend du taux d'intérêt, de la croissance, de la maturité de la dette, de la confiance des créanciers et de la crédibilité politique du pays. C'est précisément là que la question « à qui ? » devient décisive : des créanciers étrangers peuvent vendre plus vite et plus facilement que des épargnants nationaux.
+
+<ARetenir>
+1. Fin 2025, la dette publique française atteint 115,6 % du PIB (Eurostat), contre 57,8 % en 1995.
+2. 57,5 % de la dette négociable de l'État est détenue par des non-résidents (AFT, 1er trimestre 2026).
+3. La dette évolue selon l'écart entre taux d'intérêt (r) et croissance (g), et selon le solde primaire.
+4. Le seuil de 90 % de Reinhart et Rogoff a été fortement contesté après la découverte d'erreurs en 2013.
+5. Il n'y a pas de seuil magique : la soutenabilité dépend des taux, de la croissance et de la confiance des créanciers.
+</ARetenir>
+
+[^aft]: Agence France Trésor, *Bulletin mensuel* n° 434, juillet 2026, répartition de la dette négociable de l'État par groupe de porteurs au 1er trimestre 2026, en valeur de marché (données Banque de France).
+[^aft2025]: Agence France Trésor, données du 4e trimestre 2025, citées dans l'exposé sommaire de l'amendement n° 10 au projet de loi n° 2694, Assemblée nationale.
+[^bce]: Dates des programmes : Banque centrale européenne, pages du programme d'achats d'actifs (APP) et du programme d'urgence face à la pandémie (PEPP, https://www.ecb.europa.eu/mopo/implement/pepp/html/index.fr.html). Création de l'AFT : arrêté du 8 février 2001 portant création d'un service à compétence nationale dénommé « Agence France Trésor ».
+[^rr]: Carmen Reinhart et Kenneth Rogoff, « Growth in a Time of Debt », NBER Working Paper 15639, 2010.
+[^barro]: Robert Barro, « Are Government Bonds Net Wealth? », Journal of Political Economy, vol. 82, n° 6, 1974.
+[^hap]: Thomas Herndon, Michael Ash et Robert Pollin, « Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff », Cambridge Journal of Economics, vol. 38, n° 2, 2014 (document de travail publié en avril 2013).
+[^blanchard]: Olivier Blanchard, « Public Debt and Low Interest Rates », American Economic Review, vol. 109, n° 4, 2019.

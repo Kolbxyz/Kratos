@@ -1,0 +1,153 @@
+---
+titre: "Keynes contre Hayek"
+resume: "L'un veut que l'État relance l'économie, l'autre qu'il s'efface devant les prix. Leur duel, commencé en 1931, structure encore chaque budget, chaque crise et chaque « quoi qu'il en coûte »."
+parcours: economie
+ordre: 3
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "The General Theory of Employment, Interest and Money (1936), chapitres 12 et 24"
+    auteur: "John Maynard Keynes, texte publié par marxists.org"
+    url: "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch24.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The General Theory, chapitre 12 : The State of Long-Term Expectation"
+    auteur: "John Maynard Keynes, texte publié par marxists.org"
+    url: "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1974"
+    auteur: "Fondation Nobel"
+    url: "https://www.nobelprize.org/prizes/economic-sciences/1974/summary/"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Adresse aux Français, 12 mars 2020"
+    auteur: "Emmanuel Macron, Présidence de la République"
+    url: "https://www.elysee.fr/emmanuel-macron/2020/03/12/adresse-aux-francais"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Dépenses des administrations publiques (gov_10a_main)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "John Maynard Keynes and Friedrich Hayek (correspondance, dont la lettre du 28 juin 1944, d'après les Collected Writings, vol. 27)"
+    auteur: "Wikiquote"
+    url: "https://en.wikiquote.org/wiki/John_Maynard_Keynes_and_Friedrich_Hayek"
+    consulte: "2026-10-15"
+  - titre: "Hayek versus Keynes: The Road to Reconciliation"
+    auteur: "Robert Skidelsky"
+    url: "https://robertskidelsky.com/2006/09/17/hayek-versus-keynes-the-road-to-reconciliation/"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Une lettre écrite sur le chemin de Bretton Woods
+
+Juin 1944. John Maynard Keynes traverse l'Atlantique pour négocier, à Bretton Woods, l'ordre monétaire d'après-guerre. Dans ses bagages, le livre de son plus célèbre adversaire : *La Route de la servitude*, de Friedrich Hayek, paru quelques mois plus tôt. Hayek y soutient que la planification économique mène, pas à pas, au totalitarisme.
+
+Le 28 juin, Keynes lui écrit depuis Atlantic City. Sa lettre surprend : moralement et philosophiquement, il se dit en accord avec la quasi-totalité du livre. Puis vient la critique : Hayek reconnaît lui-même qu'il faut tracer une limite entre marché et État, mais ne dit jamais où[^lettre].
+
+Toute la querelle est là. Pas entre un ami et un ennemi de la liberté, mais entre deux réponses à la même question : **que doit faire l'État quand l'économie s'effondre ?**
+
+<div class="chiffres">
+  <Chiffre valeur="57,2 %" label="du PIB : dépenses publiques de la France, contre 49,5 % pour l'Union européenne" source="Eurostat, gov_10a_main" url="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table" date="année 2025" forme="biscuit" />
+  <Chiffre valeur="61,7 %" label="le pic de 2020, année du « quoi qu'il en coûte »" source="Eurostat, gov_10a_main" url="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table" date="année 2020" forme="trefle" />
+</div>
+
+## Deux visions de la crise
+
+<Positions items={[
+  { titre: "Keynes", sous_titre: "Théorie générale, 1936", forme: "biscuit", points: [
+    "Une crise vient d'un <strong>manque de demande</strong> : ménages et entreprises, inquiets, cessent de dépenser.",
+    "Le marché peut rester bloqué longtemps avec un chômage massif : il ne se rétablit pas seul.",
+    "L'État doit alors <strong>dépenser</strong>, quitte à s'endetter, pour relancer la demande.",
+    "Les décisions d'investir dépendent des « esprits animaux », pas d'un calcul rationnel.",
+  ]},
+  { titre: "Hayek", sous_titre: "Prix et production, 1931 ; La Route de la servitude, 1944", forme: "gemme", points: [
+    "Une crise vient d'un <strong>excès de crédit</strong> passé : la monnaie trop abondante a provoqué de mauvais investissements.",
+    "La récession est la purge de ces erreurs. Relancer, c'est les prolonger.",
+    "Les <strong>prix</strong> transmettent une information dispersée qu'aucun planificateur ne peut réunir.",
+    "Plus l'État dirige l'économie, plus il doit diriger les vies : c'est la « route de la servitude ».",
+  ]},
+]} />
+
+Keynes résume sa défiance envers la mécanique pure par une formule devenue célèbre :
+
+<Citation auteur="John Maynard Keynes" oeuvre="Théorie générale de l'emploi, de l'intérêt et de la monnaie" annee="1936" reference="Chapitre 12, section VII (traduction)" url="https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm">
+  La plupart, probablement, de nos décisions de faire quelque chose de positif, dont les conséquences complètes s'étaleront sur de nombreux jours, ne peuvent être prises que sous l'effet des esprits animaux : d'un besoin spontané d'agir plutôt que de ne rien faire.
+</Citation>
+
+## Histoire : un siècle de balancier
+
+<Timeline items={[
+  { date: "1931", texte: "Invité à la London School of Economics, Hayek donne les conférences publiées sous le titre <em>Prix et production</em>. Il devient le contradicteur attitré de Keynes, à Cambridge." },
+  { date: "1936", texte: "Keynes publie la <strong>Théorie générale</strong>. Après la guerre, elle inspire les politiques économiques de tout l'Occident." },
+  { date: "1944", texte: "Hayek publie <strong>La Route de la servitude</strong>. Keynes lui écrit le 28 juin, avant Bretton Woods." },
+  { date: "1974", texte: "Hayek reçoit le prix de la Banque de Suède en sciences économiques, partagé avec Gunnar Myrdal, figure de la social-démocratie suédoise." },
+  { date: "Années 1970", texte: "La « stagflation » (inflation et chômage en même temps) met en échec les recettes keynésiennes. Le balancier part vers le marché." },
+  { date: "2008-2009", texte: "Crise financière mondiale : les gouvernements relancent massivement. Retour de Keynes." },
+  { date: "12 mars 2020", texte: "Covid : Emmanuel Macron annonce que l'État protégera salariés et entreprises « quoi qu'il en coûte »." },
+]} />
+
+Dates : Fondation Nobel (1974), Élysée (2020), Skidelsky (1931-1944)[^dates].
+
+## Les données : la France, championne de la dépense
+
+<Chart
+  src="economie/depenses-publiques"
+  kind="line"
+  x="annee"
+  y="depenses_pib"
+  series="pays"
+  titre="Dépenses totales des administrations publiques, en % du PIB, 1995-2025"
+  unite="% du PIB"
+/>
+
+Trois lectures :
+
+- **Chaque crise fait bondir la dépense** : 2009 (58,0 % en France), puis 2020 (61,7 %). C'est le réflexe keynésien des « stabilisateurs automatiques » : les recettes fiscales chutent, les dépenses sociales montent.
+- **La France ne redescend jamais à son niveau d'avant-crise.** En 2025, elle dépense 57,2 % de son PIB, contre 53,6 % en 2007.
+- **L'écart avec l'Allemagne est passé de 0,9 point en 1995 à 6,7 points en 2025** (50,5 %).
+
+## Ce qu'en dit Keynes lui-même
+
+La dernière page de la *Théorie générale* est un avertissement adressé à tous ceux qui croient décider en toute indépendance :
+
+<Citation auteur="John Maynard Keynes" oeuvre="Théorie générale de l'emploi, de l'intérêt et de la monnaie" annee="1936" reference="Chapitre 24, section V (traduction)" url="https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch24.htm">
+  Les hommes d'action qui se croient parfaitement affranchis des influences doctrinales sont d'ordinaire les esclaves de quelque économiste défunt. [...] Ce sont les idées, et non les intérêts constitués, qui sont dangereuses, pour le bien comme pour le mal.
+</Citation>
+
+<p class="note">Texte original : « Practical men, who believe themselves to be quite exempt from any intellectual influences, are usually the slaves of some defunct economist. [...] it is ideas, not vested interests, which are dangerous for good or evil. »</p>
+
+Ironie : le « défunt économiste » que citent aujourd'hui les gouvernements, c'est souvent Keynes lui-même, mort en 1946. Et leurs adversaires citent Hayek.
+
+## Le débat aujourd'hui
+
+**Avec Keynes :**
+
+- Sans le « quoi qu'il en coûte », les faillites et licenciements de 2020 auraient été bien plus nombreux.
+- Une dépense publique utile (infrastructures, recherche, transition énergétique) peut accroître la croissance future.
+- En récession, couper les dépenses aggrave la crise : c'est la leçon que de nombreux économistes tirent de l'austérité européenne après 2010.
+
+**Avec Hayek :**
+
+- La dépense de crise devient permanente : la France n'a pas retrouvé son niveau de 2007.
+- La dette accumulée réduit les marges pour la crise suivante (voir la leçon sur la dette).
+- Plus la dépense publique pèse, plus les choix économiques passent par la décision politique plutôt que par les prix.
+
+<ARetenir>
+1. Pour Keynes, une crise est un manque de demande que l'État doit compenser en dépensant.
+2. Pour Hayek, une crise est la correction d'un excès de crédit, et les prix portent une information que l'État ne peut remplacer.
+3. Leur désaccord porte sur la limite entre marché et État, pas sur la liberté : Keynes partageait les valeurs de Hayek (lettre du 28 juin 1944).
+4. Les dépenses publiques françaises atteignent 57,2 % du PIB en 2025, contre 49,5 % dans l'Union européenne (Eurostat).
+5. Le balancier : keynésianisme après 1945, Hayek et le marché après les années 1970, retour de la relance en 2008 et 2020.
+</ARetenir>
+
+[^lettre]: Lettre de John Maynard Keynes à Friedrich Hayek, Atlantic City, 28 juin 1944, *Collected Writings of John Maynard Keynes*, vol. 27, p. 385, citée par Wikiquote et analysée par Robert Skidelsky.
+[^dates]: Fondation Nobel, prix 1974 « pour leurs travaux pionniers sur la théorie de la monnaie et des fluctuations économiques » ; Emmanuel Macron, adresse aux Français du 12 mars 2020 ; Robert Skidelsky, « Hayek versus Keynes: The Road to Reconciliation », 2006.

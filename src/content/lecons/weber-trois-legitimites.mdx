@@ -1,0 +1,143 @@
+---
+titre: "Weber et les trois légitimités"
+resume: "Pourquoi obéit-on ? Par habitude, par fascination pour un chef, ou parce que la règle est la règle. La grille de Max Weber (1919) explique encore de Gaulle, les maires et la crise de confiance de 2026."
+parcours: pouvoir
+ordre: 1
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "Politik als Beruf (1919), conférence devant le Freistudentischer Bund, Munich"
+    auteur: "Max Weber, sur Wikisource (édition Duncker & Humblot, 1919)"
+    url: "https://de.wikisource.org/wiki/Politik_als_Beruf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Baromètre de la confiance politique, vague 17, premiers résultats (février 2026)"
+    auteur: "CEVIPOF, Sciences Po"
+    url: "https://www.sciencespo.fr/cevipof/sites/sciencespo.fr.cevipof/files/BaroConf2026_infographieFChanvril_V17_PremiersResultats.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "En 1969, le référendum qui chasse de Gaulle de l'Élysée"
+    auteur: "Public Sénat"
+    url: "https://www.publicsenat.fr/article/politique/en-1969-le-referendum-qui-chasse-de-gaulle-de-l-elysee-140357"
+    consulte: "2026-10-15"
+  - titre: "27 avril 1969 : de Gaulle perd son référendum"
+    auteur: "Hérodote"
+    url: "https://www.herodote.net/almanach-ID-807.php"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Munich, janvier 1919
+
+L'Allemagne vient de perdre la guerre. L'empereur a abdiqué, des conseils ouvriers et de soldats se forment, la Bavière est au bord de la révolution. Devant des étudiants munichois, le sociologue Max Weber, 54 ans, donne une conférence au titre sobre : *Politik als Beruf*, « la politique comme métier » (ou « comme vocation », le mot allemand dit les deux)[^weber].
+
+Ses auditeurs veulent entendre parler de révolution et de morale. Weber commence par une définition froide, devenue la plus citée de la science politique :
+
+<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conférence de Munich (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf">
+  L'État est cette communauté humaine qui, à l'intérieur d'un territoire déterminé, revendique avec succès pour elle-même le monopole de la violence physique légitime.
+</Citation>
+
+<p class="note">Texte original : « Staat ist diejenige menschliche Gemeinschaft, welche innerhalb eines bestimmten Gebietes [...] das Monopol legitimer physischer Gewaltsamkeit für sich (mit Erfolg) beansprucht. »</p>
+
+Chaque mot compte. **Monopole** : les autres (familles, milices, seigneurs) n'ont le droit d'user de la force que si l'État le permet. **Légitime** : la force seule ne suffit pas, il faut que les gouvernés l'acceptent. D'où la vraie question de Weber : **pourquoi les hommes obéissent-ils ?**
+
+<div class="chiffres">
+  <Chiffre valeur="22 %" label="des Français font confiance à la politique, 4 points de moins qu'en 2025" source="CEVIPOF, baromètre vague 17" url="https://www.sciencespo.fr/cevipof/sites/sciencespo.fr.cevipof/files/BaroConf2026_infographieFChanvril_V17_PremiersResultats.pdf" date="février 2026" forme="soleil" />
+  <Chiffre valeur="82 %" label="jugent pourtant qu'un système démocratique est une bonne chose" source="CEVIPOF, baromètre vague 17" url="https://www.sciencespo.fr/cevipof/sites/sciencespo.fr.cevipof/files/BaroConf2026_infographieFChanvril_V17_PremiersResultats.pdf" date="février 2026" forme="fleur" />
+</div>
+
+## L'idée centrale : trois raisons d'obéir
+
+Weber répond qu'il existe « en principe trois » fondements de légitimité. Ce sont des **types idéaux** : aucun pouvoir réel n'est pur, tous mélangent les trois.
+
+<Positions items={[
+  { titre: "Traditionnelle", sous_titre: "L'autorité de « l'éternel hier »", forme: "arche", points: [
+    "On obéit parce qu'il en a toujours été ainsi : la coutume est sacrée.",
+    "Figures : le patriarche, le prince héréditaire.",
+    "En France : la monarchie de droit divin, jusqu'en 1789.",
+  ]},
+  { titre: "Charismatique", sous_titre: "Le don de grâce personnel", forme: "soleil", points: [
+    "On obéit à une personne, pour ses qualités extraordinaires : héroïsme, révélation, exemplarité.",
+    "Figures : le prophète, le chef de guerre, et, écrit Weber, « le grand démagogue ».",
+    "En France : de Gaulle le 18 juin 1940, sans mandat ni armée.",
+  ]},
+  { titre: "Légale-rationnelle", sous_titre: "La croyance en la validité de la règle", forme: "gemme", points: [
+    "On obéit à une fonction définie par des règles, pas à une personne.",
+    "Figure : le fonctionnaire moderne, le « serviteur de l'État ».",
+    "En France : le préfet, le juge, la Constitution elle-même.",
+  ]},
+]} />
+
+La phrase originale vaut d'être lue : le charisme est celui du prophète ou, dans le domaine politique, du « chef de guerre élu, du souverain plébiscitaire, du grand démagogue et du chef de parti »[^weber]. Weber n'en fait pas un compliment : c'est une description.
+
+## La Ve République, laboratoire des trois légitimités
+
+La France de 1958 est un cas d'école. La Constitution crée un pouvoir **légal-rationnel**, mais taillé pour un homme dont la légitimité est d'abord **charismatique**.
+
+<Timeline items={[
+  { date: "18 juin 1940", texte: "Un général de brigade à titre temporaire parle à la BBC. Il n'a ni gouvernement ni armée : sa légitimité est purement charismatique." },
+  { date: "28 septembre 1958", texte: "La Constitution est approuvée par référendum : le charisme se coule dans des règles." },
+  { date: "28 octobre 1962", texte: "Référendum sur l'élection du président au suffrage universel direct : de Gaulle veut que ses successeurs, sans son histoire, tirent leur autorité directement du peuple." },
+  { date: "27 avril 1969", texte: "Référendum sur les régions et le Sénat : le non l'emporte avec <strong>52,41 %</strong>. Dans la nuit, de Gaulle annonce qu'il cesse d'exercer ses fonctions. Le charisme, désavoué, se retire." },
+]} />
+
+Sources : Public Sénat et Hérodote (1969)[^1969].
+
+Dans *Économie et société* (posthume, 1922), Weber a un nom pour ce que fait de Gaulle en 1962 : la **routinisation du charisme** (*Veralltäglichung*). Un pouvoir fondé sur une personne exceptionnelle doit, pour survivre à cette personne, se transformer en institution. L'élection présidentielle au suffrage universel transforme le charisme du fondateur en procédure.
+
+## Les données : à qui les Français font-ils confiance ?
+
+<Chart
+  src="pouvoir/confiance-2026"
+  kind="barX"
+  x="confiance"
+  y="acteur"
+  titre="Part des Français qui font confiance à…, en %, janvier 2026"
+  unite="% de confiance"
+/>
+
+Lu avec Weber, ce graphique dit quelque chose de précis :
+
+- **Les institutions qui servent sans discourir** (hôpitaux, 79 %) gardent une légitimité forte. Le maire (60 %), proche et connu, aussi.
+- **Les institutions politiques nationales s'effondrent** : Assemblée nationale (20 %, « niveau historiquement bas » selon le CEVIPOF), président (18 %), partis (15 %).
+- Pourtant, 82 % des Français jugent qu'un système démocratique est une bonne chose. **Ce n'est pas la légalité qui est rejetée, ce sont ceux qui l'incarnent.** Le terrain, selon Weber, sur lequel prospère la demande de charisme.
+
+## Le politique de vocation
+
+Weber termine sa conférence sur un avertissement aux idéalistes : l'éthique de **conviction** (agir selon ses principes, quelles qu'en soient les conséquences) ne suffit pas en politique. Il faut aussi une éthique de **responsabilité** (répondre des conséquences prévisibles de ses actes). Et il conclut :
+
+<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conclusion (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf">
+  La politique consiste à percer lentement et vigoureusement des planches dures, avec à la fois de la passion et du coup d'œil.
+</Citation>
+
+<p class="note">Texte original : « Die Politik bedeutet ein starkes langsames Bohren von harten Brettern mit Leidenschaft und Augenmaß zugleich. »</p>
+
+## Le débat : faut-il craindre le retour du charisme ?
+
+**Le charisme, danger :**
+
+- Weber lui-même le range aux côtés du « grand démagogue » : il ne connaît pas de limite légale.
+- L'Allemagne des années 1930 a montré ce que produit un chef charismatique au mépris des règles.
+- Une démocratie qui attend un sauveur abandonne ses procédures.
+
+**Le charisme, nécessité :**
+
+- Weber redoutait une administration sans véritable chef politique, où personne ne décide ni n'assume.
+- Les grandes ruptures (1940, 1958) sont venues de personnalités, pas de procédures.
+- La Ve République a justement tenté d'encadrer le charisme par le droit : élection, mandat limité, Conseil constitutionnel.
+
+<ARetenir>
+1. L'État revendique « avec succès » le monopole de la violence physique légitime (Weber, 1919).
+2. Trois fondements de la légitimité : la tradition, le charisme, la légalité rationnelle. Aucun pouvoir réel n'est pur.
+3. De Gaulle illustre le passage du charisme (1940) à l'institution (1958, 1962), puis son retrait quand le peuple le désavoue (1969, 52,41 % de non).
+4. En 2026, 22 % des Français font confiance à la politique, mais 82 % restent attachés à la démocratie (CEVIPOF).
+5. Éthique de conviction et éthique de responsabilité : le politique doit répondre des conséquences de ses actes.
+</ARetenir>
+
+[^weber]: Max Weber, *Politik als Beruf*, conférence prononcée devant le Freistudentischer Bund de Munich, publiée chez Duncker & Humblot en 1919 (texte intégral sur Wikisource allemand).
+[^1969]: Public Sénat, « En 1969, le référendum qui chasse de Gaulle de l'Élysée » ; Hérodote, « 27 avril 1969 ». Le référendum de 1958 est sourcé dans la leçon sur le 49.3.

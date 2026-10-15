@@ -1,0 +1,130 @@
+---
+titre: "Le Conseil constitutionnel et la QPC"
+resume: "Depuis 2010, n'importe quel justiciable peut faire tomber une loi. Garde à vue, harcèlement sexuel, délit de solidarité : comment la QPC a changé le rapport entre le citoyen et le législateur."
+parcours: institutions
+ordre: 3
+lecture_min: 12
+verifie_le: null
+sources:
+  - titre: "Constitution du 4 octobre 1958, article 61-1"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Bilan statistique, premier semestre 2026"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/bilan-statistique/juin-2026"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 2010-14/22 QPC du 30 juillet 2010, Garde à vue"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/2010/201014_22QPC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 2012-240 QPC du 4 mai 2012, Définition du délit de harcèlement sexuel"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/2012/2012240QPC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 2018-717/718 QPC du 6 juillet 2018, Délit d'aide à l'entrée, à la circulation ou au séjour irréguliers d'un étranger"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/2018/2018717_718QPC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le jour où une loi est tombée en pleine audience
+
+Le 4 mai 2012, toutes les poursuites pour harcèlement sexuel qui n'ont pas encore été définitivement jugées s'effondrent. Le Conseil constitutionnel vient d'abroger l'article 222-33 du code pénal, qui définissait ce délit en termes trop vagues : l'abrogation « prend effet à compter de la publication » et s'applique « à toutes les affaires non jugées définitivement »[^harc]. Le Parlement doit voter une nouvelle définition en urgence.
+
+Qui a déclenché cette abrogation ? Ni le gouvernement, ni l'opposition. **Un justiciable**, poursuivi dans une affaire, qui a soulevé une **question prioritaire de constitutionnalité** (QPC).
+
+<div class="chiffres">
+  <Chiffre valeur="1 091" label="décisions QPC rendues depuis le 1er mars 2010" source="Conseil constitutionnel, bilan statistique" url="https://www.conseil-constitutionnel.fr/bilan-statistique/juin-2026" date="au 30 juin 2026" forme="arche" />
+  <Chiffre valeur="32 %" label="se concluent par une censure totale (269) ou partielle (79)" source="Conseil constitutionnel, bilan statistique" url="https://www.conseil-constitutionnel.fr/bilan-statistique/juin-2026" date="au 30 juin 2026" forme="trefle" />
+</div>
+
+## L'idée centrale : contrôler la loi après coup
+
+Jusqu'en 2010, une loi française ne pouvait être contrôlée qu'**avant** sa promulgation (contrôle *a priori*), et seulement si le président, le Premier ministre, un président d'assemblée ou 60 parlementaires saisissaient le Conseil. Une loi jamais déférée, ou votée avant 1958, était intouchable, même si elle violait les droits fondamentaux.
+
+La révision constitutionnelle du 23 juillet 2008 crée l'**article 61-1** :
+
+> « Lorsque, à l'occasion d'une instance en cours devant une juridiction, il est soutenu qu'une disposition législative porte atteinte aux droits et libertés que la Constitution garantit, le Conseil constitutionnel peut être saisi de cette question sur renvoi du Conseil d'État ou de la Cour de cassation qui se prononce dans un délai déterminé. »
+>
+> Constitution du 4 octobre 1958, article 61-1, alinéa 1.
+
+Le mécanisme fonctionne comme un **double filtre** :
+
+1. Un justiciable soulève la question devant n'importe quel tribunal, dans n'importe quel procès.
+2. Le juge vérifie qu'elle est sérieuse et la transmet au **Conseil d'État** (juridictions administratives) ou à la **Cour de cassation** (juridictions judiciaires).
+3. Ces cours suprêmes décident de renvoyer, ou non, au **Conseil constitutionnel**. Depuis 2010, le Conseil d'État a renvoyé 558 QPC et la Cour de cassation 676[^bilan].
+4. Le Conseil juge la loi. S'il la censure, elle disparaît **pour tout le monde**, pas seulement pour le requérant.
+
+## Les données : un contentieux devenu ordinaire
+
+<Chart
+  src="qpc/decisions-par-an"
+  kind="barX"
+  x="decisions"
+  y="annee"
+  titre="Décisions QPC rendues par le Conseil constitutionnel, par année, 2010-2026"
+  unite="décisions"
+/>
+
+- **2011 est l'année record (110 décisions)** : les avocats ont d'abord visé les lois anciennes que personne n'avait pu contester.
+- **Le rythme s'est stabilisé entre 40 et 80 décisions par an.** La QPC représente désormais l'essentiel de l'activité du Conseil : 55 décisions QPC contre 26 décisions DC (contrôle *a priori*) en 2025[^bilan].
+- **Un tiers de censures** : sur 1 091 décisions, 697 concluent à la conformité, 348 à une non-conformité totale ou partielle[^bilan].
+
+## Trois décisions qui ont changé la vie des gens
+
+<Timeline items={[
+  { date: "30 juillet 2010", texte: "<strong>Garde à vue.</strong> Le Conseil juge contraires à la Constitution les articles du code de procédure pénale qui l'encadrent, faute notamment d'une assistance effective de l'avocat. Il reporte l'abrogation au 1er juillet 2011 pour laisser le législateur réécrire la loi." },
+  { date: "4 mai 2012", texte: "<strong>Harcèlement sexuel.</strong> Délit défini de manière trop imprécise : abrogation immédiate. Une nouvelle loi est promulguée le 6 août 2012." },
+  { date: "6 juillet 2018", texte: "<strong>Délit de solidarité.</strong> Saisi par l'agriculteur Cédric Herrou, poursuivi pour avoir aidé des migrants dans la vallée de la Roya, le Conseil consacre la valeur constitutionnelle du principe de fraternité." },
+]} />
+
+La décision de 2018 est la plus étonnante : la devise républicaine « Liberté, Égalité, Fraternité » figure à l'article 2 de la Constitution depuis 1958, mais le troisième mot n'avait jamais produit d'effet juridique.
+
+<Citation auteur="Conseil constitutionnel" oeuvre="Décision n° 2018-717/718 QPC" annee="2018" reference="6 juillet 2018, paragraphe 8" url="https://www.conseil-constitutionnel.fr/decision/2018/2018717_718QPC.htm">
+  Il découle du principe de fraternité la liberté d'aider autrui, dans un but humanitaire, sans considération de la régularité de son séjour sur le territoire national.
+</Citation>
+
+## Le pouvoir de dire quand la loi meurt
+
+Le Conseil ne se contente pas de censurer : il **choisit la date** à laquelle la censure prend effet. Pour la garde à vue, une abrogation immédiate aurait, selon ses propres termes, entraîné « des conséquences manifestement excessives » pour la recherche des auteurs d'infractions[^gav]. Il a donc laissé onze mois au Parlement.
+
+C'est un pouvoir considérable : le juge constitutionnel ne dit pas seulement ce qui est conforme, il **organise le calendrier du législateur**.
+
+## Le débat
+
+<Positions items={[
+  { titre: "Une conquête démocratique", sous_titre: "Arguments des partisans", forme: "fleur", points: [
+    "Le citoyen n'est plus spectateur : il peut contester la loi qu'on lui applique.",
+    "Les lois anciennes, jamais contrôlées, sont enfin passées au crible des droits fondamentaux.",
+    "La France rattrape ses voisins, où le recours individuel existe depuis des décennies (Allemagne, Espagne).",
+  ]},
+  { titre: "Un juge trop puissant ?", sous_titre: "Arguments des critiques", forme: "gemme", points: [
+    "Le Conseil arbitre désormais des choix de société (immigration, bioéthique, fiscalité) sans légitimité élective.",
+    "Ses neuf membres nommés le sont par trois autorités politiques, et les anciens présidents de la République en sont membres de droit (article 56).",
+    "Le double filtre laisse aux cours suprêmes le pouvoir de bloquer une question.",
+  ]},
+]} />
+
+<ARetenir>
+1. Depuis le 1er mars 2010, tout justiciable peut contester une loi déjà en vigueur qui porte atteinte à ses droits (article 61-1).
+2. La question passe un double filtre : le juge saisi, puis le Conseil d'État ou la Cour de cassation.
+3. 1 091 décisions QPC au 30 juin 2026, dont 32 % de censures totales ou partielles.
+4. La garde à vue (2010), le harcèlement sexuel (2012) et le délit de solidarité (2018) ont été réécrits après une QPC.
+5. Le Conseil choisit la date d'effet de ses censures : il organise le calendrier du législateur.
+</ARetenir>
+
+[^harc]: Conseil constitutionnel, décision n° 2012-240 QPC du 4 mai 2012, considérant 7.
+[^bilan]: Conseil constitutionnel, bilan statistique au 30 juin 2026 : 1 091 décisions QPC (697 conformités, 79 non-conformités partielles, 269 non-conformités totales, 46 autres solutions) ; saisines venant du Conseil d'État (558) et de la Cour de cassation (676).
+[^gav]: Conseil constitutionnel, décision n° 2010-14/22 QPC du 30 juillet 2010, considérant 30.

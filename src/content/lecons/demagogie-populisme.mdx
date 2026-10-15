@@ -1,0 +1,159 @@
+---
+titre: "Démagogie et populisme : comment meurent les démocraties"
+resume: "Une galère qui rame toute la nuit pour annuler un massacre voté par Athènes, un best-seller interdit en prison, un Premier ministre populiste battu dans les urnes : ce que la démagogie fait aux démocraties."
+parcours: pouvoir
+ordre: 5
+lecture_min: 14
+verifie_le: null
+sources:
+  - titre: "Histoire de la guerre du Péloponnèse, livre III, 36-49 (traduction de Richard Crawley)"
+    auteur: "Thucydide, Projet Gutenberg"
+    url: "https://www.gutenberg.org/ebooks/7142"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "How Democracies Die (Crown, 2018)"
+    auteur: "Steven Levitsky et Daniel Ziblatt, présentation et synthèse sur Wikipédia"
+    url: "https://en.wikipedia.org/wiki/How_Democracies_Die"
+    consulte: "2026-10-15"
+  - titre: "Populism (approche idéelle, définition de Cas Mudde, 2004)"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Populism"
+    consulte: "2026-10-15"
+  - titre: "The 48 Laws of Power (Robert Greene, 1998)"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/The_48_Laws_of_Power"
+    consulte: "2026-10-15"
+  - titre: "Élection présidentielle française de 2022 (et éditions précédentes)"
+    auteur: "Wikipédia, d'après les résultats proclamés par le Conseil constitutionnel"
+    url: "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2022"
+    consulte: "2026-10-15"
+  - titre: "Hungary election 2026 results: Péter Magyar wins, Viktor Orbán concedes"
+    auteur: "CNN"
+    url: "https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar"
+    consulte: "2026-10-15"
+  - titre: "2026 Hungarian parliamentary election"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/2026_Hungarian_parliamentary_election"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## La course de la galère
+
+Athènes, 427 avant notre ère. La cité de Mytilène, sur l'île de Lesbos, s'est révoltée contre l'empire athénien. Sous le coup de la colère, l'assemblée du peuple vote une décision terrible : mettre à mort **toute la population masculine adulte** de Mytilène et réduire en esclavage les femmes et les enfants. Une trière part aussitôt porter l'ordre.
+
+Le lendemain, beaucoup d'Athéniens regrettent. L'assemblée se réunit à nouveau. L'homme qui avait fait voter le massacre reprend la parole. Thucydide le présente ainsi :
+
+<Citation auteur="Thucydide" oeuvre="Histoire de la guerre du Péloponnèse" annee="Ve siècle av. J.-C." reference="Livre III, 36 (traduit de la version anglaise de R. Crawley)" url="https://www.gutenberg.org/ebooks/7142">
+  Cléon, fils de Cléénète, celui-là même qui avait fait voter la mise à mort des Mytiléniens, l'homme le plus violent d'Athènes, et alors de loin le plus puissant auprès du peuple.
+</Citation>
+
+Cléon perd de justesse : le vote à main levée est « presque égal ». Une seconde trière part en catastrophe, avec un jour et une nuit de retard. Ses rameurs mangent de la farine d'orge pétrie au vin et à l'huile **sans lâcher les rames**, et dorment à tour de rôle. Elle arrive alors que le général athénien vient tout juste de lire le décret : le massacre est évité de quelques instants[^thucydide].
+
+Le mot « démagogue » vient du grec *dêmagôgos*, celui qui conduit le peuple. Cléon en est resté le modèle : un orateur qui transforme la colère du moment en décision irréversible.
+
+<div class="chiffres">
+  <Chiffre valeur="23,15 %" label="pour Marine Le Pen au premier tour de 2022, contre 0,75 % pour son père en 1974" source="Résultats officiels, Wikipédia" url="https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2022" date="10 avril 2022" forme="gemme" />
+  <Chiffre valeur="16 ans" label="de pouvoir de Viktor Orbán, battu dans les urnes, qui reconnaît sa défaite le soir même" source="CNN" url="https://www.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar" date="12 avril 2026" forme="soleil" />
+</div>
+
+## L'idée centrale : qu'est-ce que le populisme ?
+
+Le mot est devenu une insulte. La science politique en donne pourtant une définition précise. Pour le politologue néerlandais Cas Mudde (2004), le populisme est une **idéologie « mince »** qui divise la société en deux groupes homogènes et antagonistes, **« le peuple pur » et « l'élite corrompue »**, et qui veut que la politique exprime la volonté générale du peuple[^mudde].
+
+« Mince », parce qu'elle s'accroche à des idéologies plus épaisses, de droite comme de gauche :
+
+<Positions items={[
+  { titre: "Populisme de droite", sous_titre: "Le peuple contre les élites et contre l'étranger", forme: "gemme", points: [
+    "Le peuple est défini par la nation, la culture, parfois l'origine.",
+    "L'élite est accusée de trahir la nation (immigration, Europe, mondialisation).",
+    "Cas Mudde range le Front national parmi les partis de la droite radicale populiste.",
+  ]},
+  { titre: "Populisme de gauche", sous_titre: "Le peuple contre l'oligarchie", forme: "trefle", points: [
+    "Le peuple est défini par la condition sociale : « les 99 % ».",
+    "L'élite est la finance, les grandes fortunes, les technocrates.",
+    "La philosophe Chantal Mouffe en fait une stratégie dans <em>Pour un populisme de gauche</em> (2018).",
+  ]},
+]} />
+
+Le populisme n'est donc pas un programme, c'est une **façon de découper le monde**. Et ce découpage a une conséquence : si le peuple est un et pur, alors **celui qui s'oppose au chef du peuple n'est pas un adversaire, mais un traître**.
+
+## Les données : la montée française
+
+<Chart
+  src="pouvoir/presidentielles-premier-tour"
+  kind="line"
+  x="annee"
+  y="score"
+  series="candidat"
+  titre="Score au premier tour de la présidentielle, en % des suffrages exprimés, 1974-2022"
+  unite="% des exprimés"
+/>
+
+- **De 0,75 % (1974) à 23,15 % (2022)** : le Front national puis Rassemblement national a été multiplié par trente en cinquante ans. Jean-Marie Le Pen n'a pas pu se présenter en 1981, faute des parrainages nécessaires.
+- **2002 est une rupture** : avec 16,86 %, Jean-Marie Le Pen se qualifie pour le second tour.
+- **Depuis 2017, les deux candidats qui opposent le plus frontalement « le peuple » et « le système »** totalisent plus de 40 % des voix au premier tour (21,30 + 19,58 en 2017 ; 23,15 + 21,95 en 2022).
+
+## Comment meurent les démocraties
+
+En 2018, deux politologues de Harvard, Steven Levitsky et Daniel Ziblatt, publient *How Democracies Die*. Leur thèse renverse l'image du coup d'État (voir la leçon précédente) : aujourd'hui, **les démocraties meurent rarement sous les chars, et le plus souvent par les urnes**, quand un dirigeant élu démantèle peu à peu les contre-pouvoirs.
+
+Ils proposent quatre signaux d'alerte pour repérer un dirigeant autoritaire avant qu'il ne prenne le pouvoir :
+
+1. **Il rejette, en paroles ou en actes, les règles du jeu démocratique** (contester d'avance un résultat électoral, suggérer de suspendre la Constitution).
+2. **Il nie la légitimité de ses adversaires** (les traiter de traîtres, de criminels, d'ennemis du peuple).
+3. **Il tolère ou encourage la violence** de ses partisans.
+4. **Il se dit prêt à restreindre les libertés de ses opposants**, y compris des médias.
+
+Selon eux, une démocratie ne tient pas d'abord par sa Constitution, mais par deux **normes non écrites** : la **tolérance mutuelle** (accepter que l'adversaire gouverne s'il gagne) et la **retenue** (ne pas user de tous ses pouvoirs légaux jusqu'au bout, par exemple en remplissant les tribunaux de juges amis)[^ld].
+
+## Le manuel du manipulateur
+
+En 1998, l'Américain Robert Greene publie *Les 48 Lois du pouvoir*, un recueil de règles tirées de Machiavel, de Sun Tzu et d'anecdotes historiques (« Ne surpassez jamais le maître », « Dissimulez vos intentions », « Attirez l'attention à tout prix »). Le livre s'est vendu à plus de **1,2 million d'exemplaires aux États-Unis**, traduit en 24 langues, et a été **interdit dans plusieurs prisons américaines**[^greene].
+
+Son succès dit quelque chose : il ne décrit pas comment servir le bien commun, mais comment **gagner** le pouvoir et le garder. C'est la démagogie vue de l'intérieur, sans le garde-fou que Machiavel lui-même posait : ne jamais se faire haïr.
+
+## Quand la démocratie tient
+
+<Timeline items={[
+  { date: "427 av. J.-C.", texte: "Athènes revient sur le massacre de Mytilène voté la veille. L'assemblée corrige sa propre colère." },
+  { date: "2010-2026", texte: "En Hongrie, Viktor Orbán gouverne seize ans avec une majorité des deux tiers, modifie la Constitution et la loi électorale." },
+  { date: "12 avril 2026", texte: "Le parti Tisza de Péter Magyar remporte les législatives hongroises avec une majorité des deux tiers. Orbán reconnaît sa défaite le soir même, jugeant le résultat « douloureux » mais « clair »." },
+]} />
+
+Sources : Thucydide, CNN, Wikipédia[^hongrie].
+
+L'exemple hongrois nourrit les deux camps. Pour les uns, il prouve que même une démocratie « illibérale » garde des élections assez libres pour qu'un pouvoir en place les perde. Pour les autres, il a fallu seize ans et une mobilisation exceptionnelle (participation de 79 %) pour y parvenir.
+
+## Le débat
+
+**Le populisme, symptôme utile :**
+
+- Il donne une voix à des électeurs que les partis de gouvernement ont délaissés (désindustrialisation, voir la leçon sur Ricardo).
+- Il rappelle que la démocratie, c'est d'abord le pouvoir du peuple, pas celui des experts.
+- La plupart des partis populistes européens participent aux élections et en respectent les résultats.
+
+**Le populisme, danger :**
+
+- En opposant un peuple « pur » à des élites « corrompues », il rend tout compromis impossible : l'adversaire devient un ennemi.
+- Il s'en prend en priorité aux contre-pouvoirs non élus (juges, presse, autorités indépendantes), au nom de la volonté populaire.
+- Les quatre signaux de Levitsky et Ziblatt se retrouvent dans la plupart des glissements autoritaires du XXIe siècle.
+
+<ARetenir>
+1. Le démagogue transforme la colère du moment en décision : Cléon fait voter le massacre de Mytilène en 427 av. J.-C., annulé de justesse.
+2. Le populisme (Mudde, 2004) oppose un « peuple pur » à une « élite corrompue » ; il existe à droite comme à gauche.
+3. En France, le FN puis RN passe de 0,75 % (1974) à 23,15 % (2022) au premier tour de la présidentielle.
+4. Levitsky et Ziblatt : les démocraties meurent aujourd'hui par les urnes ; quatre signaux d'alerte, deux normes non écrites (tolérance mutuelle et retenue).
+5. Le 12 avril 2026, Viktor Orbán perd les élections hongroises et reconnaît sa défaite.
+</ARetenir>
+
+[^thucydide]: Thucydide, *Histoire de la guerre du Péloponnèse*, livre III, 36 (premier vote et présentation de Cléon) et 49 (vote presque égal, course de la seconde trière, massacre évité), traduction de Richard Crawley, Projet Gutenberg.
+[^mudde]: Cas Mudde, « The Populist Zeitgeist », *Government and Opposition*, 2004, cité par Wikipédia, « Populism » ; Cas Mudde, *Populist Radical Right Parties in Europe*, Cambridge University Press, 2007 ; Chantal Mouffe, *Pour un populisme de gauche*, Albin Michel, 2018.
+[^ld]: Steven Levitsky et Daniel Ziblatt, *How Democracies Die*, Crown, 2018, chapitre 1 (indicateurs) et chapitre 5 (tolérance mutuelle et retenue institutionnelle).
+[^greene]: Wikipédia, « The 48 Laws of Power » : ventes, traductions et interdictions dans plusieurs prisons américaines.
+[^hongrie]: CNN, 12 avril 2026 ; Wikipédia, « 2026 Hungarian parliamentary election » (participation de 78,99 %).

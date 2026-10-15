@@ -1,0 +1,143 @@
+---
+titre: "Ricardo et la mondialisation"
+resume: "Pourquoi le Portugal, meilleur que l'Angleterre en tout, a-t-il intérêt à commercer avec elle ? L'idée la plus contre-intuitive de l'économie, et ce que l'entrée de la Chine dans l'OMC lui a fait subir."
+parcours: economie
+ordre: 4
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "On the Principles of Political Economy and Taxation (1817), chapitre 7 : On Foreign Trade"
+    auteur: "David Ricardo, texte publié par marxists.org"
+    url: "https://www.marxists.org/reference/subject/economics/ricardo/tax/ch07.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Pétition des fabricants de chandelles (Sophismes économiques, 1845)"
+    auteur: "Frédéric Bastiat, sur Wikisource"
+    url: "https://fr.wikisource.org/wiki/P%C3%A9tition_des_fabricants_de_chandelles"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Trade (% of GDP), NE.TRD.GNFS.ZS"
+    auteur: "Banque mondiale"
+    url: "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Background Information on China's Accession to the World Trade Organization"
+    auteur: "Office of the United States Trade Representative"
+    url: "https://www.ustr.gov/archive/Document_Library/Fact_Sheets/2001/Background_Information_on_China's_Accession_to_the_World_Trade_Organization.html"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The China Syndrome: Local Labor Market Effects of Import Competition in the United States (NBER Working Paper 18054 ; American Economic Review, 2013)"
+    auteur: "David Autor, David Dorn et Gordon Hanson"
+    url: "https://www.nber.org/papers/w18054"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## La pétition contre le soleil
+
+En 1845, l'économiste landais Frédéric Bastiat publie une fausse pétition adressée à la Chambre des députés. Ses signataires, les fabricants de chandelles, se plaignent d'une concurrence déloyale :
+
+<Citation auteur="Frédéric Bastiat" oeuvre="Sophismes économiques" annee="1845" reference="« Pétition des fabricants de chandelles, bougies, lampes [...] »" url="https://fr.wikisource.org/wiki/P%C3%A9tition_des_fabricants_de_chandelles">
+  Ce rival, qui n'est autre que le soleil, nous fait une guerre si acharnée, que nous soupçonnons qu'il nous est suscité par la perfide Albion.
+</Citation>
+
+Ils demandent donc une loi qui ordonne « la fermeture de toutes fenêtres, lucarnes, abat-jour, contre-vents, volets ». L'absurdité est le but : protéger un producteur national contre un produit moins cher, c'est appauvrir tous les consommateurs. Mais Bastiat ne fait que vulgariser un raisonnement plus fin, publié vingt-huit ans plus tôt par un agent de change londonien devenu économiste : David Ricardo.
+
+<div class="chiffres">
+  <Chiffre valeur="32,9 → 76 %" label="part du commerce dans le PIB français, de 1970 au record de 2022" source="Banque mondiale, NE.TRD.GNFS.ZS" url="https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS" date="1970-2022" forme="biscuit" />
+  <Chiffre valeur="1/4" label="du recul de l'emploi industriel américain (1990-2007) expliqué par les importations chinoises, au minimum" source="Autor, Dorn et Hanson, NBER" url="https://www.nber.org/papers/w18054" date="2012-2013" forme="gemme" />
+</div>
+
+## L'idée centrale : l'avantage comparatif
+
+L'intuition commune dit : un pays doit produire ce qu'il fait **mieux que les autres**. Ricardo démontre que c'est faux. Il suffit qu'il le fasse **relativement** mieux. Son exemple de 1817 : l'Angleterre et le Portugal, le drap et le vin.
+
+<Positions items={[
+  { titre: "Angleterre", sous_titre: "Travail nécessaire pendant un an", forme: "arche", points: [
+    "Drap : <strong>100 hommes</strong>",
+    "Vin : <strong>120 hommes</strong>",
+    "Moins efficace dans les deux, mais <em>relativement</em> moins mauvaise pour le drap.",
+  ]},
+  { titre: "Portugal", sous_titre: "Travail nécessaire pendant un an", forme: "fleur", points: [
+    "Drap : <strong>90 hommes</strong>",
+    "Vin : <strong>80 hommes</strong>",
+    "Plus efficace dans les deux, mais <em>surtout</em> pour le vin.",
+  ]},
+]} />
+
+Le Portugal est meilleur partout. Pourtant, il a intérêt à acheter son drap à l'Angleterre :
+
+<Citation auteur="David Ricardo" oeuvre="Des principes de l'économie politique et de l'impôt" annee="1817" reference="Chapitre 7, « Du commerce extérieur » (traduction)" url="https://www.marxists.org/reference/subject/economics/ricardo/tax/ch07.htm">
+  Bien qu'il puisse fabriquer le drap avec le travail de 90 hommes, il l'importerait d'un pays où il faut le travail de 100 hommes pour le produire, parce qu'il lui serait plus avantageux d'employer son capital à la production du vin.
+</Citation>
+
+Le calcul : en se consacrant au vin, le Portugal échange 80 journées de travail contre du drap qui lui en aurait coûté 90. L'Angleterre, elle, obtient pour 100 journées un vin qui lui en aurait coûté 120. **Les deux gagnent.**
+
+## Les angles morts du modèle
+
+Ricardo raisonne avec des hypothèses fortes, qu'il faut avoir en tête :
+
+1. **Les travailleurs changent de secteur sans coût.** Le tisserand anglais devient vigneron... sauf qu'en réalité, il ne devient rien du tout s'il a 50 ans et vit dans une ville mono-industrielle.
+2. **Le gain est national, pas individuel.** Le pays gagne en moyenne, mais certains perdent. Rien ne garantit qu'on les indemnise.
+3. **Les capitaux ne bougent pas.** Ricardo l'écrit lui-même : les capitalistes préfèrent investir chez eux. Aujourd'hui, une usine se délocalise en quelques mois.
+
+## Histoire : la grande ouverture
+
+<Timeline items={[
+  { date: "1817", texte: "Ricardo publie ses <em>Principes</em> et la théorie de l'avantage comparatif." },
+  { date: "1845", texte: "Bastiat publie la « Pétition des fabricants de chandelles »." },
+  { date: "1947", texte: "Accord général sur les tarifs douaniers et le commerce (GATT), négocié dans le prolongement de Bretton Woods." },
+  { date: "1995", texte: "Le GATT devient l'Organisation mondiale du commerce (OMC)." },
+  { date: "11 décembre 2001", texte: "La Chine devient le <strong>143e membre de l'OMC</strong>, après quinze ans de négociations." },
+]} />
+
+<Chart
+  src="economie/ouverture-commerciale"
+  kind="line"
+  x="annee"
+  y="commerce_pib"
+  series="pays"
+  titre="Commerce (exportations + importations), en % du PIB, 1970-2024"
+  unite="% du PIB"
+/>
+
+Lecture :
+
+- **La France a doublé son ouverture** : le commerce représentait 32,9 % de son PIB en 1970, 68,1 % en 2024, après un record de 76,0 % en 2022.
+- **La Chine a fait un bond spectaculaire après son entrée dans l'OMC** : de 38,1 % en 2001 à **63,6 % en 2006**, son maximum. Elle est ensuite redescendue (38,0 % en 2024) en développant son marché intérieur.
+- **Le monde suit la même pente**, avec des chutes à chaque crise : 2009, puis 2020.
+
+## Le « choc chinois » : Ricardo à l'épreuve
+
+En 2013, trois économistes, David Autor, David Dorn et Gordon Hanson, publient une étude qui fait date. En comparant les bassins d'emploi américains selon leur exposition aux importations chinoises, ils montrent que la concurrence chinoise a provoqué chômage et baisse des salaires durables dans les régions industrielles, et qu'elle explique, au minimum, **un quart du recul de l'emploi industriel américain** entre 1990 et 2007[^adh].
+
+Ricardo n'est pas réfuté : les consommateurs ont bien gagné, par des prix plus bas. Mais les perdants étaient concentrés géographiquement, et ne se sont pas reconvertis. Cette géographie de la perte pèse sur la vie politique des deux côtés de l'Atlantique.
+
+## Le débat
+
+**Pour le libre-échange :**
+
+- Il a contribué à sortir des centaines de millions de personnes de la pauvreté en Asie.
+- Il baisse les prix pour tous les consommateurs, et d'abord pour les plus modestes.
+- Le protectionnisme appelle les représailles : les guerres commerciales des années 1930 ont aggravé la Grande Dépression.
+
+**Pour la protection :**
+
+- Les gains sont diffus, les pertes concentrées : des régions entières se désindustrialisent.
+- La dépendance stratégique (masques en 2020, médicaments, semi-conducteurs) a un prix que le modèle de Ricardo ignore.
+- Le commerce n'est « libre » que si les règles sont respectées : subventions publiques et dumping faussent l'avantage comparatif.
+
+<ARetenir>
+1. Avantage comparatif (Ricardo, 1817) : un pays gagne à se spécialiser là où il est relativement le meilleur, même s'il est meilleur ou pire partout.
+2. Exemple : le Portugal, meilleur que l'Angleterre pour le drap et le vin, gagne à produire du vin et à importer du drap.
+3. Le modèle suppose que les travailleurs changent de secteur sans coût et que les capitaux restent chez eux.
+4. La Chine entre à l'OMC le 11 décembre 2001 ; son commerce passe de 38 % à 64 % de son PIB en cinq ans.
+5. Le « choc chinois » explique au moins un quart du recul de l'emploi industriel américain de 1990 à 2007.
+</ARetenir>
+
+[^adh]: David Autor, David Dorn et Gordon Hanson, « The China Syndrome: Local Labor Market Effects of Import Competition in the United States », NBER Working Paper 18054, 2012, publié dans l'*American Economic Review*, vol. 103, n° 6, 2013. Résumé : « Conservatively, it explains one-quarter of the contemporaneous aggregate decline in U.S. manufacturing employment ».

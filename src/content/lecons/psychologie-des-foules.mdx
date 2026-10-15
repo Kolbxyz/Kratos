@@ -1,0 +1,146 @@
+---
+titre: "Psychologie des foules : de Gustave Le Bon aux manifestations"
+resume: "En 1895, un médecin français affirme qu'en foule, l'homme devient un barbare. Un siècle plus tard, la psychologie sociale montre qu'il se trompait, avec des conséquences directes pour la police et les manifestants."
+parcours: pouvoir
+ordre: 6
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "Psychologie des foules (1895), livres I et II"
+    auteur: "Gustave Le Bon, sur Wikisource"
+    url: "https://fr.wikisource.org/wiki/Psychologie_des_foules/Livre_I"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Psychologie des foules, livre II"
+    auteur: "Gustave Le Bon, sur Wikisource"
+    url: "https://fr.wikisource.org/wiki/Psychologie_des_foules/Livre_II"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Mouvement social contre la réforme des retraites en France de 2023 (comptages)"
+    auteur: "Wikipédia, d'après le ministère de l'Intérieur et la CGT"
+    url: "https://fr.wikipedia.org/wiki/Mouvement_social_contre_la_r%C3%A9forme_des_retraites_en_France_de_2023"
+    consulte: "2026-10-15"
+  - titre: "Hillsborough disaster (enquêtes judiciaires de 2014-2016)"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Hillsborough_disaster"
+    consulte: "2026-10-15"
+  - titre: "« Un fiasco évitable » : le rapport du Sénat sur la finale du Stade de France"
+    auteur: "Public Sénat"
+    url: "https://www.publicsenat.fr/actualites/societe/un-fiasco-evitable-le-rapport-au-vitriol-du-senat-sur-les-violences-au-stade"
+    consulte: "2026-10-15"
+  - titre: "Stephen Reicher (travaux sur l'émeute de St Pauls, 1984)"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/Stephen_Reicher"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le livre qui fit peur aux élites
+
+1895. La France sort de vingt ans de grèves, d'attentats anarchistes et de la crise boulangiste, quand un général populaire a failli renverser la République porté par des foules enthousiastes. Le médecin et sociologue amateur Gustave Le Bon publie *Psychologie des foules*. Son diagnostic tient en une phrase :
+
+<Citation auteur="Gustave Le Bon" oeuvre="Psychologie des foules" annee="1895" reference="Livre I, chapitre 1" url="https://fr.wikisource.org/wiki/Psychologie_des_foules/Livre_I">
+  Par le fait seul qu'il fait partie d'une foule organisée, l'homme descend de plusieurs degrés sur l'échelle de la civilisation. Isolé, c'était peut-être un individu cultivé, en foule c'est un barbare, c'est-à-dire un instinctif.
+</Citation>
+
+Le livre devient l'un des plus lus de la science sociale naissante. Mais était-il juste ?
+
+<div class="chiffres">
+  <Chiffre valeur="× 2,7" label="d'écart entre la CGT (près de 3,5 millions) et le ministère de l'Intérieur (1,28 million) pour la même manifestation" source="Wikipédia, d'après Intérieur et CGT" url="https://fr.wikipedia.org/wiki/Mouvement_social_contre_la_r%C3%A9forme_des_retraites_en_France_de_2023" date="7 mars 2023" forme="soleil" />
+  <Chiffre valeur="97" label="morts à Hillsborough en 1989 ; les supporters, d'abord accusés, ont été jugés non responsables" source="Wikipédia, Hillsborough disaster" url="https://en.wikipedia.org/wiki/Hillsborough_disaster" date="enquêtes closes le 26 avril 2016" forme="gemme" />
+</div>
+
+## L'idée centrale de Le Bon : l'âme collective
+
+Pour Le Bon, la foule n'est pas une somme d'individus. Dans certaines circonstances, il « se forme une âme collective », et l'individu y perd sa personnalité consciente. Trois mécanismes l'expliquent :
+
+<Positions items={[
+  { titre: "L'anonymat", forme: "biscuit", points: [
+    "Noyé dans la masse, l'individu se sent irresponsable.",
+    "Il cède à des instincts qu'il aurait réfrénés seul.",
+  ]},
+  { titre: "La contagion", forme: "trefle", points: [
+    "Sentiments et actes se propagent comme une maladie.",
+    "L'individu sacrifie son intérêt personnel à celui de la foule.",
+  ]},
+  { titre: "La suggestibilité", forme: "soleil", points: [
+    "La foule est comme hypnotisée par un meneur.",
+    "Elle transforme aussitôt en actes les idées qu'on lui suggère.",
+  ]},
+]} />
+
+Et Le Bon livre au lecteur le mode d'emploi du meneur :
+
+<Citation auteur="Gustave Le Bon" oeuvre="Psychologie des foules" annee="1895" reference="Livre II, chapitre 3" url="https://fr.wikisource.org/wiki/Psychologie_des_foules/Livre_II">
+  Ils ont principalement recours à trois procédés très nets : l'affirmation, la répétition, la contagion. [...] L'affirmation pure et simple, dégagée de tout raisonnement et de toute preuve, est un des plus sûrs moyens de faire pénétrer une idée dans l'esprit des foules.
+</Citation>
+
+Affirmer sans prouver, répéter, laisser la contagion faire le reste : c'est la démagogie théorisée (voir la leçon précédente). C'est aussi, un siècle avant leur invention, une description assez exacte du fonctionnement des réseaux sociaux.
+
+## Ce que Le Bon n'avait pas vu
+
+Le Bon raisonne à partir d'exemples historiques et de faits divers (comme celui de deux fillettes noyées, « reconnues » à tort par une douzaine de témoins) plutôt qu'en observant des foules réelles. À partir des années 1980, des psychologues sociaux britanniques vont sur le terrain.
+
+En 1984, Stephen Reicher analyse l'émeute du quartier de St Pauls, à Bristol (1980). Il constate que la foule ne fait pas n'importe quoi : elle attaque la police, les banques, certains commerces, mais épargne les maisons du quartier et règle elle-même la circulation. **La foule n'a pas perdu son identité : elle en a adopté une autre**, une identité collective (« nous, le quartier ») qui a ses propres normes[^reicher].
+
+Ces travaux, poursuivis par son ancien doctorant Clifford Stott, débouchent sur une conclusion pratique : **c'est souvent l'intervention policière indiscriminée qui transforme une foule pacifique en émeute**. Quand la police traite tout le monde en ennemi, elle soude la foule contre elle, et les éléments violents deviennent influents.
+
+## Quand on accuse la foule à tort
+
+<Timeline items={[
+  { date: "15 avril 1989", texte: "<strong>Hillsborough</strong>, Sheffield : une bousculade fait 97 morts lors d'une demi-finale de football. La police accuse des supporters ivres et violents." },
+  { date: "26 avril 2016", texte: "Au terme de nouvelles enquêtes, un jury conclut que les victimes ont été <strong>tuées illégalement</strong> à cause de défaillances graves de la police et des secours, et que les supporters ne sont pas responsables." },
+  { date: "28 mai 2022", texte: "<strong>Stade de France</strong>, finale de la Ligue des champions : chaos aux entrées. Le ministre de l'Intérieur met en cause les supporters britanniques et les faux billets." },
+  { date: "13 juillet 2022", texte: "Le Sénat publie son rapport, « un fiasco évitable » : il pointe un « enchaînement de dysfonctionnements » de l'UEFA et de la préfecture de police, et reproche au ministre d'avoir voulu reporter la faute sur les supporters." },
+]} />
+
+Sources : Wikipédia (Hillsborough), Public Sénat (Stade de France)[^cas].
+
+Dans les deux cas, la théorie de Le Bon a servi d'explication toute prête : une foule est dangereuse par nature. Dans les deux cas, les enquêtes ont montré que le danger venait de la gestion de la foule.
+
+## Les données : combien étaient-ils ?
+
+En France, chaque manifestation produit deux chiffres : celui des organisateurs et celui du ministère de l'Intérieur. Le mouvement contre la réforme des retraites de 2023 en donne un exemple frappant :
+
+<Chart
+  src="pouvoir/comptage-retraites-2023"
+  kind="barX"
+  x="manifestants_millions"
+  y="comptage"
+  titre="Manifestants en France selon la CGT et selon le ministère de l'Intérieur, en millions, 2023"
+  unite="millions"
+/>
+
+- **Le 7 mars 2023 est un record des deux côtés** : 1,28 million selon la police, plus que les records précédents (1,23 million le 12 octobre 2010, un million le 12 décembre 1995) ; près de 3,5 millions selon la CGT.
+- **L'écart se répète à chaque journée** : le 6 juin 2023, dernière journée du mouvement, 281 000 manifestants selon l'Intérieur, 900 000 selon la CGT.
+- **Le chiffre est une arme politique** : pour le gouvernement, une mobilisation faible justifie de tenir ; pour les syndicats, une mobilisation massive justifie de céder. C'est Le Bon à l'envers : on ne mesure pas la foule, on la raconte.
+
+## Le débat : la foule, danger ou force démocratique ?
+
+**Avec Le Bon :**
+
+- Les lynchages, les pogroms, les paniques montrent que des individus ordinaires peuvent commettre en groupe ce qu'ils ne feraient jamais seuls.
+- La contagion émotionnelle est démultipliée par les réseaux sociaux, qui fonctionnent par affirmation et répétition.
+- Les régimes totalitaires du XXe siècle ont reposé sur des rassemblements de masse et la manipulation des foules.
+
+**Contre Le Bon :**
+
+- Le droit de manifester est une liberté fondamentale, et la plupart des manifestations sont pacifiques.
+- La recherche de terrain montre que les foules gardent des normes et une rationalité propres.
+- Considérer la foule comme irrationnelle justifie de la traiter en bloc, ce qui produit précisément la violence qu'on redoute.
+
+<ARetenir>
+1. Pour Le Bon (1895), l'individu en foule perd sa personnalité et « descend de plusieurs degrés sur l'échelle de la civilisation ».
+2. Ses trois procédés du meneur : l'affirmation sans preuve, la répétition, la contagion.
+3. La psychologie sociale moderne (Reicher, 1984 ; Stott) montre que la foule adopte une identité collective avec ses propres normes.
+4. Hillsborough (1989) et le Stade de France (2022) : la foule accusée, la gestion des autorités mise en cause par les enquêtes.
+5. Le 7 mars 2023 : 1,28 million de manifestants selon la police, près de 3,5 millions selon la CGT.
+</ARetenir>
+
+[^reicher]: Stephen Reicher, « The St Pauls' riot: An explanation of the limits of crowd action in terms of a social identity model », *European Journal of Social Psychology*, vol. 14, n° 1, 1984, p. 1-21, cité par Wikipédia, « Stephen Reicher ».
+[^cas]: Wikipédia, « Hillsborough disaster » : enquêtes du 1er avril 2014 au 26 avril 2016 ; Public Sénat, « Un fiasco évitable », 13 juillet 2022.

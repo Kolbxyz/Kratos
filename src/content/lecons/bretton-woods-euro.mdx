@@ -1,0 +1,169 @@
+---
+titre: "De Bretton Woods à l'euro"
+resume: "En 1944, 44 pays attachent leur monnaie au dollar et le dollar à l'or. En 1971, Nixon coupe le lien. En 1999, onze pays renoncent à leur monnaie. Histoire d'un demi-siècle de guerre monétaire."
+parcours: economie
+ordre: 2
+lecture_min: 14
+verifie_le: null
+sources:
+  - titre: "Bretton Woods-GATT, 1941-1947 (Milestones in the History of U.S. Foreign Relations)"
+    auteur: "Office of the Historian, U.S. Department of State"
+    url: "https://history.state.gov/milestones/1937-1945/bretton-woods"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Creation of the Bretton Woods System"
+    auteur: "Federal Reserve History"
+    url: "https://www.federalreservehistory.org/essays/bretton-woods-created"
+    consulte: "2026-10-15"
+  - titre: "Foreign Relations of the United States, 1964-1968, vol. VIII, document 36 (note sur la conférence de presse du général de Gaulle, 4 février 1965)"
+    auteur: "Office of the Historian, U.S. Department of State"
+    url: "https://history.state.gov/historicaldocuments/frus1964-68v08/d36"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Nixon Ends Convertibility of US Dollars to Gold and Announces Wage/Price Controls (flottement de 1973 compris)"
+    auteur: "Federal Reserve History"
+    url: "https://www.federalreservehistory.org/essays/gold-convertibility-ends"
+    consulte: "2026-10-15"
+  - titre: "La fin de l'étalon-or (conversion des dollars français en or, 1964-1965)"
+    auteur: "La Vie des idées"
+    url: "https://laviedesidees.fr/La-fin-de-l-etalon-or"
+    consulte: "2026-10-15"
+  - titre: "The international role of the euro (rapport annuel)"
+    auteur: "Banque centrale européenne"
+    url: "https://www.ecb.europa.eu/press/other-publications/ire/html/index.en.html"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Address to the Nation Outlining a New Economic Policy: The Challenge of Peace, 15 août 1971"
+    auteur: "Richard Nixon, The American Presidency Project"
+    url: "https://www.presidency.ucsb.edu/documents/address-the-nation-outlining-new-economic-policy-the-challenge-peace"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Règlement (CE) n° 2866/98 du Conseil du 31 décembre 1998 concernant les taux de conversion entre l'euro et les monnaies des États membres adoptant l'euro"
+    auteur: "Conseil de l'Union européenne, texte publié par le CVCE"
+    url: "https://www.cvce.eu/content/publication/2001/11/26/1c0fa824-cb1d-4ef1-ada4-6a58020864a7/publishable_fr.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "La Bulgarie adhérera à la zone euro le 1er janvier 2026"
+    auteur: "Banque de France"
+    url: "https://www.banque-france.fr/fr/communiques-de-presse/la-bulgarie-adherera-la-zone-euro-le-1er-janvier-2026"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Dossier : les années Mitterrand, dévaluations et rigueur"
+    auteur: "Hérodote"
+    url: "https://www.herodote.net/dossier-74.php"
+    consulte: "2026-10-15"
+  - titre: "1992 French Maastricht Treaty referendum"
+    auteur: "Wikipédia (résultats officiels cités)"
+    url: "https://en.wikipedia.org/wiki/1992_French_Maastricht_Treaty_referendum"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Un dimanche soir de 1971
+
+Le 15 août 1971, Richard Nixon interrompt la programmation de la télévision américaine. Entre l'annonce d'un gel des prix et des salaires et celle d'une taxe sur les importations, il glisse une phrase technique qui met fin à un ordre monétaire mondial :
+
+<Citation auteur="Richard Nixon" oeuvre="Address to the Nation Outlining a New Economic Policy" annee="1971" reference="15 août 1971 (traduction)" url="https://www.presidency.ucsb.edu/documents/address-the-nation-outlining-new-economic-policy-the-challenge-peace">
+  J'ai demandé au secrétaire [au Trésor] Connally de suspendre temporairement la convertibilité du dollar en or ou en autres actifs de réserve.
+</Citation>
+
+<p class="note">Texte original : « I have directed Secretary Connally to suspend temporarily the convertibility of the dollar into gold or other reserve assets ».</p>
+
+« Temporairement » : la suspension dure toujours. Depuis ce soir-là, aucune grande monnaie n'est plus convertible en or. Pour comprendre ce que Nixon a cassé, il faut remonter à l'été 1944.
+
+<div class="chiffres">
+  <Chiffre valeur="35 $" label="l'once d'or : le prix fixe auquel le dollar était convertible de 1944 à 1971" source="Federal Reserve History" url="https://www.federalreservehistory.org/essays/bretton-woods-created" date="accords de 1944" forme="biscuit" />
+  <Chiffre valeur="6,55957" label="francs pour un euro, taux fixé de façon irrévocable" source="Règlement (CE) n° 2866/98" url="https://www.cvce.eu/content/publication/2001/11/26/1c0fa824-cb1d-4ef1-ada4-6a58020864a7/publishable_fr.pdf" date="31 décembre 1998" forme="fleur" />
+  <Chiffre valeur="21" label="pays membres de la zone euro depuis l'entrée de la Bulgarie" source="Banque de France" url="https://www.banque-france.fr/fr/communiques-de-presse/la-bulgarie-adherera-la-zone-euro-le-1er-janvier-2026" date="1er janvier 2026" forme="soleil" />
+</div>
+
+## L'idée centrale : le « trilemme » monétaire
+
+Un pays ne peut pas avoir en même temps les trois choses suivantes. Il doit en sacrifier une :
+
+<Positions items={[
+  { titre: "Taux de change fixe", forme: "arche", points: ["Stabilité pour le commerce et l'investissement.", "Impossible de dévaluer pour regagner de la compétitivité."] },
+  { titre: "Libre circulation des capitaux", forme: "trefle", points: ["Les épargnants placent leur argent où ils veulent.", "Les capitaux fuient à la moindre inquiétude."] },
+  { titre: "Politique monétaire autonome", forme: "biscuit", points: ["La banque centrale fixe ses taux selon l'économie nationale.", "C'est l'arme anti-crise et anti-chômage."] },
+]} />
+
+Toute l'histoire monétaire depuis 1944 est celle des choix successifs dans ce triangle. **Bretton Woods** choisit les changes fixes et l'autonomie, en contrôlant les capitaux. **Le flottement** après 1973 choisit l'autonomie et la liberté des capitaux. **L'euro** choisit des changes fixes (une monnaie unique) et la liberté des capitaux, au prix de l'autonomie nationale.
+
+## 1944 : le dollar aussi bon que l'or
+
+En juillet 1944, les délégués de **44 nations** se réunissent à Bretton Woods, dans le New Hampshire[^bw]. Deux plans s'affrontent : celui de John Maynard Keynes, pour le Royaume-Uni, et celui de Harry Dexter White, pour le Trésor américain. Celui de White l'emporte, reflet du rapport de force : les États-Unis détiennent alors l'essentiel de l'or monétaire mondial.
+
+Le système est simple :
+
+1. Le dollar est convertible en or à **35 dollars l'once**, pour les banques centrales.
+2. Les autres monnaies sont fixées par rapport au dollar, avec une marge de 1 %.
+3. Un Fonds monétaire international (FMI) prête aux pays en difficulté passagère. La Banque mondiale finance la reconstruction.
+
+## La faille : le « privilège exorbitant »
+
+Pour que le monde ait assez de dollars pour commercer, les États-Unis doivent en émettre toujours plus. Mais plus il y a de dollars à l'étranger, moins le stock d'or américain suffit à les garantir. L'économiste Robert Triffin décrit ce piège dès 1960.
+
+La France est la première à en tirer les conséquences. Le 4 février 1965, en conférence de presse, de Gaulle réclame un retour progressif à l'étalon-or : l'or est, selon lui, la seule « base monétaire indiscutable » qui « ne porte la marque d'aucun pays en particulier ». Le Trésor américain répond le jour même que ce système s'est « effondré » en 1931[^gaulle]. Paris convertit alors une partie de ses dollars en or et rapatrie le métal.
+
+## 1971-2002 : du flottement à la monnaie unique
+
+<Timeline items={[
+  { date: "15 août 1971", texte: "Nixon suspend la convertibilité du dollar en or. Fin du cœur du système de Bretton Woods." },
+  { date: "Mars 1973", texte: "Les grandes monnaies cessent d'être fixées au dollar : début des changes <strong>flottants</strong>." },
+  { date: "13 mars 1979", texte: "Le Système monétaire européen (SME) limite les fluctuations entre monnaies européennes." },
+  { date: "1981-1983", texte: "Le franc est dévalué trois fois dans le SME : 3 % en octobre 1981, 5,75 % en juin 1982, 4,25 % en mars 1983. En mars 1983, le gouvernement choisit de rester dans le SME : c'est le « tournant de la rigueur »." },
+  { date: "20 septembre 1992", texte: "La France ratifie le traité de Maastricht par référendum : <strong>51,05 %</strong> de oui. Le « petit oui » ouvre la voie à la monnaie unique." },
+  { date: "1er janvier 1999", texte: "L'euro naît dans onze pays. Un euro vaut <strong>6,55957 francs</strong>, de façon irrévocable." },
+  { date: "1er janvier 2002", texte: "Pièces et billets en euros entrent en circulation." },
+]} />
+
+Sources des dates : Hérodote (dévaluations), règlement (CE) n° 2866/98, résultats officiels du référendum[^dates].
+
+## Les données : trente ans de montagnes russes
+
+<Chart
+  src="monnaie/franc-dollar"
+  kind="line"
+  x="annee"
+  y="francs_par_dollar"
+  titre="Francs français pour un dollar, moyenne annuelle, 1971-2001"
+  unite="francs"
+  label="francs pour 1 dollar"
+/>
+
+Ce graphique montre ce que « change flottant » veut dire :
+
+- **De 1980 à 1985, le dollar fait plus que doubler** : de 4,23 francs en moyenne en 1980 à 8,99 francs en 1985, sous l'effet des taux d'intérêt américains très élevés destinés à casser l'inflation.
+- **Puis il s'effondre** : 6,01 francs en 1987, après un accord des grandes puissances pour faire baisser le dollar (accords du Plaza, septembre 1985).
+- Pour une entreprise française qui importe du pétrole, payé en dollars, ou qui exporte vers les États-Unis, ces mouvements valent parfois plus que toute sa marge. C'est l'argument central des partisans de la monnaie unique : protéger le commerce européen de ces variations.
+
+## Le débat : l'euro a-t-il tenu ses promesses ?
+
+**Pour :**
+
+- Plus aucune crise de change entre pays membres : les dévaluations de 1981-1983 sont impossibles aujourd'hui.
+- L'euro est devenu la deuxième monnaie de réserve mondiale, et la zone continue de s'élargir (Croatie en 2023, Bulgarie en 2026).
+- Lors de la crise de 2020, la Banque centrale européenne a pu acheter massivement de la dette publique sans crise monétaire.
+
+**Contre :**
+
+- Un pays en difficulté ne peut plus dévaluer : l'ajustement passe par les salaires et le chômage, comme en Grèce après 2010.
+- Une seule politique monétaire pour des économies différentes : un taux d'intérêt adapté à l'Allemagne ne l'est pas forcément à l'Espagne.
+- La monnaie unique a été créée sans budget commun ni union politique complète, ce que plusieurs économistes jugeaient risqué dès les années 1990.
+
+<ARetenir>
+1. Bretton Woods (1944) : le dollar convertible en or à 35 dollars l'once, les autres monnaies fixées au dollar.
+2. Le système reposait sur une contradiction : le monde avait besoin de dollars, mais trop de dollars ruinait leur convertibilité en or.
+3. Le 15 août 1971, Nixon suspend « temporairement » la convertibilité : elle n'a jamais été rétablie.
+4. Le trilemme : on ne peut avoir à la fois changes fixes, libre circulation des capitaux et politique monétaire autonome.
+5. L'euro (1999) supprime le risque de change en Europe au prix de l'autonomie monétaire nationale. 21 pays l'utilisent depuis 2026.
+</ARetenir>
+
+[^bw]: Office of the Historian, U.S. Department of State, « Bretton Woods-GATT, 1941-1947 » ; Federal Reserve History, « Creation of the Bretton Woods System ».
+[^gaulle]: Foreign Relations of the United States, 1964-1968, vol. VIII, document 36, note éditoriale sur la conférence de presse du 4 février 1965 et la déclaration du Trésor américain du même jour. Les formules de de Gaulle y sont citées en anglais ; leur retraduction ici n'est pas le texte original.
+[^dates]: Hérodote, dossier sur les années Mitterrand ; règlement (CE) n° 2866/98 du 31 décembre 1998 ; référendum du 20 septembre 1992 : 13 162 992 oui (51,05 %), 12 623 582 non (48,95 %).

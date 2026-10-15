@@ -1,0 +1,132 @@
+---
+titre: "Droit européen contre droit national : de Costa à Nicolo"
+resume: "Une facture d'électricité impayée à Milan, une élection contestée en France, et vingt-cinq ans de résistance des juges : comment le droit européen est passé au-dessus des lois françaises, et où s'arrête sa primauté."
+parcours: institutions
+ordre: 4
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "Arrêt de la Cour du 15 juillet 1964, Flaminio Costa contre E.N.E.L., affaire 6/64"
+    auteur: "Cour de justice des Communautés européennes (texte reproduit par mafr.fr)"
+    url: "https://www.mafr.fr/media/attachments/2012/9/25/Arret_de_la_CJUE_Costa_c_ENEL_1964.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Décision n° 74-54 DC du 15 janvier 1975, Loi relative à l'interruption volontaire de la grossesse"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/1975/7454DC.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Conseil d'État, Assemblée, 20 octobre 1989, Nicolo (n° 108243)"
+    auteur: "Conseil d'État, les grandes décisions"
+    url: "https://www.conseil-etat.fr/decisions-de-justice/jurisprudence/les-grandes-decisions-du-conseil-d-etat/conseil-d-etat-assemblee-20-octobre-1989-nicolo"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Données de connexion : communiqué de presse sur la décision French Data Network du 21 avril 2021"
+    auteur: "Conseil d'État"
+    url: "https://www.conseil-etat.fr/Media/actualites/documents/2021/04-avril/com.-presse-donnees-de-connexion-vdef-web.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Communiqué de presse n° 32/2020 du 5 mai 2020 (programme PSPP de la BCE, 2 BvR 859/15)"
+    auteur: "Bundesverfassungsgericht"
+    url: "https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/EN/2020/bvg20-032.htm"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Le Tribunal constitutionnel polonais et l'Union européenne (rapport n° 168, 2023-2024)"
+    auteur: "Sénat"
+    url: "https://www.senat.fr/rap/r23-168/r23-16819.html"
+    consulte: "2026-10-15"
+---
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Une facture d'électricité qui change l'Europe
+
+Milan, 1963. Flaminio Costa, consommateur et actionnaire de la société Edison Volta, refuse de payer sa facture à l'ENEL, l'entreprise publique créée par la nationalisation de l'électricité italienne en 1962. Sa défense : la loi de nationalisation viole le traité de Rome. Le juge de paix de Milan pose la question à Luxembourg.
+
+Le gouvernement italien plaide l'« irrecevabilité absolue » : le juge national, dit-il, est « tenu d'appliquer une loi interne ». Le 15 juillet 1964, la Cour de justice des Communautés européennes répond exactement l'inverse, et pose un principe que le traité de Rome n'énonce pas en ces termes : la **primauté** du droit communautaire[^costa].
+
+<Citation auteur="Cour de justice des Communautés européennes" oeuvre="Costa contre E.N.E.L., affaire 6/64" annee="1964" reference="Arrêt du 15 juillet 1964, motifs" url="https://www.mafr.fr/media/attachments/2012/9/25/Arret_de_la_CJUE_Costa_c_ENEL_1964.pdf">
+  Issu d'une source autonome, le droit né du traité ne pourrait donc, en raison de sa nature spécifique originale, se voir judiciairement opposer un texte interne quel qu'il soit, sans perdre son caractère communautaire et sans que soit mise en cause la base juridique de la Communauté elle-même.
+</Citation>
+
+« Quel qu'il soit » : la loi, mais aussi, dans la logique de la Cour, la Constitution. Les États ont consenti une « limitation définitive de leurs droits souverains », écrit-elle encore.
+
+<div class="chiffres">
+  <Chiffre valeur="25 ans" label="séparent l'arrêt Costa (1964) du ralliement du Conseil d'État (Nicolo, 1989)" source="CJCE, affaire 6/64 ; Conseil d'État, n° 108243" url="https://www.conseil-etat.fr/decisions-de-justice/jurisprudence/les-grandes-decisions-du-conseil-d-etat/conseil-d-etat-assemblee-20-octobre-1989-nicolo" date="1964-1989" forme="arche" />
+  <Chiffre valeur="502" label="eurodéputés condamnent l'arrêt polonais rejetant la primauté (153 contre)" source="Parlement européen, résolution 2021/2935(RSP)" url="https://oeil.europarl.europa.eu/oeil/fr/document-summary?id=1680182" date="21 octobre 2021" forme="trefle" />
+</div>
+
+## L'idée centrale : qui a le dernier mot ?
+
+Le problème est logique avant d'être politique. Deux ordres juridiques coexistent sur le même territoire, et chacun se prétend au sommet de sa propre pyramide (voir la leçon sur Kelsen) :
+
+<Positions items={[
+  { titre: "Vu de Luxembourg", sous_titre: "Cour de justice de l'Union", forme: "biscuit", points: [
+    "Le droit de l'Union forme un <strong>ordre juridique propre</strong>, intégré à celui des États.",
+    "Il prime sur <strong>toute</strong> norme nationale, Constitution comprise.",
+    "Sinon, chaque État pourrait vider les traités de leur effet par une simple loi, et le droit européen varierait d'un pays à l'autre.",
+  ]},
+  { titre: "Vu de Paris", sous_titre: "Conseil d'État et Conseil constitutionnel", forme: "arche", points: [
+    "Les traités priment sur les lois <strong>parce que</strong> l'article 55 de la Constitution le dit.",
+    "La primauté tire donc sa force de la Constitution, qui reste au sommet de l'ordre interne.",
+    "Ce que la Constitution donne, elle peut le limiter : c'est la réserve d'<strong>identité constitutionnelle</strong>.",
+  ]},
+]} />
+
+La différence semble théorique. Elle ne l'est pas : elle décide de qui tranche en cas de conflit grave.
+
+## Histoire : vingt-cinq ans de résistance française
+
+L'article 55 de la Constitution de 1958 proclame pourtant que les traités ont « une autorité supérieure à celle des lois ». Mais quel juge doit le faire respecter ? Chacun se renvoie la question.
+
+<Timeline items={[
+  { date: "1er mars 1968", texte: "Arrêt <strong>Semoules</strong> : le Conseil d'État refuse d'écarter une loi postérieure contraire à un traité. Pour lui, la loi fait « écran » : le juge administratif n'a pas à la juger." },
+  { date: "15 janvier 1975", texte: "Décision <strong>IVG</strong> : le Conseil constitutionnel refuse lui aussi, car « une loi contraire à un traité ne serait pas, pour autant, contraire à la Constitution »." },
+  { date: "24 mai 1975", texte: "Arrêt <strong>Jacques Vabre</strong> : la Cour de cassation franchit le pas et écarte une loi douanière contraire au traité de Rome." },
+  { date: "20 octobre 1989", texte: "Arrêt <strong>Nicolo</strong> : saisi par un électeur contestant les élections européennes de juin 1989, le Conseil d'État abandonne la théorie de la loi-écran et contrôle une loi de 1977 au regard du traité de Rome." },
+  { date: "30 octobre 1998", texte: "Arrêt <strong>Sarran</strong> : la limite. La supériorité des traités ne s'applique pas, dans l'ordre interne, aux dispositions de nature constitutionnelle." },
+  { date: "27 juillet 2006", texte: "Le Conseil constitutionnel pose qu'une directive ne peut être transposée si elle va à l'encontre d'une règle « inhérente à l'identité constitutionnelle de la France »." },
+]} />
+
+Dates et formules : Conseil constitutionnel (1975), Conseil d'État (1968, 1989, 1998)[^nicolo].
+
+## La fracture contemporaine
+
+Pendant des décennies, ce désaccord de principe est resté théorique : les juges nationaux évitaient l'affrontement. Depuis 2020, il éclate au grand jour.
+
+<Timeline items={[
+  { date: "5 mai 2020", texte: "<strong>Karlsruhe contre Luxembourg.</strong> La Cour constitutionnelle allemande juge qu'un arrêt de la Cour de justice validant les rachats de dette de la BCE est <em>ultra vires</em> : hors des compétences confiées à l'Union. Une première pour deux institutions européennes." },
+  { date: "21 avril 2021", texte: "<strong>French Data Network.</strong> Le Conseil d'État applique la jurisprudence européenne sur la conservation des données de connexion, mais vérifie qu'elle ne compromet pas les exigences de la Constitution, comme la sécurité nationale. Il admet une conservation généralisée face à la menace terroriste." },
+  { date: "7 octobre 2021", texte: "<strong>Varsovie.</strong> Le Tribunal constitutionnel polonais, saisi par le Premier ministre, juge plusieurs articles du traité sur l'Union incompatibles avec la Constitution polonaise. La Commission européenne ouvre une procédure d'infraction." },
+]} />
+
+Ces trois affaires n'ont pas la même portée. La décision allemande et l'arrêt français cherchent un compromis entre deux exigences juridiques. La décision polonaise intervenait dans un contexte de réformes judiciaires que le Parlement européen a dénoncées le 21 octobre 2021 par 502 voix contre 153[^pologne].
+
+## Le débat
+
+**Pour une primauté absolue :**
+
+- Un marché unique suppose un droit unique : si chaque cour nationale peut écarter le droit européen, il n'y a plus d'Union de droit.
+- Les États ont signé librement les traités, et peuvent en sortir (article 50, utilisé par le Royaume-Uni).
+- La réserve d'identité constitutionnelle peut servir de prétexte à des gouvernements qui veulent s'affranchir de l'État de droit.
+
+**Pour le dernier mot national :**
+
+- La souveraineté appartient au peuple (article 3 de la Constitution), pas à une organisation internationale.
+- La Cour de justice est juge de ses propres compétences : sans contre-pouvoir, l'Union peut étendre ses pouvoirs par la jurisprudence.
+- Le juge constitutionnel est le gardien des droits que la Constitution garantit, y compris contre une norme européenne.
+
+<ARetenir>
+1. Le 15 juillet 1964, l'arrêt Costa pose la primauté du droit européen sur « un texte interne quel qu'il soit ».
+2. En France, l'article 55 place les traités au-dessus des lois, mais il a fallu attendre 1975 (Cour de cassation) et 1989 (Conseil d'État, Nicolo) pour que les juges l'appliquent aux lois postérieures.
+3. Pour les juges français, la Constitution reste au sommet de l'ordre interne (Sarran, 1998 ; identité constitutionnelle, 2006).
+4. Depuis 2020, l'Allemagne, la France et la Pologne ont, chacune à sa façon, contesté le dernier mot de la Cour de justice.
+5. La question de fond : qui est le juge ultime des compétences, Luxembourg ou les cours nationales ?
+</ARetenir>
+
+[^costa]: Cour de justice des Communautés européennes, arrêt du 15 juillet 1964, *Flaminio Costa contre E.N.E.L.*, affaire 6/64, Rec. p. 1141.
+[^nicolo]: Conseil constitutionnel, décision n° 74-54 DC du 15 janvier 1975, considérant 5 ; Conseil d'État, Assemblée, 20 octobre 1989, *Nicolo*, n° 108243, et commentaire publié par le Conseil d'État dans « Les grandes décisions ». Arrêts *Semoules* (CE, Sect., 1er mars 1968), *Jacques Vabre* (Cass., ch. mixte, 24 mai 1975), *Sarran* (CE, Ass., 30 octobre 1998) et décision n° 2006-540 DC du 27 juillet 2006 : références classiques de droit public citées dans ce commentaire.
+[^pologne]: Sénat, rapport n° 168 (2023-2024), partie III ; résolution du Parlement européen du 21 octobre 2021 sur la crise de l'État de droit en Pologne et la primauté du droit de l'Union (502 voix pour, 153 contre, 16 abstentions).

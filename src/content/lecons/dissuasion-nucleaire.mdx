@@ -1,0 +1,189 @@
+---
+titre: "La dissuasion nucléaire française"
+resume: "Une arme conçue pour ne jamais servir. Comment la France a bâti sa force de frappe, ce que dit sa doctrine, et pourquoi elle l'ouvre à l'Europe depuis 2026."
+parcours: militaire
+ordre: 1
+lecture_min: 14
+verifie_le: null
+sources:
+  - titre: "Déclaration du Président de la République sur la dissuasion nucléaire, base de l'Île Longue, 2 mars 2026"
+    auteur: "Emmanuel Macron, publié par le ministère de l'Europe et des Affaires étrangères"
+    url: "https://fi.diplomatie.gouv.fr/fr/declaration-du-president-de-la-republique-sur-la-dissuasion-nucleaire"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Loi n° 2026-791 du 16 août 2026 actualisant la programmation militaire pour les années 2024 à 2030"
+    auteur: "Journal officiel, Légifrance"
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000054694833"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Indemnisation des victimes des essais nucléaires menés entre 1960 et 1996 (rapport n° 640, synthèse)"
+    auteur: "Sénat"
+    url: "https://www.senat.fr/rap/l25-640/l25-640-syn.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Avis n° 3620 sur le protocole relatif au statut des quartiers généraux militaires de l'OTAN (Nathalie Nieson)"
+    auteur: "Assemblée nationale, commission de la Défense"
+    url: "https://www.assemblee-nationale.fr/14/pdf/rapports/r3620.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "The Absolute Weapon: Atomic Power and World Order (présentation et extrait de « Implications for Military Policy »)"
+    auteur: "Bernard Brodie (dir.), Yale Institute of International Studies, 1946, cité par Air & Space Forces Magazine"
+    url: "https://www.airandspaceforces.com/article/0613keeperfile/"
+    consulte: "2026-10-15"
+  - titre: "La dissuasion nucléaire française à l'épreuve d'un nouvel ordre européen (Briefings de l'Ifri, 2 avril 2026)"
+    auteur: "Héloïse Fayet, Ifri"
+    url: "https://www.ifri.org/fr/briefings/la-dissuasion-nucleaire-francaise-lepreuve-dun-nouvel-ordre-europeen-analyse-du-discours"
+    consulte: "2026-10-15"
+  - titre: "Discours sur la stratégie de défense et de dissuasion devant la 27e promotion de l'École de guerre, 7 février 2020"
+    auteur: "Emmanuel Macron, Présidence de la République"
+    url: "https://www.elysee.fr/emmanuel-macron/2020/02/07/discours-du-president-emmanuel-macron-sur-la-strategie-de-defense-et-de-dissuasion-devant-les-stagiaires-de-la-27eme-promotion-de-lecole-de-guerre"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Discours devant les écoles militaires, 3 novembre 1959 (extrait de Discours et messages, vol. III, Plon, 1970)"
+    auteur: "Charles de Gaulle, publié par le CVCE"
+    url: "https://www.cvce.eu/content/publication/1999/1/1/c45374f7-6791-41cb-866f-1e1523201df9/publishable_fr.pdf"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Military expenditure (% of GDP), MS.MIL.XPND.GD.ZS"
+    auteur: "SIPRI, diffusé par la Banque mondiale"
+    url: "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "SIPRI Military Expenditure Database"
+    auteur: "Stockholm International Peace Research Institute"
+    url: "https://www.sipri.org/databases/milex"
+    consulte: "2026-10-15"
+  - titre: "Pourquoi la France ne proposera pas de parapluie nucléaire à l'Europe"
+    auteur: "Héloïse Fayet, Ifri"
+    url: "https://www.ifri.org/fr/articles/pourquoi-la-france-ne-proposera-pas-de-parapluie-nucleaire-leurope"
+    consulte: "2026-10-15"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+
+## Une arme faite pour ne pas servir
+
+Le 2 mars 2026, sur la base de l'Île Longue, en Bretagne, Emmanuel Macron se tient devant un sous-marin nucléaire lanceur d'engins (SNLE). Il rappelle qu'un seul de ces bâtiments « emporte avec lui une puissance de frappe qui équivaut à la somme de toutes les bombes tombées en Europe pendant la Seconde Guerre mondiale »[^ilelongue]. Puis il annonce trois ruptures : la France va **augmenter son arsenal**, **ne plus en publier le chiffre**, et proposer à ses alliés européens une **dissuasion avancée**.
+
+Le sous-marin n'a jamais tiré. Sa mission est réussie chaque jour où il ne tire pas. C'est le paradoxe de la dissuasion : une arme dont toute la valeur tient à la certitude, chez l'adversaire, qu'elle *pourrait* servir.
+
+<div class="chiffres">
+  <Chiffre valeur="210" label="essais nucléaires entre le 13 février 1960 et le 27 janvier 1996" source="Sénat, rapport n° 640" url="https://www.senat.fr/rap/l25-640/l25-640-syn.pdf" date="session 2025-2026" forme="soleil" />
+  <Chiffre valeur="8" label="pays européens associés au dialogue sur la dissuasion avancée dès son annonce" source="Discours de l'Île Longue" url="https://fi.diplomatie.gouv.fr/fr/declaration-du-president-de-la-republique-sur-la-dissuasion-nucleaire" date="2 mars 2026" forme="gemme" />
+  <Chiffre valeur="+36 Md€" label="de crédits militaires supplémentaires sur 2026-2030" source="Loi n° 2026-791, Légifrance" url="https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000054694833" date="16 août 2026" forme="trefle" />
+</div>
+
+## L'idée centrale : dissuader du faible au fort
+
+En 1946, un an après Hiroshima, le stratège américain Bernard Brodie tire la conclusion qui fondera toute la pensée nucléaire :
+
+<Citation auteur="Bernard Brodie" oeuvre="The Absolute Weapon" annee="1946" reference="Essai « Implications for Military Policy » (traduction)" url="https://www.airandspaceforces.com/article/0613keeperfile/">
+  Jusqu'ici, le but principal de notre appareil militaire a été de gagner les guerres. Désormais, son but principal doit être de les éviter.
+</Citation>
+
+<p class="note">Texte original : « Thus far the chief purpose of our military establishment has been to win wars. From now on its chief purpose must be to avert them. »</p>
+
+Les théoriciens français, le général Pierre-Marie Gallois puis Lucien Poirier, en tirent une conséquence propre à une puissance moyenne : le **pouvoir égalisateur de l'atome**. Un pays n'a pas besoin d'égaler l'arsenal d'une superpuissance. Il lui suffit de pouvoir infliger des dommages supérieurs à l'enjeu que représente la France pour l'agresseur. C'est la dissuasion **du faible au fort**.
+
+De ce principe découlent les piliers de la doctrine, réaffirmés par Emmanuel Macron en 2020[^ecole] :
+
+1. **Stricte suffisance** : l'arsenal est dimensionné au minimum crédible, pas à la parité.
+2. **Intérêts vitaux** : la dissuasion protège ce qui est vital pour la nation. Leur définition n'est jamais précisée, pour que l'adversaire ne puisse calculer où passe la ligne.
+3. **Arme politique, pas de bataille** : la décision appartient au seul président de la République.
+4. **Avertissement unique** : en cas de méprise de l'adversaire, une frappe d'avertissement nucléaire, « unique et non renouvelable », peut rétablir la dissuasion.
+
+## Histoire : de la force de frappe à la dissuasion avancée
+
+En 1959, un an après son retour au pouvoir, de Gaulle expose devant les officiers des écoles militaires la logique qui guidera la France pendant soixante ans :
+
+<Citation auteur="Charles de Gaulle" oeuvre="Discours et messages, vol. III" annee="1959" reference="Discours du 3 novembre 1959 devant les écoles militaires" url="https://www.cvce.eu/content/publication/1999/1/1/c45374f7-6791-41cb-866f-1e1523201df9/publishable_fr.pdf">
+  Il faut que la défense de la France soit française. [...] La conséquence, c'est qu'il faut, évidemment, que nous sachions nous pourvoir, au cours des prochaines années, d'une force capable d'agir pour notre compte, de ce qu'on est convenu d'appeler « une force de frappe » susceptible de se déployer à tout moment et n'importe où.
+</Citation>
+
+<Timeline items={[
+  { date: "13 février 1960", texte: "Premier essai nucléaire français, dans le Sahara. Les 17 premiers essais ont lieu en Algérie, à Reggane puis In Ekker." },
+  { date: "1964", texte: "Première alerte opérationnelle des forces aériennes stratégiques." },
+  { date: "1966", texte: "De Gaulle retire la France du <strong>commandement militaire intégré de l'OTAN</strong>. Le 30 mars, Paris dénonce le protocole sur les quartiers généraux alliés. La France reste membre de l'Alliance." },
+  { date: "Janvier 1972", texte: "Première patrouille d'un SNLE, <em>Le Redoutable</em>." },
+  { date: "27 janvier 1996", texte: "Dernier essai, à Fangataufa. Bilan : <strong>210 essais</strong>, dont 193 en Polynésie française." },
+  { date: "Avril 2009", texte: "Retour dans les structures militaires intégrées de l'OTAN, annoncé au sommet de Strasbourg-Kehl." },
+  { date: "7 février 2020", texte: "Discours de l'École de guerre : arsenal « inférieur à 300 armes nucléaires », intérêts vitaux à « dimension européenne »." },
+  { date: "2 mars 2026", texte: "Discours de l'Île Longue : hausse du nombre de têtes, fin de la publication du chiffre, <strong>dissuasion avancée</strong>." },
+]} />
+
+Dates : Sénat (essais), Assemblée nationale (OTAN), discours présidentiels de 2020 et 2026[^dates].
+
+Aujourd'hui, la dissuasion repose sur **deux composantes** complémentaires[^ecole] :
+
+- **Océanique** : les SNLE, armés depuis 2026 du missile **M51.3**. Dilués dans les océans, ils garantissent une capacité de riposte permanente, même après une première frappe ennemie. Le prochain, *L'Invincible*, doit naviguer en 2036[^ilelongue].
+- **Aéroportée** : les forces aériennes stratégiques. Plus visibles, elles permettent de **montrer** la détermination avant toute escalade. Depuis 2026, elles peuvent être déployées chez des alliés européens.
+
+## Les données : ce que coûte la défense
+
+<Chart
+  src="defense/depenses-militaires-pib"
+  kind="line"
+  x="annee"
+  y="depenses_pib"
+  series="pays"
+  titre="Dépenses militaires totales, en % du PIB, 1960-2025"
+  unite="% du PIB"
+/>
+
+Lecture :
+
+- **En 1960, la France consacrait plus de 5 % de son PIB à la défense**, pendant la guerre d'Algérie et la construction de la force de frappe. En 2025, elle y consacre **2,03 %**.
+- **Les « dividendes de la paix »** après 1990 sont visibles partout : la France passe sous 2 % en 2006 et touche 1,85 % en 2013 ; l'Allemagne tombe à 1,11 % en 2015.
+- **La remontée récente** est la plus forte en Allemagne : de 1,34 % en 2022 à **2,27 % en 2025**, devant la France (2,03 %), ce qui n'était plus arrivé depuis 1975. La loi de programmation militaire 2024-2030 prévoyait 413 milliards d'euros de besoins programmés. Son actualisation du 16 août 2026 y ajoute **36 milliards d'euros** sur 2026-2030[^lpm].
+
+Ces chiffres couvrent l'ensemble de la défense, dissuasion comprise. De 1976 à 2024, la France et le Royaume-Uni, seules puissances nucléaires d'Europe occidentale, consacrent chaque année à leur défense une part de leur PIB plus élevée que l'Allemagne.
+
+## La rupture de 2026 : la dissuasion avancée
+
+Depuis de Gaulle, la doctrine laisse entendre que les intérêts vitaux de la France ne s'arrêtent pas à ses frontières. En 2020, Emmanuel Macron le formule explicitement :
+
+<Citation auteur="Emmanuel Macron" oeuvre="Discours sur la stratégie de défense et de dissuasion" annee="2020" reference="École de guerre, 7 février 2020" url="https://www.elysee.fr/emmanuel-macron/2020/02/07/discours-du-president-emmanuel-macron-sur-la-strategie-de-defense-et-de-dissuasion-devant-les-stagiaires-de-la-27eme-promotion-de-lecole-de-guerre">
+  Soyons clairs : les intérêts vitaux de la France ont désormais une dimension européenne.
+</Citation>
+
+Six ans plus tard, il passe des mots aux actes :
+
+<Citation auteur="Emmanuel Macron" oeuvre="Déclaration sur la dissuasion nucléaire" annee="2026" reference="Base de l'Île Longue, 2 mars 2026" url="https://fi.diplomatie.gouv.fr/fr/declaration-du-president-de-la-republique-sur-la-dissuasion-nucleaire">
+  Il s'agit d'une démarche progressive qui offre la possibilité à nos alliés européens de participer aux exercices de la dissuasion et qui pourra prévoir le déploiement de circonstance d'éléments de forces stratégiques sur le territoire d'un partenaire.
+</Citation>
+
+Outre le Royaume-Uni et l'Allemagne, il annonce que « la Pologne, les Pays-Bas, la Belgique, la Grèce, la Suède et le Danemark s'y joindront ». Et il met fin à une transparence ancienne : « nous ne communiquerons plus sur les chiffres de notre arsenal nucléaire »[^ilelongue]. La décision d'emploi, elle, reste au seul président français.
+
+## Le débat
+
+**Pour une dimension européenne affirmée :**
+
+- La France est le seul État de l'Union européenne doté de l'arme nucléaire depuis la sortie du Royaume-Uni en 2020.
+- Associer des partenaires aux exercices et déployer des avions chez eux rend l'engagement français visible, donc plus crédible pour un agresseur.
+- Selon l'Ifri, le discours de 2026 a été bien accueilli par les partenaires européens[^ifri2026].
+
+**Pour la prudence :**
+
+- La décision d'emploi ne se partage pas : une dissuasion n'est crédible que si un seul responsable peut décider vite. C'est pourquoi 2026 associe des alliés sans partager le « bouton ».
+- La France ne peut offrir un « parapluie » comparable à celui des États-Unis : son arsenal est dimensionné pour la stricte suffisance, pas pour couvrir un continent[^ifri].
+- Augmenter l'arsenal et cesser d'en publier le chiffre rompt avec la transparence pratiquée jusqu'en 2020, un argument que mettent en avant les partisans du désarmement.
+
+Le débat n'oppose donc pas « pour » et « contre » l'Europe, mais deux idées de la crédibilité : l'une fondée sur la solidarité affichée, l'autre sur la souveraineté de la décision.
+
+<ARetenir>
+1. La dissuasion française repose sur le principe « du faible au fort » : pouvoir infliger des dommages supérieurs à l'enjeu, sans chercher la parité.
+2. Doctrine : stricte suffisance, intérêts vitaux, décision présidentielle, avertissement nucléaire unique.
+3. Deux composantes : les SNLE armés du M51.3 et les forces aériennes stratégiques.
+4. 210 essais nucléaires entre 1960 et 1996, dont 193 en Polynésie.
+5. Depuis le 2 mars 2026 : hausse de l'arsenal, chiffre plus publié, dissuasion avancée ouverte à 8 pays européens.
+</ARetenir>
+
+[^ilelongue]: Emmanuel Macron, déclaration sur la dissuasion nucléaire, base de l'Île Longue, 2 mars 2026, texte publié par le ministère de l'Europe et des Affaires étrangères.
+[^ecole]: Emmanuel Macron, discours sur la stratégie de défense et de dissuasion, École de guerre, 7 février 2020, elysee.fr.
+[^dates]: Sénat, rapport n° 640 (2025-2026), synthèse ; Assemblée nationale, avis n° 3620 (2016), commission de la Défense ; discours du 7 février 2020 et du 2 mars 2026.
+[^lpm]: Loi n° 2023-703 du 1er août 2023 relative à la programmation militaire pour les années 2024 à 2030 ; loi n° 2026-791 du 16 août 2026 actualisant la programmation militaire, Journal officiel du 18 août 2026.
+[^ifri2026]: Héloïse Fayet, « La dissuasion nucléaire française à l'épreuve d'un nouvel ordre européen », Briefings de l'Ifri, 2 avril 2026.
+[^ifri]: Héloïse Fayet, « Pourquoi la France ne proposera pas de parapluie nucléaire à l'Europe », Ifri.

@@ -1,0 +1,122 @@
+---
+titre: "Clausewitz : la guerre comme continuation de la politique"
+resume: "Un officier prussien vaincu par Napoléon passe douze ans à écrire un livre qu'il ne finira jamais. Deux siècles plus tard, état-majors, révolutionnaires et philosophes le citent encore."
+parcours: militaire
+ordre: 2
+lecture_min: 13
+verifie_le: null
+sources:
+  - titre: "On War (Vom Kriege, 1832), traduction de J. J. Graham (1873), livre I, chapitres 1 et 7"
+    auteur: "Carl von Clausewitz, Projet Gutenberg"
+    url: "https://www.gutenberg.org/ebooks/1946"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Carl von Clausewitz"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Carl_von_Clausewitz"
+    consulte: "2026-10-15"
+  - titre: "Grundgedanken über Krieg und Kriegführung (extraits en allemand)"
+    auteur: "Carl von Clausewitz, Projet Gutenberg"
+    url: "https://www.gutenberg.org/ebooks/36693"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "A History of Warfare (John Keegan, 1993)"
+    auteur: "Wikipédia"
+    url: "https://en.wikipedia.org/wiki/A_History_of_Warfare"
+    consulte: "2026-10-15"
+---
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le vaincu d'Auerstaedt
+
+Le 14 octobre 1806, à Iéna et Auerstaedt, Napoléon anéantit en une journée l'armée prussienne, réputée la meilleure d'Europe depuis Frédéric II. Parmi les prisonniers : un capitaine de 26 ans, aide de camp du prince Auguste de Prusse. Il s'appelle Carl von Clausewitz. Il passera deux ans en captivité, en France et en Suisse[^bio].
+
+Cette défaite pose la question qui l'occupera toute sa vie : **comment un empereur corse a-t-il pu balayer des armées professionnelles, disciplinées, savamment manœuvrées ?** Sa réponse : Napoléon n'a pas seulement mieux manœuvré. Il a fait une autre guerre, celle d'une nation entière mobilisée par la Révolution, au service d'un projet politique.
+
+<div class="chiffres">
+  <Chiffre valeur="1806" label="Clausewitz capturé par les Français après Auerstaedt, deux ans de captivité" source="Wikipédia, Carl von Clausewitz" url="https://fr.wikipedia.org/wiki/Carl_von_Clausewitz" date="14 octobre 1806" forme="gemme" />
+  <Chiffre valeur="1832" label="De la guerre paraît, posthume et inachevé, publié par son épouse Marie von Brühl" source="Wikipédia, Carl von Clausewitz" url="https://fr.wikipedia.org/wiki/Carl_von_Clausewitz" date="1832-1837" forme="soleil" />
+</div>
+
+## L'idée centrale : la guerre a une grammaire, pas de logique propre
+
+Clausewitz meurt du choléra le 16 novembre 1831 à Breslau, laissant un manuscrit qu'il jugeait lui-même inachevé. Dans une note, il écrit que le premier chapitre du livre I est « le seul » qu'il considère comme achevé. C'est là que se trouve la formule la plus célèbre de la pensée stratégique :
+
+<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 1, § 24 (traduit de la version anglaise de J. J. Graham, 1873)" url="https://www.gutenberg.org/ebooks/1946">
+  La guerre n'est pas seulement un acte politique, mais un véritable instrument politique, une continuation des relations politiques, leur poursuite par d'autres moyens.
+</Citation>
+
+Elle est souvent mal comprise. Clausewitz ne dit pas que la guerre est banale, ni que la politique est violente. Il dit que **la guerre n'a pas de but en elle-même**. Une armée qui cherche « la victoire » sans savoir quel résultat politique elle doit produire va à l'échec, même en gagnant ses batailles. Conséquence pratique : le chef militaire est subordonné au gouvernement.
+
+## La « remarquable trinité »
+
+Pour Clausewitz, chaque guerre est un « caméléon » qui change de couleur selon les cas. Mais toute guerre combine trois forces, qu'il associe à trois acteurs[^trinite] :
+
+<Positions items={[
+  { titre: "La violence", sous_titre: "Le peuple", forme: "soleil", points: [
+    "Haine, hostilité, passion : « un instinct aveugle ».",
+    "La Révolution française a fait entrer les passions populaires dans la guerre.",
+    "Sans elle, aucune nation ne tient une guerre longue.",
+  ]},
+  { titre: "Le hasard", sous_titre: "Le chef et son armée", forme: "trefle", points: [
+    "Le jeu des probabilités, où le talent et le caractère du chef s'expriment.",
+    "Le domaine de la « friction » et de l'incertitude.",
+    "« Une libre activité de l'âme », écrit-il.",
+  ]},
+  { titre: "La raison", sous_titre: "Le gouvernement", forme: "arche", points: [
+    "La guerre comme instrument subordonné à une fin politique.",
+    "C'est elle qui fixe le but et décide quand s'arrêter.",
+    "Quand elle disparaît, la guerre tend vers les extrêmes.",
+  ]},
+]} />
+
+## La friction : pourquoi les plans échouent
+
+Le chapitre 7 du livre I est l'un des plus lus par les militaires d'aujourd'hui. Clausewitz y explique pourquoi la guerre réelle ne ressemble jamais à la guerre sur la carte :
+
+<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 7, « La friction dans la guerre » (traduit de la version de J. J. Graham)" url="https://www.gutenberg.org/ebooks/1946">
+  Tout est très simple à la guerre, mais la chose la plus simple est difficile. Ces difficultés s'accumulent et produisent une friction que personne ne peut se représenter exactement s'il n'a pas vu la guerre.
+</Citation>
+
+Un ordre mal transmis, une route boueuse, un régiment épuisé, un renseignement faux : chaque petit incident ralentit la machine. Ce que les états-majors modernes appellent le « brouillard de la guerre » vient de cette idée.
+
+## Histoire : la postérité d'un livre inachevé
+
+<Timeline items={[
+  { date: "1806", texte: "Défaite prussienne d'Iéna-Auerstaedt. Clausewitz est fait prisonnier." },
+  { date: "1812-1815", texte: "Refusant l'alliance forcée de la Prusse avec Napoléon, il sert dans l'armée russe. En 1815, il est chef d'état-major d'un corps d'armée prussien lors de la campagne de Belgique." },
+  { date: "16 novembre 1831", texte: "Il meurt du choléra à Breslau, à 51 ans." },
+  { date: "1832-1837", texte: "Son épouse, Marie von Brühl, publie ses œuvres, dont <strong>De la guerre</strong>." },
+  { date: "XIXe-XXe siècles", texte: "Moltke, Lénine, Mao, Eisenhower, Kissinger, Raymond Aron en font une référence intellectuelle." },
+]} />
+
+Le livre a servi des lecteurs que tout oppose. En France, Raymond Aron lui consacre en 1976 *Penser la guerre, Clausewitz*, pour en faire un penseur de la **limitation** de la guerre par la politique, à l'âge nucléaire (voir la leçon sur la dissuasion)[^bio].
+
+## Le débat : Clausewitz est-il dépassé ?
+
+**Ses critiques :**
+
+- L'historien militaire John Keegan (*Histoire de la guerre*, 1993) soutient que la guerre est un phénomène culturel plus ancien que l'État, et pas seulement un instrument politique.
+- Les guerres civiles, le terrorisme et les conflits entre milices ne mettent pas toujours face à face des gouvernements, des armées et des peuples distincts.
+- L'arme nucléaire rend absurde l'idée d'une guerre totale au service d'un but politique.
+
+**Ses défenseurs :**
+
+- Même un groupe terroriste poursuit un but politique : la formule s'applique au-delà des États.
+- La trinité n'est pas une liste d'acteurs, mais de forces (passion, hasard, raison), présentes dans toute guerre.
+- La dissuasion nucléaire est elle-même clausewitzienne : elle subordonne entièrement l'arme au but politique d'éviter la guerre.
+
+<ARetenir>
+1. Clausewitz, officier prussien capturé en 1806, cherche à comprendre pourquoi Napoléon a gagné : la guerre était devenue l'affaire de nations entières.
+2. « La guerre est la continuation de la politique par d'autres moyens » : elle n'a pas de but propre, le gouvernement fixe ses fins.
+3. La trinité : violence (le peuple), hasard (l'armée), raison (le gouvernement).
+4. La friction : « tout est très simple à la guerre, mais la chose la plus simple est difficile ».
+5. De la guerre, publié en 1832 par sa veuve, est inachevé : sa postérité, de Lénine à Aron, vient aussi de ses ambiguïtés.
+</ARetenir>
+
+[^bio]: Wikipédia, « Carl von Clausewitz » : capture après la bataille d'Auerstaedt le 14 octobre 1806 et deux ans de captivité ; service dans l'armée russe (1812-1815) ; mort du choléra à Breslau le 16 novembre 1831 ; publication de ses œuvres par Marie von Brühl entre 1832 et 1837 ; liste de ses lecteurs (Moltke, Lénine, Mao, Eisenhower, Kissinger, Aron).
+[^trinite]: Carl von Clausewitz, *De la guerre*, livre I, chapitre 1, § 28, « Résultat pour la théorie » (traduction de J. J. Graham, 1873).

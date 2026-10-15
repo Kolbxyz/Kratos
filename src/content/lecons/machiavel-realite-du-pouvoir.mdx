@@ -1,0 +1,140 @@
+---
+titre: "Machiavel et la réalité du pouvoir"
+resume: "Un fonctionnaire florentin torturé écrit dans sa ferme un petit livre pour séduire les Médicis. Mis à l'Index, réfuté par un roi, admiré par Rousseau : pourquoi Le Prince dérange depuis cinq siècles."
+parcours: pouvoir
+ordre: 3
+lecture_min: 12
+verifie_le: null
+sources:
+  - titre: "Il Principe, chapitres XV, XVII et XVIII"
+    auteur: "Niccolò Machiavelli, sur Wikisource italien"
+    url: "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVII"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Il Principe, chapitre XVIII"
+    auteur: "Niccolò Machiavelli, sur Wikisource italien"
+    url: "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVIII"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Il Principe, chapitre XV"
+    auteur: "Niccolò Machiavelli, sur Wikisource italien"
+    url: "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XV"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Du contrat social, livre III, chapitre 6"
+    auteur: "Jean-Jacques Rousseau, sur Wikisource (édition de 1762)"
+    url: "https://fr.wikisource.org/wiki/Du_contrat_social/%C3%89dition_1762/Livre_III/Chapitre_6"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Nicolas Machiavel (biographie)"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Nicolas_Machiavel"
+    consulte: "2026-10-15"
+  - titre: "Le Prince (publication et réception)"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Le_Prince"
+    consulte: "2026-10-15"
+---
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le cachot, puis la ferme
+
+Florence, 20 février 1513. Niccolò Machiavelli, 43 ans, quatorze ans durant secrétaire de la chancellerie de la République, est arrêté. Les Médicis, revenus au pouvoir à l'automne précédent, le soupçonnent d'avoir trempé dans une conjuration. Il est jeté au cachot et torturé. Libéré en mars grâce à l'amnistie qui accompagne l'élection du pape Léon X, un Médicis, il se retire dans sa petite propriété de Sant'Andrea in Percussina, au sud de Florence[^bio].
+
+Là, ruiné et désœuvré, il écrit un petit traité destiné à regagner la faveur des nouveaux maîtres : *De principatibus*, « Des principautés ». Nous l'appelons *Le Prince*. Il est dédié à Laurent de Médicis. Il ne lui rendra jamais son poste.
+
+<div class="chiffres">
+  <Chiffre valeur="1513" label="écriture du Prince, après l'arrestation et la torture de Machiavel" source="Wikipédia, Nicolas Machiavel" url="https://fr.wikipedia.org/wiki/Nicolas_Machiavel" date="1513" forme="trefle" />
+  <Chiffre valeur="1532" label="première publication, cinq ans après la mort de l'auteur" source="Wikipédia, Le Prince" url="https://fr.wikipedia.org/wiki/Le_Prince" date="Florence, 1532" forme="soleil" />
+  <Chiffre valeur="1559" label="Le Prince est inscrit au premier Index des livres interdits" source="Wikipédia, Le Prince" url="https://fr.wikipedia.org/wiki/Le_Prince" date="30 décembre 1559" forme="gemme" />
+</div>
+
+## L'idée centrale : la « vérité effective » des choses
+
+Avant Machiavel, les « miroirs des princes » expliquaient au souverain comment être vertueux : juste, généreux, pieux. Au chapitre XV, Machiavel rompt avec cette tradition en une phrase :
+
+<Citation auteur="Nicolas Machiavel" oeuvre="Le Prince" annee="1513" reference="Chapitre XV (traduction)" url="https://it.wikisource.org/wiki/Il_Principe/Capitolo_XV">
+  Mon intention étant d'écrire une chose utile à qui l'entend, il m'a paru plus convenable de suivre la vérité effective de la chose que l'imagination qu'on s'en fait.
+</Citation>
+
+<p class="note">Texte original : « mi è parso più conveniente andare dietro alla verità effettuale della cosa, che all'immaginazione di essa ».</p>
+
+Il poursuit : il y a tant de distance entre la façon dont on vit et celle dont on devrait vivre que celui qui néglige ce qui se fait pour ce qui devrait se faire court à sa perte. D'où le conseil qui a fait scandale : un prince qui veut se maintenir doit « apprendre à pouvoir ne pas être bon », et en user « selon la nécessité ».
+
+**Ce n'est pas un éloge du mal.** C'est la naissance d'une science politique qui décrit le pouvoir tel qu'il fonctionne, et non tel qu'on voudrait qu'il soit.
+
+## Craint ou aimé ?
+
+Le chapitre XVII pose la question la plus célèbre du livre :
+
+<Citation auteur="Nicolas Machiavel" oeuvre="Le Prince" annee="1513" reference="Chapitre XVII (traduction)" url="https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVII">
+  On voudrait être l'un et l'autre ; mais, comme il est difficile qu'ils aillent ensemble, il est bien plus sûr d'être craint qu'aimé, quand on doit se passer de l'un des deux.
+</Citation>
+
+La raison est psychologique : l'amour est un lien d'obligation que les hommes rompent dès que leur intérêt l'exige, la crainte repose sur la peur d'une punition « qui ne vous abandonne jamais ». Mais Machiavel ajoute aussitôt une limite que l'on oublie toujours : le prince doit se faire craindre **sans se faire haïr**. Et pour cela, il doit s'abstenir « des biens de ses citoyens et de ses sujets, et de leurs femmes ».
+
+## Le renard et le lion
+
+Au chapitre XVIII, Machiavel explique que le prince doit savoir user de deux natures, celle de l'homme (la loi) et celle de la bête (la force). Et parmi les bêtes, il doit en imiter deux :
+
+<Positions items={[
+  { titre: "Le lion", sous_titre: "La force", forme: "soleil", points: [
+    "Il effraie les loups.",
+    "Mais il ne se défend pas des pièges.",
+    "Qui n'est que lion, écrit Machiavel, « n'y entend rien ».",
+  ]},
+  { titre: "Le renard", sous_titre: "La ruse", forme: "trefle", points: [
+    "Il reconnaît les pièges.",
+    "Mais il ne se défend pas des loups.",
+    "D'où la conclusion la plus dérangeante : un prince prudent ne doit pas tenir sa parole quand elle se retourne contre lui.",
+  ]},
+]} />
+
+Sources : chapitres XV, XVII et XVIII du texte italien[^texte].
+
+## Cinq siècles de scandale
+
+<Timeline items={[
+  { date: "1532", texte: "Publication posthume à Florence. Machiavel est mort en juin 1527." },
+  { date: "30 décembre 1559", texte: "Le livre est inscrit au premier Index des livres interdits par l'Église." },
+  { date: "1576", texte: "Le huguenot Innocent Gentillet publie un <em>Anti-Machiavel</em> : il accuse les idées de Machiavel, importées par la cour de France, d'avoir changé le royaume en tyrannie." },
+  { date: "1740", texte: "Frédéric II de Prusse publie à son tour un <em>Anti-Machiavel</em>, rédigé en français et édité par Voltaire." },
+  { date: "1762", texte: "Rousseau renverse la lecture : <em>Le Prince</em> serait « le livre des républicains »." },
+]} />
+
+L'argument de Rousseau est l'un des plus fins jamais écrits sur Machiavel :
+
+<Citation auteur="Jean-Jacques Rousseau" oeuvre="Du contrat social" annee="1762" reference="Livre III, chapitre 6" url="https://fr.wikisource.org/wiki/Du_contrat_social/%C3%89dition_1762/Livre_III/Chapitre_6">
+  En feignant de donner des leçons aux rois, il en a donné de grandes aux peuples. Le Prince de Machiavel est le livre des républicains.
+</Citation>
+
+Autrement dit : en dévoilant les ressorts du pouvoir, Machiavel arme ceux qui le subissent. L'auteur du *Prince* a aussi écrit les *Discours sur la première décade de Tite-Live*, une longue défense de la république romaine.
+
+## Le débat : Machiavel, cynique ou lucide ?
+
+**Machiavel cynique :**
+
+- Il justifie le mensonge, la violence et la trahison dès qu'ils servent le pouvoir.
+- Il fait de la conservation du pouvoir une fin en soi, sans se demander à quoi ce pouvoir sert.
+- Le mot « machiavélique » est devenu synonyme de manipulation, en français comme dans toutes les langues européennes.
+
+**Machiavel lucide :**
+
+- Il ne recommande pas le mal : il constate qu'un dirigeant impuissant ne protège personne.
+- Il distingue, au chapitre VIII, la cruauté « bien employée » (brève, nécessaire) de celle qui dure et fait haïr.
+- Il fonde la science politique moderne : décrire le pouvoir tel qu'il est, avant de le juger. C'est le programme de toutes les leçons de ce site.
+
+<ARetenir>
+1. Le Prince est écrit en 1513 par un fonctionnaire déchu et torturé, publié en 1532, mis à l'Index en 1559.
+2. Machiavel veut suivre « la vérité effective de la chose » plutôt que l'image idéale du bon prince.
+3. Mieux vaut être craint qu'aimé si l'on ne peut être les deux, mais jamais haï.
+4. Le prince doit être renard pour voir les pièges et lion pour effrayer les loups.
+5. Pour Rousseau, en dévoilant les ruses du pouvoir, Le Prince est « le livre des républicains ».
+</ARetenir>
+
+[^bio]: Wikipédia, « Nicolas Machiavel » : relevé de ses fonctions début novembre 1512, arrêté le 20 février 1513, emprisonné et torturé, libéré en mars 1513 lors de l'amnistie accordée à l'avènement de Léon X, retraite à Sant'Andrea in Percussina.
+[^texte]: Niccolò Machiavelli, *Il Principe*, chapitre XVIII : « bisogna adunque essere volpe a cognoscere i lacci, e lione a sbigottire i lupi » (il faut donc être renard pour connaître les pièges, et lion pour effrayer les loups).
