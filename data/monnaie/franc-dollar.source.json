@@ -1,0 +1,8 @@
+{
+  "titre": "Francs français pour un dollar américain, moyenne annuelle",
+  "producteur": "Board of Governors of the Federal Reserve System, via FRED (Federal Reserve Bank of St. Louis)",
+  "jeu": "EXFRUS, taux de change mensuel",
+  "url": "https://fred.stlouisfed.org/series/EXFRUS",
+  "traitement": "Moyenne des 12 valeurs mensuelles de chaque année complète.",
+  "consulte": "2026-10-15"
+}

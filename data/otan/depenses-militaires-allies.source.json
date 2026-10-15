@@ -1,0 +1,8 @@
+{
+  "producteur": "SIPRI Military Expenditure Database, diffusé par la Banque mondiale",
+  "jeu": "MS.MIL.XPND.GD.ZS",
+  "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS",
+  "titre": "Dépenses militaires de douze membres de l'OTAN, en % du PIB, dernière année disponible",
+  "traitement": "Arrondi à deux décimales. Sélection : les plus grandes armées de l'Alliance et le flanc est.",
+  "consulte": "2026-10-15"
+}

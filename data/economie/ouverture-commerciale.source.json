@@ -1,0 +1,8 @@
+{
+  "producteur": "Banque mondiale",
+  "jeu": "NE.TRD.GNFS.ZS",
+  "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+  "titre": "Commerce (exportations + importations de biens et services), en % du PIB",
+  "traitement": "Arrondi à deux décimales. Série arrêtée en 2024 : la valeur mondiale provisoire de 2025 (68,5 %) repose sur un agrégat encore incomplet.",
+  "consulte": "2026-10-15"
+}

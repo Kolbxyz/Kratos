@@ -1,0 +1,8 @@
+{
+  "producteur": "SIPRI Military Expenditure Database, diffusé par la Banque mondiale",
+  "jeu": "MS.MIL.XPND.GD.ZS",
+  "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS",
+  "titre": "Dépenses militaires, en % du PIB",
+  "traitement": "Arrondi à deux décimales. Allemagne : RFA avant 1991.",
+  "consulte": "2026-10-15"
+}
