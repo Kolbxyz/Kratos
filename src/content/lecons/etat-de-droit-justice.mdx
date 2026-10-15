@@ -3,7 +3,7 @@ titre: "L'État de droit : soumettre le pouvoir à un juge, et donner au juge le
 resume: "Le Conseil d'État annule une ordonnance de De Gaulle, la CEDH juge que le parquet français n'est pas indépendant, la Pologne paie un million d'euros par jour. Ce que veut dire « État de droit », et ce qu'il coûte."
 parcours: institutions
 ordre: 5
-lecture_min: 30
+lecture_min: 20
 verifie_le: null
 lectures:
   - auteur: "Montesquieu"
@@ -99,6 +99,19 @@ sources:
     url: "https://worldjusticeproject.org/sites/default/files/documents/France_FR.pdf"
     consulte: "2026-10-15"
     primaire: true
+  - titre: "Loi des 16 et 24 août 1790"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Loi_des_16_et_24_ao%C3%BBt_1790"
+    consulte: "2026-10-15"
+  - titre: "Traité de la juridiction administrative et des recours contentieux, livre I, chapitre II (1887)"
+    auteur: "Édouard Laferrière, sur Wikisource"
+    url: "https://fr.wikisource.org/wiki/Trait%C3%A9_de_la_juridiction_administrative_et_des_recours_contentieux/Livre_I/Chapitre_II"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Arrêt Blanco"
+    auteur: "Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Arr%C3%AAt_Blanco"
+    consulte: "2026-10-15"
 ---
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
@@ -180,6 +193,20 @@ En France, aucun juge ne contrôle tout. Le contrôle du pouvoir est réparti en
 ]} />
 
 Seules échappent au contrôle du Conseil d'État deux catégories d'actes : les **actes de gouvernement**, catégorie reconnue depuis 1875, et les décisions prises par le président dans le domaine de la loi en vertu de l'**article 16**, les pleins pouvoirs de crise (Conseil d'État, *Rubin de Servens*, 2 mars 1962)[^canal].
+
+## Chapitre 1 bis : pourquoi la France a deux justices
+
+Une particularité française étonne les juristes étrangers : l'administration n'est pas jugée par les tribunaux ordinaires, mais par une justice à part, coiffée par le Conseil d'État. Cette dualité vient d'une méfiance révolutionnaire envers les juges.
+
+La Constituante veut rompre avec la justice d'Ancien Régime, où les charges de juge s'achetaient. La loi des **16 et 24 août 1790**, première grande loi judiciaire de la Révolution, abolit la vénalité des offices, rend la justice gratuite, prévoit l'élection des juges pour six ans, interdit les juridictions d'exception et impose la publicité des débats[^loi1790]. Son article 13 pose le principe qui fonde encore le droit public français :
+
+<Citation auteur="Assemblée nationale constituante" oeuvre="Loi des 16 et 24 août 1790 sur l'organisation judiciaire" annee="1790" reference="Titre II, article 13, cité par Édouard Laferrière, Traité de la juridiction administrative (1887)" url="https://fr.wikisource.org/wiki/Trait%C3%A9_de_la_juridiction_administrative_et_des_recours_contentieux/Livre_I/Chapitre_II">
+  Les fonctions judiciaires sont distinctes et demeureront toujours séparées des fonctions administratives ; les juges ne pourront, à peine de forfaiture, troubler de quelque manière que ce soit, les opérations des corps administratifs ni citer devant eux les administrateurs pour raison de leurs fonctions.
+</Citation>
+
+Le paradoxe est complet : une loi conçue pour **protéger l'administration des juges** a produit, par étapes, un juge spécialisé de l'administration. Le 8 février 1873, l'arrêt **Blanco** du Tribunal des conflits, souvent présenté comme l'acte fondateur du droit administratif, affirme que la responsabilité de l'État pour les dommages causés par le service public relève de la juridiction administrative et obéit à des règles propres ; les historiens du droit discutent d'ailleurs l'idée qu'il ait été perçu comme fondateur dès son époque[^blanco]. Moins d'un siècle plus tard, en 1962, ce même juge annule une ordonnance du général de Gaulle (Canal).
+
+La France a donc inventé l'État de droit à l'envers : non pas en confiant le contrôle du pouvoir aux juges ordinaires, comme l'Angleterre de Dicey, mais en créant au sein même de l'État une institution chargée de le juger.
 
 ## Chapitre 2 : l'indépendance, et sa faille française
 
@@ -298,3 +325,5 @@ Le World Justice Project mesure le phénomène à l'échelle mondiale : en 2025,
 [^hongrie]: eucrim, « Council adopted historic decision on budget protection vis-à-vis Hungary ».
 [^israel]: Wikipédia, « 2023 Israeli judicial reform ».
 [^wjp]: World Justice Project, communiqué « La France se classe 22e sur 143 dans l'indice WJP Rule of Law Index », 28 octobre 2025.
+[^loi1790]: Wikipédia, « Loi des 16 et 24 août 1790 » ; texte de l'article 13 cité par Édouard Laferrière, *Traité de la juridiction administrative et des recours contentieux*, livre I, chapitre II, sur Wikisource.
+[^blanco]: Wikipédia, « Arrêt Blanco ».

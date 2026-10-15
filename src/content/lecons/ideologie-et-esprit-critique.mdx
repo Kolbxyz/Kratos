@@ -3,7 +3,7 @@ titre: "L'idéologie, ennemie naturelle de la pensée critique"
 resume: "Une secte qui redouble de foi quand la prophétie échoue, des matheux qui calculent faux quand le sujet est politique, des experts à peine meilleurs que le hasard : pourquoi l'idéologie est notre mode par défaut."
 parcours: societe
 ordre: 3
-lecture_min: 30
+lecture_min: 15
 verifie_le: null
 lectures:
   - auteur: "Jonathan Haidt"
@@ -89,6 +89,16 @@ sources:
     auteur: "Wikipédia"
     url: "https://en.wikipedia.org/wiki/Philip_E._Tetlock"
     consulte: "2026-10-15"
+  - titre: "Exposure to ideologically diverse news and opinion on Facebook, Science, 348, 2015"
+    auteur: "Eytan Bakshy, Solomon Messing, Lada Adamic"
+    url: "https://doi.org/10.1126/science.aaa1160"
+    consulte: "2026-10-15"
+    primaire: true
+  - titre: "Like-minded sources on Facebook are prevalent but not polarizing, Nature, 620, 2023"
+    auteur: "Brendan Nyhan et al."
+    url: "https://doi.org/10.1038/s41586-023-06297-w"
+    consulte: "2026-10-15"
+    primaire: true
 ---
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
@@ -228,6 +238,16 @@ Les corrections marchent donc, modestement. Ce qui résiste n'est pas l'informat
 
 On présente souvent la polarisation politique comme un phénomène universel, causé par Internet. Levi Boxell, Matthew Gentzkow et Jesse Shapiro mesurent la **polarisation affective** (l'hostilité envers les partisans du camp adverse) dans **douze pays de l'OCDE sur quarante ans**. Les États-Unis connaissent la plus forte hausse ; cinq pays une hausse plus faible ; **six pays une baisse**[^boxell]. Un facteur présent dans tous ces pays, comme les réseaux sociaux, ne peut pas expliquer à lui seul des évolutions de sens opposé.
 
+### Les chambres d'écho, un coupable trop commode
+
+Une explication domine le débat public : les algorithmes des réseaux sociaux enfermeraient chacun dans une « bulle » d'opinions conformes, et fabriqueraient ainsi la polarisation. Deux études menées sur Facebook, avec des données d'une ampleur inédite, nuancent fortement ce récit.
+
+En 2015, Eytan Bakshy, Solomon Messing et Lada Adamic analysent dans *Science*, à partir de données anonymisées, le comportement de **10,1 millions** d'utilisateurs américains face aux informations partagées. Conclusion : comparés au classement algorithmique du fil d'actualité, **les choix des individus eux-mêmes** limitent davantage leur exposition aux contenus du camp opposé[^bakshy]. Ce n'est pas d'abord la machine qui trie ; c'est l'utilisateur.
+
+En 2023, une équipe conduite notamment par Brendan Nyhan publie dans *Nature* une expérience sur l'élection présidentielle américaine de 2020. Les données portent sur l'ensemble des utilisateurs adultes actifs de Facebook aux États-Unis : les contenus de sources « de même opinion » constituent la **majorité** de ce qu'ils voient, même si la politique n'en représente qu'une petite part. Les chercheurs réduisent alors d'environ **un tiers**, pour **23 377 utilisateurs**, l'exposition à ces sources pendant la campagne. Résultat : plus de contenus du camp adverse, moins de langage incivil, mais **aucun effet mesurable** sur huit indicateurs préenregistrés, dont la polarisation affective, l'extrémisme idéologique et la croyance dans de fausses affirmations[^nyhan2023].
+
+La conclusion est cohérente avec tout ce chapitre : l'idéologie ne vient pas d'abord de l'outil, elle vient de l'esprit et du groupe. Changer l'algorithme ne change pas les convictions.
+
 ## Chapitre 7 : ce qui marche, mesuré
 
 ### Les experts et le hasard
@@ -289,3 +309,5 @@ La pensée critique se mesure donc, et elle s'apprend. Ses ingrédients sont con
 [^backfire]: Wikipédia, « Backfire effect » (revue de 2020, position de Brendan Nyhan en 2021).
 [^boxell]: Levi Boxell, Matthew Gentzkow et Jesse Shapiro, « Cross-Country Trends in Affective Polarization », *Review of Economics and Statistics*, résumé.
 [^tetlock]: Wikipédia, « Philip E. Tetlock » (tournois de 1984 à 2003, hérissons et renards, Good Judgment Project).
+[^bakshy]: Eytan Bakshy, Solomon Messing et Lada Adamic, « Exposure to ideologically diverse news and opinion on Facebook », *Science*, 348, 2015, résumé.
+[^nyhan2023]: Brendan Nyhan et al., « Like-minded sources on Facebook are prevalent but not polarizing », *Nature*, 620, 2023, résumé.
