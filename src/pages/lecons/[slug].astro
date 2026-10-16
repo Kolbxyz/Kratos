@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import Forme from "../../components/Forme.astro";
+import RailLecon from "../../components/RailLecon.astro";
 import { PARCOURS } from "../../parcours";
 
 export async function getStaticPaths() {
@@ -18,18 +19,20 @@ const p = PARCOURS[d.parcours];
 const base = import.meta.env.BASE_URL;
 const sources = [...d.sources].sort((a, b) => Number(b.primaire) - Number(a.primaire));
 const primaires = d.sources.filter((s) => s.primaire).length;
+const secondaires = d.sources.filter((s) => s.secondaire).length;
 ---
-<Base titre={`${d.titre} · Leçons de pouvoir`} description={d.resume}>
+<Base titre={`${d.titre} · Kratos`} description={d.resume}>
   <article data-parcours={d.parcours} data-pagefind-body>
+    {chapitres.length >= 3 && <RailLecon chapitres={chapitres} />}
     <header class="hero">
       <Forme nom={p.forme} class="hero-forme" />
       <div class="wrap">
-        <a class="chip tone" href={`${base}#${d.parcours}`}>{p.nom}</a>
+        <a class="chip tone" href={`${base}parcours/${d.parcours}/`}>{p.nom}</a>
         <h1>{d.titre}</h1>
         <p class="lede">{d.resume}</p>
         <div class="meta">
           <span class="chip">{d.lecture_min} min</span>
-          <span class="chip">{d.sources.length} sources, dont {primaires} primaires</span>
+          <span class="chip">{d.sources.length} sources, dont {primaires} primaires{secondaires > 0 && `, ${secondaires} secondaires`}</span>
           {d.verifie_le
             ? <span class="chip">Vérifiée le {d.verifie_le}</span>
             : <span class="chip warn-chip">Relecture humaine en cours</span>}
@@ -77,12 +80,18 @@ const primaires = d.sources.filter((s) => s.primaire).length;
         </section>
       )}
 
+      <div class="fin no-print" data-fin-lecon>
+        <button class="btn" type="button" data-marquer-lue={lecon.id} aria-pressed="false">Marquer comme lue</button>
+        <a class="chip" href={`${base}parcours/${d.parcours}/`}>Retour au parcours {p.nom}</a>
+      </div>
+
       <section class="sources">
         <h2>Sources</h2>
         <ol>
           {sources.map((s) => (
             <li>
               {s.primaire && <span class="chip tone">Primaire</span>}
+              {s.secondaire && <span class="chip">Secondaire, à recouper</span>}
               <span>{s.auteur}, <a href={s.url}><cite>{s.titre}</cite></a>. Consulté le {s.consulte}.</span>
             </li>
           ))}
@@ -127,6 +136,8 @@ const primaires = d.sources.filter((s) => s.primaire).length;
   .lectures li { display: grid; gap: 0.2rem; padding: 0.8rem 1rem; border-radius: var(--r-m); border-left: 4px solid var(--tone); background: var(--surface); }
   .lectures .titre { font-weight: 650; }
   .lectures .pourquoi { color: var(--ink-2); font-size: 0.9rem; }
+  .fin { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin: 2.5rem 0; font-family: var(--sans); }
+  .fin .btn { background: var(--tone); color: var(--bg); border: 0; cursor: pointer; }
   .sources { font: 0.9rem/1.5 var(--sans); }
   .sources ol { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
   .sources li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; padding: 0.7rem 0.9rem; border-radius: var(--r-m); background: var(--surface); }

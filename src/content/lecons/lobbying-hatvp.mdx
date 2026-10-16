@@ -1,0 +1,366 @@
+---
+titre: "Le lobbying et la HATVP : qui influence la loi ?"
+resume: "Le lobbying est légal en France. Depuis 2017, ceux qui le pratiquent doivent déclarer ce qu'ils font. Que montrent les fiches d'activités du répertoire public, et que ne montrent-elles pas ?"
+parcours: institutions
+ordre: 6
+lecture_min: 22
+verifie_le: null
+sources:
+  - titre: "Synthèse du rapport d'activité 2025"
+    auteur: "Haute Autorité pour la transparence de la vie publique (HATVP)"
+    url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2026/05/HATVP_4-PAGES_dp.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Représentation d'intérêts et transparence : chiffres et infos clés pour 2024 (bilan des déclarations d'activités, juillet 2025)"
+    auteur: "Haute Autorité pour la transparence de la vie publique (HATVP)"
+    url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "La représentation des intérêts des GAFAM depuis 2020 (avril 2025)"
+    auteur: "Haute Autorité pour la transparence de la vie publique (HATVP)"
+    url: "https://hatvp.fr/wordpress/wp-content/uploads/2025/04/Analyse-RI-GAFAM-VF.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Le répertoire des représentants d'intérêts (page d'accueil)"
+    auteur: "Haute Autorité pour la transparence de la vie publique (HATVP)"
+    url: "https://www.hatvp.fr/le-repertoire/"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Répertoire des représentants d'intérêts, fichiers en vues séparées et fusionnées (données ouvertes)"
+    auteur: "Haute Autorité pour la transparence de la vie publique (HATVP), diffusé sur data.gouv.fr"
+    url: "https://www.data.gouv.fr/datasets/5d13692f634f41364f8929b8"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Le Fédéraliste, n° 10 (James Madison, New York Packet, 23 novembre 1787)"
+    auteur: "The Avalon Project, Yale Law School"
+    url: "https://avalon.law.yale.edu/18th_century/fed10.asp"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "The Logic of Collective Action: Public Goods and the Theory of Groups"
+    auteur: "Mancur Olson, Harvard University Press, 1965"
+    url: "https://doi.org/10.4159/9780674041660"
+    consulte: "2026-10-16"
+  - titre: "The Theory of Economic Regulation, Bell Journal of Economics and Management Science, vol. 2, n° 1"
+    auteur: "George Stigler, 1971"
+    url: "https://doi.org/10.2307/3003160"
+    consulte: "2026-10-16"
+lectures:
+  - auteur: "James Madison, Alexander Hamilton, John Jay"
+    titre: "Le Fédéraliste"
+    annee: 1788
+    pourquoi: "Le numéro 10 pose la question que le lobbying rend concrète : que faire des groupes organisés qui défendent leur intérêt contre celui des autres ?"
+    url: "https://avalon.law.yale.edu/18th_century/fed10.asp"
+  - auteur: "Mancur Olson"
+    titre: "The Logic of Collective Action"
+    annee: 1965
+    pourquoi: "Explique pourquoi certains intérêts s'organisent et pèsent sur la décision publique, et d'autres non."
+    url: "https://doi.org/10.4159/9780674041660"
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import Positions from "../../components/Positions.astro";
+import Schema from "../../components/Schema.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+
+Entre 2020 et 2024, Google compte **247** fiches d'activités de lobbying dans le répertoire public français. Apple en compte **27**. Sur la même période, Microsoft en déclare 56[^gafam]. Le chiffre d'affaires réalisé en France en 2022 raconte pourtant une autre hiérarchie : environ 225 millions d'euros pour Apple, environ 725 millions pour Google, 3 milliards pour Microsoft[^gafam]. Celui qui vend le plus n'est pas celui qui déclare le plus.
+
+Ce contraste ne tient à aucune opinion : il se lit dans un registre que n'importe qui peut ouvrir. C'est tout l'objet de cette leçon. En France, influencer la loi est une activité légale et reconnue. Ce que le droit impose depuis 2017, c'est de la rendre **visible**. Reste à savoir ce que cette visibilité montre vraiment.
+
+<div class="chiffres">
+  <Chiffre valeur="3 526" label="entités inscrites au répertoire des représentants d'intérêts" source="HATVP, synthèse du rapport d'activité 2025" url="https://www.hatvp.fr/wordpress/wp-content/uploads/2026/05/HATVP_4-PAGES_dp.pdf" date="au 31 décembre 2025" forme="biscuit" />
+  <Chiffre valeur="127 745" label="activités déclarées affichées par le répertoire" source="HATVP, page d'accueil du répertoire" url="https://www.hatvp.fr/le-repertoire/" date="page consultée le 16 octobre 2026" forme="fleur" />
+</div>
+
+## L'idée centrale : l'influence est légale, sa visibilité se règle
+
+Le mot « lobbying » désigne en droit français la **représentation d'intérêts**. La HATVP, l'autorité qui tient le registre, la décrit dans son bilan 2024 comme « une activité légitime qui contribue à une prise de décision publique éclairée » : chacun peut faire entendre son point de vue ou apporter une expertise[^bilan].
+
+La loi ne cherche donc pas à interdire l'influence. Elle pose trois exigences :
+
+1. **S'inscrire** sur un répertoire public lorsqu'on prend l'initiative de contacter des responsables publics pour tenter d'influencer une décision.
+2. **Déclarer** chaque année les objectifs poursuivis, les décisions visées, les responsables contactés et les moyens dépensés.
+3. **Respecter des règles de déontologie** dans les contacts avec les responsables publics.
+
+Ce dispositif repose sur un pari : si l'on voit qui parle à qui, sur quoi et avec quels moyens, le public peut juger de l'impact de ces échanges sur la loi. La HATVP le formule ainsi : le répertoire permet au public « de mieux connaître et de pouvoir mesurer l'impact de la représentation d'intérêts sur le processus normatif »[^bilan].
+
+Il y a donc deux questions distinctes. La première est juridique : qui doit se déclarer, et que risque-t-il s'il ne le fait pas ? La seconde est empirique : que disent réellement les déclarations ? Les chapitres suivants traitent la première, puis la seconde, puis les limites de la réponse.
+
+## Histoire longue : des factions de Madison au registre de 2017
+
+### 1787 : Madison et le problème des factions
+
+Le problème est plus vieux que le mot. Le 23 novembre 1787, James Madison publie dans le *New York Packet* le dixième texte du *Fédéraliste*, pour défendre la future Constitution des États-Unis. Il y définit ce qu'il appelle une faction[^fed10] :
+
+<Citation auteur="James Madison" oeuvre="Le Fédéraliste, n° 10 (traduction)" annee="1787" reference="New York Packet, 23 novembre 1787" url="https://avalon.law.yale.edu/18th_century/fed10.asp" original="By a faction, I understand a number of citizens, whether amounting to a majority or a minority of the whole, who are united and actuated by some common impulse of passion, or of interest, adversed to the rights of other citizens, or to the permanent and aggregate interests of the community." langue="en">
+  Par faction, j'entends un certain nombre de citoyens, qu'ils forment une majorité ou une minorité de l'ensemble, unis et animés par une impulsion commune de passion ou d'intérêt, contraire aux droits des autres citoyens ou aux intérêts permanents et collectifs de la communauté.
+</Citation>
+
+Madison examine deux façons de guérir les maux de la faction : en supprimer les causes, ou en contrôler les effets. Pour les causes, il écarte les deux voies possibles. La première consiste à détruire la liberté dont la faction a besoin pour exister, et il juge ce remède pire que le mal. La seconde consiste à donner à tous les citoyens les mêmes opinions et les mêmes intérêts, ce qu'il juge impraticable[^fed10]. Sa formule la plus connue tient en une ligne :
+
+<Citation auteur="James Madison" oeuvre="Le Fédéraliste, n° 10 (traduction)" annee="1787" reference="New York Packet, 23 novembre 1787" url="https://avalon.law.yale.edu/18th_century/fed10.asp" original="Liberty is to faction what air is to fire" langue="en">
+  La liberté est à la faction ce que l'air est au feu.
+</Citation>
+
+Reste le contrôle des effets. Le dispositif français de 2017 n'interdit pas les groupes d'intérêts : il organise ce que le public peut en savoir.
+
+### 1965 et 1971 : pourquoi certains intérêts pèsent plus que d'autres
+
+Deux travaux d'économistes ont transformé la question. En 1965, Mancur Olson publie *The Logic of Collective Action* (Harvard University Press). Sa thèse centrale : l'existence d'un grand groupe ayant un intérêt commun ne suffit pas à produire une action collective, parce que chacun a intérêt à laisser les autres payer le coût de l'organisation (le problème du « passager clandestin »). Les petits groupes s'organisent plus facilement que les grands[^olson].
+
+En 1971, George Stigler publie « The Theory of Economic Regulation » dans le *Bell Journal of Economics and Management Science*. Il y avance que la régulation est, en règle générale, acquise par l'industrie qu'elle encadre et conçue et mise en œuvre principalement à son profit[^stigler]. Cette thèse, dite de la capture, a été discutée depuis : une partie de la critique porte sur la portée de l'expression « as a rule » (« en règle générale »)[^peltzman].
+
+La HATVP ne cite pas ces deux auteurs dans les documents utilisés ici. Ils servent à poser la question que le registre documente : quels intérêts se sont organisés pour parler aux responsables publics, et sur quoi ?
+
+### 2016-2025 : la construction du registre français
+
+<Timeline items={[
+  { date: "9 décembre 2016", texte: "La loi dite « Sapin II » oblige les représentants d'intérêts à s'inscrire en ligne sur un répertoire tenu par la HATVP (HATVP, bilan 2024)." },
+  { date: "9 mai 2017", texte: "Le décret n° 2017-867 fixe le fonctionnement du répertoire numérique, dont la liste des types d'actions et des départements ministériels (HATVP, bilan 2024)." },
+  { date: "Juillet 2017", texte: "L'espace en ligne destiné aux représentants d'intérêts ouvre sur le site de la HATVP (HATVP, bilan 2024). Dans les données ouvertes, 778 entités ont une première publication datée de 2017 et 937 de 2018." },
+  { date: "Juin 2021", texte: "La HATVP met en ligne le « hub du lobbying », plateforme de visualisation et d'analyse des données du répertoire (HATVP, bilan 2024)." },
+  { date: "25 juillet 2024", texte: "Une loi confie à la HATVP un second répertoire, consacré aux activités d'influence menées pour le compte de mandants étrangers (HATVP, rapport d'activité 2025)." },
+  { date: "14 octobre 2024", texte: "Le Conseil d'État, dans la décision dite « Institut Montaigne », juge que les laboratoires d'idées ne sont pas des représentants d'intérêts par défaut (HATVP, bilan 2024)." },
+  { date: "1er octobre 2025", texte: "Le téléservice Argos, répertoire de l'influence étrangère, devient opérationnel (HATVP, rapport d'activité 2025)." },
+]} />
+
+## Le dispositif français : qui doit s'inscrire, et que déclare-t-on ?
+
+### Les critères de l'article 18-2
+
+L'article 18-2 de la loi du 11 octobre 2013 définit qui est représentant d'intérêts. La HATVP le résume dans son bilan 2024 par des critères cumulatifs[^bilan] :
+
+- une **personne morale** (dont un dirigeant, un employé ou un membre exerce une activité de représentation d'intérêts) ou une **personne physique** agissant dans le cadre d'une activité professionnelle ;
+- qui **prend l'initiative de contacter** un responsable public pour tenter d'influencer une décision publique ;
+- et dont l'activité est soit **principale** (plus de la moitié de son temps sur six mois), soit **régulière** (au moins dix entrées en communication sur les douze derniers mois).
+
+Seuls comptent donc les contacts pris à l'initiative du représentant d'intérêts. La HATVP demande de supprimer ce critère (voir plus bas).
+
+Ne doivent pas s'inscrire[^bilan] :
+
+- les élus dans l'exercice de leur mandat ;
+- les partis et groupements politiques, dans le cadre de leur mission prévue à l'article 4 de la Constitution ;
+- les organisations syndicales de fonctionnaires et, dans le cadre du dialogue social garanti par l'article L. 1 du code du travail, les organisations syndicales de salariés et les organisations professionnelles d'employeurs ;
+- les associations à objet cultuel ;
+- les associations représentatives des élus dans l'exercice des missions prévues dans leurs statuts.
+
+Autrement dit, un syndicat de salariés agissant dans le cadre du dialogue social n'a pas à s'inscrire, alors qu'une entreprise qui remplit les critères d'initiative et de seuil doit le faire.
+
+### Les think tanks : la décision « Institut Montaigne »
+
+Le 14 octobre 2024, le Conseil d'État a jugé que les laboratoires d'idées ne doivent pas, par défaut, être considérés comme représentants d'intérêts. La décision n'exclut pas qu'ils le soient : elle institue trois critères que la HATVP examine, portant sur leurs conditions de financement, leurs modalités de gouvernance et les conditions dans lesquelles leurs travaux sont menés[^bilan]. La HATVP a pris contact avec tous les organismes inscrits comme « think tanks », qui pourraient ne plus être soumis à l'obligation[^bilan].
+
+### Ce qu'on déclare
+
+Dans sa déclaration annuelle, un représentant d'intérêts indique[^bilan] :
+
+1. les objectifs poursuivis et le domaine d'intervention (31 domaines possibles) ;
+2. le type de décision publique visée (loi, acte réglementaire, décision dite d'espèce, certains marchés publics et contrats de concession, etc.) ;
+3. le type d'action menée (organiser des rendez-vous, transmettre une expertise dans un objectif de conviction, etc.) ;
+4. les catégories de responsables publics contactés ;
+5. les tiers pour le compte desquels il agit, le cas échéant (un cabinet de conseil pour son client, une société mère pour une filiale) ;
+6. les dépenses de représentation d'intérêts, exprimées en fourchettes fixées par l'arrêté du 4 juillet 2017 ;
+7. pour les cabinets de conseil et d'avocats, le chiffre d'affaires lié à cette activité.
+
+Le délai est de trois mois après la clôture de l'exercice comptable. Un représentant d'intérêts qui n'a mené aucune action doit tout de même déposer une déclaration de non-activité[^bilan]. Après une désinscription, ses déclarations restent visibles cinq ans[^bilan].
+
+Les pratiques doivent aussi respecter les obligations déontologiques de l'article 18-5 : lors des prises de contact avec des responsables publics, des demandes d'informations ou de documents officiels, de la diffusion d'informations, de l'organisation de colloques auxquels sont invités des responsables publics[^bilan].
+
+### Qui contrôle qui
+
+<Schema
+  titre="Le répertoire des représentants d'intérêts : acteurs et obligations"
+  noeuds={[
+    { id: "ri", nom: "Représentant d'intérêts" },
+    { id: "rp", nom: "Responsable public" },
+    { id: "hatvp", nom: "HATVP" },
+    { id: "public", nom: "Public" },
+    { id: "parquet", nom: "Parquet" },
+  ]}
+  liens={[
+    { de: "ri", vers: "rp", verbe: "prend l'initiative de contacter le responsable public pour tenter d'influencer une décision publique", source: "Loi n° 2013-907, article 18-2, présenté par la HATVP (bilan 2024, p. 3)", url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf" },
+    { de: "ri", vers: "hatvp", verbe: "communique son identité, ses actions de représentation d'intérêts et les moyens qu'il y consacre", source: "Loi n° 2013-907, article 18-3, présenté par la HATVP (bilan 2024, p. 4)", url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf" },
+    { de: "hatvp", vers: "ri", verbe: "s'assure du respect des obligations déclaratives et déontologiques", source: "HATVP, bilan 2024, p. 4", url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf" },
+    { de: "hatvp", vers: "public", verbe: "met ces informations à la disposition des citoyens", source: "HATVP, bilan 2024, p. 4", url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf" },
+    { de: "hatvp", vers: "parquet", verbe: "a transmis 19 dossiers en 2025 pour non-dépôt de déclaration d'activités et de moyens", source: "HATVP, synthèse du rapport d'activité 2025", url: "https://www.hatvp.fr/wordpress/wp-content/uploads/2026/05/HATVP_4-PAGES_dp.pdf" },
+  ]}
+/>
+
+## Les données : ce que le répertoire montre
+
+### Un registre qui a grossi par vagues
+
+Au 31 décembre 2025, 3 526 entités étaient inscrites au répertoire, « un chiffre en croissance continue depuis 2017 », et plus de 107 000 fiches d'activités étaient consultables librement[^synthese]. En juillet 2024, la HATVP comptait 3 215 inscrits ; au 1er juillet 2025, ce nombre avait augmenté de 9 %[^bilan].
+
+Le rythme n'a pas été régulier. Les données ouvertes de la HATVP permettent de dater la première publication de chaque entité encore présente dans le fichier[^donnees] :
+
+<Chart
+  src="pouvoir/lobbying-inscriptions-par-annee"
+  kind="line"
+  x="annee"
+  y="nouveaux_inscrits"
+  titre="Entités selon l'année de leur première publication au répertoire, 2017-2025"
+  unite="entités"
+/>
+
+L'essentiel des inscriptions date des deux premières années, quand la loi a rendu l'inscription obligatoire : 778 entités en 2017 et 937 en 2018. Ensuite, le rythme annuel varie entre 217 et 437 : 236 en 2019, 217 en 2020, 266 en 2021, 305 en 2022, 437 en 2023, 375 en 2024, 278 en 2025. Ces comptes sont des minima pour les premières années : les entités désinscrites depuis plus de cinq ans ne figurent plus dans le fichier[^donnees].
+
+### Plus de fiches chaque année
+
+Une fiche d'activités correspond à un sujet sur lequel un représentant d'intérêts a agi. Le nombre de fiches rattachées aux exercices clos augmente de 13 251 en 2021 à 20 170 en 2025[^donnees] :
+
+<Chart
+  src="pouvoir/lobbying-fiches-par-annee"
+  kind="line"
+  x="annee"
+  y="fiches"
+  titre="Fiches d'activités de représentation d'intérêts par année d'exercice, 2021-2025"
+  unite="fiches"
+/>
+
+Ce décompte est celui du fichier téléchargé le 16 octobre 2026. Il ne se compare pas aux totaux publiés dans les bilans de la HATVP, arrêtés à d'autres dates : le bilan de juillet 2025 indique par exemple 15 633 fiches pour 2023, là où le fichier d'octobre 2026 en compte 18 592 pour le même exercice[^bilan][^donnees].
+
+Les fiches se répartissent très inégalement. En 2024, un représentant d'intérêts a renseigné en moyenne 8,6 fiches, et les cabinets de conseil et d'avocats en ont renseigné 19 en moyenne[^bilan]. La HATVP prévient que le nombre de fiches « reflète avant tout la diversité des sujets traités » : une réunion portant sur trois sujets donne trois fiches, et plusieurs réunions sur un même sujet n'en donnent qu'une[^bilan].
+
+### Qui les lobbyistes cherchent-ils à atteindre ?
+
+Pour l'exercice 2025, le fichier permet de compter les fiches selon la catégorie de responsable public visée. Une fiche peut en viser plusieurs : les barres ne s'additionnent pas[^donnees].
+
+<Chart
+  src="pouvoir/lobbying-cibles-2025"
+  kind="barX"
+  x="fiches"
+  y="cible"
+  titre="Fiches d'activités de l'exercice 2025 selon la catégorie de responsable public visée"
+  unite="fiches"
+/>
+
+Les parlementaires et leurs collaborateurs sont cités dans 12 525 fiches, le Gouvernement et les cabinets ministériels dans 10 751, les agents de l'État dans 5 604. Les collaborateurs du Président de la République figurent dans 2 529 fiches[^donnees]. Les parlementaires et le Gouvernement arrivent ainsi en tête, les agents de l'État en troisième position. La répartition ne dit rien de l'efficacité : elle indique seulement où se dirigent les actions déclarées.
+
+### Que font-ils concrètement ?
+
+Dans son bilan 2024, la HATVP publie la part de chaque type d'action déclarée[^bilan] :
+
+<Chart
+  src="pouvoir/lobbying-types-actions-2024"
+  kind="barX"
+  x="part"
+  y="action"
+  titre="Types d'actions déclarées en 2024, en % des actions"
+  unite="%"
+/>
+
+Quatre types dominent : transmettre une information ou une expertise pour convaincre (25 %), organiser des discussions informelles ou des réunions en tête-à-tête (23,5 %), transmettre des suggestions pour influencer la rédaction d'une décision (18,5 %) et établir une correspondance régulière (15,3 %). À l'inverse, envoyer des pétitions, des lettres ouvertes ou des tracts ne représente que 1,8 % des actions déclarées, et organiser des débats publics, des marches ou des stratégies d'influence sur internet 1,3 %[^bilan].
+
+Les actions déclarées sont donc surtout de l'expertise, de la rédaction et des rendez-vous. Les actions publiques (pétitions, tracts, débats, marches) forment une part marginale.
+
+### Un cas de loi : le « pouvoir d'achat »
+
+La HATVP publie aussi des analyses par texte. Pour la loi dite « Pouvoir d'achat », 68 entités inscrites au répertoire déclarent avoir été actives lors des débats, principalement des sociétés commerciales, des organisations professionnelles, des associations et des cabinets de conseil. Sur l'année 2024, 272 fiches d'activités attestent des actions menées. Les mesures visées concernaient la protection du niveau de vie, la souveraineté énergétique, le transport routier de marchandises et les carburants[^bilan].
+
+## Les limites du registre : ce que la HATVP dit elle-même
+
+Un registre n'est utile que si l'on sait ce qu'il ne mesure pas. La HATVP le dit dans ses propres publications.
+
+**Une fiche n'est pas une mesure d'intensité.** Le bilan 2024 le rappelle : une fiche peut regrouper plusieurs actions ou, à l'inverse, une action peut produire plusieurs fiches[^bilan]. Comparer des organisations au nombre de fiches revient à comparer leur nombre de sujets, pas leur poids.
+
+**La qualité des déclarations est inégale.** Selon l'algorithme de la HATVP, 74,3 % des objets déclarés en 2024 respectent les exigences minimales de lisibilité, contre 74,7 % en 2023. La rubrique « observations », qui permet de préciser le contexte, n'est utilisée que dans près d'une déclaration sur quatre[^bilan].
+
+**Tous ne déclarent pas.** Pour l'exercice 2024, 2 884 entités inscrites devaient déclarer. Au 30 avril 2025, après relances amiables, 89 % l'avaient fait[^bilan]. Au titre de l'exercice 2023, 296 représentants d'intérêts ne déclaraient aucune des informations exigées par la loi[^bilan]. En 2025, la HATVP a clôturé 174 contrôles et transmis 19 dossiers au parquet pour non-dépôt de déclaration d'activités et de moyens[^synthese].
+
+**Les dépenses sont en fourchettes.** Les montants déclarés suivent les tranches de l'arrêté du 4 juillet 2017, ce qui interdit tout total précis[^bilan].
+
+**Le champ est borné par la loi.** Seuls les contacts pris à l'initiative du représentant d'intérêts entrent dans la définition. Les syndicats et organisations d'employeurs dans le cadre du dialogue social, les partis et les élus dans l'exercice de leur mandat sont hors du champ[^bilan].
+
+La HATVP tire elle-même la conclusion de ces limites dans cinq propositions[^bilan] :
+
+1. lui donner un pouvoir de sanction administrative en cas de non-dépôt d'une déclaration ;
+2. accroître le rythme de déclaration, d'annuel à semestriel, et améliorer la précision des informations ;
+3. introduire un délit d'entrave ou une sanction administrative en cas d'obstruction au contrôle ;
+4. lui donner un droit de communication auprès des responsables et entités publics visés par une action ;
+5. simplifier le champ de la représentation d'intérêts, notamment en supprimant le critère du contact à l'initiative du représentant d'intérêts et en simplifiant les seuils de déclenchement de l'obligation déclarative.
+
+## Étude de cas : les GAFAM
+
+En avril 2025, la HATVP a publié une analyse fondée sur 533 fiches d'activités relatant des actions menées entre 2020 et 2024 par Google, Apple, Facebook (Meta, restée inscrite sous son ancien nom), Amazon et Microsoft, ou par des entités qu'elles ont mandatées[^gafam].
+
+<Chart
+  src="pouvoir/lobbying-gafam-fiches"
+  kind="barX"
+  x="fiches"
+  y="entreprise"
+  titre="Fiches d'activités déclarées pour le compte des GAFAM, 2020-2024"
+  unite="fiches"
+/>
+
+Google compte 247 fiches, Amazon 118, Facebook 85, Microsoft 56 et Apple 27[^gafam]. L'analyse met ces chiffres en regard du chiffre d'affaires réalisé en France en 2022 : environ 225 millions d'euros pour Apple, environ 725 millions pour Google, soit un rapport de un à trois, contre un rapport de un à neuf pour les fiches. Microsoft, avec 3 milliards d'euros, déclare près de 200 fiches de moins que Google[^gafam]. Le nombre de fiches ne suit donc pas la taille de l'entreprise en France.
+
+Les entreprises n'agissent pas toutes de la même manière. Google déclare en propre 184 de ses 247 fiches (près de 75 %), Microsoft 42 sur 56, Apple 21 sur 27. Facebook déclare 46 fiches en propre contre 39 déclarées par des tiers (54 %), et Amazon 73 contre 45 (61 %)[^gafam]. Les cabinets, fédérations et agences d'affaires publiques servent de relais, davantage pour Facebook que pour Google.
+
+L'ensemble progresse nettement :
+
+<Chart
+  src="pouvoir/lobbying-gafam-par-annee"
+  kind="line"
+  x="annee"
+  y="fiches"
+  titre="Fiches d'activités des cinq GAFAM réunis, 2020-2023"
+  unite="fiches"
+/>
+
+Le total passe de 88 fiches en 2020 à 100 en 2021, 158 en 2022 et 187 en 2023, tiré en grande partie par Google : 31 fiches en 2020, 112 depuis 2023[^gafam]. Les activités se concentrent sur deux règlements européens adoptés en 2022, le Digital Markets Act (DMA) et le Digital Services Act (DSA), et sur leur transposition en droit français par la loi visant à sécuriser et réguler l'espace numérique (SREN). Google a publié 21 fiches sur le seul projet de loi SREN en 2023[^gafam].
+
+La HATVP résume l'objectif déclaré : défendre l'harmonisation des règles à l'échelle européenne, en plaidant pour que la loi française n'introduise pas de contraintes supplémentaires pesant sur les entreprises[^gafam]. L'analyse relève aussi que l'Autorité de la concurrence, l'ARCOM et l'ARCEP ont été visées directement par des actions de Google, Microsoft, Amazon et Facebook, et que Google a déclaré des actions sur des textes éloignés de son cœur d'activité, comme la loi de programmation militaire[^gafam].
+
+## Le débat : que doit faire un État de l'influence ?
+
+Les textes cités dans cette leçon ne répondent pas de la même façon à la question. Voici les positions, chacune avec son auteur.
+
+<Positions items={[
+  { titre: "Madison", sous_titre: "Le Fédéraliste n° 10, 1787", forme: "biscuit", points: [
+    "La faction a besoin de la liberté pour exister : la supprimer est un remède pire que le mal.",
+    "Donner à tous les mêmes opinions et les mêmes intérêts est un remède impraticable.",
+    "Il reste à <strong>contrôler les effets</strong> de la faction.",
+  ]},
+  { titre: "Olson et Stigler", sous_titre: "1965 et 1971", forme: "gemme", points: [
+    "Les petits groupes concentrés <strong>s'organisent plus facilement</strong> que les grands groupes diffus (Olson).",
+    "La régulation est, en règle générale, acquise par l'industrie qu'elle encadre et conçue pour son profit (Stigler).",
+    "La portée de cette règle a été discutée depuis.",
+  ]},
+  { titre: "La HATVP", sous_titre: "Bilan 2024, juillet 2025", forme: "fleur", points: [
+    "Le lobbying est une activité <strong>légitime</strong> qui éclaire la décision publique.",
+    "Le dispositif doit être plus contraignant : pouvoir de sanction, déclaration semestrielle, droit de communication, champ simplifié.",
+    "Elle précise que le nombre de fiches ne mesure pas l'intensité de l'influence.",
+  ]},
+]} />
+
+Trois lignes de désaccord se dégagent de ces textes.
+
+**Où fixer le champ ?** La loi exclut les élus dans l'exercice de leur mandat, les partis, et, dans le cadre du dialogue social, les syndicats et les organisations d'employeurs. La HATVP propose de simplifier ce champ et de supprimer le critère de l'initiative[^bilan]. Le Conseil d'État, lui, a refusé de ranger les think tanks par défaut parmi les représentants d'intérêts[^bilan].
+
+**Quels pouvoirs pour le contrôleur ?** En 2025, l'autorité a transmis 19 dossiers au parquet pour non-dépôt[^synthese]. Parmi ses propositions, la HATVP demande à être dotée d'un pouvoir de sanction administrative du non-dépôt d'une déclaration[^bilan].
+
+**Que prouve la transparence ?** Le registre montre qui déclare quoi, pas qui a gagné. Avec les travaux d'Olson et de Stigler, la question devient : un registre où figurent les intérêts organisés révèle-t-il aussi ceux qui ne le sont pas ? Les données du répertoire ne répondent qu'à la première moitié de la question.
+
+## À retenir
+
+<ARetenir>
+
+1. Le lobbying est légal en France, et la HATVP le juge « légitime » ; la loi de 2016 impose de le déclarer, pas de s'en abstenir.
+2. Au 31 décembre 2025, 3 526 entités étaient inscrites au répertoire, avec plus de 107 000 fiches d'activités consultables.
+3. Un représentant d'intérêts est défini par l'initiative du contact et par un seuil : activité principale (plus de la moitié du temps sur six mois) ou régulière (au moins dix entrées en communication sur douze mois).
+4. Les déclarations visent d'abord les parlementaires (12 525 fiches en 2025) et le Gouvernement (10 751) ; les actions dominantes sont l'expertise pour convaincre et les rendez-vous en tête-à-tête.
+5. Entre 2020 et 2024, Google déclare 247 fiches et Apple 27 : le nombre de fiches ne suit pas le chiffre d'affaires, et ne mesure ni l'intensité ni l'efficacité de l'influence.
+6. En 2025, la HATVP a transmis 19 dossiers au parquet pour non-dépôt ; elle demande un pouvoir de sanction administrative, une déclaration semestrielle et un champ simplifié.
+
+</ARetenir>
+
+[^gafam]: HATVP, « La représentation des intérêts des GAFAM depuis 2020 », avril 2025 : 533 fiches d'activités sur 2020-2024, 247 fiches pour Google, 118 pour Amazon, 85 pour Facebook, 56 pour Microsoft, 27 pour Apple ; chiffres d'affaires en France en 2022 cités par l'analyse ; totaux annuels 88, 100, 158 et 187 fiches de 2020 à 2023 ; répartition des fiches déclarées en propre ou par des tiers ; DMA, DSA et loi SREN. https://hatvp.fr/wordpress/wp-content/uploads/2025/04/Analyse-RI-GAFAM-VF.pdf
+[^bilan]: HATVP, « Représentation d'intérêts et transparence : chiffres et infos clés pour 2024 », bilan des déclarations d'activités, juillet 2025 : définition de l'article 18-2 et exclusions (p. 3), décision du Conseil d'État du 14 octobre 2024 et articles 18-3 et 18-5 (p. 4), contenu de la déclaration et déontologie (p. 5), exercice 2024 (p. 8), désinscription (p. 9), fiches d'activités (p. 10 à 12), types d'actions (p. 15), défauts de déclaration (p. 17), propositions de la HATVP (p. 18), hub du lobbying et analyse de la loi « Pouvoir d'achat » (p. 19). https://www.hatvp.fr/wordpress/wp-content/uploads/2025/09/HATVP_BILAN_RRI-2024_web.pdf
+[^synthese]: HATVP, « Synthèse du rapport d'activité 2025 », 2026 : 3 526 entités inscrites au 31 décembre 2025, plus de 107 000 fiches d'activités, 174 contrôles clôturés, 19 dossiers transmis au parquet, loi du 25 juillet 2024, Argos opérationnel depuis le 1er octobre 2025. https://www.hatvp.fr/wordpress/wp-content/uploads/2026/05/HATVP_4-PAGES_dp.pdf
+[^donnees]: HATVP, données ouvertes du répertoire des représentants d'intérêts (vues fusionnées), fichier mis à jour le 16 octobre 2026, traité par `scripts/fetch-lobbying.mjs` : une ligne par entité pour les inscriptions, fiches distinctes par année d'exercice, couples distincts (fiche, catégorie de responsable public) pour 2025. https://www.data.gouv.fr/datasets/5d13692f634f41364f8929b8
+[^fed10]: James Madison, *Federalist* n° 10, *New York Packet*, 23 novembre 1787. Original : « By a faction, I understand a number of citizens, whether amounting to a majority or a minority of the whole, who are united and actuated by some common impulse of passion, or of interest, adversed to the rights of other citizens, or to the permanent and aggregate interests of the community » ; « Liberty is to faction what air is to fire ». https://avalon.law.yale.edu/18th_century/fed10.asp
+[^olson]: Mancur Olson, *The Logic of Collective Action: Public Goods and the Theory of Groups*, Harvard University Press, 1965. https://doi.org/10.4159/9780674041660
+[^stigler]: George J. Stigler, « The Theory of Economic Regulation », *Bell Journal of Economics and Management Science*, vol. 2, n° 1, printemps 1971, p. 3 à 21. https://doi.org/10.2307/3003160
+[^peltzman]: Rétrospective sur la théorie de Stigler, *Public Choice*, vol. 193, 2022 (https://ideas.repec.org/a/kap/pubcho/v193y2022i1d10.1007_s11127-022-00996-0.html) ; ProMarket, « Assessing George Stigler's Economic Theory of Regulation », 27 juillet 2021, qui discute l'expression « as a rule » (https://promarket.org/2021/07/27/assessing-george-stiglers-economic-theory-of-regulation/).

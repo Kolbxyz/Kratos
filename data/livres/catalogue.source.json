@@ -1,0 +1,7 @@
+{
+  "titre": "Couvertures et sujets des lectures de la bibliothèque",
+  "producteur": "Open Library (Internet Archive)",
+  "url": "https://openlibrary.org/developers/api",
+  "consulte": "2026-10-16",
+  "traitement": "Recherche par titre et nom d'auteur ; résultat retenu seulement si l'auteur et au moins 60 % des mots du titre correspondent. Titre, auteur, année et résumé viennent des leçons."
+}

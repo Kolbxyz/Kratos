@@ -1,0 +1,8 @@
+{
+  "titre": "Taux de pauvreté monétaire par groupe d'âge, France, Allemagne et Italie, 2025",
+  "producteur": "Eurostat",
+  "jeu": "ilc_li02 (seuil B_60, âges Y_LT18, Y18-64, Y_GE65 ; enquête EU-SILC)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table",
+  "traitement": "Part de chaque groupe d'âge sous 60 % du revenu équivalent médian national, année 2025, arrondie à une décimale.",
+  "consulte": "2026-10-16"
+}

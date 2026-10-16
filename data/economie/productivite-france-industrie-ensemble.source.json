@@ -1,0 +1,8 @@
+{
+  "titre": "Productivité apparente du travail en France, industrie et ensemble de l'économie, base 100 en 2000, jusqu'en 2025",
+  "producteur": "Eurostat",
+  "jeu": "nama_10_a10 (valeur ajoutée brute, volumes chaînés 2020, B1G) divisée par nama_10_a10_e (emploi, concept intérieur)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10/default/table",
+  "traitement": "Valeur ajoutée brute en volume (millions d'euros 2020) divisée par l'emploi en milliers de personnes, rebasée à 100 en 2000 par division par la valeur de l'année 2000, arrondie à une décimale. Mesure par personne en emploi (non par heure travaillée).",
+  "consulte": "2026-10-16"
+}

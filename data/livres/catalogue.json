@@ -1,0 +1,914 @@
+{
+  "boris-mirkine-guetzevitch-les-nouvelles-tendances-du-droit-constitutio": {
+    "ol": "https://openlibrary.org/works/OL11187332W",
+    "sujets": [
+      "Constitutional law"
+    ],
+    "pages": 218
+  },
+  "kenneth-rogoff-the-optimal-degree-of-commitment-to-an-intermediate-mon": {
+    "ol": "https://openlibrary.org/works/OL11633839W",
+    "sujets": [
+      "Mathematical models",
+      "Monetary policy"
+    ],
+    "pages": 55
+  },
+  "john-maynard-keynes-theorie-generale-de-l-emploi-de-l-interet-et-de-la": {
+    "ol": "https://openlibrary.org/works/OL33405691W",
+    "sujets": [
+      "Economics",
+      "Money",
+      "Interest",
+      "Employment (Economic theory)",
+      "Usury"
+    ],
+    "pages": 407
+  },
+  "anne-goldgar-tulipmania-money-honor-and-knowledge-in-the-dutch-golden-": {
+    "ol": "https://openlibrary.org/works/OL3528060W",
+    "sujets": [
+      "Business",
+      "History",
+      "Nonfiction",
+      "Social life and customs",
+      "Economic conditions",
+      "Tulip Mania, 1634-1637"
+    ],
+    "pages": 425,
+    "couverture": "anne-goldgar-tulipmania-money-honor-and-knowledge-in-the-dutch-golden-.jpg"
+  },
+  "robert-shiller-irrational-exuberance-exuberance-irrationnelle": {
+    "ol": "https://openlibrary.org/works/OL3638785W",
+    "sujets": [
+      "Risk",
+      "Aktienmarkt",
+      "Prix",
+      "Entwicklung",
+      "Risque",
+      "Actions (Titres de société)"
+    ],
+    "pages": 312,
+    "couverture": "robert-shiller-irrational-exuberance-exuberance-irrationnelle.jpg"
+  },
+  "robert-triffin-gold-and-the-dollar-crisis": {
+    "ol": "https://openlibrary.org/works/OL4063633W",
+    "sujets": [
+      "Addresses, essays, lectures",
+      "Balance of payments",
+      "Bank reserves",
+      "Currency convertibility",
+      "Currency question",
+      "Gold"
+    ],
+    "pages": 181,
+    "couverture": "robert-triffin-gold-and-the-dollar-crisis.jpg"
+  },
+  "barry-eichengreen-globalizing-capital-a-history-of-the-international-m": {
+    "ol": "https://openlibrary.org/works/OL8003040W",
+    "sujets": [
+      "Gold standard",
+      "History",
+      "International finance"
+    ],
+    "pages": 234,
+    "couverture": "barry-eichengreen-globalizing-capital-a-history-of-the-international-m.jpg"
+  },
+  "carl-von-clausewitz-de-la-guerre": {
+    "ol": "https://openlibrary.org/works/OL8631905W",
+    "sujets": [],
+    "pages": 760,
+    "couverture": "carl-von-clausewitz-de-la-guerre.jpg"
+  },
+  "raymond-aron-penser-la-guerre-clausewitz": {
+    "ol": "https://openlibrary.org/works/OL356095W",
+    "sujets": [
+      "Military art and science",
+      "War",
+      "War (Philosophy)",
+      "Clausewitz, karl von, 1780-1831"
+    ],
+    "pages": 390,
+    "couverture": "raymond-aron-penser-la-guerre-clausewitz.jpg"
+  },
+  "louis-favoreu-la-politique-saisie-par-le-droit": {
+    "ol": "https://openlibrary.org/works/OL2374447W",
+    "sujets": [
+      "Politics and government",
+      "Constitutional law",
+      "France. Conseil constitutionnel"
+    ],
+    "pages": 153,
+    "couverture": "louis-favoreu-la-politique-saisie-par-le-droit.jpg"
+  },
+  "alec-stone-sweet-governing-with-judges-constitutional-politics-in-euro": {
+    "ol": "https://openlibrary.org/works/OL8011776W",
+    "sujets": [
+      "Constitutional courts",
+      "Judicial power",
+      "Courts, europe",
+      "Law, political aspects",
+      "Political aspects",
+      "Law"
+    ],
+    "pages": 248,
+    "couverture": "alec-stone-sweet-governing-with-judges-constitutional-politics-in-euro.jpg"
+  },
+  "thomas-hobbes-leviathan": {
+    "ol": "https://openlibrary.org/works/OL653987W",
+    "sujets": [
+      "Political science",
+      "The State",
+      "Early works to 1800",
+      "Sciences politiques",
+      "État",
+      "Ouvrages avant 1800"
+    ],
+    "pages": 508,
+    "couverture": "thomas-hobbes-leviathan.jpg"
+  },
+  "john-locke-deuxieme-traite-du-gouvernement-civil": {
+    "ol": "https://openlibrary.org/works/OL880143W",
+    "sujets": [
+      "Science politique",
+      "Caroline Constitution"
+    ],
+    "pages": 256
+  },
+  "jean-jacques-rousseau-du-contrat-social": {
+    "ol": "https://openlibrary.org/works/OL80609W",
+    "sujets": [
+      "Peace",
+      "The State",
+      "Science politique",
+      "Economics",
+      "Early works to 1800",
+      "Social contract"
+    ],
+    "pages": 249,
+    "couverture": "jean-jacques-rousseau-du-contrat-social.jpg"
+  },
+  "robert-klitgaard-controlling-corruption": {
+    "ol": "https://openlibrary.org/works/OL8203699W",
+    "sujets": [
+      "Political corruption",
+      "Case studies",
+      "Prevention",
+      "Corruption (Politique)",
+      "Cas, Études de",
+      "POLITICAL SCIENCE"
+    ],
+    "pages": 225,
+    "couverture": "robert-klitgaard-controlling-corruption.jpg"
+  },
+  "dacher-keltner-the-power-paradox": {
+    "ol": "https://openlibrary.org/works/OL20032677W",
+    "sujets": [
+      "Social psychology",
+      "Power (Social sciences)",
+      "Identity (psychology)",
+      "Self",
+      "Control (Psychology)",
+      "Einfluss"
+    ],
+    "pages": 202,
+    "couverture": "dacher-keltner-the-power-paradox.jpg"
+  },
+  "thibault-le-texier-histoire-d-un-mensonge-enquete-sur-l-experience-de-": {
+    "ol": "https://openlibrary.org/works/OL22518239W",
+    "sujets": [
+      "Social psychology",
+      "Research",
+      "Social sciences",
+      "Experiments",
+      "Prison psychology"
+    ],
+    "pages": 296,
+    "couverture": "thibault-le-texier-histoire-d-un-mensonge-enquete-sur-l-experience-de-.jpg"
+  },
+  "salluste-la-guerre-de-jugurtha": {
+    "ol": "https://openlibrary.org/works/OL41349750W",
+    "sujets": [],
+    "pages": 86
+  },
+  "joseph-h-h-weiler-the-transformation-of-europe-yale-law-journal": {
+    "ol": "https://openlibrary.org/works/OL45972674W",
+    "sujets": [],
+    "pages": 2483
+  },
+  "karen-j-alter-establishing-the-supremacy-of-european-law": {
+    "ol": "https://openlibrary.org/works/OL8016495W",
+    "sujets": [
+      "Rule of law",
+      "International law",
+      "International and municipal law",
+      "Règle de droit",
+      "Droit international et droit interne",
+      "UE/CE Droit"
+    ],
+    "pages": 288,
+    "couverture": "karen-j-alter-establishing-the-supremacy-of-european-law.jpg"
+  },
+  "edward-luttwak-coup-d-etat-a-practical-handbook-coup-d-etat-mode-d-emp": {
+    "ol": "https://openlibrary.org/works/OL652647W",
+    "sujets": [
+      "Coups d'état",
+      "Handbooks, manuals",
+      "Coups d'etat",
+      "Staatsstreich",
+      "Revolutions",
+      "Révolutions"
+    ],
+    "pages": 209,
+    "couverture": "edward-luttwak-coup-d-etat-a-practical-handbook-coup-d-etat-mode-d-emp.jpg"
+  },
+  "curzio-malaparte-technique-du-coup-d-etat": {
+    "ol": "https://openlibrary.org/works/OL1272986W",
+    "sujets": [
+      "Politics and government",
+      "Revolutions"
+    ],
+    "pages": 269
+  },
+  "naunihal-singh-seizing-power-the-strategic-logic-of-military-coups": {
+    "ol": "https://openlibrary.org/works/OL20336440W",
+    "sujets": [
+      "Military government",
+      "Coups d'état"
+    ],
+    "pages": 264,
+    "couverture": "naunihal-singh-seizing-power-the-strategic-logic-of-military-coups.jpg"
+  },
+  "steven-levitsky-et-daniel-ziblatt-how-democracies-die": {
+    "ol": "https://openlibrary.org/works/OL18139175W",
+    "sujets": [
+      "Democracy",
+      "Political culture",
+      "Politics and government",
+      "Political Ideologies",
+      "American Government",
+      "Fascism & Totalitarianism"
+    ],
+    "pages": 320,
+    "couverture": "steven-levitsky-et-daniel-ziblatt-how-democracies-die.jpg"
+  },
+  "jan-werner-muller-what-is-populism": {
+    "ol": "https://openlibrary.org/works/OL24319318W",
+    "sujets": [
+      "Populism",
+      "Democracy",
+      "Philosophy",
+      "Political science",
+      "Democracy Philosophy",
+      "Political science Philosophy"
+    ],
+    "pages": 148,
+    "couverture": "jan-werner-muller-what-is-populism.jpg"
+  },
+  "pierre-gallois-strategie-de-l-age-nucleaire": {
+    "ol": "https://openlibrary.org/works/OL973841W",
+    "sujets": [
+      "Strategy",
+      "Military policy",
+      "Nuclear warfare"
+    ],
+    "pages": 238
+  },
+  "lawrence-freedman-the-evolution-of-nuclear-strategy": {
+    "ol": "https://openlibrary.org/works/OL76945W",
+    "sujets": [
+      "Military policy",
+      "Nuclear warfare",
+      "Strategy",
+      "Atomic warfare",
+      "History",
+      "Guerre nucleaire"
+    ],
+    "pages": 522,
+    "couverture": "lawrence-freedman-the-evolution-of-nuclear-strategy.jpg"
+  },
+  "a-v-dicey-introduction-to-the-study-of-the-law-of-the-constitution": {
+    "ol": "https://openlibrary.org/works/OL2980860W",
+    "sujets": [
+      "Constitutional law",
+      "Constitution",
+      "Great Britain",
+      "Constitutions",
+      "Droit constitutionnel",
+      "Volkssoevereiniteit"
+    ],
+    "pages": 561,
+    "couverture": "a-v-dicey-introduction-to-the-study-of-the-law-of-the-constitution.jpg"
+  },
+  "carl-schmitt-theologie-politique": {
+    "ol": "https://openlibrary.org/works/OL3586424W",
+    "sujets": [],
+    "pages": 182,
+    "couverture": "carl-schmitt-theologie-politique.jpg"
+  },
+  "thomas-rid-active-measures-the-secret-history-of-disinformation-and-po": {
+    "ol": "https://openlibrary.org/works/OL20835996W",
+    "sujets": [
+      "Soviet union, history",
+      "Propaganda",
+      "United states, history, 20th century",
+      "Espionage",
+      "World war, 1939-1945"
+    ],
+    "pages": 528,
+    "couverture": "thomas-rid-active-measures-the-secret-history-of-disinformation-and-po.jpg"
+  },
+  "martin-gurri-the-revolt-of-the-public-and-the-crisis-of-authority-in-t": {
+    "ol": "https://openlibrary.org/works/OL20789949W",
+    "sujets": [
+      "Authority",
+      "Democracy",
+      "Public interest",
+      "Political obligation",
+      "Legitimacy of governments",
+      "Elite (social sciences)"
+    ],
+    "pages": 448,
+    "couverture": "martin-gurri-the-revolt-of-the-public-and-the-crisis-of-authority-in-t.jpg"
+  },
+  "walter-lippmann-public-opinion-l-opinion-publique": {
+    "ol": "https://openlibrary.org/works/OL42346W",
+    "sujets": [
+      "Social psychology",
+      "Public opinion",
+      "Politics and government",
+      "Co-operative Commonwealth Federation",
+      "Socialism",
+      "Public opinion -- United States"
+    ],
+    "pages": 427,
+    "couverture": "walter-lippmann-public-opinion-l-opinion-publique.jpg"
+  },
+  "edward-bernays-propaganda": {
+    "ol": "https://openlibrary.org/works/OL2781905W",
+    "sujets": [
+      "Brainwash",
+      "Marketing",
+      "Propaganda",
+      "Psychology",
+      "Propoganda",
+      "Public opinion"
+    ],
+    "pages": 159,
+    "couverture": "edward-bernays-propaganda.jpg"
+  },
+  "jonathan-haidt-the-righteous-mind-l-esprit-vertueux": {
+    "ol": "https://openlibrary.org/works/OL16568840W",
+    "sujets": [
+      "Political psychology",
+      "Social psychology",
+      "Ethics",
+      "Religious Psychology",
+      "New York Times bestseller",
+      "Religiöser Konflikt"
+    ],
+    "pages": 493,
+    "couverture": "jonathan-haidt-the-righteous-mind-l-esprit-vertueux.jpg"
+  },
+  "leon-festinger-henry-riecken-stanley-schachter-when-prophecy-fails-l-e": {
+    "ol": "https://openlibrary.org/works/OL4788695W",
+    "sujets": [
+      "disconfirmation behavior",
+      "news media",
+      "Prophecies",
+      "proselyting",
+      "Prophecies (occultism)",
+      "End of the world"
+    ],
+    "pages": 255,
+    "couverture": "leon-festinger-henry-riecken-stanley-schachter-when-prophecy-fails-l-e.jpg"
+  },
+  "raymond-aron-l-opium-des-intellectuels": {
+    "ol": "https://openlibrary.org/works/OL356094W",
+    "sujets": [
+      "Intellectuals",
+      "Intellectual life"
+    ],
+    "pages": 337,
+    "couverture": "raymond-aron-l-opium-des-intellectuels.jpg"
+  },
+  "philip-tetlock-expert-political-judgment": {
+    "ol": "https://openlibrary.org/works/OL5737028W",
+    "sujets": [
+      "Ideology",
+      "Political psychology",
+      "Long Now Manual for Civilization",
+      "Psychologie politique",
+      "Idéologie",
+      "89.52 political psychology"
+    ],
+    "pages": 352,
+    "couverture": "philip-tetlock-expert-political-judgment.jpg"
+  },
+  "alexis-de-tocqueville-de-la-democratie-en-amerique-tome-ii": {
+    "ol": "https://openlibrary.org/works/OL29889488W",
+    "sujets": [],
+    "pages": null
+  },
+  "benjamin-constant-de-la-liberte-des-anciens-comparee-a-celle-des-moder": {
+    "ol": "https://openlibrary.org/works/OL24168680W",
+    "sujets": [],
+    "pages": 42,
+    "couverture": "benjamin-constant-de-la-liberte-des-anciens-comparee-a-celle-des-moder.jpg"
+  },
+  "louis-dumont-essais-sur-l-individualisme-une-perspective-anthropologiq": {
+    "ol": "https://openlibrary.org/works/OL3473466W",
+    "sujets": [
+      "Anthropological aspects",
+      "History",
+      "Individualism",
+      "Personality and culture",
+      "Anthropology"
+    ],
+    "pages": 310,
+    "couverture": "louis-dumont-essais-sur-l-individualisme-une-perspective-anthropologiq.jpg"
+  },
+  "francis-fukuyama-identity-the-demand-for-dignity-and-the-politics-of-r": {
+    "ol": "https://openlibrary.org/works/OL19753459W",
+    "sujets": [
+      "Dignity",
+      "Social aspects",
+      "Identity politics",
+      "Resentment",
+      "Group identity",
+      "Polarization (Social sciences)"
+    ],
+    "pages": 240,
+    "couverture": "francis-fukuyama-identity-the-demand-for-dignity-and-the-politics-of-r.jpg"
+  },
+  "robert-putnam-bowling-alone": {
+    "ol": "https://openlibrary.org/works/OL4291077W",
+    "sujets": [
+      "Social conditions",
+      "Social change",
+      "History",
+      "Isolation <Soziologie>",
+      "Conditions sociales",
+      "Histoire"
+    ],
+    "pages": 544,
+    "couverture": "robert-putnam-bowling-alone.jpg"
+  },
+  "milton-friedman-et-anna-schwartz-a-monetary-history-of-the-united-stat": {
+    "ol": "https://openlibrary.org/works/OL2747776W",
+    "sujets": [
+      "Currency question",
+      "Money",
+      "United States",
+      "Monetary policy",
+      "History",
+      "Politique monétaire"
+    ],
+    "pages": 860,
+    "couverture": "milton-friedman-et-anna-schwartz-a-monetary-history-of-the-united-stat.jpg"
+  },
+  "charles-goodhart-et-manoj-pradhan-the-great-demographic-reversal": {
+    "ol": "https://openlibrary.org/works/OL20922714W",
+    "sujets": [
+      "Economics"
+    ],
+    "pages": 311,
+    "couverture": "charles-goodhart-et-manoj-pradhan-the-great-demographic-reversal.jpg"
+  },
+  "hans-kelsen-theorie-pure-du-droit": {
+    "ol": "https://openlibrary.org/works/OL33260181W",
+    "sujets": [
+      "Law",
+      "Philosophy",
+      "Study and teaching"
+    ],
+    "pages": 205
+  },
+  "h-l-a-hart-the-concept-of-law": {
+    "ol": "https://openlibrary.org/works/OL1420755W",
+    "sujets": [
+      "Philosophy",
+      "Law",
+      "Jurisprudence",
+      "Methodology",
+      "Law, philosophy"
+    ],
+    "pages": 263,
+    "couverture": "h-l-a-hart-the-concept-of-law.jpg"
+  },
+  "friedrich-hayek-la-route-de-la-servitude": {
+    "ol": "https://openlibrary.org/works/OL1164973W",
+    "sujets": [
+      "Economic policy",
+      "Politique économique",
+      "Totalitarianism",
+      "Totalitarisme"
+    ],
+    "pages": 176,
+    "couverture": "friedrich-hayek-la-route-de-la-servitude.jpg"
+  },
+  "nicholas-wapshott-keynes-hayek-the-clash-that-defined-modern-economics": {
+    "ol": "https://openlibrary.org/works/OL16282899W",
+    "sujets": [
+      "Subsidies",
+      "Free enterprise",
+      "Economists",
+      "Keynes, john maynard, 1883-1946",
+      "Economics, philosophy",
+      "Wirtschaftstheorie"
+    ],
+    "pages": 400,
+    "couverture": "nicholas-wapshott-keynes-hayek-the-clash-that-defined-modern-economics.jpg"
+  },
+  "james-madison-alexander-hamilton-john-jay-le-federaliste": {
+    "ol": "https://openlibrary.org/works/OL12528715M",
+    "sujets": [],
+    "pages": 788
+  },
+  "mancur-olson-the-logic-of-collective-action": {
+    "ol": "https://openlibrary.org/works/OL108561W",
+    "sujets": [
+      "Social groups",
+      "Social interaction",
+      "Collectieve acties",
+      "Groupes sociaux",
+      "Collectieve goederen",
+      "Interaction sociale"
+    ],
+    "pages": 186,
+    "couverture": "mancur-olson-the-logic-of-collective-action.jpg"
+  },
+  "nicolas-machiavel-le-prince": {
+    "ol": "https://openlibrary.org/works/OL30512801W",
+    "sujets": [],
+    "pages": null
+  },
+  "nicolas-machiavel-discours-sur-la-premiere-decade-de-tite-live": {
+    "ol": "https://openlibrary.org/works/OL15021666W",
+    "sujets": [
+      "Ouvrages avant 1800",
+      "Science politique",
+      "Livy"
+    ],
+    "pages": 469,
+    "couverture": "nicolas-machiavel-discours-sur-la-premiere-decade-de-tite-live.jpg"
+  },
+  "quentin-skinner-machiavelli-a-very-short-introduction": {
+    "ol": "https://openlibrary.org/works/OL15843914W",
+    "sujets": [
+      "Political scientists",
+      "Biography",
+      "Contributions in political science",
+      "Philosophy",
+      "Political science",
+      "Politisches Denken"
+    ],
+    "pages": 102,
+    "couverture": "quentin-skinner-machiavelli-a-very-short-introduction.jpg"
+  },
+  "robert-h-bork-the-antitrust-paradox": {
+    "ol": "https://openlibrary.org/works/OL3289572W",
+    "sujets": [
+      "Antitrust law",
+      "Législation",
+      "Concurrence",
+      "Droit",
+      "Antitrustrecht"
+    ],
+    "pages": 475,
+    "couverture": "robert-h-bork-the-antitrust-paradox.jpg"
+  },
+  "emmanuel-kant-fondements-de-la-metaphysique-des-m-urs": {
+    "ol": "https://openlibrary.org/works/OL21715201W",
+    "sujets": [
+      "Morale"
+    ],
+    "pages": 252,
+    "couverture": "emmanuel-kant-fondements-de-la-metaphysique-des-m-urs.jpg"
+  },
+  "montaigne-essais-livre-i-chapitre-31-des-cannibales": {
+    "ol": "https://openlibrary.org/works/OL30760419W",
+    "sujets": [],
+    "pages": null
+  },
+  "joseph-henrich-the-weirdest-people-in-the-world": {
+    "ol": "https://openlibrary.org/works/OL20844844W",
+    "sujets": [
+      "Psychology",
+      "New York Times reviewed",
+      "Developmental psychology",
+      "Social interaction",
+      "Human evolution",
+      "Cognitive psychology"
+    ],
+    "pages": 704,
+    "couverture": "joseph-henrich-the-weirdest-people-in-the-world.jpg"
+  },
+  "peter-singer-the-expanding-circle": {
+    "ol": "https://openlibrary.org/works/OL936832W",
+    "sujets": [
+      "Ethics",
+      "Sociobiology",
+      "Science, moral and ethical aspects"
+    ],
+    "pages": 190,
+    "couverture": "peter-singer-the-expanding-circle.jpg"
+  },
+  "lawrence-s-kaplan-the-united-states-and-nato-the-formative-years": {
+    "ol": "https://openlibrary.org/works/OL1826211W",
+    "sujets": [
+      "History",
+      "North Atlantic Treaty Organization",
+      "Foreign relations",
+      "Histoire",
+      "Relations extérieures",
+      "Diplomatic relations"
+    ],
+    "pages": 276,
+    "couverture": "lawrence-s-kaplan-the-united-states-and-nato-the-formative-years.jpg"
+  },
+  "mary-elise-sarotte-not-one-inch-america-russia-and-the-making-of-post-": {
+    "ol": "https://openlibrary.org/works/OL25323789W",
+    "sujets": [
+      "WWIII",
+      "expansion of NATO",
+      "Ukraine",
+      "PfP (Partnership for Peace)"
+    ],
+    "pages": 568,
+    "couverture": "mary-elise-sarotte-not-one-inch-america-russia-and-the-making-of-post-.jpg"
+  },
+  "robert-michels-zur-soziologie-des-parteiwesens-in-der-modernen-demokra": {
+    "ol": "https://openlibrary.org/works/OL10476465W",
+    "sujets": [],
+    "pages": 424,
+    "couverture": "robert-michels-zur-soziologie-des-parteiwesens-in-der-modernen-demokra.jpg"
+  },
+  "max-weber-politik-als-beruf-le-savant-et-le-politique": {
+    "ol": "https://openlibrary.org/works/OL1362890W",
+    "sujets": [
+      "Political ethics",
+      "Politics, Practical",
+      "Practical Politics"
+    ],
+    "pages": 82
+  },
+  "maurice-duverger-les-partis-politiques": {
+    "ol": "https://openlibrary.org/works/OL1373779W",
+    "sujets": [
+      "Political parties",
+      "Parties, Political",
+      "Partis politique"
+    ],
+    "pages": 476
+  },
+  "simone-weil-note-sur-la-suppression-generale-des-partis-politiques": {
+    "ol": "https://openlibrary.org/works/OL17817301W",
+    "sujets": [],
+    "pages": 53,
+    "couverture": "simone-weil-note-sur-la-suppression-generale-des-partis-politiques.jpg"
+  },
+  "kenneth-n-waltz-man-the-state-and-war-a-theoretical-analysis": {
+    "ol": "https://openlibrary.org/works/OL5490554W",
+    "sujets": [
+      "International relations",
+      "Philosophy",
+      "The State",
+      "War",
+      "Relaciones internacionales",
+      "Guerre"
+    ],
+    "pages": 263,
+    "couverture": "kenneth-n-waltz-man-the-state-and-war-a-theoretical-analysis.jpg"
+  },
+  "geoffrey-blainey-the-causes-of-war": {
+    "ol": "https://openlibrary.org/works/OL2561878W",
+    "sujets": [
+      "Modern Military history",
+      "War",
+      "Long Now Manual for Civilization",
+      "ARMED CONFLICTS",
+      "MILITARY HISTORY"
+    ],
+    "pages": 295,
+    "couverture": "geoffrey-blainey-the-causes-of-war.jpg"
+  },
+  "graham-allison-destined-for-war-can-america-and-china-escape-thucydide": {
+    "ol": "https://openlibrary.org/works/OL20166846W",
+    "sujets": [
+      "War",
+      "China, foreign relations, united states",
+      "United states, foreign relations, china",
+      "Thucydides"
+    ],
+    "pages": 384,
+    "couverture": "graham-allison-destined-for-war-can-america-and-china-escape-thucydide.jpg"
+  },
+  "gustave-le-bon-psychologie-des-foules": {
+    "ol": "https://openlibrary.org/works/OL301829W",
+    "sujets": [
+      "Collective behavior",
+      "Crowds",
+      "Foules",
+      "Social psychology"
+    ],
+    "pages": 207,
+    "couverture": "gustave-le-bon-psychologie-des-foules.jpg"
+  },
+  "elias-canetti-masse-et-puissance": {
+    "ol": "https://openlibrary.org/works/OL1411611W",
+    "sujets": [
+      "Groupes sociaux",
+      "Social psychology",
+      "Pouvoir (Sciences sociales)",
+      "Psychologie sociale",
+      "Social groups",
+      "Power (Social sciences)"
+    ],
+    "pages": 526,
+    "couverture": "elias-canetti-masse-et-puissance.jpg"
+  },
+  "carmen-reinhart-et-kenneth-rogoff-this-time-is-different-eight-centuri": {
+    "ol": "https://openlibrary.org/works/OL18666643W",
+    "sujets": [
+      "Financial crises",
+      "Case studies",
+      "Business cycles",
+      "Fiscal policy"
+    ],
+    "pages": 488,
+    "couverture": "carmen-reinhart-et-kenneth-rogoff-this-time-is-different-eight-centuri.jpg"
+  },
+  "david-graeber-debt-the-first-5-000-years": {
+    "ol": "https://openlibrary.org/works/OL14909099W",
+    "sujets": [
+      "Money",
+      "Debt",
+      "Financial crises",
+      "History",
+      "Financial crisis",
+      "Money, history"
+    ],
+    "pages": 544
+  },
+  "montesquieu-de-l-esprit-des-lois": {
+    "ol": "https://openlibrary.org/works/OL453554W",
+    "sujets": [
+      "Derecho",
+      "Filosofía",
+      "Jurisprudence",
+      "great_books_of_the_western_world",
+      "Ciencias políticas",
+      "State, The"
+    ],
+    "pages": 447
+  },
+  "alexis-de-tocqueville-l-ancien-regime-et-la-revolution": {
+    "ol": "https://openlibrary.org/works/OL487147W",
+    "sujets": [
+      "History",
+      "Causes",
+      "War",
+      "Political Systems",
+      "Causes and character",
+      "Histoire"
+    ],
+    "pages": 361,
+    "couverture": "alexis-de-tocqueville-l-ancien-regime-et-la-revolution.jpg"
+  },
+  "theda-skocpol-states-and-social-revolutions": {
+    "ol": "https://openlibrary.org/works/OL2079364W",
+    "sujets": [
+      "Revolutions",
+      "History",
+      "Case studies",
+      "China",
+      "Russia",
+      "France"
+    ],
+    "pages": 407,
+    "couverture": "theda-skocpol-states-and-social-revolutions.jpg"
+  },
+  "charles-tilly-european-revolutions-1492-1992": {
+    "ol": "https://openlibrary.org/works/OL2680232W",
+    "sujets": [
+      "Revolutions",
+      "Europe, history",
+      "History",
+      "Europe",
+      "Revolutions--history",
+      "Revolutions--europe--history"
+    ],
+    "pages": 304,
+    "couverture": "charles-tilly-european-revolutions-1492-1992.jpg"
+  },
+  "hannah-arendt-on-revolution": {
+    "ol": "https://openlibrary.org/works/OL10460639W",
+    "sujets": [
+      "Revolutions",
+      "Revoluciones",
+      "Historia",
+      "Révolutions",
+      "Revolution",
+      "Revolutie"
+    ],
+    "pages": 350,
+    "couverture": "hannah-arendt-on-revolution.jpg"
+  },
+  "hannah-arendt-the-origins-of-totalitarianism": {
+    "ol": "https://openlibrary.org/works/OL10460640W",
+    "sujets": [
+      "Antisemitism",
+      "Imperialism",
+      "Totalitarianism",
+      "Philosophy, german",
+      "Antisémitisme",
+      "Impérialisme"
+    ],
+    "pages": 527,
+    "couverture": "hannah-arendt-the-origins-of-totalitarianism.jpg"
+  },
+  "juan-j-linz-totalitarian-and-authoritarian-regimes": {
+    "ol": "https://openlibrary.org/works/OL2970072W",
+    "sujets": [
+      "Totalitarianism",
+      "Authoritarianism",
+      "Totalitarisme",
+      "Autoritarisme"
+    ],
+    "pages": 343,
+    "couverture": "juan-j-linz-totalitarian-and-authoritarian-regimes.jpg"
+  },
+  "david-ricardo-des-principes-de-l-economie-politique-et-de-l-impot": {
+    "ol": "https://openlibrary.org/works/OL1097139W",
+    "sujets": [
+      "Économie politique",
+      "Taxation",
+      "Economics",
+      "Impôt"
+    ],
+    "pages": 349
+  },
+  "dani-rodrik-the-globalization-paradox": {
+    "ol": "https://openlibrary.org/works/OL15538738W",
+    "sujets": [
+      "Economic aspects",
+      "Globalization",
+      "International economic relations",
+      "International economic integration",
+      "BUSINESS & ECONOMICS",
+      "International"
+    ],
+    "pages": 368,
+    "couverture": "dani-rodrik-the-globalization-paradox.jpg"
+  },
+  "bruce-bueno-de-mesquita-et-alastair-smith-the-dictator-s-handbook": {
+    "ol": "https://openlibrary.org/works/OL15980652W",
+    "sujets": [
+      "Political corruption",
+      "Philosophy",
+      "Political leadership",
+      "Power (Social sciences)",
+      "Leadership",
+      "Pouvoir politique"
+    ],
+    "pages": 352,
+    "couverture": "bruce-bueno-de-mesquita-et-alastair-smith-the-dictator-s-handbook.jpg"
+  },
+  "milan-svolik-the-politics-of-authoritarian-rule": {
+    "ol": "https://openlibrary.org/works/OL16599688W",
+    "sujets": [
+      "Authoritarianism",
+      "Case studies",
+      "POLITICAL SCIENCE / General"
+    ],
+    "pages": null
+  },
+  "daron-acemoglu-et-james-robinson-why-nations-fail": {
+    "ol": "https://openlibrary.org/works/OL16568759W",
+    "sujets": [
+      "Revolutions",
+      "Economic development",
+      "Economics",
+      "Social policy",
+      "Poverty",
+      "Economic policy"
+    ],
+    "pages": 529,
+    "couverture": "daron-acemoglu-et-james-robinson-why-nations-fail.jpg"
+  },
+  "max-weber-economie-et-societe": {
+    "ol": "https://openlibrary.org/works/OL5783148W",
+    "sujets": [
+      "Sociologie",
+      "Économique"
+    ],
+    "pages": null
+  },
+  "raymond-aron-les-etapes-de-la-pensee-sociologique": {
+    "ol": "https://openlibrary.org/works/OL1444740W",
+    "sujets": [],
+    "pages": 662,
+    "couverture": "raymond-aron-les-etapes-de-la-pensee-sociologique.jpg"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "titre": "Industrie et services dans l'emploi et la valeur ajoutée, France, Allemagne et Italie, 2024",
+  "producteur": "Eurostat et Banque mondiale",
+  "jeu": "nama_10_a10_e (emploi par branche) ; NV.IND.MANF.ZS (valeur ajoutée manufacturière)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table",
+  "traitement": "Année 2024 pour toutes les lignes. Les valeurs reprennent les séries enregistrées par le même script (parts de l'emploi calculées à partir de nama_10_a10_e, valeur ajoutée de la Banque mondiale).",
+  "consulte": "2026-10-16"
+}

@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Forme from "../../components/Forme.astro";
+import { PARCOURS, type ParcoursId } from "../../parcours";
+
+export async function getStaticPaths() {
+  const lecons = (await getCollection("lecons")).sort((a, b) => a.data.ordre - b.data.ordre);
+  return (Object.keys(PARCOURS) as ParcoursId[]).map((id) => ({
+    params: { id },
+    props: { id, items: lecons.filter((l) => l.data.parcours === id) },
+  }));
+}
+
+const { id, items } = Astro.props;
+const p = PARCOURS[id];
+const base = import.meta.env.BASE_URL;
+const minutes = items.reduce((n, l) => n + l.data.lecture_min, 0);
+---
+<Base titre={`${p.nom} · Kratos`} description={p.accroche}>
+  <div data-parcours={id}>
+    <header class="tete">
+      <Forme nom={p.forme} class="tete-forme" />
+      <div class="wrap">
+        <a class="chip" href={base}>Tous les parcours</a>
+        <h1>{p.nom}</h1>
+        <p class="lede">{p.accroche}</p>
+        <div class="meta">
+          <span class="chip">{items.length} leçons</span>
+          <span class="chip">{Math.round(minutes / 60)} h de lecture</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <ol class="chemin">
+        {items.map((l, i) => (
+          <li data-lecon={l.id}>
+            <a href={`${base}lecons/${l.id}/`}>
+              <span class="num"><span class="n">{i + 1}</span><span class="ok" aria-label="Lue">✓</span></span>
+              <span class="corps">
+                <strong>{l.data.titre}</strong>
+                <span>{l.data.resume}</span>
+                <small>
+                  <span class="chip">{l.data.lecture_min} min</span>
+                  <span class="chip">{l.data.sources.length} sources</span>
+                  {!l.data.verifie_le && <span class="chip">Relecture en cours</span>}
+                </small>
+              </span>
+            </a>
+          </li>
+        ))}
+        {p.a_venir.map((t) => <li class="soon"><span class="num"><span class="n">·</span></span><span class="corps"><strong>{t}</strong><small>À venir</small></span></li>)}
+      </ol>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .wrap { max-width: 52rem; }
+  .tete { position: relative; overflow: hidden; margin: 12px 12px 0; padding: 2.4rem 0 2.6rem; border-radius: var(--r-xl); background: var(--tone-container); color: var(--on-tone-container); }
+  .tete .wrap { position: relative; }
+  .tete h1 { font-stretch: 112%; }
+  .tete .lede { color: inherit; opacity: 0.88; }
+  .tete .chip { background: color-mix(in srgb, var(--bg) 55%, transparent); color: inherit; }
+  :global(.tete-forme) { position: absolute; width: min(20rem, 70vw); right: max(-5rem, calc(50% - 30rem)); top: -3rem; fill: var(--tone); opacity: 0.16; }
+
+  .chemin { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 0.7rem; position: relative; font-family: var(--sans); }
+  .chemin li { border-radius: var(--r-l); background: var(--surface); transition: border-radius 0.45s var(--spring), transform 0.45s var(--spring); }
+  .chemin li:not(.soon):hover { border-radius: var(--r-xl) var(--r-s) var(--r-xl) var(--r-s); transform: translateX(4px); }
+  .chemin a, .chemin .soon { display: flex; gap: 1rem; padding: 1.1rem 1.2rem; color: inherit; text-decoration: none; }
+  .num { flex: none; display: grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: var(--r-s) 50% var(--r-s) 50%; background: var(--tone); color: var(--bg); font: 800 1.1rem/1 var(--display); }
+  .num .ok { display: none; }
+  .lue .num { background: var(--tone-container); color: var(--on-tone-container); box-shadow: inset 0 0 0 2px var(--tone); }
+  .lue .num .n { display: none; }
+  .lue .num .ok { display: block; }
+  .corps { display: flex; flex-direction: column; gap: 0.35rem; }
+  .corps strong { font: 750 1.15rem/1.25 var(--display); font-stretch: 105%; }
+  .corps > span { font-size: 0.92rem; line-height: 1.45; color: var(--ink-2); }
+  small { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .soon { background: transparent !important; border: 2px dashed var(--rule); color: var(--ink-3); }
+  .soon .num { background: var(--surface-2); color: var(--ink-3); }
+</style>

@@ -1,0 +1,8 @@
+{
+  "titre": "Âge médian de la population, France, Allemagne et Italie, jusqu'en 2025",
+  "producteur": "Eurostat",
+  "jeu": "demo_pjanind (indicateur MEDAGEPOP)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table",
+  "traitement": "Âge médian au 1er janvier de chaque année, en années, arrondi à une décimale. Séries publiées par Eurostat, sans retraitement. Le début de série varie selon le pays, d'après la disponibilité publiée par Eurostat.",
+  "consulte": "2026-10-16"
+}

@@ -1,0 +1,8 @@
+{
+  "titre": "Hausse de la productivité apparente du travail, industrie et ensemble de l'économie, France, Allemagne et Italie, 2000-2025",
+  "producteur": "Eurostat",
+  "jeu": "nama_10_a10 (B1G, volumes chaînés 2020) et nama_10_a10_e (EMP_DC)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10/default/table",
+  "traitement": "Hausse en % de la valeur ajoutée en volume par personne en emploi entre 2000 et 2025, arrondie à une décimale. Chaque ligne est calculée à partir des séries Eurostat de la branche B à E (industrie hors construction) ou du total.",
+  "consulte": "2026-10-16"
+}

@@ -6,7 +6,7 @@ ordre: 1
 lecture_min: 13
 verifie_le: null
 sources:
-  - titre: "Dette publique brute au sens de Maastricht (gov_10dd_edpt1)"
+  - titre: "Dette publique brute, solde et intérêts des administrations publiques (gov_10dd_edpt1, postes GD, B9, D41PAY)"
     auteur: "Eurostat"
     url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table"
     consulte: "2026-10-15"
@@ -47,8 +47,18 @@ sources:
     auteur: "Robert Barro, Journal of Political Economy"
     url: "https://doi.org/10.1086/260266"
     consulte: "2026-10-15"
+lectures:
+  - auteur: "Carmen Reinhart et Kenneth Rogoff"
+    titre: "This Time Is Different. Eight Centuries of Financial Folly"
+    annee: 2009
+    pourquoi: "Huit siècles de crises de dette et de défauts souverains, avec les données qui montrent la récurrence du même scénario."
+  - auteur: "David Graeber"
+    titre: "Debt. The First 5,000 Years"
+    annee: 2011
+    pourquoi: "L'histoire de la dette comme rapport de pouvoir, de la Mésopotamie à nos jours, par un anthropologue. Une lecture critique, à confronter aux données."
 ---
 import Chart from "../../components/Chart.astro";
+import Comparatif from "../../components/Comparatif.astro";
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
 import ARetenir from "../../components/ARetenir.astro";
@@ -99,6 +109,13 @@ Ce graphique raconte trois histoires :
 
 Le traité de Maastricht (1992) fixe deux repères pour les pays de l'Union : un déficit public inférieur à 3 % du PIB et une dette inférieure à **60 %**. La France n'est plus repassée sous ce second seuil depuis 2002.
 
+Les trois pays du graphique se comparent sur ces deux repères et sur le coût de la dette. En 2025, aucun des trois n'est sous 60 % de dette, et seule l'Allemagne (2,7 %) respecte la limite de 3 % de déficit : l'Italie est à 3,1 % et la France à 5,1 %. Les intérêts pèsent 2,2 % du PIB en France, 1,1 % en Allemagne et 3,9 % en Italie.
+
+<Comparatif
+  src="economie/comparatif-finances-publiques-2025"
+  titre="Dette, déficit et intérêts des administrations publiques, 2025"
+/>
+
 ## Histoire : comment la dette a changé de mains
 
 <Timeline items={[
@@ -116,7 +133,7 @@ Le retrait de la banque centrale se lit dans les chiffres : entre fin 2025 et le
 
 L'inquiétude n'est pas nouvelle. En 1776, Adam Smith observe déjà les finances des monarchies européennes :
 
-<Citation auteur="Adam Smith" oeuvre="The Wealth of Nations" annee="1776" reference="Livre V, chapitre 3, « Of Public Debts » (traduction)" url="https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_V/Chapter_3">
+<Citation auteur="Adam Smith" oeuvre="The Wealth of Nations" annee="1776" reference="Livre V, chapitre 3, « Of Public Debts » (traduction)" url="https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_V/Chapter_3" original="The progress of the enormous debts which at present oppress, and will in the long run probably ruin, all the great nations of Europe, has been pretty uniform." langue="en">
   Les progrès des dettes énormes qui accablent aujourd'hui, et qui finiront probablement par ruiner, toutes les grandes nations d'Europe ont été assez uniformes.
 </Citation>
 
@@ -142,10 +159,10 @@ Deux siècles et demi plus tard, aucune de ces nations n'a été « ruinée » p
 5. Il n'y a pas de seuil magique : la soutenabilité dépend des taux, de la croissance et de la confiance des créanciers.
 </ARetenir>
 
-[^aft]: Agence France Trésor, *Bulletin mensuel* n° 434, juillet 2026, répartition de la dette négociable de l'État par groupe de porteurs au 1er trimestre 2026, en valeur de marché (données Banque de France).
-[^aft2025]: Agence France Trésor, données du 4e trimestre 2025, citées dans l'exposé sommaire de l'amendement n° 10 au projet de loi n° 2694, Assemblée nationale.
+[^aft]: Agence France Trésor, *Bulletin mensuel* n° 434, juillet 2026, répartition de la dette négociable de l'État par groupe de porteurs au 1er trimestre 2026, en valeur de marché (données Banque de France). https://www.aft.gouv.fr/files/medias-aft/7_Publications/7.2_BM/434_Bulletin%20mensuel%20juillet%202026.pdf
+[^aft2025]: Agence France Trésor, données du 4e trimestre 2025, citées dans l'exposé sommaire de l'amendement n° 10 au projet de loi n° 2694, Assemblée nationale. https://www.assemblee-nationale.fr/dyn/17/amendements/2694/AN/10
 [^bce]: Dates des programmes : Banque centrale européenne, pages du programme d'achats d'actifs (APP) et du programme d'urgence face à la pandémie (PEPP, https://www.ecb.europa.eu/mopo/implement/pepp/html/index.fr.html). Création de l'AFT : arrêté du 8 février 2001 portant création d'un service à compétence nationale dénommé « Agence France Trésor ».
-[^rr]: Carmen Reinhart et Kenneth Rogoff, « Growth in a Time of Debt », NBER Working Paper 15639, 2010.
-[^barro]: Robert Barro, « Are Government Bonds Net Wealth? », Journal of Political Economy, vol. 82, n° 6, 1974.
-[^hap]: Thomas Herndon, Michael Ash et Robert Pollin, « Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff », Cambridge Journal of Economics, vol. 38, n° 2, 2014 (document de travail publié en avril 2013).
-[^blanchard]: Olivier Blanchard, « Public Debt and Low Interest Rates », American Economic Review, vol. 109, n° 4, 2019.
+[^rr]: Carmen Reinhart et Kenneth Rogoff, « Growth in a Time of Debt », NBER Working Paper 15639, 2010. https://www.nber.org/papers/w15639
+[^barro]: Robert Barro, « Are Government Bonds Net Wealth? », Journal of Political Economy, vol. 82, n° 6, 1974. https://doi.org/10.1086/260266
+[^hap]: Thomas Herndon, Michael Ash et Robert Pollin, « Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff », Cambridge Journal of Economics, vol. 38, n° 2, 2014 (document de travail publié en avril 2013). https://doi.org/10.1093/cje/bet075
+[^blanchard]: Olivier Blanchard, « Public Debt and Low Interest Rates », American Economic Review, vol. 109, n° 4, 2019. https://doi.org/10.1257/aer.109.4.1197

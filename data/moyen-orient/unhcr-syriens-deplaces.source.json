@@ -1,0 +1,8 @@
+{
+  "titre": "Syriens réfugiés à l'étranger et déplacés internes, 2012-2025 (UNHCR)",
+  "producteur": "UNHCR, Refugee Data Finder (population statistics)",
+  "jeu": "UNHCR Population Statistics API, pays d'origine = Syrie, agrégat tous pays d'accueil",
+  "url": "https://www.unhcr.org/refugee-statistics/",
+  "traitement": "Stocks de fin d'année : champ refugees (réfugiés sous mandat du UNHCR, pays d'origine Syrie) et champ idps (personnes déplacées internes). L'année 2025 est la dernière publiée au moment de la consultation. Requête : https://api.unhcr.org/population/v1/population/?yearFrom=2012&yearTo=2025&coo=SYR&cf_type=ISO.",
+  "consulte": "2026-10-16"
+}

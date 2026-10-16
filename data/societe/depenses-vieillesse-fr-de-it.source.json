@@ -1,0 +1,8 @@
+{
+  "titre": "Dépenses publiques de vieillesse, en % du PIB, France, Allemagne et Italie, jusqu'en 2024",
+  "producteur": "Eurostat",
+  "jeu": "gov_10a_exp (COFOG GF1002 « Vieillesse », administrations publiques S13, total des dépenses TE)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table",
+  "traitement": "Dépenses des administrations publiques classées en fonction « Vieillesse » (division 10.2 de la COFOG), en % du PIB, arrondies à une décimale. Début de série variable selon le pays (France 1995, Allemagne 2000, Italie 2001), d'après la disponibilité publiée par Eurostat.",
+  "consulte": "2026-10-16"
+}

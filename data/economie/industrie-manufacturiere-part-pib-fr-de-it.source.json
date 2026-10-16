@@ -1,0 +1,8 @@
+{
+  "titre": "Valeur ajoutée de l'industrie manufacturière, en % du PIB, France, Allemagne et Italie, jusqu'en 2025",
+  "producteur": "Banque mondiale, comptes nationaux (données de la Banque mondiale et de l'OCDE)",
+  "jeu": "NV.IND.MANF.ZS",
+  "url": "https://data.worldbank.org/indicator/NV.IND.MANF.ZS",
+  "traitement": "Valeur ajoutée de l'industrie manufacturière en % du PIB, arrondie à une décimale. Début de série variable selon le pays (France 1970, Allemagne 1991, Italie 1990), d'après la disponibilité publiée par la Banque mondiale.",
+  "consulte": "2026-10-16"
+}

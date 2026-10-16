@@ -1,0 +1,605 @@
+---
+titre: "Monopoles et numérique : peut-on encadrer les plateformes ?"
+resume: "Effets de réseau, articles 101 et 102 TFUE, amendes contre Google, Digital Markets Act, Digital Services Act, procès fédéraux américains : comment le droit traite les géants du numérique, et ce que chaque école en pense."
+parcours: economie
+ordre: 9
+lecture_min: 27
+verifie_le: null
+sources:
+  - titre: "Traité sur le fonctionnement de l'Union européenne, article 102 (version consolidée, JO C 202 du 7 juin 2016)"
+    auteur: "Union européenne (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12016E102"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Traité sur le fonctionnement de l'Union européenne, article 101 (version consolidée, JO C 202 du 7 juin 2016)"
+    auteur: "Union européenne (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12016E101"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Règlement (CE) n° 1/2003 du Conseil, article 23 (texte consolidé au 1er juillet 2009)"
+    auteur: "Union européenne (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:02003R0001-20090701"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Règlement (UE) 2022/1925 du 14 septembre 2022 relatif aux marchés contestables et équitables dans le secteur numérique (Digital Markets Act)"
+    auteur: "Parlement européen et Conseil (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Règlement (UE) 2022/2065 du 19 octobre 2022 relatif à un marché unique des services numériques (Digital Services Act)"
+    auteur: "Parlement européen et Conseil (EUR-Lex)"
+    url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R2065"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Google Shopping : communiqué IP/17/1784 du 27 juin 2017"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_17_1784"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Google Android : communiqué IP/18/4581 du 18 juillet 2018"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_18_4581"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Google AdSense : communiqué IP/19/1770 du 20 mars 2019"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_19_1770"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Google, technologie publicitaire : communiqué IP/25/1992 du 5 septembre 2025"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1992"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Apple, services de musique en ligne : communiqué IP/24/1161 du 4 mars 2024"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_24_1161"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Meta, Facebook Marketplace : communiqué IP/24/5801 du 14 novembre 2024"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_24_5801"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Delivery Hero et Glovo : communiqué IP/25/1356 du 2 juin 2025"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1356"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, désignation de six contrôleurs d'accès : communiqué IP/23/4328 du 6 septembre 2023"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_4328"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, désignation de Booking : communiqué IP/24/2561 du 13 mai 2024"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_24_2561"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, Apple et Meta : communiqué IP/25/1085 du 23 avril 2025"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, Google : communiqué IP/26/1670 du 23 juillet 2026"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, portail des contrôleurs d'accès (Gatekeepers Portal)"
+    auteur: "Commission européenne"
+    url: "https://digital-markets-act.ec.europa.eu/gatekeepers_en"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DMA, avis préliminaire sur les services de cloud d'Amazon et de Microsoft (25 juin 2026)"
+    auteur: "Commission européenne"
+    url: "https://digital-markets-act.ec.europa.eu/commission-reaches-preliminary-position-amazons-and-microsofts-market-leading-cloud-services-should-2026-06-25_en"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DSA, premières désignations : communiqué IP/23/2413 du 25 avril 2023"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_2413"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DSA, amende contre X : communiqué IP/25/2934 du 5 décembre 2025"
+    auteur: "Commission européenne"
+    url: "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Arrêt Google Shopping (C-48/22 P) : communiqué de presse n° 135/24 du 10 septembre 2024"
+    auteur: "Cour de justice de l'Union européenne"
+    url: "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240135en.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Arrêt Google AdSense (T-334/19) : communiqué de presse n° 143/24 du 18 septembre 2024"
+    auteur: "Cour de justice de l'Union européenne"
+    url: "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240143en.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Arrêt Google Android (T-604/18) : communiqué de presse n° 147/22 du 14 septembre 2022"
+    auteur: "Cour de justice de l'Union européenne"
+    url: "https://curia.europa.eu/jcms/upload/docs/application/pdf/2022-09/cp220147en.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Arrêt Google Android (C-738/22 P) : communiqué de presse n° 93/26 du 2 juillet 2026"
+    auteur: "Cour de justice de l'Union européenne"
+    url: "https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260093en.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Sherman Act, 15 U.S.C. § 1 et § 2"
+    auteur: "Code des États-Unis, diffusé par le Legal Information Institute (Cornell)"
+    url: "https://www.law.cornell.edu/uscode/text/15/2"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "United States v. Google LLC, n° 20-cv-3010 (D.D.C.), memorandum opinion sur les remèdes, 2 septembre 2025"
+    auteur: "Tribunal fédéral du district de Columbia (juge Amit Mehta), diffusé par GovInfo"
+    url: "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_20-cv-03010/pdf/USCOURTS-dcd-1_20-cv-03010-3.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Department of Justice Prevails in Landmark Antitrust Case Against Google (17 avril 2025)"
+    auteur: "Département de la Justice des États-Unis"
+    url: "https://www.justice.gov/opa/pr/department-justice-prevails-landmark-antitrust-case-against-google"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Department of Justice Again Wins Substantial Relief Against Google (16 septembre 2026)"
+    auteur: "Département de la Justice des États-Unis"
+    url: "https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "FTC v. Meta Platforms, Inc., n° 20-3590 (D.D.C.), memorandum opinion (version publique du 2 décembre 2025)"
+    auteur: "Tribunal fédéral du district de Columbia (juge James Boasberg), diffusé par GovInfo"
+    url: "https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_20-cv-03590/pdf/USCOURTS-dcd-1_20-cv-03590-7.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "FTC Appeals Ruling in Meta Monopolization Case (20 janvier 2026)"
+    auteur: "Federal Trade Commission"
+    url: "https://www.ftc.gov/news-events/news/press-releases/2026/01/ftc-appeals-ruling-meta-monopolization-case"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "DOJ urges DC Circuit to beef up remedies in Google monopoly ruling"
+    auteur: "Courthouse News Service (presse, pour le suivi de l'appel)"
+    url: "https://www.courthousenews.com/doj-urges-dc-circuit-to-beef-up-remedies-in-google-monopoly-ruling/"
+    secondaire: true
+    consulte: "2026-10-16"
+  - titre: "Competition policy for the digital era (rapport final)"
+    auteur: "Jacques Crémer, Yves-Alexandre de Montjoye, Heike Schweitzer, pour la Commission européenne (DG Concurrence), 2019"
+    url: "https://op.europa.eu/en/publication-detail/-/publication/21dc175c-7b76-11e9-9f05-01aa75ed71a1/language-en"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Amazon's Antitrust Paradox, Yale Law Journal, 2017, p. 710 à 805"
+    auteur: "Lina M. Khan"
+    url: "https://www.yalelawjournal.org/pdf/e.710.Khan.805_zuvfyyeh.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Antitrust in a time of populism, International Journal of Industrial Organization, vol. 61, 2018, p. 714 à 748"
+    auteur: "Carl Shapiro"
+    url: "https://doi.org/10.1016/j.ijindorg.2018.01.001"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Reiter v. Sonotone Corp., 442 U.S. 330 (11 juin 1979)"
+    auteur: "Cour suprême des États-Unis, diffusé par le Legal Information Institute (Cornell)"
+    url: "https://www.law.cornell.edu/supremecourt/text/442/330"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Lina M. Khan, présidente de la FTC (page de la Commission)"
+    auteur: "Federal Trade Commission"
+    url: "https://www.ftc.gov/about-ftc/commissioners-staff/lina-m-khan"
+    consulte: "2026-10-16"
+    primaire: true
+lectures:
+  - auteur: "Lina M. Khan"
+    titre: "Amazon's Antitrust Paradox (Yale Law Journal)"
+    annee: 2017
+    pourquoi: "L'article qui a fait de la structure des marchés, et pas seulement du prix, un critère de l'antitrust appliqué aux plateformes."
+    url: "https://www.yalelawjournal.org/pdf/e.710.Khan.805_zuvfyyeh.pdf"
+  - auteur: "Jacques Crémer, Yves-Alexandre de Montjoye, Heike Schweitzer"
+    titre: "Competition policy for the digital era"
+    annee: 2019
+    pourquoi: "Le rapport d'experts remis à la Commission : rendements d'échelle, effets de réseau, données, et ce qu'ils changent à l'application du droit de la concurrence."
+    url: "https://op.europa.eu/en/publication-detail/-/publication/21dc175c-7b76-11e9-9f05-01aa75ed71a1/language-en"
+  - auteur: "Carl Shapiro"
+    titre: "Antitrust in a time of populism"
+    annee: 2018
+    pourquoi: "La défense d'une application rigoureuse de l'antitrust existant aux grandes firmes, sans lui confier des objectifs politiques."
+    url: "https://doi.org/10.1016/j.ijindorg.2018.01.001"
+  - auteur: "Robert H. Bork"
+    titre: "The Antitrust Paradox"
+    annee: 1978
+    pourquoi: "Le livre d'où vient la formule « consumer welfare prescription », reprise par la Cour suprême des États-Unis en 1979."
+---
+import Chart from "../../components/Chart.astro";
+import Citation from "../../components/Citation.astro";
+import Timeline from "../../components/Timeline.astro";
+import Positions from "../../components/Positions.astro";
+import Schema from "../../components/Schema.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+
+Le 2 juillet 2026, la Cour de justice de l'Union européenne a confirmé une amende de 4,125 milliards d'euros infligée à Google pour avoir verrouillé la distribution de son moteur de recherche sur les téléphones Android, huit ans après la décision de la Commission[^cjandroid]. Vingt et un jours plus tard, le 23 juillet 2026, la Commission infligeait à la même entreprise 890 millions d'euros d'amendes sous un autre texte, le règlement sur les marchés numériques[^dmagoogle]. Même entreprise, mêmes domaines (la recherche, Android), mais deux logiques : sanctionner après coup un abus de position dominante, ou imposer à l'avance des règles à quelques entreprises désignées.
+
+Cette leçon suit les deux logiques, puis les compare à la voie américaine, celle de procès fédéraux devant des juges. Elle s'arrête sur le désaccord de fond : faut-il juger un monopole à son effet sur les prix, ou à la structure du marché qu'il verrouille ? Sur le lobbying des grandes plateformes dans ces négociations, voir la [leçon sur le lobbying et la HATVP](/Power/lecons/lobbying-hatvp/), qui analyse les déclarations des GAFAM au répertoire français.
+
+<div class="chiffres">
+  <Chiffre valeur="23" label="services de plateforme essentiels désignés au titre du DMA, répartis entre 7 entreprises" source="Commission européenne, portail des contrôleurs d'accès" url="https://digital-markets-act.ec.europa.eu/gatekeepers_en" date="page consultée le 16 octobre 2026" forme="gemme" />
+  <Chiffre valeur="4,125 Md€" label="amende Android contre Google, telle que fixée par le Tribunal et confirmée par la Cour de justice" source="CJUE, communiqué n° 93/26" url="https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260093en.pdf" date="2 juillet 2026" forme="soleil" />
+  <Chiffre valeur="890 M€" label="premières amendes DMA contre Google (460 pour la recherche, 430 pour Google Play)" source="Commission européenne, communiqué IP/26/1670" url="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670" date="23 juillet 2026" forme="fleur" />
+</div>
+
+## L'idée centrale : pourquoi le numérique tend vers la concentration
+
+### Rendements d'échelle, effets de réseau, données
+
+En 2019, trois experts (Jacques Crémer, Yves-Alexandre de Montjoye et Heike Schweitzer) remettent à la direction générale de la Concurrence de la Commission un rapport sur la politique de concurrence à l'ère numérique. Ils retiennent trois caractéristiques de l'économie numérique[^cremer] :
+
+1. **Des rendements d'échelle extrêmes.** Le coût de production d'un service numérique est « beaucoup moins que proportionnel » au nombre de clients servis (traduction). Les auteurs notent que l'idée n'est pas nouvelle (de grandes usines sont plus efficaces que de petites), mais que le numérique la pousse à l'extrême.
+2. **Des externalités de réseau.** La commodité d'une technologie ou d'un service augmente avec le nombre de ses utilisateurs. Un nouvel entrant ne peut donc pas se contenter d'offrir un meilleur prix ou une meilleure qualité : il doit aussi convaincre les utilisateurs de l'opérateur en place de migrer ensemble. Les effets de réseau peuvent ainsi empêcher une plateforme supérieure de déloger une plateforme établie.
+3. **Le rôle des données.** La capacité de collecter et d'exploiter de grandes quantités de données est un paramètre de concurrence dont l'importance augmente.
+
+De ces trois traits découlent des économies de gamme, qui favorisent les écosystèmes : des groupes qui offrent plusieurs services reliés entre eux[^cremer].
+
+### La logique du monopole naturel
+
+Un monopole naturel est un marché où un seul producteur sert la demande à moindre coût que plusieurs. Le rapport décrit cette logique pour les plateformes : si elles étaient identiques, non interopérables, et si les utilisateurs n'en utilisaient qu'une seule, il serait coûteux de bâtir plusieurs plateformes pour les mêmes besoins quand les coûts décroissent fortement avec la taille. Les auteurs en tirent que le jeu normal de la concurrence mène à la concentration, et que la concurrence prend alors une autre forme : la concurrence « pour le marché » plutôt que « dans le marché ». Ils citent Weyl et White, qui soutiennent qu'en présence d'externalités de réseau la concurrence conduit à trop peu de concentration[^cremer].
+
+Les mêmes auteurs ajoutent deux réserves. L'expérience montre que les grandes plateformes en place sont très difficiles à déloger, mais il existe peu de preuves empiriques du coût d'efficacité de cette difficulté. Et l'avantage de l'opérateur en place dépend de facteurs que le droit peut modifier : la possibilité d'utiliser plusieurs plateformes à la fois, la portabilité des données, l'interopérabilité[^cremer].
+
+### Le droit a repris le vocabulaire
+
+La Commission utilise la même analyse dans ses décisions. Dans la décision Google Shopping de 2017, elle explique les barrières à l'entrée sur le marché de la recherche généraliste[^shopping] :
+
+<Citation auteur="Commission européenne" oeuvre="Communiqué IP/17/1784 (traduction)" annee="2017" reference="27 juin 2017" url="https://ec.europa.eu/commission/presscorner/detail/en/ip_17_1784" original="There are also high barriers to entry in these markets, in part because of network effects: the more consumers use a search engine, the more attractive it becomes to advertisers. The profits generated can then be used to attract even more consumers." langue="en">
+  Il existe aussi des barrières élevées à l'entrée sur ces marchés, en partie à cause des effets de réseau : plus les consommateurs utilisent un moteur de recherche, plus il devient attrayant pour les annonceurs. Les profits ainsi générés peuvent ensuite servir à attirer encore plus de consommateurs.
+</Citation>
+
+Dans la décision Android de 2018, elle applique le même raisonnement aux systèmes d'exploitation : plus il y a d'utilisateurs, plus les développeurs écrivent d'applications pour le système, ce qui attire de nouveaux utilisateurs[^android]. Le règlement sur les marchés numériques, lui, inscrit ces notions dans la loi : pour désigner une entreprise qui n'atteint pas les seuils chiffrés, la Commission tient compte notamment des « effets de réseau et des avantages tirés des données », des effets d'échelle et de gamme, de la « captivité » des utilisateurs (coûts de changement et biais comportementaux) et de l'intégration verticale ou conglomérale (article 3, paragraphe 8)[^dma].
+
+## Le droit européen de la concurrence : articles 101 et 102
+
+### Deux interdictions
+
+Le traité sur le fonctionnement de l'Union européenne pose deux règles. L'article 101 interdit les ententes : « tous accords entre entreprises, toutes décisions d'associations d'entreprises et toutes pratiques concertées » qui ont pour objet ou pour effet d'empêcher, de restreindre ou de fausser la concurrence dans le marché intérieur. Il cite en exemple la fixation des prix, la limitation de la production, la répartition des marchés, les conditions inégales à des prestations équivalentes et les ventes liées. Les accords interdits sont « nuls de plein droit » (paragraphe 2). Le paragraphe 3 prévoit une exemption pour les accords qui améliorent la production ou la distribution ou promeuvent le progrès technique ou économique, à condition de réserver aux utilisateurs une partie équitable du profit, de ne pas imposer de restrictions indispensables, et de ne pas éliminer la concurrence pour une partie substantielle des produits[^tfue101].
+
+L'article 102 vise le seul comportement d'une entreprise en position dominante[^tfue] :
+
+<Citation auteur="Traité sur le fonctionnement de l'Union européenne" oeuvre="Article 102" annee="2016" reference="Version consolidée, JO C 202 du 7 juin 2016, p. 89" url="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12016E102">
+  Est incompatible avec le marché intérieur et interdit, dans la mesure où le commerce entre États membres est susceptible d'en être affecté, le fait pour une ou plusieurs entreprises d'exploiter de façon abusive une position dominante sur le marché intérieur ou dans une partie substantielle de celui-ci.
+</Citation>
+
+Le texte énumère quatre exemples d'abus : imposer des prix ou conditions non équitables (a), limiter la production, les débouchés ou le développement technique au préjudice des consommateurs (b), appliquer des conditions inégales à des partenaires pour des prestations équivalentes (c), et subordonner un contrat à l'acceptation de prestations supplémentaires sans lien avec son objet (d)[^tfue]. Ce dernier cas est ce que les communiqués de la Commission nomment *tying*, la vente liée.
+
+Un point revient dans chaque communiqué de la Commission : la position dominante n'est pas illégale en soi. Seul son abus l'est, et une entreprise dominante a une « responsabilité particulière » de ne pas restreindre la concurrence, sur le marché où elle domine ou sur un marché distinct[^shopping].
+
+### Qui sanctionne, et de combien
+
+La Commission applique ces articles elle-même. Le règlement n° 1/2003 lui permet d'infliger des amendes aux entreprises qui enfreignent les articles 101 ou 102. Pour chaque entreprise, l'amende « n'excède pas 10 % de son chiffre d'affaires total réalisé au cours de l'exercice social précédent », et il faut tenir compte de la gravité et de la durée de l'infraction. Le règlement précise que ces décisions « n'ont pas un caractère pénal » (article 23)[^reg1]. Il prévoit en outre des astreintes jusqu'à 5 % du chiffre d'affaires journalier moyen par jour de retard (article 24)[^reg1]. Le texte consolidé que cette leçon a lu date de 2009 et nomme encore ces articles 81 et 82, leur ancienne numérotation.
+
+### Des exemples dans le numérique
+
+Trois décisions récentes montrent l'étendue du droit existant.
+
+- **Apple, musique en ligne (4 mars 2024).** La Commission juge que les règles de l'App Store interdisant aux développeurs d'informer les utilisateurs d'iPhone des offres moins chères hors de l'application sont des conditions de transaction non équitables, contraires à l'article 102, point a). L'infraction a duré près de dix ans. L'amende dépasse 1,8 milliard d'euros, dont une somme forfaitaire de 1,8 milliard ajoutée pour que la sanction soit suffisamment dissuasive[^apple].
+- **Meta, Facebook Marketplace (14 novembre 2024).** Amende de 797,72 millions d'euros pour avoir lié Marketplace à Facebook, de sorte que tous les utilisateurs y sont exposés, et pour avoir imposé des conditions inéquitables aux services d'annonces concurrents qui font de la publicité sur Facebook et Instagram[^marketplace].
+- **Delivery Hero et Glovo (2 juin 2025).** Amende cumulée de 329 millions d'euros pour une entente (article 101) : les deux sociétés s'étaient engagées à ne pas se débaucher leurs salariés, avaient échangé des informations commerciales sensibles et s'étaient réparti des marchés géographiques, de juillet 2018 à juillet 2022. La Commission indique qu'il s'agit de sa première décision constatant une entente sur le marché du travail[^glovo].
+
+Ces affaires ont une limite que la Cour de justice a rappelée en 2024. Traiter ses propres produits mieux que ceux des concurrents n'est pas, « en règle générale », un comportement qui sort de la concurrence par les mérites quelles que soient les circonstances ; c'est au vu des caractéristiques du marché et des circonstances de l'espèce que le comportement de Google a été jugé discriminatoire[^cjshopping]. Le droit de la concurrence reste un droit du cas par cas.
+
+## Les décisions contre Google
+
+### Google Shopping (2017) : l'avantage donné à son propre comparateur
+
+Le 27 juin 2017, la Commission inflige à Google 2 424 495 000 euros. Elle constate que Google a placé son comparateur de prix en tête de ses résultats de recherche et rétrogradé ceux des concurrents[^shopping]. Les chiffres de la décision :
+
+- Google est dominant sur la recherche généraliste dans les 31 pays de l'Espace économique européen depuis 2008 (2011 en Tchéquie), avec des parts de marché supérieures à 90 % dans la plupart d'entre eux.
+- La pratique a été introduite en janvier 2008 en Allemagne et au Royaume-Uni, en octobre 2010 en France, en mai 2011 en Italie, aux Pays-Bas et en Espagne, puis dans six autres pays entre 2013 et 2013 selon la liste du communiqué, soit 13 pays au total.
+- Les dix premiers résultats de la page 1 reçoivent environ 95 % des clics sur les résultats génériques, le premier environ 35 %, alors que le premier résultat de la page 2 en reçoit environ 1 %. Déplacer le premier résultat à la troisième place réduit les clics d'environ 50 %.
+- Même le meilleur comparateur concurrent apparaît en moyenne en page quatre.
+- Depuis le début de chaque abus, le trafic du comparateur de Google a été multiplié par 45 au Royaume-Uni, 35 en Allemagne, 19 en France, 29 aux Pays-Bas, 17 en Espagne et 14 en Italie, tandis que des concurrents ont perdu jusqu'à 85 % de leur trafic au Royaume-Uni, 92 % en Allemagne et 80 % en France.
+
+L'amende est calculée sur le chiffre d'affaires de Google tiré de son comparateur dans les 13 pays concernés. Google dispose de 90 jours pour cesser la pratique, sous peine d'astreintes jusqu'à 5 % du chiffre d'affaires journalier mondial moyen d'Alphabet[^shopping].
+
+Le Tribunal a validé l'essentiel de la décision le 10 novembre 2021, tout en annulant le constat d'infraction sur le marché de la recherche généraliste, faute de preuve d'effets anticoncurrentiels, même potentiels. La Cour de justice a rejeté le pourvoi de Google le 10 septembre 2024 et maintenu l'amende, pour laquelle Alphabet répond solidairement à hauteur de 523 518 000 euros[^cjshopping].
+
+### Google Android (2018) : trois restrictions
+
+Le 18 juillet 2018, la Commission inflige 4 342 865 000 euros. Elle reproche à Google trois types de restrictions imposées aux fabricants de téléphones et aux opérateurs[^android] :
+
+1. exiger la préinstallation de l'application Google Search et du navigateur Chrome comme condition de la licence de la boutique Play Store ;
+2. verser des paiements à de grands fabricants et opérateurs à condition qu'ils préinstallent Google Search en exclusivité ;
+3. interdire aux fabricants qui préinstallent les applications Google de vendre le moindre appareil tournant sous une version alternative d'Android non approuvée par Google (les « forks »).
+
+La Commission retient que Google est dominant sur la recherche (parts supérieures à 90 % dans la plupart des États de l'EEE), sur les systèmes d'exploitation mobiles sous licence (plus de 95 % dans le monde hors Chine) et sur les boutiques d'applications Android (le Play Store représente plus de 90 % des téléchargements d'applications sur Android). Environ 80 % des appareils mobiles intelligents en Europe tournaient sous Android. Elle relève que la préinstallation crée un biais de statu quo : les utilisateurs qui trouvent des applications préinstallées tendent à les garder[^android].
+
+Le Tribunal a confirmé l'infraction le 14 septembre 2022, mais annulé le volet relatif aux accords de partage de revenus conditionnés à la préinstallation exclusive de Google Search, et fixé l'amende à 4,125 milliards d'euros, Alphabet étant solidairement tenue à hauteur de 1 520 605 895 euros[^gcandroid]. La Cour de justice a rejeté le pourvoi le 2 juillet 2026. Ses motifs portent sur la méthode : le Tribunal pouvait tenir compte de l'ensemble du contexte économique sans qu'il faille systématiquement recourir à une analyse contrefactuelle ; la preuve d'un abus de position dominante ne suppose pas toujours de démontrer qu'un concurrent aussi efficace serait évincé ; compte tenu des caractéristiques des marchés numériques concernés, le Tribunal pouvait conclure que les pratiques étaient susceptibles de restreindre la concurrence et de renforcer les barrières à l'entrée sans appliquer ce test[^cjandroid].
+
+### Google AdSense (2019) : l'amende annulée
+
+Le 20 mars 2019, la Commission inflige 1 494 459 000 euros (1,29 % du chiffre d'affaires 2018 de Google). Elle visait des clauses des contrats passés avec des sites tiers : exclusivité à partir de 2006, puis clauses de « placement premium » à partir de mars 2009, qui réservaient à Google les emplacements les plus rentables, et obligation d'obtenir l'accord de Google avant de modifier l'affichage des annonces concurrentes. Google était, selon la Commission, dominant sur l'intermédiation en publicité de recherche dans l'EEE depuis au moins 2006, avec plus de 85 % de part de marché pendant l'essentiel de la période[^adsense].
+
+Le 18 septembre 2024, le Tribunal a validé la majorité des constats de la Commission mais annulé la décision en entier. Il juge que la Commission a commis des erreurs en appréciant la durée des clauses et le marché qu'elles couvraient en 2016, et qu'elle n'a pas établi que les trois clauses constituaient chacune un abus ni ensemble une infraction unique et continue[^gcadsense]. C'est la seule des trois grandes décisions de 2017 à 2019 qui n'a pas survécu devant le juge.
+
+### Technologie publicitaire (2025) : un conflit d'intérêts structurel
+
+Le 5 septembre 2025, la Commission inflige 2,95 milliards d'euros à Google pour avoir favorisé sa propre place de marché publicitaire, AdX. Elle constate que Google est dominant sur les serveurs publicitaires pour éditeurs (DFP) et sur les outils d'achat programmatique pour le web ouvert (Google Ads et DV360), et qu'entre au moins 2014 et 2025 il a, par exemple, informé AdX à l'avance de la valeur de la meilleure offre concurrente à battre pour remporter l'enchère. La Commission a tenu compte du fait que Google avait déjà été condamné pour abus de position dominante. Elle a donné 60 jours à Google pour proposer des mesures mettant fin à ses conflits d'intérêts et a indiqué sa position préliminaire : seule la cession d'une partie de ses services y remédierait. Elle ajoute que la conduite est largement similaire à celle examinée par le département de la Justice américain[^adtech]. Le communiqué ne dit pas quelle mesure sera finalement imposée.
+
+<Chart
+  src="numerique/amendes-commission-numerique"
+  kind="barX"
+  x="montant"
+  y="decision"
+  titre="Amendes de la Commission européenne contre des plateformes numériques, montant décidé"
+  unite="millions d'euros"
+/>
+
+Le graphique réunit les amendes de trois régimes. Les montants sont ceux décidés par la Commission avant tout recours : l'amende Android est depuis ramenée à 4 125 millions, et la décision AdSense est annulée. Il omet l'amende de plus de 1,8 milliard contre Apple (musique en ligne), dont le communiqué ne donne pas le montant exact.
+
+### Les procédures européennes en un coup d'œil
+
+<Timeline items={[
+  { date: "27 juin 2017", texte: "La Commission inflige 2 424 495 000 euros à Google dans l'affaire Shopping (Commission, IP/17/1784)." },
+  { date: "18 juillet 2018", texte: "Amende Android : 4 342 865 000 euros (Commission, IP/18/4581)." },
+  { date: "20 mars 2019", texte: "Amende AdSense : 1 494 459 000 euros (Commission, IP/19/1770)." },
+  { date: "10 novembre 2021", texte: "Le Tribunal valide l'essentiel de la décision Shopping (CJUE, communiqué n° 135/24)." },
+  { date: "14 septembre 2022", texte: "Le Tribunal ramène l'amende Android à 4,125 milliards d'euros (CJUE, communiqué n° 147/22). Le même jour est daté le règlement DMA (règlement 2022/1925)." },
+  { date: "10 septembre 2024", texte: "La Cour de justice rejette le pourvoi de Google dans l'affaire Shopping (CJUE, communiqué n° 135/24)." },
+  { date: "18 septembre 2024", texte: "Le Tribunal annule la décision AdSense (CJUE, communiqué n° 143/24)." },
+  { date: "5 septembre 2025", texte: "Amende de 2,95 milliards d'euros pour la technologie publicitaire (Commission, IP/25/1992)." },
+  { date: "2 juillet 2026", texte: "La Cour de justice rejette le pourvoi de Google dans l'affaire Android (CJUE, communiqué n° 93/26)." },
+]} />
+
+## Le Digital Markets Act : réguler avant la faute
+
+### Pourquoi un second texte
+
+Le règlement (UE) 2022/1925, daté du 14 septembre 2022, est en vigueur depuis novembre 2022 et s'applique depuis mai 2023. La Commission le présente comme un texte visant à garantir des marchés « contestables et équitables » dans le secteur numérique[^dma23]. La différence avec l'article 102 tient à la méthode. L'article 102 exige de prouver un abus de position dominante sur un marché défini, ce qui a pris à la Commission environ sept ans entre l'ouverture de l'affaire Android en avril 2015 et le jugement du Tribunal en septembre 2022, puis près de quatre de plus jusqu'à la Cour de justice[^gcandroid][^cjandroid]. Le DMA fixe à l'avance une liste d'interdictions et d'obligations pour des entreprises désignées.
+
+### Qui est contrôleur d'accès
+
+Le DMA désigne comme « contrôleur d'accès » une entreprise qui a un poids important sur le marché intérieur, fournit un service de plateforme essentiel constituant un point d'accès majeur entre entreprises utilisatrices et utilisateurs finaux, et jouit d'une position solide et durable. Il fixe des seuils qui créent une présomption (article 3, paragraphe 2)[^dma] :
+
+- un chiffre d'affaires annuel dans l'Union d'au moins 7,5 milliards d'euros pendant chacun des trois derniers exercices, ou une capitalisation boursière moyenne d'au moins 75 milliards au cours du dernier exercice, avec le même service fourni dans au moins trois États membres ;
+- un service ayant compté au moins 45 millions d'utilisateurs finaux actifs par mois dans l'Union et au moins 10 000 entreprises utilisatrices actives par an ;
+- ces seuils d'utilisateurs atteints pendant chacun des trois derniers exercices.
+
+Les services de plateforme essentiels sont dix catégories : intermédiation en ligne, moteurs de recherche, réseaux sociaux, messageries, plateformes de partage de vidéos, assistants virtuels, navigateurs, informatique en nuage, systèmes d'exploitation, et publicité en ligne[^dma23]. La procédure de désignation suit un chemin fixé par le texte :
+
+<Schema
+  titre="Désigner un contrôleur d'accès : la procédure du DMA"
+  noeuds={[
+    { id: "ent", nom: "Entreprise qui fournit un service essentiel" },
+    { id: "com", nom: "Commission européenne" },
+    { id: "enq", nom: "Enquête de marché (article 17)" },
+    { id: "ca", nom: "Contrôleur d'accès" },
+    { id: "obl", nom: "Obligations des articles 5, 6 et 7" },
+  ]}
+  liens={[
+    { de: "ent", vers: "com", verbe: "notifie qu'elle atteint les seuils, sans tarder et dans les deux mois", source: "Règlement (UE) 2022/1925, article 3, paragraphe 3", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+    { de: "ent", vers: "com", verbe: "peut présenter des arguments pour démontrer que, exceptionnellement, elle ne satisfait pas aux exigences malgré les seuils", source: "Règlement (UE) 2022/1925, article 3, paragraphe 5", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+    { de: "com", vers: "ca", verbe: "désigne l'entreprise qui atteint tous les seuils au plus tard 45 jours ouvrables après réception des informations", source: "Règlement (UE) 2022/1925, article 3, paragraphe 4", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+    { de: "com", vers: "enq", verbe: "peut ouvrir l'enquête si les arguments remettent manifestement en cause les présomptions, ou pour désigner une entreprise qui n'atteint pas les seuils", source: "Règlement (UE) 2022/1925, article 3, paragraphes 5 et 8, et article 17", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+    { de: "enq", vers: "ca", verbe: "aboutit à la désignation si l'entreprise ne démontre pas qu'elle échappe aux exigences", source: "Règlement (UE) 2022/1925, article 3, paragraphe 5, quatrième alinéa", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+    { de: "ca", vers: "obl", verbe: "se conforme aux obligations dans les six mois suivant l'énumération du service dans la décision de désignation", source: "Règlement (UE) 2022/1925, article 3, paragraphe 10", url: "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925" },
+  ]}
+/>
+
+Le texte donne aussi à la Commission un pouvoir de réexamen : elle revoit au moins tous les trois ans si les contrôleurs d'accès remplissent encore les conditions, et au moins une fois par an si de nouvelles entreprises les remplissent (article 4)[^dma].
+
+### Les désignations
+
+Le 6 septembre 2023, la Commission désigne pour la première fois six contrôleurs d'accès : Alphabet, Amazon, Apple, ByteDance, Meta et Microsoft, pour 22 services de plateforme essentiels. Elle écarte alors Gmail, Outlook.com et le navigateur Samsung Internet, malgré les seuils atteints, parce que les entreprises ont fourni des arguments suffisants pour montrer qu'il ne s'agit pas de points d'accès majeurs[^dma23]. Apple est désignée pour iPadOS le 29 avril 2024, Booking le 13 mai 2024 pour Booking.com, et Meta voit Facebook Marketplace retiré de la liste le 23 avril 2025 parce que le service comptait moins de 10 000 utilisateurs professionnels en 2024[^booking][^portail][^dmafines25].
+
+<Chart
+  src="numerique/controleurs-acces-services"
+  kind="barX"
+  x="services"
+  y="entreprise"
+  titre="Services de plateforme essentiels désignés au titre du DMA, par contrôleur d'accès"
+  unite="services"
+/>
+
+Au total, 23 services sont désignés[^portail]. Alphabet en compte huit : Google Play, Google Maps, Google Shopping, Google Search, YouTube, Android, son service de publicité et Chrome.
+
+Le 25 juin 2026, la Commission a informé Amazon et Microsoft de son avis préliminaire selon lequel leurs services d'informatique en nuage, AWS et Azure, devraient eux aussi être désignés. Elle invoque des bases d'utilisateurs « vastes et enracinées », des effets de verrouillage, des coûts de changement élevés, et le rôle de leurs outils d'intelligence artificielle dans les choix d'achat[^cloud]. L'article 3, paragraphe 8, permet une désignation même sans atteindre les seuils chiffrés, à condition de remplir les trois critères qualitatifs et au terme d'une enquête de marché[^dma].
+
+### Ce que les contrôleurs d'accès doivent faire ou ne pas faire
+
+Les articles 5, 6 et 7 forment la liste des obligations. Quelques exemples, lus dans le règlement[^dma] :
+
+- **Données (article 5, paragraphe 2).** Ne pas combiner les données personnelles d'un service avec celles d'un autre service du contrôleur d'accès ou de tiers, sauf choix précis présenté à l'utilisateur et consentement.
+- **Prix et conditions (article 5, paragraphe 3).** Ne pas empêcher les entreprises utilisatrices de proposer les mêmes produits ailleurs à des prix ou conditions différents.
+- **Anti-steering (article 5, paragraphe 4).** Permettre aux entreprises utilisatrices de communiquer et promouvoir leurs offres gratuitement auprès des utilisateurs acquis, et de conclure des contrats avec eux, y compris hors du service du contrôleur d'accès.
+- **Ventes liées (article 5, paragraphes 7 et 8).** Ne pas exiger l'usage de son service d'identification, de son navigateur, de son paiement, ni l'inscription à un autre service essentiel comme condition d'accès.
+- **Données des concurrents (article 6, paragraphe 2).** Ne pas utiliser, en concurrence avec les entreprises utilisatrices, les données non publiques qu'elles génèrent.
+- **Désinstallation et choix par défaut (article 6, paragraphe 3).** Permettre de désinstaller facilement les applications et de changer facilement les paramètres par défaut, avec un écran de choix pour le moteur de recherche, l'assistant virtuel et le navigateur.
+- **Boutiques tierces (article 6, paragraphe 4).** Permettre l'installation d'applications et de boutiques d'applications tierces.
+- **Classement (article 6, paragraphe 5).** Ne pas accorder un traitement plus favorable à ses propres services et produits qu'aux services similaires de tiers en matière de classement, d'indexation et d'exploration, et appliquer des conditions transparentes, équitables et non discriminatoires.
+
+On lit dans l'article 6, paragraphe 5, le comportement que la Commission a sanctionné dans Google Shopping, et dans les articles 5, paragraphes 7 et 8, et 6, paragraphes 3 et 4, des pratiques proches de celles d'Android. Le DMA convertit une jurisprudence en obligations qui s'appliquent d'emblée.
+
+### Les sanctions et les premières décisions
+
+En cas de non-respect, la Commission adopte une décision constatant le non-respect et s'efforce de le faire dans les douze mois suivant l'ouverture de la procédure (article 29). Elle peut infliger des amendes jusqu'à 10 % du chiffre d'affaires mondial de l'exercice précédent, et jusqu'à 20 % en cas de même infraction ou d'infraction similaire pour le même service dans les huit années précédentes (article 30). Une amende allant jusqu'à 1 % est prévue pour des renseignements inexacts ou incomplets[^dma]. En cas d'infractions systématiques, la Commission peut aussi imposer des mesures correctives, jusqu'à obliger à céder une activité[^dma23].
+
+Les premières sanctions sont tombées le 23 avril 2025 :
+
+- **Apple : 500 millions d'euros** pour avoir enfreint l'obligation d'anti-steering. Les développeurs d'applications ne peuvent pas informer pleinement les consommateurs d'offres alternatives et moins chères hors de l'App Store.
+- **Meta : 200 millions d'euros** pour son modèle « consentir ou payer » : entre mars 2024, quand les obligations sont devenues juridiquement contraignantes, et novembre 2024, les utilisateurs de Facebook et d'Instagram n'avaient le choix qu'entre accepter la combinaison de leurs données pour des publicités personnalisées ou payer un abonnement sans publicité.
+
+Les enquêtes avaient été ouvertes le 25 mars 2024, et les avis préliminaires envoyés le 24 juin 2024 (Apple) et le 1er juillet 2024 (Meta). La Commission a demandé aux deux entreprises de se conformer sous 60 jours, sous peine d'astreintes[^dmafines25].
+
+Le 23 juillet 2026, Google reçoit deux amendes : **460 millions d'euros** pour avoir favorisé ses propres services (achats, hôtels, transports, sports) dans les résultats de Google Search, et **430 millions d'euros** pour avoir empêché les développeurs de Google Play d'orienter les utilisateurs vers des offres alternatives, les frais de « steering » et leur durée allant au-delà de ce que le DMA permet. L'enquête avait été ouverte le 25 mars 2024 et l'avis préliminaire notifié le 19 mars 2025. La Commission note que Google a proposé et commencé à tester des changements dans l'affichage de ses services gratuits, qu'elle juge être des « progrès substantiels », et que le dialogue se poursuit sur l'application des mêmes principes à AI Overviews et AI Mode. Google a 60 jours pour se conformer et peut faire appel[^dmagoogle].
+
+Sur la durée, le contraste est net : entre l'ouverture de l'enquête (25 mars 2024) et la décision, il s'est écoulé 28 mois pour Google, contre 13 mois pour Apple et Meta, alors que le règlement vise les douze mois[^dmagoogle][^dmafines25][^dma]. La rapidité du texte reste à démontrer.
+
+## Le Digital Services Act : le même pouvoir, un autre objet
+
+Le règlement (UE) 2022/2065, daté du 19 octobre 2022, ne traite pas de concurrence mais de la responsabilité des intermédiaires en ligne. Il s'applique aux « très grandes plateformes » et aux « très grands moteurs de recherche » qui ont au moins 45 millions de destinataires actifs mensuels dans l'Union et qui sont désignés comme tels par une décision de la Commission (article 33). Le critère est donc l'audience, pas le pouvoir de marché. Les obligations s'appliquent quatre mois après la notification de la désignation (article 33, paragraphe 6). Les fournisseurs doivent identifier, analyser et évaluer les risques systémiques que leurs services font courir dans l'Union, notamment la diffusion de contenus illicites et les effets sur les droits fondamentaux (article 34)[^dsa].
+
+Le 25 avril 2023, la Commission désigne les premiers 17 très grandes plateformes (dont Amazon Store, App Store d'Apple, Booking.com, Facebook, Google Play, Google Maps, Google Shopping, Instagram, LinkedIn, TikTok, Twitter et YouTube) et 2 très grands moteurs de recherche (Bing et Google Search)[^dsa23]. L'amende peut atteindre 6 % du chiffre d'affaires mondial annuel de l'exercice précédent (article 74)[^dsa].
+
+Le 5 décembre 2025, la Commission rend la première décision de non-respect du DSA et inflige 120 millions d'euros à X. Elle lui reproche trois manquements : la conception trompeuse de la coche bleue « compte vérifié » (article 25, paragraphe 1), le défaut de transparence de son répertoire publicitaire et l'absence d'accès des chercheurs aux données publiques (articles 39 et 40, paragraphe 12). X dispose de 60 jours ouvrables pour indiquer ses mesures sur la coche bleue et de 90 jours ouvrables pour remettre un plan d'action sur les deux autres points. L'enquête sur les contenus illicites et la manipulation de l'information, ouverte le 18 décembre 2023, se poursuit[^x].
+
+## Les États-Unis : le Sherman Act et trois procès fédéraux
+
+### Un texte de 1890
+
+Aux États-Unis, la règle est le Sherman Act du 2 juillet 1890. Son article 1 déclare illégal « tout contrat, toute association sous forme de trust ou autre, ou toute entente, qui restreint le commerce » entre États ou avec l'étranger (traduction). Son article 2 vise celui qui « monopolisera, ou tentera de monopoliser » une part de ce commerce (traduction). Les deux articles prévoient des sanctions pénales : une amende pouvant atteindre 100 millions de dollars pour une société et jusqu'à 10 ans de prison pour une personne physique[^sherman].
+
+Les procès contre les géants du numérique ne passent pas par ces sanctions pénales. Le département de la Justice et la Federal Trade Commission saisissent un tribunal fédéral civil, qui juge si la loi est violée et fixe lui-même les remèdes.
+
+| | Union européenne | États-Unis |
+| --- | --- | --- |
+| Texte | Articles 101 et 102 TFUE | Sherman Act, articles 1 et 2 |
+| Ce qui est interdit | Exploiter de façon abusive une position dominante | Monopoliser, ou tenter de monopoliser |
+| Qui décide | La Commission, avec recours devant le Tribunal puis la Cour de justice | Un tribunal fédéral, saisi par le DOJ ou la FTC |
+| Sanction type | Amende administrative jusqu'à 10 % du chiffre d'affaires mondial, non pénale | Mesures judiciaires (injonctions, accès aux données, séparations) ; amendes pénales plafonnées par la loi |
+| Texte préventif | DMA et DSA | Pas de loi fédérale équivalente étudiée dans cette leçon |
+
+Sources du tableau : articles 101 et 102 TFUE, règlement 1/2003 article 23, 15 U.S.C. § 1 et 2[^tfue][^reg1][^sherman].
+
+### United States v. Google (recherche)
+
+Le 5 août 2024, le juge Amit Mehta (tribunal du district de Columbia) conclut que Google a violé l'article 2 du Sherman Act en maintenant un monopole sur certains marchés par une conduite d'éviction. Il retient deux marchés où Google a un pouvoir de monopole, les services de recherche généralistes et la publicité textuelle de recherche, et juge exclusifs les accords avec les développeurs de navigateurs (Apple, Mozilla), les contrats de distribution d'applications mobiles Android et les accords de partage de revenus[^mehta]. Il résume lui-même sa conclusion par une phrase que le jugement sur les remèdes reprend :
+
+<Citation auteur="Amit Mehta, juge fédéral" oeuvre="United States v. Google LLC, memorandum opinion du 2 septembre 2025, p. 1, citant la décision du 5 août 2024 (traduction)" annee="2024" reference="Tribunal du district de Columbia, n° 20-cv-3010 (APM)" url="https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_20-cv-03010/pdf/USCOURTS-dcd-1_20-cv-03010-3.pdf" original="Google is a monopolist, and it has acted as one to maintain its monopoly." langue="en">
+  Google est un monopoleur, et il a agi en monopoleur pour maintenir son monopole.
+</Citation>
+
+La décision relève que la part de marché de Google sur la recherche est passée de 80 % en 2009 à 89,2 % en 2020, et qu'elle atteint près de 95 % sur mobile[^mehta].
+
+Le 2 septembre 2025, le même juge décide des remèdes. Il interdit à Google les contrats exclusifs de distribution de Google Search, Chrome, Google Assistant et Gemini, et les accords qui conditionnent la licence du Play Store à la préinstallation de ses applications. Il refuse la cession de Chrome et une cession conditionnelle d'Android : les demandeurs « ont exagéré » en les réclamant, car Google ne s'est pas servi de ces actifs pour imposer les restrictions illégales. Il n'interdit pas à Google de payer ses partenaires de distribution, car une interdiction générale des paiements risquerait d'imposer des préjudices « écrasants » aux partenaires. Il oblige Google à partager certaines données d'index de recherche et d'interaction des utilisateurs avec des « concurrents qualifiés » (pas les données publicitaires) et à leur offrir des services de syndication de recherche et d'annonces. Il rejette les écrans de choix[^mehta].
+
+L'introduction du jugement donne l'état d'esprit du juge : les tribunaux doivent aborder les remèdes avec « une bonne dose d'humilité », car la cour « n'a aucune expertise » dans les moteurs de recherche, la vente d'annonces ou l'ingénierie de l'intelligence artificielle générative (traduction)[^mehta]. Il constate aussi que l'IA générative a changé la donne depuis le procès sur la responsabilité : les chatbots ne sont pas encore près de remplacer les moteurs de recherche, mais l'industrie s'attend à ce qu'ils se rapprochent de leurs fonctions[^mehta].
+
+En 2026, l'affaire est devant la cour d'appel du circuit de Washington. Selon la presse judiciaire, le département de la Justice demande de confirmer la responsabilité et les remèdes de partage de données, et d'annuler le refus d'interdire les paiements massifs aux distributeurs comme Apple, sans contester le refus de cession ; la plaidoirie n'est pas encore fixée[^chn].
+
+### United States v. Google (technologie publicitaire)
+
+Le 17 avril 2025, le tribunal fédéral de Virginie orientale (juge Leonie Brinkema) juge que Google a violé la loi antitrust en monopolisant des marchés de la publicité numérique sur le web ouvert, après un procès de 15 jours en septembre 2024. Selon le département de la Justice, la décision retient que Google a « nui à ses clients éditeurs, au processus concurrentiel et, en fin de compte, aux consommateurs d'information sur le web ouvert » (traduction)[^doj1]. C'est le second jugement de responsabilité contre Google en moins d'un an.
+
+Le 16 septembre 2026, le département de la Justice annonce les remèdes. Le tribunal a ordonné des mesures de comportement : intégration d'AdX et de DFP avec Prebid, la norme ouverte d'enchères en temps réel ; transmission d'offres en temps réel aux serveurs publicitaires concurrents ; droit pour les éditeurs d'exporter leurs données ; interdiction pour l'outil d'achat AdWords d'enchérir de façon préférentielle sur AdX ; un contrôleur indépendant pendant six ans. Le département précise qu'il continue d'examiner l'opinion avant de décider de la suite[^doj2]. Le communiqué ne mentionne aucune cession d'actif.
+
+### FTC v. Meta
+
+Le 18 novembre 2025, le juge James Boasberg donne raison à Meta. La FTC soutenait que Meta détenait un monopole sur un marché des « réseaux sociaux personnels » (Facebook, Instagram, Snapchat, MeWe) et l'avait préservé en rachetant Instagram et WhatsApp. Le juge conclut que la FTC n'a pas rempli la charge de la preuve : Meta ne détient pas de monopole sur le marché pertinent, parce que TikTok et YouTube en font partie. Il écrit que, même si YouTube est exclu, la seule inclusion de TikTok suffit à faire échouer la thèse de la FTC, et que l'agence doit prouver que Meta détient un tel pouvoir aujourd'hui, pas seulement dans le passé[^meta].
+
+La FTC a annoncé le 20 janvier 2026 qu'elle faisait appel devant la cour d'appel du circuit de Washington[^ftc].
+
+### Un contraste instructif
+
+La même conduite peut donc recevoir des issues opposées selon le système. À Bruxelles, une autorité administrative décide, inflige des amendes en pourcentage du chiffre d'affaires et adopte aussi un règlement préventif. À Washington, un juge fixe lui-même les remèdes et les calibre sur ce qu'il estime pouvoir ordonner : il refuse de céder Chrome, mais impose le partage de données. Dans l'affaire Meta, le tribunal ne trouve pas de monopole, là où la Commission, dans sa décision Marketplace, a retenu une position dominante de Meta sur les réseaux sociaux personnels dans l'EEE[^marketplace][^meta]. Les deux systèmes définissent les marchés pertinents chacun pour leur compte, sur des preuves différentes.
+
+### Les procédures américaines en un coup d'œil
+
+<Timeline items={[
+  { date: "2 juillet 1890", texte: "Le Sherman Act est promulgué (15 U.S.C. § 1 et 2, note de référence : July 2, 1890, ch. 647, 26 Stat. 209)." },
+  { date: "11 juin 1979", texte: "La Cour suprême, dans Reiter v. Sonotone, cite la formule « consumer welfare prescription » de Robert Bork (Cour suprême, 442 U.S. 330)." },
+  { date: "5 août 2024", texte: "Le juge Mehta juge que Google a maintenu illégalement un monopole sur la recherche (jugement sur les remèdes du 2 septembre 2025, p. 9 et 10)." },
+  { date: "17 avril 2025", texte: "Le tribunal de Virginie orientale juge que Google a monopolisé des marchés de la publicité numérique (département de la Justice, communiqué du 17 avril 2025)." },
+  { date: "2 septembre 2025", texte: "Remèdes dans l'affaire de la recherche : pas de cession de Chrome, partage de données avec des concurrents qualifiés (jugement du 2 septembre 2025, p. 3 à 5)." },
+  { date: "18 novembre 2025", texte: "Le juge Boasberg rejette la plainte de la FTC contre Meta, version publique du 2 décembre 2025 (opinion, p. 1, 2 et 89)." },
+  { date: "20 janvier 2026", texte: "La FTC annonce son appel dans l'affaire Meta (FTC, communiqué du 20 janvier 2026)." },
+  { date: "16 septembre 2026", texte: "Annonce des remèdes dans l'affaire de la technologie publicitaire : mesures de comportement et contrôleur indépendant pendant six ans (département de la Justice, communiqué du 16 septembre 2026)." },
+]} />
+
+## Le débat : bien-être du consommateur ou structure du marché ?
+
+Les décisions décrites plus haut reposent sur une question qu'aucun juge ne règle une fois pour toutes : que protège le droit de la concurrence ? Trois textes exposent les positions.
+
+### Le critère du prix et du bien-être du consommateur
+
+Dans *Reiter v. Sonotone* (1979), la Cour suprême des États-Unis écrit, à propos de l'histoire du Sherman Act, que les débats du Congrès « suggèrent » que celui-ci l'a conçu comme une « consumer welfare prescription », en citant Robert Bork, *The Antitrust Paradox* (1978)[^sonotone]. Carl Shapiro, économiste à Berkeley, rattache à l'école de Chicago un tournant vers une application « bien plus restreinte » de l'antitrust autour de 1980 (traduction)[^shapiro].
+
+<Citation auteur="Cour suprême des États-Unis" oeuvre="Reiter v. Sonotone Corp., 442 U.S. 330 (traduction)" annee="1979" reference="Opinion du 11 juin 1979, citant R. Bork, The Antitrust Paradox 66 (1978)" url="https://www.law.cornell.edu/supremecourt/text/442/330" original="None of the subsequent floor debates reflect any such intent. On the contrary, they suggest that Congress designed the Sherman Act as a “consumer welfare prescription.”" langue="en">
+  Aucun des débats parlementaires ultérieurs ne reflète une telle intention. Au contraire, ils suggèrent que le Congrès a conçu le Sherman Act comme une « consumer welfare prescription ».
+</Citation>
+
+### La critique de Lina Khan
+
+Lina Khan publie en 2017 dans le *Yale Law Journal* une note sur Amazon. Elle a ensuite présidé la FTC du 15 juin 2021 au 20 janvier 2025[^ftckhan]. Son article soutient que le cadre actuel de l'antitrust ne saisit pas l'architecture du pouvoir de marché des plateformes :
+
+<Citation auteur="Lina M. Khan" oeuvre="Amazon's Antitrust Paradox, Yale Law Journal, résumé (traduction)" annee="2017" reference="Yale Law Journal, 2017, p. 710" url="https://www.yalelawjournal.org/pdf/e.710.Khan.805_zuvfyyeh.pdf" original="This Note argues that the current framework in antitrust—specifically its pegging competition to “consumer welfare,” defined as short-term price effects—is unequipped to capture the architecture of market power in the modern economy." langue="en">
+  Cette note soutient que le cadre actuel de l'antitrust, et en particulier le fait d'aligner la concurrence sur le « bien-être du consommateur », défini comme les effets de court terme sur les prix, n'est pas équipé pour saisir l'architecture du pouvoir de marché dans l'économie moderne.
+</Citation>
+
+Sa démonstration repose sur deux points : la prédation par les prix devient rationnelle pour une plateforme qui privilégie la croissance aux profits, et l'intégration de plusieurs activités place la plateforme en contrôle d'une infrastructure dont dépendent ses rivaux. Elle propose deux voies : restaurer les principes traditionnels de l'antitrust et de la concurrence, ou appliquer des obligations de « common carrier » aux plateformes[^khan]. Elle rappelle aussi que, jusque dans les années 1950, l'antitrust servait à protéger ce que le juge Louis Brandeis appelait la « liberté industrielle » (*industrial liberty*)[^khan].
+
+### La voie médiane de Carl Shapiro et le rapport européen
+
+<Positions items={[
+  { titre: "Bork et le bien-être du consommateur", sous_titre: "Reiter v. Sonotone, 1979", forme: "biscuit", points: [
+    "Le Sherman Act est lu comme une <strong>prescription de bien-être du consommateur</strong> (Cour suprême, citant Bork, 1978).",
+    "Le critère est le préjudice causé aux consommateurs, mesuré par ses effets économiques.",
+    "Shapiro situe le tournant de l'école de Chicago vers 1980.",
+  ]},
+  { titre: "Khan et la structure du marché", sous_titre: "Yale Law Journal, 2017", forme: "gemme", points: [
+    "Le « bien-être du consommateur », défini comme effets de <strong>court terme sur les prix</strong>, ne saisit pas le pouvoir des plateformes.",
+    "Il faut examiner la <strong>structure</strong> : prédation, intégration, contrôle d'une infrastructure dont dépendent les rivaux.",
+    "Deux voies : restaurer les principes traditionnels de l'antitrust, ou imposer des obligations de common carrier.",
+  ]},
+  { titre: "Shapiro, l'antitrust existant, appliqué", sous_titre: "Int. J. of Industrial Organization, 2018", forme: "fleur", points: [
+    "Un <strong>examen étroit</strong> des plus grandes firmes, y compris technologiques, est approprié.",
+    "Il doit continuer de viser des <strong>conduites précises</strong> qui nuisent aux clients ou perturbent le processus concurrentiel.",
+    "Le droit et les institutions de l'antitrust sont mal adaptés pour traiter directement le pouvoir politique des grandes entreprises ou l'inégalité de revenus.",
+  ]},
+]} />
+
+Shapiro, dans le résumé de son article, défend un examen strict des grandes firmes sans élargir les objectifs de l'antitrust[^shapiro]. Le rapport européen de 2019 pose une position voisine du côté du droit communautaire : « Il n'est pas nécessaire de repenser les objectifs fondamentaux du droit de la concurrence à la lumière de la « révolution » numérique » (traduction), tout en jugeant que les caractéristiques de l'économie numérique « requièrent une application vigoureuse » et « justifient des ajustements » dans la manière d'appliquer le droit[^cremer].
+
+### Trois points de désaccord
+
+**Quel critère ?** Pour la Cour suprême de 1979, il s'agit du bien-être du consommateur. Pour Khan, le prix à court terme ne suffit pas. Pour Shapiro, le critère reste la conduite qui nuit aux clients ou perturbe le processus concurrentiel, ce qui est plus large que le seul prix sans aller jusqu'aux objectifs politiques. Le juge Mehta, lui, applique l'article 2 en cherchant un monopole et une conduite d'éviction ; il n'invoque pas de critère de prix[^mehta].
+
+**Quel outil ?** L'antitrust au cas par cas, ou une réglementation préventive. L'Union a choisi les deux : les articles 101 et 102 pour les abus passés, le DMA pour les obligations générales. Khan envisage des obligations de type *common carrier* ; le DMA en est un équivalent européen au sens où il impose des règles à des entreprises désignées, mais la leçon ne s'appuie sur aucun texte qui l'affirme. Aux États-Unis, le tribunal de Mehta rejette un remède de nature réglementaire sur le choix de présentation des produits : les écrans de choix, parce que « le précédent impose d'éviter les remèdes qui contraignent la conception des produits »[^mehta].
+
+**Quel remède ?** Séparer ou encadrer. Le juge Mehta refuse la cession de Chrome et d'Android et choisit le partage de données. Dans l'affaire de la publicité, le département de la Justice présente des mesures de comportement et un contrôleur, sans cession. La Commission indique en 2025 que, dans son affaire de technologie publicitaire, seule une cession partielle lui paraît répondre au conflit d'intérêts, tout en attendant la proposition de Google[^mehta][^doj2][^adtech]. Dans ce désaccord, l'Europe et les États-Unis ne sont pas alignés, alors même que la Commission relève que les conduites sont largement similaires.
+
+## À retenir
+
+<ARetenir>
+
+1. Les rendements d'échelle, les effets de réseau et les données poussent les marchés numériques vers la concentration. Les experts de la Commission en tirent que la concurrence s'exerce « pour le marché », et que le droit doit être appliqué avec vigueur et ajusté, sans changer ses objectifs.
+2. L'article 102 TFUE sanctionne l'abus de position dominante, pas la domination. La Commission peut infliger jusqu'à 10 % du chiffre d'affaires mondial, par une amende non pénale (règlement 1/2003, article 23).
+3. Google a reçu 2,42 milliards (Shopping, 2017), 4,34 milliards (Android, 2018, ramenés à 4,125 milliards, confirmés le 2 juillet 2026), 1,49 milliard (AdSense, 2019, annulée le 18 septembre 2024) et 2,95 milliards (technologie publicitaire, 2025).
+4. Le DMA désigne 7 entreprises pour 23 services au 16 octobre 2026, leur impose des obligations dès la désignation et prévoit des amendes jusqu'à 10 % (20 % en récidive). Les premières amendes : 500 millions pour Apple et 200 millions pour Meta (23 avril 2025), 890 millions pour Google (23 juillet 2026).
+5. Le DSA vise les très grandes plateformes (45 millions d'utilisateurs actifs mensuels) sur les risques systémiques et la transparence, avec des amendes jusqu'à 6 % ; sa première amende, 120 millions d'euros, frappe X (5 décembre 2025).
+6. Aux États-Unis, c'est un juge qui décide : Google est un monopoleur sur la recherche (2024), mais Chrome n'est pas cédé (2025) ; Meta l'emporte contre la FTC (2025), qui fait appel.
+7. Le désaccord de fond oppose un critère centré sur le prix et le bien-être du consommateur (Bork, la Cour suprême de 1979) à une lecture centrée sur la structure du marché (Khan), avec une position intermédiaire (Shapiro) : cette leçon expose les positions, elle ne tranche pas.
+
+</ARetenir>
+
+[^cremer]: Jacques Crémer, Yves-Alexandre de Montjoye, Heike Schweitzer, *Competition policy for the digital era*, rapport final pour la Commission européenne (DG Concurrence), 2019. Chapitre 2 (résumé) : « Extreme returns to scale. The cost of production of digital services is much less than proportional to the number of customers served. » ; « Network externalities. The convenience of using a technology or a service increases with the number of users that adopt it. [...] Network effects could thus prevent a superior platform from displacing an established incumbent. » ; « If platforms were fully identical, non-interoperable, and if users would not multi-home, it would be wasteful to build several platforms serving the exact same needs when costs are strongly decreasing in size » ; « Weyl and White go as far as to argue that competition will lead to too little concentration » ; « experience shows that large incumbent digital players are very difficult to dislodge, although there is little empirical evidence of the efficiency cost of this difficulty » ; chapitre 3 : « There is no need to rethink the fundamental goals of competition law in the light of the digital "revolution". Vigorous competition policy enforcement is still a powerful tool » ; « they require vigorous competition policy enforcement and justify adjustments to the way competition law is applied ». https://op.europa.eu/en/publication-detail/-/publication/21dc175c-7b76-11e9-9f05-01aa75ed71a1/language-en
+[^shopping]: Commission européenne, communiqué IP/17/1784, 27 juin 2017 : amende de 2 424 495 000 euros, dominance, calendrier par pays, chiffres de clics et de trafic, 90 jours, astreintes. Original de la citation : « There are also high barriers to entry in these markets, in part because of network effects: the more consumers use a search engine, the more attractive it becomes to advertisers. The profits generated can then be used to attract even more consumers. » Même communiqué pour la « responsabilité particulière » des entreprises dominantes. https://ec.europa.eu/commission/presscorner/detail/en/ip_17_1784
+[^android]: Commission européenne, communiqué IP/18/4581, 18 juillet 2018 : amende de 4 342 865 000 euros ; trois restrictions ; parts de marché ; 80 % des appareils en Europe ; biais de statu quo ; effets de réseau sur les systèmes d'exploitation (« the more users use a smart mobile operating system, the more developers write apps for that system », puis, après un tiret cadratin de l'original, « which in turn attracts more users »). https://ec.europa.eu/commission/presscorner/detail/en/ip_18_4581
+[^adsense]: Commission européenne, communiqué IP/19/1770, 20 mars 2019 : amende de 1 494 459 000 euros (1,29 % du chiffre d'affaires 2018 de Google), clauses d'exclusivité (2006), de placement premium (mars 2009) et d'autorisation préalable, dominance depuis au moins 2006 avec plus de 85 % de part de marché pendant l'essentiel de la période. https://ec.europa.eu/commission/presscorner/detail/en/ip_19_1770
+[^adtech]: Commission européenne, communiqué IP/25/1992, 5 septembre 2025 : amende de 2,95 milliards d'euros, AdX, DFP, Google Ads et DV360, période d'au moins 2014 à 2025, 60 jours, position préliminaire sur la cession, mention des antécédents de Google et de la procédure américaine. https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1992
+[^cjshopping]: Cour de justice de l'Union européenne, communiqué n° 135/24, 10 septembre 2024, affaire C-48/22 P : rejet du pourvoi, Tribunal du 10 novembre 2021 (T-612/17), amende de 2 424 495 000 euros dont 523 518 000 solidairement à la charge d'Alphabet. Original : « it cannot be considered that, as a general rule, a dominant undertaking which treats its own products or services more favourably than it treats those of its competitors is engaging in conduct which departs from competition on the merits irrespective of the circumstances of the case ». https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240135en.pdf
+[^gcandroid]: Cour de justice de l'Union européenne, communiqué n° 147/22, 14 septembre 2022, affaire T-604/18 : procédure ouverte le 15 avril 2015, décision du 18 juillet 2018, trois restrictions, annulation du volet partage de revenus, amende fixée à 4,125 milliards d'euros. https://curia.europa.eu/jcms/upload/docs/application/pdf/2022-09/cp220147en.pdf
+[^cjandroid]: Cour de justice de l'Union européenne, communiqué n° 93/26, 2 juillet 2026, affaire C-738/22 P : rejet du pourvoi ; amende initiale de 4 342 865 000 euros, fixée par le Tribunal à 4 125 000 000 euros dont 1 520 605 895 solidairement à la charge d'Alphabet ; absence d'analyse contrefactuelle systématique ; test du concurrent aussi efficace non requis dans le cas d'espèce. https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260093en.pdf
+[^gcadsense]: Cour de justice de l'Union européenne, communiqué n° 143/24, 18 septembre 2024, affaire T-334/19 : annulation de la décision du 20 mars 2019 pour des erreurs dans l'appréciation de la durée des clauses et du marché couvert en 2016. https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240143en.pdf
+[^tfue]: Traité sur le fonctionnement de l'Union européenne, article 102, version consolidée, JO C 202 du 7 juin 2016, p. 89. https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12016E102
+[^tfue101]: Traité sur le fonctionnement de l'Union européenne, article 101, version consolidée, JO C 202 du 7 juin 2016, p. 88. https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12016E101
+[^reg1]: Règlement (CE) n° 1/2003 du Conseil, articles 23 et 24, texte consolidé au 1er juillet 2009 (numérotation 81 et 82 du traité, aujourd'hui 101 et 102). https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:02003R0001-20090701
+[^apple]: Commission européenne, communiqué IP/24/1161, 4 mars 2024 : amende de plus de 1,8 milliard d'euros, article 102, point a), près de dix ans, somme forfaitaire de 1,8 milliard. Le communiqué ne donne pas le montant exact. https://ec.europa.eu/commission/presscorner/detail/en/ip_24_1161
+[^marketplace]: Commission européenne, communiqué IP/24/5801, 14 novembre 2024 : amende de 797,72 millions d'euros, vente liée de Marketplace à Facebook, conditions inéquitables, dominance de Meta sur les réseaux sociaux personnels dans l'EEE. https://ec.europa.eu/commission/presscorner/detail/en/ip_24_5801
+[^glovo]: Commission européenne, communiqué IP/25/1356, 2 juin 2025 : amende cumulée de 329 millions d'euros, non-débauchage, échange d'informations, répartition de marchés, de juillet 2018 à juillet 2022, première entente constatée sur le marché du travail, procédure de transaction. https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1356
+[^dma]: Règlement (UE) 2022/1925, JO L 265 du 12 octobre 2022 : articles 3 (désignation, seuils, paragraphes 8 et 10), 4 (réexamen), 5 et 6 (obligations), 17 (enquête de marché), 29 et 30 (non-respect, amendes). https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R1925
+[^dma23]: Commission européenne, communiqué IP/23/4328, 6 septembre 2023 : six contrôleurs d'accès, 22 services, DMA en vigueur depuis novembre 2022 et applicable depuis mai 2023, dix catégories de services, amendes jusqu'à 10 % et 20 %, mesures correctives en cas d'infractions systématiques, Gmail, Outlook.com et Samsung Internet non désignés. https://ec.europa.eu/commission/presscorner/detail/en/ip_23_4328
+[^booking]: Commission européenne, communiqué IP/24/2561, 13 mai 2024 : désignation de Booking pour Booking.com. https://ec.europa.eu/commission/presscorner/detail/en/ip_24_2561
+[^portail]: Commission européenne, portail des contrôleurs d'accès du DMA, consulté le 16 octobre 2026 : désignations du 6 septembre 2023, du 29 avril 2024 (iPadOS) et du 13 mai 2024, retrait de Facebook Marketplace le 23 avril 2025, 23 services au total ; liste par entreprise, traitée par `scripts/fetch-monopoles-numerique.mjs`. https://digital-markets-act.ec.europa.eu/gatekeepers_en
+[^dmafines25]: Commission européenne, communiqué IP/25/1085, 23 avril 2025 : amendes de 500 et 200 millions d'euros, enquêtes ouvertes le 25 mars 2024, avis préliminaires des 24 juin et 1er juillet 2024, 60 jours, retrait de Marketplace (moins de 10 000 utilisateurs professionnels en 2024). https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085
+[^dmagoogle]: Commission européenne, communiqué IP/26/1670, 23 juillet 2026 : amendes de 460 et 430 millions d'euros, enquêtes ouvertes le 25 mars 2024, avis préliminaire du 19 mars 2025, 60 jours, propositions de Google sur l'affichage, AI Overviews et AI Mode. https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670
+[^cloud]: Commission européenne, portail du DMA, 25 juin 2026 : avis préliminaire sur la désignation d'AWS et d'Azure. https://digital-markets-act.ec.europa.eu/commission-reaches-preliminary-position-amazons-and-microsofts-market-leading-cloud-services-should-2026-06-25_en
+[^dsa]: Règlement (UE) 2022/2065, JO L 277 du 27 octobre 2022 : articles 33 (seuil de 45 millions, désignation, quatre mois), 34 (risques systémiques) et 74 (amendes jusqu'à 6 %). https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32022R2065
+[^dsa23]: Commission européenne, communiqué IP/23/2413, 25 avril 2023 : 17 très grandes plateformes et 2 très grands moteurs de recherche. https://ec.europa.eu/commission/presscorner/detail/en/ip_23_2413
+[^x]: Commission européenne, communiqué IP/25/2934, 5 décembre 2025 : amende de 120 millions d'euros, première décision de non-respect du DSA, articles 25, paragraphe 1, 39 et 40, paragraphe 12, délais de 60 et 90 jours ouvrables, enquête ouverte le 18 décembre 2023. https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934
+[^sherman]: Sherman Act, 15 U.S.C. § 1 et § 2, texte en vigueur diffusé par le Legal Information Institute. Original de l'article 1 : « Every contract, combination in the form of trust or otherwise, or conspiracy, in restraint of trade or commerce among the several States, or with foreign nations, is declared to be illegal. » ; article 2 : « Every person who shall monopolize, or attempt to monopolize, or combine or conspire with any other person or persons, to monopolize any part of the trade or commerce among the several States, or with foreign nations, shall be deemed guilty of a felony » ; peines : amende n'excédant pas 100 000 000 de dollars pour une société, prison jusqu'à 10 ans. Date : July 2, 1890, ch. 647, 26 Stat. 209. https://www.law.cornell.edu/uscode/text/15/2 https://www.law.cornell.edu/uscode/text/15/1
+[^mehta]: *United States v. Google LLC*, n° 20-cv-3010 (APM) (D.D.C.), memorandum opinion du 2 septembre 2025 (document 1436) : décision du 5 août 2024 (p. 9 et 10), marchés et accords retenus, parts de marché de 80 % en 2009 à 89,2 % en 2020 et près de 95 % sur mobile (p. 108), conclusions de l'introduction (p. 1 à 5). Original de la citation : « Google is a monopolist, and it has acted as one to maintain its monopoly. » Autres originaux : « a healthy dose of humility » ; « Plaintiffs overreached in seeking forced divesture of these key assets » ; « Precedent requires courts to avoid remedies that compel product design requirements ». https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_20-cv-03010/pdf/USCOURTS-dcd-1_20-cv-03010-3.pdf
+[^chn]: Courthouse News Service, « DOJ urges DC Circuit to beef up remedies in Google monopoly ruling », 2026. Source de presse, pour l'état de l'appel ; non recoupée avec le dossier de la cour d'appel. https://www.courthousenews.com/doj-urges-dc-circuit-to-beef-up-remedies-in-google-monopoly-ruling/
+[^doj1]: Département de la Justice des États-Unis, « Department of Justice Prevails in Landmark Antitrust Case Against Google », 17 avril 2025. Original : « harmed Google's publishing customers, the competitive process, and, ultimately, consumers of information on the open web ». Le communiqué reprend les mots du tribunal ; l'opinion elle-même n'a pas été lue pour cette leçon. https://www.justice.gov/opa/pr/department-justice-prevails-landmark-antitrust-case-against-google
+[^doj2]: Département de la Justice des États-Unis, « Department of Justice Again Wins Substantial Relief Against Google », 16 septembre 2026 : mesures décrites par le département, et non lues dans l'opinion du tribunal, que cette leçon n'a pas consultée. https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google
+[^meta]: *FTC v. Meta Platforms, Inc.*, n° 20-3590 (JEB) (D.D.C.), memorandum opinion du 18 novembre 2025, version publique du 2 décembre 2025 (document 705), p. 1, 2 et 88-89. Originaux : « Meta holds no monopoly in the relevant market » ; « Even if YouTube is out, including TikTok alone defeats the FTC's case » ; « the agency must show that it continues to hold such power now ». https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_20-cv-03590/pdf/USCOURTS-dcd-1_20-cv-03590-7.pdf
+[^ftc]: Federal Trade Commission, « FTC Appeals Ruling in Meta Monopolization Case », 20 janvier 2026. https://www.ftc.gov/news-events/news/press-releases/2026/01/ftc-appeals-ruling-meta-monopolization-case
+[^sonotone]: Cour suprême des États-Unis, *Reiter v. Sonotone Corp.*, 442 U.S. 330, argué le 25 avril 1979, jugé le 11 juin 1979. Original : « they suggest that Congress designed the Sherman Act as a "consumer welfare prescription." R. Bork, The Antitrust Paradox 66 (1978) ». https://www.law.cornell.edu/supremecourt/text/442/330
+[^shapiro]: Carl Shapiro, « Antitrust in a time of populism », *International Journal of Industrial Organization*, vol. 61, 2018, p. 714 à 748. Originaux : « The Chicago School ushered in a far more circumscribed approach to antitrust enforcement around 1980 » ; « close antitrust scrutiny is appropriate for today's largest and most powerful firms, including those in the tech sector » ; « should continue to focus on identifying specific conduct that harms customers or disrupts the competitive process » ; « antitrust law and antitrust institutions are ill suited to directly address concerns associated with the political power of large corporations or other public policy goals such as income inequality or job creation ». https://doi.org/10.1016/j.ijindorg.2018.01.001
+[^khan]: Lina M. Khan, « Amazon's Antitrust Paradox », *Yale Law Journal*, 2017, p. 710 à 805. Original du résumé, en trois fragments que l'original relie par des tirets cadratins : « This Note argues that the current framework in antitrust » ; « specifically its pegging competition to "consumer welfare," defined as short-term price effects » ; « is unequipped to capture the architecture of market power in the modern economy ». Voies proposées : « restoring traditional antitrust and competition policy principles » ou « applying common carrier obligations and duties ». Brandeis : « what Justice Louis Brandeis called "industrial liberty" ». https://www.yalelawjournal.org/pdf/e.710.Khan.805_zuvfyyeh.pdf
+[^ftckhan]: Federal Trade Commission, page de Lina M. Khan : « Chair of the Federal Trade Commission from June 15, 2021 to January 20, 2025 ». https://www.ftc.gov/about-ftc/commissioners-staff/lina-m-khan

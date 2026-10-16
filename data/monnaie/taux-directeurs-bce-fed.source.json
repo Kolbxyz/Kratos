@@ -1,0 +1,8 @@
+{
+  "titre": "Taux directeur de la BCE (facilité de dépôt) et taux effectif des fonds fédéraux, au 31 décembre, 1999-2025",
+  "producteur": "Banque centrale européenne (ECB Data Portal) ; Réserve fédérale, série DFF diffusée par la Federal Reserve Bank of St. Louis (FRED)",
+  "jeu": "ECB FM.B.U2.EUR.4F.KR.DFR.LEV (dates de modification) ; FRED DFF (taux effectif quotidien)",
+  "url": "https://data.ecb.europa.eu/data/datasets/FM/FM.B.U2.EUR.4F.KR.DFR.LEV",
+  "traitement": "Valeur en vigueur au 31 décembre de chaque année (dernière modification ou dernière observation quotidienne à cette date). Le taux de la facilité de dépôt de la BCE est celui qui rémunère les dépôts des banques auprès de l'Eurosystème ; en 1999 la série reflète la période de transition de janvier. Le taux effectif de la Fed est une moyenne pondérée des taux réellement pratiqués, il peut s'écarter de la fourchette cible. Dernières données disponibles au téléchargement : BCE 2026-09-16, Fed 2026-10-14.",
+  "consulte": "2026-10-16"
+}

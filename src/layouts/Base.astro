@@ -1,14 +1,16 @@
 ---
 import "../styles/global.css";
 import Forme from "../components/Forme.astro";
+import Progression from "../components/Progression.astro";
 interface Props { titre: string; description: string }
 const { titre, description } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const ici = Astro.url.pathname;
 const nav = [
   { href: base, nom: "Parcours" },
+  { href: `${base}bibliotheque/`, nom: "Bibliothèque" },
   { href: `${base}recherche/`, nom: "Recherche" },
-  { href: `${base}methode/`, nom: "Méthode" },
+  { href: `${base}a-propos/`, nom: "À propos" },
 ];
 ---
 <!doctype html>
@@ -25,9 +27,9 @@ const nav = [
   <body>
     <header class="site-header">
       <div class="bar">
-        <a class="brand" href={base}><Forme nom="biscuit" />Leçons de pouvoir</a>
+        <a class="brand" href={base}><Forme nom="biscuit" />Kratos</a>
         <nav>
-          {nav.map((n) => <a href={n.href} aria-current={ici === n.href ? "page" : undefined}>{n.nom}</a>)}
+          {nav.map((n) => <a href={n.href} aria-current={ici === n.href || (n.href !== base && ici.startsWith(n.href)) ? "page" : undefined}>{n.nom}</a>)}
         </nav>
       </div>
     </header>
@@ -38,5 +40,6 @@ const nav = [
         Une erreur ? Signalez-la sur le dépôt du projet.
       </div>
     </footer>
+    <Progression />
   </body>
 </html>

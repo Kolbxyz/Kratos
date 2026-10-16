@@ -1,0 +1,8 @@
+{
+  "titre": "The Missing Profits of Nations, tableau 2 : profits transférés, estimations par pays (2015)",
+  "producteur": "Thomas Tørsløv, Ludvig Wier, Gabriel Zucman, NBER Working Paper 24701 (juin 2018, révisé en avril 2020)",
+  "url": "https://www.nber.org/system/files/working_papers/w24701/w24701.pdf",
+  "jeu": "Colonne « Shifted profits » du tableau 2, valeurs négatives prises en valeur absolue (profits reçus)",
+  "traitement": "Saisie manuelle des onze lignes de havres du tableau, en milliards de dollars courants de 2015. Les auteurs précisent que l'attribution à un havre précis comporte une marge d'erreur, sans effet sur le total mondial.",
+  "consulte": "2026-10-16"
+}

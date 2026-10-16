@@ -1,0 +1,8 @@
+{
+  "titre": "Civils tués délibérément par les principaux acteurs du Moyen-Orient, 1989-2025 (UCDP One-sided Violence 26.1)",
+  "producteur": "Uppsala Conflict Data Program (UCDP)",
+  "jeu": "UCDP One-sided Violence Dataset, version 26.1",
+  "url": "https://ucdp.uu.se/downloads/",
+  "traitement": "Neuf acteurs retenus : ceux qui ont le plus de victimes dans les lignes codées uniquement « Moyen-Orient » (region = 2). Pour chacun, civils_tues = somme des estimations centrales (best_fatality_estimate) sur toutes ses lignes et toutes les années, quelle que soit la région ; dont_moyen_orient_seul = somme des seules lignes codées région 2. L'écart est important pour l'État islamique : l'UCDP code ses années 2015 à 2025 comme des lignes multi-régions, qu'on ne peut pas découper par pays. Définition UCDP : usage de la force armée contre des civils par le gouvernement d'un État ou par un groupe organisé, au moins 25 morts civils par acteur et par an, exécutions extrajudiciaires en détention exclues. Les civils tués dans les combats ou les bombardements sont comptés à part, comme morts au combat. Fichier : https://ucdp.uu.se/downloads/nsos/ucdp-onesided-261-csv.zip.",
+  "consulte": "2026-10-16"
+}

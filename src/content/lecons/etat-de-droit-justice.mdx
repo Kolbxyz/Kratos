@@ -47,6 +47,7 @@ sources:
   - titre: "Rule of law"
     auteur: "Wikipédia"
     url: "https://en.wikipedia.org/wiki/Rule_of_law"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Rule of Law Checklist, CDL-AD(2016)007"
     auteur: "Commission européenne pour la démocratie par le droit (Commission de Venise)"
@@ -62,6 +63,11 @@ sources:
     url: "https://rm.coe.int/fiches-pays-partie-2-fr/1680b21e9a"
     consulte: "2026-10-15"
     primaire: true
+  - titre: "Study on the functioning of judicial systems in the EU Member States (2026), partie 1, tableaux 7.1.1, 7.2.5 et 7.3.1 (données 2024)"
+    auteur: "Commission européenne et CEPEJ, Conseil de l'Europe"
+    url: "https://commission.europa.eu/publications/two-studies-prepared-european-commission-cepej-functioning-judicial-systems-eu-member-states-2026_en"
+    consulte: "2026-10-16"
+    primaire: true
   - titre: "Rapport CEPEJ : la France toujours en dessous de la moyenne européenne"
     auteur: "Olivia Dufour, Actu-Juridique"
     url: "https://www.actu-juridique.fr/justice/rapport-cepej-la-france-toujours-en-dessous-de-la-moyenne-europeenne/"
@@ -70,6 +76,7 @@ sources:
     auteur: "Samuel-Frédéric Servière, Fondation IFRAP"
     url: "https://www.ifrap.org/fonction-publique-et-administration/justice-il-manque-5-702-procureurs-pour-etre-dans-la-moyenne-europeenne"
     consulte: "2026-10-15"
+    secondaire: true
   - titre: "Surpopulation carcérale : 88 829 détenus en France au 1er juin"
     auteur: "Le Club des juristes"
     url: "https://www.leclubdesjuristes.com/en-bref/surpopulation-carcerale-88-829-detenus-en-france-au-1er-juin-16724/"
@@ -77,23 +84,22 @@ sources:
   - titre: "Carl Schmitt (citations)"
     auteur: "Wikiquote (allemand)"
     url: "https://de.wikiquote.org/wiki/Carl_Schmitt"
+    secondaire: true
     consulte: "2026-10-15"
-  - titre: "Polish constitutional crisis"
-    auteur: "Wikipédia"
-    url: "https://en.wikipedia.org/wiki/Polish_constitutional_crisis"
-    consulte: "2026-10-15"
-  - titre: "Poland fined €1 million a day by EU for not suspending disciplinary chamber for judges"
-    auteur: "Notes from Poland"
-    url: "https://notesfrompoland.com/2021/10/27/poland-fined-e1-million-a-day-by-eu-for-not-suspending-disciplinary-chamber-for-judges/"
-    consulte: "2026-10-15"
+  - titre: "Communiqué de presse n° 192/21, affaire C-204/21 R, Commission c. Pologne"
+    auteur: "Cour de justice de l'Union européenne"
+    url: "https://curia.europa.eu/site/upload/docs/application/pdf/2021-10/cp210192en.pdf"
+    consulte: "2026-10-16"
+    primaire: true
   - titre: "Council adopted historic decision on budget protection vis-à-vis Hungary"
     auteur: "eucrim"
     url: "https://eucrim.eu/news/council-adopted-historic-decision-on-budget-protection-vis-a-vis-hungary-conditions-also-for-rrf-payments/"
     consulte: "2026-10-15"
-  - titre: "2023 Israeli judicial reform"
-    auteur: "Wikipédia"
-    url: "https://en.wikipedia.org/wiki/2023_Israeli_judicial_reform"
-    consulte: "2026-10-15"
+  - titre: "The Supreme Court Ruling on Canceling the Reasonableness Clause: Implications"
+    auteur: "Israel Democracy Institute"
+    url: "https://en.idi.org.il/articles/52235"
+    consulte: "2026-10-16"
+    secondaire: true
   - titre: "La France se classe 22e sur 143 dans l'indice WJP Rule of Law Index 2025 (communiqué)"
     auteur: "World Justice Project"
     url: "https://worldjusticeproject.org/sites/default/files/documents/France_FR.pdf"
@@ -102,16 +108,18 @@ sources:
   - titre: "Loi des 16 et 24 août 1790"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Loi_des_16_et_24_ao%C3%BBt_1790"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Traité de la juridiction administrative et des recours contentieux, livre I, chapitre II (1887)"
     auteur: "Édouard Laferrière, sur Wikisource"
     url: "https://fr.wikisource.org/wiki/Trait%C3%A9_de_la_juridiction_administrative_et_des_recours_contentieux/Livre_I/Chapitre_II"
     consulte: "2026-10-15"
     primaire: true
-  - titre: "Arrêt Blanco"
-    auteur: "Wikipédia"
-    url: "https://fr.wikipedia.org/wiki/Arr%C3%AAt_Blanco"
-    consulte: "2026-10-15"
+  - titre: "Tribunal des conflits, 8 février 1873, Blanco, n° 00012"
+    auteur: "Tribunal des conflits (texte de l'arrêt, copie en PDF)"
+    url: "https://www.mafr.fr/media/attachments/2012/9/12/Arret_TC_8_fev_1873_blanco.pdf"
+    consulte: "2026-10-16"
+    primaire: true
 ---
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
@@ -128,7 +136,7 @@ Le 19 octobre 1962, le Conseil d'État **annule l'ordonnance du président de la
 Le chef de l'État le plus puissant de l'histoire républicaine, fort d'une habilitation donnée par le peuple lui-même, voit un de ses actes annulé par un juge. C'est exactement cela, l'**État de droit** : le pouvoir, même légitime, même populaire, reste soumis à des règles, et un juge peut le dire.
 
 <div class="chiffres">
-  <Chiffre valeur="3,2" label="procureurs pour 100 000 habitants en France, la plus faible densité de l'Union européenne (moyenne : 11,4)" source="Fondation IFRAP, d'après la CEPEJ" url="https://www.ifrap.org/fonction-publique-et-administration/justice-il-manque-5-702-procureurs-pour-etre-dans-la-moyenne-europeenne" date="données publiées le 4 juin 2026" forme="gemme" />
+  <Chiffre valeur="3,2" label="procureurs pour 100 000 habitants en France, contre 11,4 en moyenne dans l'Union européenne (minimum : 2,9)" source="Commission européenne et CEPEJ, tableau 7.3.1 (données 2024)" url="https://commission.europa.eu/publications/two-studies-prepared-european-commission-cepej-functioning-judicial-systems-eu-member-states-2026_en" date="2026" forme="gemme" />
   <Chiffre valeur="140,5 %" label="taux de suroccupation des prisons françaises, avec 88 829 détenus" source="Le Club des juristes, d'après le ministère de la Justice" url="https://www.leclubdesjuristes.com/en-bref/surpopulation-carcerale-88-829-detenus-en-france-au-1er-juin-16724/" date="1er juin 2026" forme="soleil" />
   <Chiffre valeur="22e / 143" label="rang de la France à l'indice de l'État de droit du World Justice Project" source="World Justice Project" url="https://worldjusticeproject.org/sites/default/files/documents/France_FR.pdf" date="indice 2025, publié le 28 octobre 2025" forme="arche" />
 </div>
@@ -204,7 +212,7 @@ La Constituante veut rompre avec la justice d'Ancien Régime, où les charges de
   Les fonctions judiciaires sont distinctes et demeureront toujours séparées des fonctions administratives ; les juges ne pourront, à peine de forfaiture, troubler de quelque manière que ce soit, les opérations des corps administratifs ni citer devant eux les administrateurs pour raison de leurs fonctions.
 </Citation>
 
-Le paradoxe est complet : une loi conçue pour **protéger l'administration des juges** a produit, par étapes, un juge spécialisé de l'administration. Le 8 février 1873, l'arrêt **Blanco** du Tribunal des conflits, souvent présenté comme l'acte fondateur du droit administratif, affirme que la responsabilité de l'État pour les dommages causés par le service public relève de la juridiction administrative et obéit à des règles propres ; les historiens du droit discutent d'ailleurs l'idée qu'il ait été perçu comme fondateur dès son époque[^blanco]. Moins d'un siècle plus tard, en 1962, ce même juge annule une ordonnance du général de Gaulle (Canal).
+Le paradoxe est complet : une loi conçue pour **protéger l'administration des juges** a produit, par étapes, un juge spécialisé de l'administration. Le 8 février 1873, l'arrêt **Blanco** du Tribunal des conflits affirme que la responsabilité de l'État pour les dommages causés par le service public relève de la juridiction administrative et obéit à des règles propres[^blanco]. Moins d'un siècle plus tard, en 1962, ce même juge annule une ordonnance du général de Gaulle (Canal).
 
 La France a donc inventé l'État de droit à l'envers : non pas en confiant le contrôle du pouvoir aux juges ordinaires, comme l'Angleterre de Dicey, mais en créant au sein même de l'État une institution chargée de le juger.
 
@@ -238,7 +246,7 @@ Le dernier rapport complet de la Commission européenne pour l'efficacité de la
 
 Pour les procureurs, la France détient un double record : **3 pour 100 000 habitants**, le chiffre le plus bas de tous les pays étudiés (médiane : 11,2), et une charge de **6,4 affaires pénales pour 100 habitants**, contre une médiane de 2,3[^cepej].
 
-Les données publiées le 4 juin 2026 confirment le diagnostic : en 2024, la France compte **7 928 juges professionnels** et **2 227 procureurs**, soit 3,2 procureurs pour 100 000 habitants contre une moyenne de 11,4 dans l'Union européenne. Atteindre cette moyenne demanderait **5 702 magistrats du parquet supplémentaires**, pour un coût estimé par la Fondation IFRAP à 451,4 millions d'euros[^ifrap].
+L'étude de la Commission européenne et de la CEPEJ publiée en juin 2026 confirme le diagnostic : en 2024, la France compte **7 968 juges professionnels** et **2 225 procureurs**, soit 3,2 procureurs pour 100 000 habitants contre une moyenne de 11,4 dans l'Union européenne[^cepej26]. Atteindre cette moyenne demanderait **5 702 magistrats du parquet supplémentaires**, pour un coût estimé par la Fondation IFRAP à 451,4 millions d'euros[^ifrap].
 
 ### Le budget
 
@@ -252,7 +260,7 @@ La peine prononcée doit encore être exécutée dans des conditions conformes a
 
 En 1922, le juriste allemand Carl Schmitt ouvre sa *Théologie politique* par une phrase qui résume la critique la plus radicale de l'État de droit :
 
-<Citation auteur="Carl Schmitt" oeuvre="Politische Theologie" annee="1922" reference="Duncker & Humblot, Berlin, p. 9 (traduction)" url="https://de.wikiquote.org/wiki/Carl_Schmitt">
+<Citation auteur="Carl Schmitt" oeuvre="Politische Theologie" annee="1922" reference="Duncker & Humblot, Berlin, p. 9 (traduction)" url="https://de.wikiquote.org/wiki/Carl_Schmitt" original="Souverän ist, wer über den Ausnahmezustand entscheidet." langue="de">
   Est souverain celui qui décide de la situation d'exception.
 </Citation>
 
@@ -266,7 +274,7 @@ Les régimes qui reculent ne suppriment pas les tribunaux. Ils les **capturent**
 
 ### Pologne, 2015-2023
 
-Après les élections de 2015, le parti Droit et Justice (PiS) contrôle la présidence et le Parlement. Il nomme des juges au Tribunal constitutionnel dans des conditions contestées (crise de 2015), étend son emprise sur la Cour suprême (crise de 2017), puis crée en 2019 une chambre disciplinaire pour les juges[^pologne]. La Cour de justice de l'Union européenne ordonne la suspension de cette chambre. La Pologne ne s'exécutant pas, la Cour la condamne le **27 octobre 2021 à une astreinte d'un million d'euros par jour**[^pologne1m]. Le PiS perd les élections législatives de 2023.
+La Cour de justice de l'Union européenne juge le 19 novembre 2019 que le droit de l'Union s'oppose à ce que des affaires relevant de ce droit tombent sous la compétence exclusive d'une juridiction qui n'est ni indépendante ni impartiale. La Cour suprême polonaise (chambre du travail) en déduit, les 5 décembre 2019 et 15 janvier 2020, que la chambre disciplinaire de la Cour suprême ne peut être regardée comme un tribunal, compte tenu des conditions de sa formation, de l'étendue de ses pouvoirs, de sa composition et du rôle du Conseil national de la magistrature dans sa création[^pologne]. La loi modificative du 14 février 2020 interdit aux juridictions nationales de contrôler le respect des exigences de l'Union sur le tribunal indépendant et impartial ; la Commission saisit la Cour le 1er avril 2021. La Pologne ne suspendant pas les dispositions litigieuses, la Cour la condamne le **27 octobre 2021 à une astreinte d'un million d'euros par jour**[^pologne1m].
 
 ### Hongrie, 2022-2026
 
@@ -274,7 +282,7 @@ L'Union européenne utilise pour la première fois un mécanisme qui lie ses fin
 
 ### Israël, 2023-2025
 
-Le 24 juillet 2023, la Knesset adopte une loi interdisant à la Cour suprême d'annuler des décisions du gouvernement au motif qu'elles seraient « déraisonnables ». Pour la première fois de son histoire, la Cour siège avec ses quinze juges. Le **1er janvier 2024**, elle annule la loi par **8 voix contre 7**, et juge par 12 voix contre 3 qu'elle a le pouvoir d'annuler des lois fondamentales. Le 27 mars 2025, la Knesset modifie la composition du comité de sélection des juges[^israel].
+La Knesset adopte en 2023 un amendement à la Loi fondamentale sur le pouvoir judiciaire qui supprime le contrôle des décisions du gouvernement et des ministres au motif qu'elles seraient « extrêmement déraisonnables ». Le **1er janvier 2024**, la Cour suprême, siégeant à quinze juges, annule l'amendement par **8 voix contre 7**. Douze des quinze juges estiment qu'elle peut, en principe, contrôler le contenu d'une loi fondamentale dans les cas exceptionnels où la Knesset a excédé ses pouvoirs constituants : c'est la première fois que la Cour se reconnaît cette autorité, et la première fois qu'elle annule une loi fondamentale[^israel].
 
 ### La méthode
 
@@ -310,20 +318,21 @@ Le World Justice Project mesure le phénomène à l'échelle mondiale : en 2025,
 5. La capture des juges suit une méthode (nominations, réduction du contrôle, discipline) : Pologne (astreinte d'un million d'euros par jour en 2021), Hongrie (6,3 milliards gelés en 2022), Israël (loi annulée par 8 voix contre 7 en 2024).
 </ARetenir>
 
-[^canal]: Conseil d'État, les grandes décisions, « Conseil d'État, 19 octobre 1962, Canal, Robin et Godot » (création de la Cour militaire de justice par l'ordonnance du 1er juin 1962, motifs de l'annulation, réaction du général de Gaulle, exception des actes de gouvernement depuis l'arrêt Prince Napoléon de 1875 et de l'article 16, arrêt Rubin de Servens de 1962).
-[^rol]: Wikipédia, « Rule of law » (principes de Dicey, citation d'Aristote : « It is more proper that law should govern than any one of the citizens »).
-[^montesquieu]: Montesquieu, *De l'esprit des lois*, livre XI, chapitre VI, édition de 1777 sur Wikisource.
-[^venise]: Commission de Venise, *Rule of Law Checklist*, CDL-AD(2016)007, adoptée lors de sa 106e session plénière (Venise, 11-12 mars 2016).
-[^moulin]: Eurojuris, « Le ministère public n'est pas une autorité judiciaire au sens de l'article 5 § 3 de la CEDH », sur l'arrêt CEDH, 5e section, 23 novembre 2010, Moulin c. France, req. n° 37104/06.
-[^cepej]: Olivia Dufour, « Rapport CEPEJ : la France toujours en dessous de la moyenne européenne », Actu-Juridique, 16 octobre 2024, sur le rapport d'évaluation 2024 (données 2022).
-[^cepejfr]: CEPEJ, *Systèmes judiciaires européens*, rapport d'évaluation, cycle 2024 (données 2022), partie 2, fiche France.
-[^ifrap]: Samuel-Frédéric Servière, « Justice : il manque 5 702 procureurs pour être dans la moyenne européenne », Fondation IFRAP, 9 juin 2026, sur les données de la CEPEJ publiées le 4 juin 2026 et les effectifs du ministère de la Justice.
-[^prisons]: Le Club des juristes, « Surpopulation carcérale : 88 829 détenus en France au 1er juin », 2 juillet 2026, d'après les statistiques du ministère de la Justice. Le site du ministère était en maintenance lors de la consultation et n'a pas pu être lu directement.
-[^schmitt]: Wikiquote (allemand), « Carl Schmitt ». Original : « Souverän ist, wer über den Ausnahmezustand entscheidet. »
-[^pologne]: Wikipédia, « Polish constitutional crisis ».
-[^pologne1m]: Notes from Poland, « Poland fined €1 million a day by EU for not suspending disciplinary chamber for judges », 27 octobre 2021.
-[^hongrie]: eucrim, « Council adopted historic decision on budget protection vis-à-vis Hungary ».
-[^israel]: Wikipédia, « 2023 Israeli judicial reform ».
-[^wjp]: World Justice Project, communiqué « La France se classe 22e sur 143 dans l'indice WJP Rule of Law Index », 28 octobre 2025.
-[^loi1790]: Wikipédia, « Loi des 16 et 24 août 1790 » ; texte de l'article 13 cité par Édouard Laferrière, *Traité de la juridiction administrative et des recours contentieux*, livre I, chapitre II, sur Wikisource.
-[^blanco]: Wikipédia, « Arrêt Blanco ».
+[^canal]: Conseil d'État, les grandes décisions, « Conseil d'État, 19 octobre 1962, Canal, Robin et Godot » (création de la Cour militaire de justice par l'ordonnance du 1er juin 1962, motifs de l'annulation, réaction du général de Gaulle, exception des actes de gouvernement depuis l'arrêt Prince Napoléon de 1875 et de l'article 16, arrêt Rubin de Servens de 1962). https://www.conseil-etat.fr/decisions-de-justice/jurisprudence/les-grandes-decisions-du-conseil-d-etat/conseil-d-etat-19-octobre-1962-canal-robin-et-godot
+[^rol]: Wikipédia, « Rule of law » (principes de Dicey, citation d'Aristote : « It is more proper that law should govern than any one of the citizens »). https://en.wikipedia.org/wiki/Rule_of_law
+[^montesquieu]: Montesquieu, *De l'esprit des lois*, livre XI, chapitre VI, édition de 1777 sur Wikisource. https://fr.wikisource.org/wiki/Esprit_des_lois_(1777)/L11/C6
+[^venise]: Commission de Venise, *Rule of Law Checklist*, CDL-AD(2016)007, adoptée lors de sa 106e session plénière (Venise, 11-12 mars 2016). https://en.wikipedia.org/wiki/Rule_of_law https://www.venice.coe.int/images/SITE%20IMAGES/Publications/Rule_of_Law_Check_List.pdf
+[^moulin]: Eurojuris, « Le ministère public n'est pas une autorité judiciaire au sens de l'article 5 § 3 de la CEDH », sur l'arrêt CEDH, 5e section, 23 novembre 2010, Moulin c. France, req. n° 37104/06. https://www.eurojuris.fr/distribution/articles/ministere-public-est-pas-autorite-judiciaire-sens-article-cedh-7608.htm
+[^cepej]: Olivia Dufour, « Rapport CEPEJ : la France toujours en dessous de la moyenne européenne », Actu-Juridique, 16 octobre 2024, sur le rapport d'évaluation 2024 (données 2022). https://www.actu-juridique.fr/justice/rapport-cepej-la-france-toujours-en-dessous-de-la-moyenne-europeenne/
+[^cepejfr]: CEPEJ, *Systèmes judiciaires européens*, rapport d'évaluation, cycle 2024 (données 2022), partie 2, fiche France. https://rm.coe.int/fiches-pays-partie-2-fr/1680b21e9a
+[^cepej26]: Commission européenne et CEPEJ, *Study on the functioning of judicial systems in the EU Member States*, partie 1, tableaux 7.1.1 (juges professionnels : 7 968 en France en 2024), 7.2.5 et 7.3.1 (procureurs pour 100 000 habitants : France 3,2 ; moyenne de l'Union 11,4 ; minimum 2,9). https://commission.europa.eu/publications/two-studies-prepared-european-commission-cepej-functioning-judicial-systems-eu-member-states-2026_en
+[^ifrap]: Samuel-Frédéric Servière, « Justice : il manque 5 702 procureurs pour être dans la moyenne européenne », Fondation IFRAP, 9 juin 2026, calcul de l'écart et du coût sur les données de la CEPEJ. https://www.ifrap.org/fonction-publique-et-administration/justice-il-manque-5-702-procureurs-pour-etre-dans-la-moyenne-europeenne
+[^prisons]: Le Club des juristes, « Surpopulation carcérale : 88 829 détenus en France au 1er juin », 2 juillet 2026, d'après les statistiques du ministère de la Justice. Le site du ministère était en maintenance lors de la consultation et n'a pas pu être lu directement. https://www.leclubdesjuristes.com/en-bref/surpopulation-carcerale-88-829-detenus-en-france-au-1er-juin-16724/
+[^schmitt]: Wikiquote (allemand), « Carl Schmitt ». Original : « Souverän ist, wer über den Ausnahmezustand entscheidet. » https://de.wikiquote.org/wiki/Carl_Schmitt
+[^pologne]: Cour de justice de l'Union européenne, communiqué de presse n° 192/21 du 27 octobre 2021, affaire C-204/21 R, *Commission c. Pologne* (rappel de l'arrêt C-585/18 du 19 novembre 2019, des arrêts de la Cour suprême polonaise de décembre 2019 et janvier 2020, de la loi du 14 février 2020 et du recours de la Commission du 1er avril 2021). https://curia.europa.eu/site/upload/docs/application/pdf/2021-10/cp210192en.pdf
+[^pologne1m]: Cour de justice de l'Union européenne, communiqué de presse n° 192/21 du 27 octobre 2021 : astreinte quotidienne de 1 000 000 € (ordonnance de la vice-présidente, affaire C-204/21 R). https://curia.europa.eu/site/upload/docs/application/pdf/2021-10/cp210192en.pdf
+[^hongrie]: eucrim, « Council adopted historic decision on budget protection vis-à-vis Hungary ». https://eucrim.eu/news/council-adopted-historic-decision-on-budget-protection-vis-a-vis-hungary-conditions-also-for-rrf-payments/
+[^israel]: Israel Democracy Institute, « The Supreme Court Ruling on Canceling the Reasonableness Clause: Implications » (arrêt du 1er janvier 2024 : annulation par 8 voix contre 7 ; 12 juges sur 15 reconnaissent le contrôle en principe), source secondaire. https://en.idi.org.il/articles/52235
+[^wjp]: World Justice Project, communiqué « La France se classe 22e sur 143 dans l'indice WJP Rule of Law Index », 28 octobre 2025. https://worldjusticeproject.org/sites/default/files/documents/France_FR.pdf
+[^loi1790]: Wikipédia, « Loi des 16 et 24 août 1790 » ; texte de l'article 13 cité par Édouard Laferrière, *Traité de la juridiction administrative et des recours contentieux*, livre I, chapitre II, sur Wikisource. https://fr.wikipedia.org/wiki/Loi_des_16_et_24_ao%C3%BBt_1790 https://fr.wikisource.org/wiki/Trait%C3%A9_de_la_juridiction_administrative_et_des_recours_contentieux/Livre_I/Chapitre_II
+[^blanco]: Tribunal des conflits, 8 février 1873, Blanco, n° 00012 : la responsabilité de l'État « a ses règles spéciales qui varient suivant les besoins du service et la nécessité de concilier les droits de l'Etat avec les droits privés » (texte de l'arrêt reproduit en PDF). https://www.mafr.fr/media/attachments/2012/9/12/Arret_TC_8_fev_1873_blanco.pdf

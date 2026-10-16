@@ -1,0 +1,28 @@
+---
+// A parcours shape with a meaningful icon on top: the shape keeps the visual identity, the icon says what the track is about.
+import Forme from "./Forme.astro";
+import { PARCOURS, type ParcoursId } from "../parcours";
+interface Props { id: ParcoursId; class?: string }
+const { id, class: cls } = Astro.props;
+const ICONES: Record<ParcoursId, string> = {
+  // crown
+  pouvoir: "M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5L3 8z",
+  // columned building
+  institutions: "M3 9.5L12 4l9 5.5H3z M6 12v6 M10 12v6 M14 12v6 M18 12v6 M3.5 21h17",
+  // rising curve on axes
+  economie: "M4 3v17h17 M7.5 15l4-4.5 3 3L20 7.5",
+  // shield with sword
+  militaire: "M12 3l8 3v6c0 4.8-3.4 7.9-8 9-4.6-1.1-8-4.2-8-9V6l8-3z M12 8v8 M9 11h6",
+  // group of people
+  societe: "M9 11a3 3 0 100-6 3 3 0 000 6z M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6 M16.5 10.5a2.5 2.5 0 100-5 M17 14c2.5.3 4 2.2 4 5",
+};
+---
+<span class:list={["medaillon", cls]} aria-hidden="true">
+  <Forme nom={PARCOURS[id].forme} />
+  <svg class="icone" viewBox="0 0 24 24" focusable="false"><path d={ICONES[id]} /></svg>
+</span>
+<style>
+  .medaillon { position: relative; display: inline-block; flex: none; width: 4.2rem; aspect-ratio: 1; }
+  .medaillon :global(.forme) { width: 100%; fill: var(--tone); transition: transform 0.7s var(--spring); }
+  .icone { position: absolute; inset: 27%; width: 46%; height: 46%; fill: none; stroke: var(--bg); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+</style>

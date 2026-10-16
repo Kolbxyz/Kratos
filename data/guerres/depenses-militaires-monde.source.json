@@ -1,0 +1,8 @@
+{
+  "titre": "Dépenses militaires mondiales, en % du PIB, 1988-2025",
+  "producteur": "SIPRI Military Expenditure Database, diffusé par la Banque mondiale",
+  "jeu": "MS.MIL.XPND.GD.ZS",
+  "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=1W",
+  "traitement": "Agrégat « Monde » de la Banque mondiale, arrondi à deux décimales. Années 1988 à 2025 (la série SIPRI publiée par la Banque mondiale commence en 1988).",
+  "consulte": "2026-10-16"
+}

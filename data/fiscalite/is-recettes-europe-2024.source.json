@@ -1,0 +1,8 @@
+{
+  "titre": "Recettes de l'impôt sur les bénéfices des sociétés, en % du PIB, 2024",
+  "producteur": "Eurostat, comptes nationaux des administrations publiques",
+  "jeu": "gov_10a_taxag (secteur S13, poste D51B, unité PC_GDP, année 2024)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_taxag/default/table",
+  "traitement": "Arrondi à une décimale. L'Allemagne, l'Espagne et la Hongrie ne publient pas le poste D51B dans ce jeu : elles n'apparaissent pas.",
+  "consulte": "2026-10-16"
+}

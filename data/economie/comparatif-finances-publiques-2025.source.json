@@ -1,0 +1,8 @@
+{
+  "titre": "Dette, déficit et intérêts des administrations publiques, en % du PIB, 2025",
+  "producteur": "Eurostat",
+  "jeu": "gov_10dd_edpt1 (secteur S13 ; postes GD, B9, D41PAY)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table",
+  "traitement": "Déficit = solde publié (B9) changé de signe. Arrondi à une décimale.",
+  "consulte": "2026-10-16"
+}

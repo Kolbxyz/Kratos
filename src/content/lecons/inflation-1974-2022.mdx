@@ -38,7 +38,17 @@ sources:
   - titre: "Dossier : les années Mitterrand (dévaluations, désindexation des salaires)"
     auteur: "Hérodote"
     url: "https://www.herodote.net/dossier-74.php"
+    secondaire: true
     consulte: "2026-10-15"
+lectures:
+  - auteur: "Milton Friedman et Anna Schwartz"
+    titre: "A Monetary History of the United States, 1867-1960"
+    annee: 1963
+    pourquoi: "Le livre qui a installé l'idée que l'inflation résulte d'abord de la quantité de monnaie, base du monétarisme des années 1970."
+  - auteur: "Charles Goodhart et Manoj Pradhan"
+    titre: "The Great Demographic Reversal"
+    annee: 2020
+    pourquoi: "Une thèse démographique sur le retour de l'inflation, publiée avant 2022. À lire comme l'une des explications en débat."
 ---
 import Chart from "../../components/Chart.astro";
 import Citation from "../../components/Citation.astro";
@@ -51,7 +61,7 @@ import Positions from "../../components/Positions.astro";
 
 En 1919, au lendemain de la Première Guerre mondiale, Keynes décrit dans un pamphlet célèbre le danger qui guette l'Europe ruinée. Ce n'est pas une révolution, c'est la planche à billets :
 
-<Citation auteur="John Maynard Keynes" oeuvre="Les Conséquences économiques de la paix" annee="1919" reference="Chapitre VI (traduction)" url="https://www.gutenberg.org/cache/epub/15776/pg15776.txt">
+<Citation auteur="John Maynard Keynes" oeuvre="Les Conséquences économiques de la paix" annee="1919" reference="Chapitre VI (traduction)" url="https://www.gutenberg.org/cache/epub/15776/pg15776.txt" original="By a continuing process of inflation, governments can confiscate, secretly and unobserved, an important part of the wealth of their citizens. By this method they not only confiscate, but they confiscate arbitrarily; and, while the process impoverishes many, it actually enriches some." langue="en">
   Par un processus continu d'inflation, les gouvernements peuvent confisquer, secrètement et sans être vus, une part importante de la richesse de leurs citoyens. Par cette méthode, non seulement ils confisquent, mais ils confisquent arbitrairement ; et, tandis que le processus appauvrit beaucoup de gens, il en enrichit en réalité quelques-uns.
 </Citation>
 
@@ -130,7 +140,7 @@ La Banque centrale européenne, elle, relève ses trois taux directeurs le 21 ju
 
 Le président de la Fed, qui a cassé l'inflation américaine au prix d'une récession, résumait ainsi sa philosophie en 1980 :
 
-<Citation auteur="Paul Volcker" oeuvre="Déclaration citée par Federal Reserve History" annee="1980" reference="Début 1980 (traduction)" url="https://www.federalreservehistory.org/essays/great-inflation">
+<Citation auteur="Paul Volcker" oeuvre="Déclaration citée par Federal Reserve History" annee="1980" reference="Début 1980 (traduction)" url="https://www.federalreservehistory.org/essays/great-inflation" original="[M]y basic philosophy is over time we have no choice but to deal with the inflationary situation because over time inflation and the unemployment rate go together." langue="en">
   Ma philosophie de base est qu'avec le temps, nous n'avons pas d'autre choix que de traiter l'inflation, parce qu'avec le temps, l'inflation et le chômage vont ensemble.
 </Citation>
 
@@ -158,6 +168,6 @@ C'est le contraire de l'idée dominante des années 1960, selon laquelle on pouv
 5. En 2022, l'Allemagne (6,9 %) dépasse la France, l'inverse des années 1970. L'inflation française revient à 0,9 % en 2025.
 </ARetenir>
 
-[^grande]: Federal Reserve History, « The Great Inflation » : embargo d'octobre 1973 et prix du brut multiplié par quatre ; second choc de 1979 multipliant le prix par trois ; nomination de Paul Volcker en 1979. Hérodote, dossier sur les années Mitterrand : blocage des prix et des salaires en juin 1982, fin de l'indexation automatique des salaires.
-[^insee]: Insee, « La flambée des prix de l'énergie : un effet sur l'inflation réduit de moitié par le "bouclier tarifaire" », Insee Analyses n° 75, septembre 2022.
-[^bce]: Banque centrale européenne, décisions de politique monétaire du 21 juillet 2022 : hausse des trois taux directeurs de 50 points de base.
+[^grande]: Federal Reserve History, « The Great Inflation » : embargo d'octobre 1973 et prix du brut multiplié par quatre ; second choc de 1979 multipliant le prix par trois ; nomination de Paul Volcker en 1979. Hérodote, dossier sur les années Mitterrand : blocage des prix et des salaires en juin 1982, fin de l'indexation automatique des salaires. https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG https://www.federalreservehistory.org/essays/great-inflation
+[^insee]: Insee, « La flambée des prix de l'énergie : un effet sur l'inflation réduit de moitié par le "bouclier tarifaire" », Insee Analyses n° 75, septembre 2022. https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG https://www.insee.fr/fr/statistiques/6524161
+[^bce]: Banque centrale européenne, décisions de politique monétaire du 21 juillet 2022 : hausse des trois taux directeurs de 50 points de base. https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.mp220721~53e5bdd317.en.html

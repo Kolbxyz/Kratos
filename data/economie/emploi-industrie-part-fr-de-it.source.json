@@ -1,0 +1,8 @@
+{
+  "producteur": "Eurostat",
+  "jeu": "nama_10_a10_e (emploi, concept intérieur EMP_DC, milliers de personnes, branches NACE rév. 2)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table",
+  "titre": "Part de l'industrie (NACE B à E) dans l'emploi total, France, Allemagne et Italie, jusqu'en 2025",
+  "traitement": "Emploi de la branche B à E (industries extractives, manufacturières, énergie, eau, déchets) divisé par l'emploi total, en %, arrondi à une décimale. La construction (F) n'est pas incluse. Début de série variable selon le pays, d'après la disponibilité publiée par Eurostat.",
+  "consulte": "2026-10-16"
+}

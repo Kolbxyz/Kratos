@@ -1,0 +1,8 @@
+{
+  "producteur": "Uppsala Conflict Data Program (UCDP) et Peace Research Institute Oslo (PRIO)",
+  "jeu": "UCDP/PRIO Armed Conflict Dataset, version 26.1",
+  "url": "https://ucdp.uu.se/downloads/",
+  "traitement": "Conflits armés étatiques distincts (identifiant conflict_id), décomptés par année civile de 1946 à 2025. Définition UCDP : incompatibilité portant sur le gouvernement ou un territoire, usage de la force armée entre deux parties dont l'une au moins est le gouvernement d'un État, au moins 25 morts au combat dans l'année. Fichier téléchargé : https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-261-csv.zip. Seuls les conflits codés « interstate » (type_of_conflict = 2) sont comptés.",
+  "titre": "Nombre de conflits armés entre États (type 2 d'UCDP) par année, 1946-2025 (UCDP/PRIO 26.1)",
+  "consulte": "2026-10-16"
+}

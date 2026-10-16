@@ -1,0 +1,8 @@
+{
+  "titre": "Incidents de cybersécurité portés à la connaissance de l'ANSSI, 2022-2025",
+  "producteur": "Agence nationale de la sécurité des systèmes d'information (ANSSI)",
+  "jeu": "Panorama de la cybermenace 2025 (CERTFR-2026-CTI-002), publié le 11 mars 2026",
+  "url": "https://www.cert.ssi.gouv.fr/uploads/CERTFR-2026-CTI-002.pdf",
+  "traitement": "Saisie manuelle : les quatre valeurs sont énoncées dans une seule phrase de la section « Éléments quantitatifs » (page 7 du PDF). Un incident est un événement de sécurité confirmé ; les signalements (2 209 en 2025) ne sont pas comptés. Le script vérifie que la page d'annonce de l'ANSSI affiche toujours 1 366 incidents pour 2025.",
+  "consulte": "2026-10-16"
+}

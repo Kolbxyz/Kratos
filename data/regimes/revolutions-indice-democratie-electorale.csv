@@ -1,0 +1,490 @@
+annee,pays,indice
+1789,France,0.256
+1790,France,0.263
+1791,France,0.233
+1792,France,0.246
+1793,France,0.275
+1794,France,0.275
+1795,France,0.268
+1796,France,0.269
+1797,France,0.269
+1798,France,0.269
+1799,France,0.269
+1800,France,0.118
+1801,France,0.118
+1802,France,0.118
+1803,France,0.118
+1804,France,0.118
+1805,France,0.118
+1806,France,0.118
+1807,France,0.118
+1808,France,0.118
+1809,France,0.118
+1810,France,0.118
+1811,France,0.118
+1812,France,0.118
+1813,France,0.118
+1814,France,0.093
+1815,France,0.183
+1816,France,0.185
+1817,France,0.184
+1818,France,0.184
+1819,France,0.185
+1820,France,0.13
+1821,France,0.186
+1822,France,0.176
+1823,France,0.176
+1824,France,0.174
+1825,France,0.174
+1826,France,0.174
+1827,France,0.174
+1828,France,0.173
+1829,France,0.173
+1830,France,0.205
+1831,France,0.206
+1832,France,0.206
+1833,France,0.206
+1834,France,0.206
+1835,France,0.206
+1836,France,0.206
+1837,France,0.206
+1838,France,0.206
+1839,France,0.205
+1840,France,0.205
+1841,France,0.205
+1842,France,0.206
+1843,France,0.207
+1844,France,0.207
+1845,France,0.207
+1846,France,0.207
+1847,France,0.206
+1848,France,0.398
+1849,France,0.479
+1850,France,0.479
+1851,France,0.294
+1852,France,0.161
+1853,France,0.175
+1854,France,0.175
+1855,France,0.175
+1856,France,0.175
+1857,France,0.175
+1858,France,0.175
+1859,France,0.175
+1860,France,0.175
+1861,France,0.197
+1862,France,0.203
+1863,France,0.202
+1864,France,0.202
+1865,France,0.202
+1866,France,0.202
+1867,France,0.202
+1868,France,0.202
+1869,France,0.203
+1870,France,0.319
+1871,France,0.449
+1872,France,0.48
+1873,France,0.48
+1874,France,0.505
+1875,France,0.505
+1876,France,0.508
+1877,France,0.509
+1878,France,0.522
+1879,France,0.538
+1880,France,0.548
+1881,France,0.547
+1882,France,0.545
+1883,France,0.545
+1884,France,0.545
+1885,France,0.546
+1886,France,0.547
+1887,France,0.547
+1888,France,0.547
+1889,France,0.546
+1890,France,0.545
+1891,France,0.545
+1892,France,0.545
+1893,France,0.541
+1894,France,0.542
+1895,France,0.542
+1896,France,0.542
+1897,France,0.542
+1898,France,0.551
+1899,France,0.55
+1900,France,0.555
+1901,France,0.562
+1902,France,0.561
+1903,France,0.561
+1904,France,0.561
+1905,France,0.561
+1906,France,0.56
+1907,France,0.559
+1908,France,0.559
+1909,France,0.559
+1910,France,0.564
+1911,France,0.566
+1912,France,0.566
+1913,France,0.566
+1914,France,0.512
+1915,France,0.513
+1916,France,0.513
+1917,France,0.513
+1918,France,0.519
+1919,France,0.533
+1920,France,0.566
+1921,France,0.566
+1922,France,0.566
+1923,France,0.566
+1924,France,0.564
+1925,France,0.56
+1926,France,0.56
+1927,France,0.56
+1928,France,0.561
+1929,France,0.561
+1930,France,0.561
+1931,France,0.561
+1932,France,0.56
+1933,France,0.56
+1934,France,0.559
+1935,France,0.557
+1936,France,0.552
+1937,France,0.552
+1938,France,0.552
+1939,France,0.534
+1940,France,0.186
+1941,France,0.082
+1942,France,0.082
+1943,France,0.082
+1944,France,0.084
+1945,France,0.208
+1946,France,0.362
+1947,France,0.705
+1948,France,0.737
+1949,France,0.737
+1950,France,0.747
+1951,France,0.748
+1952,France,0.748
+1953,France,0.748
+1954,France,0.722
+1955,France,0.736
+1956,France,0.743
+1957,France,0.751
+1958,France,0.754
+1959,France,0.747
+1960,France,0.748
+1961,France,0.748
+1962,France,0.749
+1963,France,0.775
+1964,France,0.775
+1965,France,0.775
+1966,France,0.775
+1967,France,0.782
+1968,France,0.78
+1969,France,0.805
+1970,France,0.829
+1971,France,0.835
+1972,France,0.828
+1973,France,0.84
+1974,France,0.844
+1975,France,0.852
+1976,France,0.852
+1977,France,0.852
+1978,France,0.854
+1979,France,0.854
+1980,France,0.854
+1981,France,0.862
+1982,France,0.867
+1983,France,0.867
+1984,France,0.867
+1985,France,0.867
+1986,France,0.864
+1987,France,0.864
+1988,France,0.874
+1989,France,0.875
+1990,France,0.875
+1991,France,0.875
+1992,France,0.875
+1993,France,0.875
+1994,France,0.875
+1995,France,0.869
+1996,France,0.874
+1997,France,0.874
+1998,France,0.873
+1999,France,0.873
+2000,France,0.873
+2001,France,0.873
+2002,France,0.874
+2003,France,0.874
+2004,France,0.874
+2005,France,0.874
+2006,France,0.874
+2007,France,0.877
+2008,France,0.885
+2009,France,0.885
+2010,France,0.885
+2011,France,0.887
+2012,France,0.89
+2013,France,0.89
+2014,France,0.889
+2015,France,0.883
+2016,France,0.883
+2017,France,0.886
+2018,France,0.874
+2019,France,0.866
+2020,France,0.866
+2021,France,0.868
+2022,France,0.875
+2023,France,0.871
+2024,France,0.864
+2025,France,0.865
+1900,Russie (URSS comprise),0.048
+1901,Russie (URSS comprise),0.047
+1902,Russie (URSS comprise),0.047
+1903,Russie (URSS comprise),0.047
+1904,Russie (URSS comprise),0.048
+1905,Russie (URSS comprise),0.067
+1906,Russie (URSS comprise),0.108
+1907,Russie (URSS comprise),0.109
+1908,Russie (URSS comprise),0.107
+1909,Russie (URSS comprise),0.107
+1910,Russie (URSS comprise),0.107
+1911,Russie (URSS comprise),0.107
+1912,Russie (URSS comprise),0.108
+1913,Russie (URSS comprise),0.108
+1914,Russie (URSS comprise),0.106
+1915,Russie (URSS comprise),0.105
+1916,Russie (URSS comprise),0.105
+1917,Russie (URSS comprise),0.098
+1918,Russie (URSS comprise),0.126
+1919,Russie (URSS comprise),0.114
+1920,Russie (URSS comprise),0.114
+1921,Russie (URSS comprise),0.111
+1922,Russie (URSS comprise),0.111
+1923,Russie (URSS comprise),0.114
+1924,Russie (URSS comprise),0.114
+1925,Russie (URSS comprise),0.112
+1926,Russie (URSS comprise),0.112
+1927,Russie (URSS comprise),0.112
+1928,Russie (URSS comprise),0.112
+1929,Russie (URSS comprise),0.111
+1930,Russie (URSS comprise),0.111
+1931,Russie (URSS comprise),0.111
+1932,Russie (URSS comprise),0.111
+1933,Russie (URSS comprise),0.111
+1934,Russie (URSS comprise),0.111
+1935,Russie (URSS comprise),0.111
+1936,Russie (URSS comprise),0.111
+1937,Russie (URSS comprise),0.116
+1938,Russie (URSS comprise),0.096
+1939,Russie (URSS comprise),0.096
+1940,Russie (URSS comprise),0.096
+1941,Russie (URSS comprise),0.093
+1942,Russie (URSS comprise),0.093
+1943,Russie (URSS comprise),0.093
+1944,Russie (URSS comprise),0.093
+1945,Russie (URSS comprise),0.093
+1946,Russie (URSS comprise),0.1
+1947,Russie (URSS comprise),0.1
+1948,Russie (URSS comprise),0.099
+1949,Russie (URSS comprise),0.099
+1950,Russie (URSS comprise),0.102
+1951,Russie (URSS comprise),0.103
+1952,Russie (URSS comprise),0.103
+1953,Russie (URSS comprise),0.103
+1954,Russie (URSS comprise),0.105
+1955,Russie (URSS comprise),0.105
+1956,Russie (URSS comprise),0.105
+1957,Russie (URSS comprise),0.105
+1958,Russie (URSS comprise),0.106
+1959,Russie (URSS comprise),0.106
+1960,Russie (URSS comprise),0.106
+1961,Russie (URSS comprise),0.106
+1962,Russie (URSS comprise),0.095
+1963,Russie (URSS comprise),0.092
+1964,Russie (URSS comprise),0.092
+1965,Russie (URSS comprise),0.092
+1966,Russie (URSS comprise),0.092
+1967,Russie (URSS comprise),0.092
+1968,Russie (URSS comprise),0.092
+1969,Russie (URSS comprise),0.092
+1970,Russie (URSS comprise),0.101
+1971,Russie (URSS comprise),0.109
+1972,Russie (URSS comprise),0.108
+1973,Russie (URSS comprise),0.108
+1974,Russie (URSS comprise),0.107
+1975,Russie (URSS comprise),0.107
+1976,Russie (URSS comprise),0.107
+1977,Russie (URSS comprise),0.107
+1978,Russie (URSS comprise),0.107
+1979,Russie (URSS comprise),0.107
+1980,Russie (URSS comprise),0.107
+1981,Russie (URSS comprise),0.107
+1982,Russie (URSS comprise),0.107
+1983,Russie (URSS comprise),0.107
+1984,Russie (URSS comprise),0.106
+1985,Russie (URSS comprise),0.109
+1986,Russie (URSS comprise),0.117
+1987,Russie (URSS comprise),0.144
+1988,Russie (URSS comprise),0.145
+1989,Russie (URSS comprise),0.176
+1990,Russie (URSS comprise),0.234
+1991,Russie (URSS comprise),0.255
+1992,Russie (URSS comprise),0.498
+1993,Russie (URSS comprise),0.48
+1994,Russie (URSS comprise),0.477
+1995,Russie (URSS comprise),0.477
+1996,Russie (URSS comprise),0.461
+1997,Russie (URSS comprise),0.456
+1998,Russie (URSS comprise),0.456
+1999,Russie (URSS comprise),0.461
+2000,Russie (URSS comprise),0.403
+2001,Russie (URSS comprise),0.374
+2002,Russie (URSS comprise),0.354
+2003,Russie (URSS comprise),0.339
+2004,Russie (URSS comprise),0.321
+2005,Russie (URSS comprise),0.32
+2006,Russie (URSS comprise),0.322
+2007,Russie (URSS comprise),0.316
+2008,Russie (URSS comprise),0.302
+2009,Russie (URSS comprise),0.309
+2010,Russie (URSS comprise),0.306
+2011,Russie (URSS comprise),0.299
+2012,Russie (URSS comprise),0.278
+2013,Russie (URSS comprise),0.276
+2014,Russie (URSS comprise),0.264
+2015,Russie (URSS comprise),0.265
+2016,Russie (URSS comprise),0.263
+2017,Russie (URSS comprise),0.261
+2018,Russie (URSS comprise),0.264
+2019,Russie (URSS comprise),0.259
+2020,Russie (URSS comprise),0.255
+2021,Russie (URSS comprise),0.245
+2022,Russie (URSS comprise),0.206
+2023,Russie (URSS comprise),0.19
+2024,Russie (URSS comprise),0.171
+2025,Russie (URSS comprise),0.17
+1900,Iran,0.029
+1901,Iran,0.029
+1902,Iran,0.029
+1903,Iran,0.029
+1904,Iran,0.029
+1905,Iran,0.029
+1906,Iran,0.08
+1907,Iran,0.121
+1908,Iran,0.118
+1909,Iran,0.106
+1910,Iran,0.137
+1911,Iran,0.136
+1912,Iran,0.121
+1913,Iran,0.121
+1914,Iran,0.121
+1915,Iran,0.121
+1916,Iran,0.121
+1917,Iran,0.121
+1918,Iran,0.121
+1919,Iran,0.121
+1920,Iran,0.121
+1921,Iran,0.088
+1922,Iran,0.145
+1923,Iran,0.113
+1924,Iran,0.115
+1925,Iran,0.08
+1926,Iran,0.056
+1927,Iran,0.115
+1928,Iran,0.115
+1929,Iran,0.115
+1930,Iran,0.115
+1931,Iran,0.115
+1932,Iran,0.114
+1933,Iran,0.113
+1934,Iran,0.113
+1935,Iran,0.113
+1936,Iran,0.113
+1937,Iran,0.113
+1938,Iran,0.113
+1939,Iran,0.113
+1940,Iran,0.113
+1941,Iran,0.1
+1942,Iran,0.122
+1943,Iran,0.127
+1944,Iran,0.158
+1945,Iran,0.164
+1946,Iran,0.161
+1947,Iran,0.161
+1948,Iran,0.159
+1949,Iran,0.159
+1950,Iran,0.156
+1951,Iran,0.185
+1952,Iran,0.205
+1953,Iran,0.118
+1954,Iran,0.058
+1955,Iran,0.102
+1956,Iran,0.057
+1957,Iran,0.058
+1958,Iran,0.058
+1959,Iran,0.058
+1960,Iran,0.061
+1961,Iran,0.061
+1962,Iran,0.06
+1963,Iran,0.061
+1964,Iran,0.109
+1965,Iran,0.11
+1966,Iran,0.11
+1967,Iran,0.11
+1968,Iran,0.111
+1969,Iran,0.111
+1970,Iran,0.113
+1971,Iran,0.113
+1972,Iran,0.113
+1973,Iran,0.113
+1974,Iran,0.113
+1975,Iran,0.107
+1976,Iran,0.107
+1977,Iran,0.107
+1978,Iran,0.11
+1979,Iran,0.159
+1980,Iran,0.167
+1981,Iran,0.121
+1982,Iran,0.106
+1983,Iran,0.104
+1984,Iran,0.108
+1985,Iran,0.109
+1986,Iran,0.109
+1987,Iran,0.171
+1988,Iran,0.177
+1989,Iran,0.168
+1990,Iran,0.16
+1991,Iran,0.16
+1992,Iran,0.159
+1993,Iran,0.162
+1994,Iran,0.165
+1995,Iran,0.165
+1996,Iran,0.174
+1997,Iran,0.218
+1998,Iran,0.231
+1999,Iran,0.234
+2000,Iran,0.233
+2001,Iran,0.234
+2002,Iran,0.232
+2003,Iran,0.232
+2004,Iran,0.207
+2005,Iran,0.177
+2006,Iran,0.173
+2007,Iran,0.173
+2008,Iran,0.167
+2009,Iran,0.158
+2010,Iran,0.144
+2011,Iran,0.145
+2012,Iran,0.158
+2013,Iran,0.174
+2014,Iran,0.183
+2015,Iran,0.186
+2016,Iran,0.186
+2017,Iran,0.185
+2018,Iran,0.182
+2019,Iran,0.181
+2020,Iran,0.165
+2021,Iran,0.158
+2022,Iran,0.148
+2023,Iran,0.153
+2024,Iran,0.166
+2025,Iran,0.159

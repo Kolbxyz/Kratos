@@ -1,0 +1,199 @@
+---
+titre: "Pauvreté, logement et gentrification : ce que mesurent les chiffres"
+resume: "16,3 % de pauvres en France en 2025, 18,7 % des locataires au prix du marché en surcharge de coûts de logement, des prix qui montent plus vite que les loyers. Et un quartier de Lyon qui a changé de classe sociale."
+parcours: societe
+ordre: 7
+lecture_min: 15
+verifie_le: null
+sources:
+  - titre: "At-risk-of-poverty rate by poverty threshold, age and sex (ilc_li02), enquête EU-SILC"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Housing cost overburden rate by tenure status (ilc_lvho07c), enquête EU-SILC"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07c/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "House price index, annual data (prc_hpi_a)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "HICP, annual data, average index (prc_hicp_aind) : loyers effectifs (CP041) et ensemble (CP00)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "In-work at-risk-of-poverty rate by age and sex (ilc_iw01), enquête EU-SILC"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_iw01/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Les arrondissements de Lyon : de profondes mutations socio-économiques en 40 ans (Insee Analyses Auvergne-Rhône-Alpes n° 29, 21 décembre 2016)"
+    auteur: "Serge Maury, Axel Gilbert, Insee"
+    url: "https://www.insee.fr/fr/statistiques/2534541"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Quartiers de Lyon : de profondes mutations en 30 ans, avec une forte dynamique à l'est (Insee Analyses Auvergne-Rhône-Alpes n° 83, 4 juillet 2019)"
+    auteur: "Bruno Balouzat, Jean Geymond, Philippe Bertrand, Insee"
+    url: "https://www.insee.fr/fr/statistiques/4183283"
+    consulte: "2026-10-16"
+    primaire: true
+lectures:
+  - auteur: "Ruth Glass"
+    titre: "London: Aspects of Change"
+    annee: 1964
+    pourquoi: "L'ouvrage où le mot « gentrification » apparaît pour décrire l'installation de classes moyennes dans des quartiers populaires de Londres."
+  - auteur: "Neil Smith"
+    titre: "The New Urban Frontier: Gentrification and the Revanchist City"
+    annee: 1996
+    pourquoi: "Une lecture de la gentrification par l'écart entre la valeur actuelle d'un quartier et celle qu'il pourrait avoir une fois réinvesti (la « rent gap »)."
+---
+import Chart from "../../components/Chart.astro";
+import Carte from "../../components/Carte.astro";
+import Comparatif from "../../components/Comparatif.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+Selon Eurostat, **16,3 % des personnes vivant en France** ont en 2025 un revenu inférieur à 60 % du revenu médian du pays[^pauv]. Dans le même pays, **18,7 % des locataires qui paient un loyer de marché** vivent dans un ménage dont les coûts du logement dépassent 40 % du revenu disponible, contre **1,1 % des propriétaires qui remboursent un crédit**[^surcharge].
+
+<div class="chiffres">
+  <Chiffre valeur="16,3 %" label="de la population de la France sous le seuil de pauvreté monétaire (60 % du revenu médian), contre 13,0 % en 2005" source="Eurostat, ilc_li02" url="https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table" date="2025" forme="gemme" />
+  <Chiffre valeur="18,7 %" label="des locataires au prix du marché en surcharge de coûts du logement en France (22,3 % en Italie, 13,2 % en Allemagne)" source="Eurostat, ilc_lvho07c" url="https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07c/default/table" date="2025" forme="soleil" />
+  <Chiffre valeur="127,3 contre 109,7" label="indice des prix des logements et indice des loyers en France, base 100 en 2015" source="Eurostat, prc_hpi_a et prc_hicp_aind" url="https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table" date="2025" forme="trefle" />
+</div>
+
+**Idée centrale : la pauvreté, le coût du logement et la composition sociale d'un quartier sont trois mesures différentes, que l'on confond souvent.** La première mesure un revenu, la deuxième un poids financier, la troisième une population résidente. Cette leçon les sépare, avec les chiffres d'Eurostat et deux études de l'Insee sur Lyon.
+
+Elle ne traite pas des politiques du logement (loi SRU, encadrement des loyers, logement social) : leurs textes officiels n'ont pas pu être lus, Légifrance refusant les requêtes automatiques. Elle ne reprend ni les délocalisations ni l'emploi industriel, vus dans la leçon sur la désindustrialisation.
+
+## Chapitre 1 : mesurer la pauvreté
+
+Eurostat mesure le **taux de pauvreté monétaire** : la part de la population dont le revenu équivalent est inférieur à 60 % du revenu équivalent médian du pays. Le seuil est donc relatif : il suit le revenu médian et ne mesure pas un niveau de vie absolu. La source est l'enquête européenne sur les revenus et les conditions de vie (EU-SILC)[^pauv].
+
+<Chart
+  src="societe/taux-pauvrete-fr-de-it"
+  kind="line"
+  x="annee"
+  y="taux"
+  series="pays"
+  titre="Taux de pauvreté monétaire (seuil de 60 % du revenu médian), France, Allemagne et Italie (Eurostat, en % de la population)"
+  unite="%"
+/>
+
+En France, le taux passe de **13,0 % en 2005 à 13,6 % en 2015 et 16,3 % en 2025**. En Allemagne, de 12,2 % en 2005 à 16,7 % en 2015 puis 16,1 % en 2025. En Italie, de 19,2 % en 2005 à 19,9 % en 2015 puis 18,6 % en 2025[^pauv]. Eurostat signale des ruptures de série pour la France en 2020 et en 2022 : la comparaison d'une année à l'autre y est moins fiable que le niveau de chaque année[^pauv].
+
+Le taux italien est le plus haut des trois chaque année de la série. Le taux allemand dépasse le taux français de 2007 à 2021, puis passe sous lui de 2022 à 2025[^pauv].
+
+## Chapitre 2 : qui est pauvre, selon l'âge et le travail
+
+<Comparatif
+  src="societe/comparatif-pauvrete-age-fr-de-it-2025"
+  titre="France, Allemagne, Italie en 2025 : taux de pauvreté monétaire selon l'âge (Eurostat)"
+/>
+
+Le taux de pauvreté change fortement avec l'âge, et pas de la même façon selon le pays. En 2025, il est de **22,8 % chez les moins de 18 ans en France**, 15,8 % entre 18 et 64 ans et **11,6 % à 65 ans et plus**. En Allemagne, c'est l'inverse : 16,0 % pour les moins de 18 ans, 15,0 % pour les 18-64 ans et **19,5 % pour les 65 ans et plus**. En Italie : 23,2 %, 18,1 % et 17,2 %[^age].
+
+<Chart
+  src="societe/pauvrete-au-travail-fr-de-it"
+  kind="line"
+  x="annee"
+  y="taux"
+  series="pays"
+  titre="Taux de pauvreté des personnes en emploi de 18 à 64 ans, France, Allemagne et Italie (Eurostat, %)"
+  unite="%"
+/>
+
+Avoir un emploi ne protège pas entièrement : **8,7 % des personnes en emploi de 18 à 64 ans sont sous le seuil de pauvreté en France en 2025**, contre 6,5 % en 2010. En Allemagne, le taux passe de 7,1 % en 2010 à 9,0 % en 2018 puis 6,7 % en 2025 ; en Italie, de 9,7 % à 12,3 % en 2018 puis 10,2 % en 2025[^iw].
+
+Ces séries ne permettent pas d'expliquer les écarts : elles ne disent ni les effets des pensions (voir la leçon sur le vieillissement pour les dépenses de vieillesse), ni ceux des prestations familiales, ni ceux du marché du travail.
+
+## Chapitre 3 : le coût du logement
+
+Le **taux de surcharge des coûts du logement** est la part de la population qui vit dans un ménage où les dépenses de logement dépassent 40 % du revenu disponible. Il dépend fortement du statut d'occupation[^surcharge].
+
+<Comparatif
+  src="societe/comparatif-surcharge-logement-fr-de-it-2025"
+  titre="France, Allemagne, Italie en 2025 : taux de surcharge des coûts du logement selon le statut d'occupation (Eurostat)"
+/>
+
+En 2025, le taux pour l'ensemble de la population est de **6,4 % en France, 11,2 % en Allemagne et 5,0 % en Italie**. Selon le statut, il varie du simple au dix-sept en France : 1,1 % pour les propriétaires avec crédit, **18,7 % pour les locataires au prix du marché**, 10,7 % pour les locataires à loyer réduit ou gratuit. En Italie, 1,3 % des propriétaires avec crédit contre **22,3 %** des locataires au prix du marché. L'Allemagne présente un profil différent : 13,0 % pour les propriétaires avec crédit et 13,2 % pour les locataires au prix du marché[^surcharge].
+
+<Carte
+  src="societe/surcharge-logement-europe-2025"
+  titre="Taux de surcharge des coûts du logement des pays européens, 2025 (ensemble de la population ; pays sans valeur : non publiés par Eurostat dans ce jeu)"
+  unite="%"
+/>
+
+La carte montre l'écart en Europe : **26,4 % en Grèce**, 23,4 % au Danemark, 13,5 % en Norvège, 11,2 % en Allemagne, 7,2 % en Espagne, 6,5 % aux Pays-Bas, 6,4 % en France, 5,0 % en Italie, jusqu'à 3,5 % en Slovaquie, 3,2 % en Croatie et 2,4 % à Chypre[^surcharge].
+
+## Chapitre 4 : les prix du logement et les loyers
+
+<Chart
+  src="societe/prix-logements-loyers-france"
+  kind="line"
+  x="annee"
+  y="valeur"
+  series="indice"
+  titre="France : prix des logements, loyers et prix à la consommation, base 100 en 2015 (Eurostat)"
+  unite="indice"
+/>
+
+En France, l'indice des prix des logements passe de **84,7 en 2005 à 127,3 en 2025** (base 100 en 2015), après un point haut à 131,8 en 2022 et un recul à 126,4 en 2024. L'indice des loyers effectifs passe de 83,3 à **109,7**, et l'indice des prix à la consommation de l'ensemble des biens et services de 86,5 à 124,4[^prix].
+
+Entre 2015 et 2025, les prix des logements ont donc augmenté de 27,3 %, l'ensemble des prix à la consommation de 24,4 % et les loyers de 9,7 %[^prix]. Les trois indices partent du même point par construction : chaque série est divisée par sa propre valeur de 2015[^prix].
+
+Ces données ne renseignent pas sur les ménages touchés : un indice des prix des logements ne dit rien de qui achète, vend ou loue.
+
+## Chapitre 5 : un quartier qui change de classe sociale, le 1er arrondissement de Lyon
+
+L'Insee écrit que « les sociologues définissent » la **gentrification** par « l'installation, dans un quartier originellement vétuste et populaire, de nouveaux habitants appartenant aux classes moyennes et supérieures ». Elle entraîne « un changement de la composition sociale du lieu ; les catégories populaires sont progressivement marginalisées, tandis que les classes moyennes supérieures donnent le « ton » à la vie de quartier »[^lyon].
+
+Le 1er arrondissement de Lyon (Terreaux et pentes de la Croix-Rousse) sert de cas d'école dans l'étude de l'Insee de 2016.
+
+- **Au milieu des années 1970** : habitat ancien et souvent vétuste ; près de la moitié des habitants n'avaient ni baignoire ni douche et plus de 40 % pas de WC ; 40 % d'ouvriers ; professions libérales et cadres supérieurs : 6 % des actifs résidents ; 6 % seulement des plus de 25 ans avaient un diplôme supérieur au baccalauréat (1975)[^lyon].
+- **En 2013** : les cadres et professions intellectuelles représentent 37 % des actifs ; le quartier est « un des plus chers de la ville pour les prix de l'immobilier » ; les anciens logements ouvriers ont pour la plupart été réhabilités ; près de 16 % des habitants vivent sous le seuil de pauvreté et les logements sociaux constituent 16 % du parc[^lyon].
+
+L'Insee note un décalage : malgré la forte présence de cadres, le niveau de vie des habitants du 1er arrondissement est « relativement moyen » comparé à celui du 6e arrondissement, à la structure sociale proche. L'étude l'explique en partie par la profession des cadres (plus de professeurs et de professions scientifiques, moins de cadres d'entreprise) et par le poids des arts et du spectacle (7 % de la population active contre 2 % à Lyon)[^lyon]. Les sociologues cités par l'Insee montrent que, dans les quartiers gentrifiés, les groupes dominants se distinguent davantage par leur niveau de qualification que par leurs revenus[^lyon].
+
+Les 8e et 9e arrondissements offrent un cas voisin, lié à la désindustrialisation. En 1975, le 8e comptait 38 % de ses emplois dans le secteur manufacturier et le 9e près de 30 % ; en 2013, la part des emplois industriels de ces deux arrondissements est de 7 % et la population ouvrière a été globalement divisée par deux. L'Insee y relève des phénomènes de gentrification (autour de Monplaisir dans le 8e, de Vaise dans le 9e), tout en soulignant que ces deux arrondissements gardent un caractère populaire : plus d'un tiers du parc de logement y est constitué de logements HLM[^lyon].
+
+Dans l'ensemble de Lyon, la population a augmenté d'un quart entre 1982 et 2014, et « dans des quartiers proches de la presqu'île, l'amélioration de l'habitat s'est accompagnée d'un phénomène de gentrification »[^lyon2].
+
+## Le débat : marginalisation ou mixité ?
+
+L'étude de l'Insee contient les deux lectures.
+
+<Positions items={[
+  { titre: "Marginalisation des catégories populaires", sous_titre: "dans la définition citée par l'Insee", forme: "arche", points: [
+    "La gentrification entraîne un changement de la composition sociale : les catégories populaires sont progressivement marginalisées[^lyon].",
+    "Le quartier devient l'un des plus chers de la ville pour les prix de l'immobilier[^lyon].",
+  ]},
+  { titre: "Une certaine mixité sociale", sous_titre: "dans les chiffres du 1er arrondissement", forme: "gemme", points: [
+    "Près de 16 % des habitants vivent sous le seuil de pauvreté ; les logements sociaux sont 16 % du parc[^lyon].",
+    "L'Insee écrit qu'il existe « une certaine mixité sociale, où des populations plus favorisées cohabitent avec des populations plus précaires, bien plus visiblement que dans le 6e arrondissement »[^lyon].",
+  ]},
+]} />
+
+La leçon expose les deux constats de la même source et ne les hiérarchise pas. Elle n'a lu aucune enquête sur les départs d'habitants ni sur les prix des loyers à Lyon : les chiffres de départs et de loyers du quartier manquent.
+
+## À retenir
+
+<ARetenir>
+1. En 2025, 16,3 % de la population française est sous le seuil de pauvreté monétaire de 60 % du revenu médian, contre 13,0 % en 2005 ; l'Allemagne est à 16,1 % et l'Italie à 18,6 %.
+2. Le taux de surcharge des coûts du logement dépend du statut : 18,7 % des locataires au prix du marché en France et 22,3 % en Italie, contre 1,1 % et 1,3 % des propriétaires avec crédit ; l'Allemagne est à 13,0 % et 13,2 %.
+3. En France, entre 2015 et 2025, les prix des logements augmentent de 27,3 %, l'ensemble des prix de 24,4 % et les loyers de 9,7 %.
+4. L'Insee écrit que les sociologues définissent la gentrification par l'installation de classes moyennes et supérieures dans un quartier vétuste et populaire ; dans le 1er arrondissement de Lyon, les professions libérales et cadres supérieurs étaient 6 % des actifs résidents en 1975, et les cadres et professions intellectuelles 37 % des actifs en 2013.
+5. La pauvreté monétaire, la surcharge de logement et la composition sociale d'un quartier sont trois mesures distinctes.
+</ARetenir>
+
+[^pauv]: Eurostat, ilc_li02 (statinfo MED_EI, seuil « Below 60 % », unité % de la population, tous âges, sexes confondus), traité dans `data/societe/taux-pauvrete-fr-de-it.csv` : France 13,0 (2005), 13,6 (2015), 16,3 (2025) ; Allemagne 12,2, 16,7, 16,1 ; Italie 19,2, 19,9, 18,6 ; drapeau « b » (rupture de série) pour la France en 2020 et 2022. https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table
+[^surcharge]: Eurostat, ilc_lvho07c (surcharge des coûts du logement par statut d'occupation, % de la population), traité dans `data/societe/comparatif-surcharge-logement-fr-de-it-2025.csv` et `data/societe/surcharge-logement-europe-2025.csv` : France 6,4 (ensemble), 1,1 (propriétaires avec crédit), 18,7 (locataires au prix du marché), 10,7 (loyer réduit ou gratuit) ; Allemagne 11,2, 13,0, 13,2, 9,2 ; Italie 5,0, 1,3, 22,3, 6,0 ; Grèce 26,4, Danemark 23,4, Norvège 13,5, Espagne 7,2, Pays-Bas 6,5, Slovaquie 3,5, Croatie 3,2, Chypre 2,4. https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07c/default/table
+[^prix]: Eurostat, prc_hpi_a (indice des prix des logements, total, moyenne annuelle) et prc_hicp_aind (IPCH : CP041 loyers effectifs, CP00 ensemble), traités dans `data/societe/prix-logements-loyers-france.csv` (chaque série divisée par sa valeur de 2015) : prix des logements 84,7 (2005), 131,8 (2022), 126,4 (2024), 127,3 (2025) ; loyers 83,3 (2005), 109,7 (2025) ; ensemble 86,5 (2005), 124,4 (2025). https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table
+[^lyon]: Serge Maury et Axel Gilbert, « Les arrondissements de Lyon : de profondes mutations socio-économiques en 40 ans », Insee Analyses Auvergne-Rhône-Alpes n° 29, 21 décembre 2016, parties « 1er et 4e arrondissements, laboratoires de gentrification » et « Les 8e et 9e arrondissements demeurent des quartiers plus populaires ». https://www.insee.fr/fr/statistiques/2534541
+[^lyon2]: Bruno Balouzat, Jean Geymond et Philippe Bertrand, « Quartiers de Lyon : de profondes mutations en 30 ans, avec une forte dynamique à l'est », Insee Analyses Auvergne-Rhône-Alpes n° 83, 4 juillet 2019, résumé : « La population de Lyon a augmenté d'un quart entre 1982 et 2014 » ; « Dans des quartiers proches de la presqu'île, l'amélioration de l'habitat s'est accompagnée d'un phénomène de gentrification ». https://www.insee.fr/fr/statistiques/4183283
+[^age]: Eurostat, ilc_li02 (seuil B_60, groupes d'âge Y_LT18, Y18-64, Y_GE65), traité dans `data/societe/comparatif-pauvrete-age-fr-de-it-2025.csv` : France 22,8 %, 15,8 %, 11,6 % ; Allemagne 16,0 %, 15,0 %, 19,5 % ; Italie 23,2 %, 18,1 %, 17,2 %. https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table
+[^iw]: Eurostat, ilc_iw01 (âge Y18-64, sexes confondus, personnes en emploi), traité dans `data/societe/pauvrete-au-travail-fr-de-it.csv` : France 6,5 % (2010), 7,1 % (2018), 8,7 % (2025) ; Allemagne 7,1 %, 9,0 %, 6,7 % ; Italie 9,7 %, 12,3 %, 10,2 %. https://ec.europa.eu/eurostat/databrowser/view/ilc_iw01/default/table

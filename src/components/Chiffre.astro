@@ -2,6 +2,7 @@
 // A highlighted fact. Source, link and period are mandatory: a key figure is never shown without them.
 import Forme from "./Forme.astro";
 import type { NomForme } from "../formes";
+import { estSecondaire } from "../lib/secondaire";
 interface Props {
   valeur: string;
   label: string;
@@ -16,7 +17,7 @@ const { valeur, label, source, url, date, forme = "biscuit" } = Astro.props;
   <Forme nom={forme} class="chiffre-forme" />
   <p class="valeur">{valeur}</p>
   <p class="label">{label}</p>
-  <figcaption><a href={url}>{source}</a>, {date}</figcaption>
+  <figcaption><a href={url}>{source}</a>, {date}{estSecondaire(url) && <span class="secondaire"> (source secondaire, à recouper)</span>}</figcaption>
 </figure>
 
 <style>

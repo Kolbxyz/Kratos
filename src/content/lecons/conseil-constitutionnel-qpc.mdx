@@ -31,6 +31,15 @@ sources:
     url: "https://www.conseil-constitutionnel.fr/decision/2018/2018717_718QPC.htm"
     consulte: "2026-10-15"
     primaire: true
+lectures:
+  - auteur: "Louis Favoreu"
+    titre: "La politique saisie par le droit"
+    annee: 1988
+    pourquoi: "Comment le Conseil constitutionnel est passé d'une arme contre le Parlement à un juge des droits fondamentaux, par l'un des juristes qui l'ont théorisé."
+  - auteur: "Alec Stone Sweet"
+    titre: "Governing with Judges. Constitutional Politics in Europe"
+    annee: 2000
+    pourquoi: "Une comparaison de la France, de l'Allemagne, de l'Italie et de l'Espagne qui montre comment les cours constitutionnelles ont déplacé le centre du pouvoir législatif."
 ---
 import Chart from "../../components/Chart.astro";
 import Citation from "../../components/Citation.astro";
@@ -38,6 +47,7 @@ import Timeline from "../../components/Timeline.astro";
 import ARetenir from "../../components/ARetenir.astro";
 import Chiffre from "../../components/Chiffre.astro";
 import Positions from "../../components/Positions.astro";
+import Schema from "../../components/Schema.astro";
 
 ## Le jour où une loi est tombée en pleine audience
 
@@ -102,6 +112,25 @@ Le Conseil ne se contente pas de censurer : il **choisit la date** à laquelle l
 
 C'est un pouvoir considérable : le juge constitutionnel ne dit pas seulement ce qui est conforme, il **organise le calendrier du législateur**.
 
+Ce pouvoir appartient à neuf membres. Leur mandat dure neuf ans et n'est pas renouvelable, et le Conseil se renouvelle par tiers tous les trois ans. Chacun doit sa place à une autorité politique[^art56] :
+
+<Schema
+  titre="Qui siège au Conseil constitutionnel (article 56)"
+  noeuds={[
+    { id: "pr", nom: "Président de la République" },
+    { id: "an", nom: "Président de l'Assemblée nationale" },
+    { id: "se", nom: "Président du Sénat" },
+    { id: "ap", nom: "Anciens présidents de la République" },
+    { id: "cc", nom: "Conseil constitutionnel" },
+  ]}
+  liens={[
+    { de: "pr", vers: "cc", verbe: "nomme trois membres, et nomme le président du Conseil", source: "Constitution, article 56", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_56" },
+    { de: "an", vers: "cc", verbe: "nomme trois membres", source: "Constitution, article 56", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_56" },
+    { de: "se", vers: "cc", verbe: "nomme trois membres", source: "Constitution, article 56", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_56" },
+    { de: "ap", vers: "cc", verbe: "en font de droit partie, à vie", source: "Constitution, article 56", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_56" },
+  ]}
+/>
+
 ## Le débat
 
 <Positions items={[
@@ -125,6 +154,7 @@ C'est un pouvoir considérable : le juge constitutionnel ne dit pas seulement ce
 5. Le Conseil choisit la date d'effet de ses censures : il organise le calendrier du législateur.
 </ARetenir>
 
-[^harc]: Conseil constitutionnel, décision n° 2012-240 QPC du 4 mai 2012, considérant 7.
-[^bilan]: Conseil constitutionnel, bilan statistique au 30 juin 2026 : 1 091 décisions QPC (697 conformités, 79 non-conformités partielles, 269 non-conformités totales, 46 autres solutions) ; saisines venant du Conseil d'État (558) et de la Cour de cassation (676).
-[^gav]: Conseil constitutionnel, décision n° 2010-14/22 QPC du 30 juillet 2010, considérant 30.
+[^harc]: Conseil constitutionnel, décision n° 2012-240 QPC du 4 mai 2012, considérant 7. https://www.conseil-constitutionnel.fr/decision/2012/2012240QPC.htm
+[^bilan]: Conseil constitutionnel, bilan statistique au 30 juin 2026 : 1 091 décisions QPC (697 conformités, 79 non-conformités partielles, 269 non-conformités totales, 46 autres solutions) ; saisines venant du Conseil d'État (558) et de la Cour de cassation (676). https://www.conseil-constitutionnel.fr/bilan-statistique/juin-2026
+[^gav]: Conseil constitutionnel, décision n° 2010-14/22 QPC du 30 juillet 2010, considérant 30. https://www.conseil-constitutionnel.fr/decision/2010/201014_22QPC.htm
+[^art56]: Constitution du 4 octobre 1958, article 56, alinéas 1 à 3. https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur

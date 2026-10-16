@@ -1,0 +1,187 @@
+---
+// Discreet reading-progress rail: one dot per chapter, a filled track, titles on hover or focus.
+interface Props { chapitres: { slug: string; text: string }[] }
+const { chapitres } = Astro.props;
+---
+<nav class="rail no-print" aria-label="Progression dans la leçon" data-rail>
+  <ol>
+    {chapitres.map((c) => (
+      <li><a href={`#${c.slug}`} data-chap={c.slug}><span class="titre">{c.text}</span><span class="point" aria-hidden="true"></span></a></li>
+    ))}
+  </ol>
+  <span class="pct" data-rail-pct aria-hidden="true">0 %</span>
+</nav>
+
+<div class="mob no-print" data-mob>
+  <div class="trait" data-trait aria-hidden="true"></div>
+  <div class="mob-boite">
+    <ol id="mob-liste" class="mob-liste" data-mob-liste hidden>
+      {chapitres.map((c) => (
+        <li><a href={`#${c.slug}`} data-chap-mob>{c.text}</a></li>
+      ))}
+    </ol>
+    <button type="button" class="fab" aria-expanded="false" aria-controls="mob-liste" data-fab>
+      Chapitres <span data-mob-pct>0 %</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  const rail = document.querySelector<HTMLElement>("[data-rail]");
+  if (rail) {
+    const liens = [...rail.querySelectorAll<HTMLAnchorElement>("[data-chap]")];
+    const titres = liens.map((a) => document.getElementById(a.dataset.chap!));
+    const fin = document.querySelector("[data-fin-lecon]");
+    const pct = rail.querySelector<HTMLElement>("[data-rail-pct]")!;
+    const n = liens.length;
+    const mobLiens = [...document.querySelectorAll<HTMLAnchorElement>("[data-chap-mob]")];
+    const mob = document.querySelector<HTMLElement>("[data-mob]")!;
+    const trait = mob.querySelector<HTMLElement>("[data-trait]")!;
+    const mobPct = mob.querySelector<HTMLElement>("[data-mob-pct]")!;
+    const fab = mob.querySelector<HTMLButtonElement>("[data-fab]")!;
+    const liste = mob.querySelector<HTMLElement>("[data-mob-liste]")!;
+    const ouvrir = (v: boolean) => {
+      fab.setAttribute("aria-expanded", String(v));
+      liste.hidden = !v;
+    };
+    fab.addEventListener("click", () => ouvrir(liste.hidden));
+    liste.addEventListener("click", (e) => { if ((e.target as HTMLElement).closest("a")) ouvrir(false); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && !liste.hidden) { ouvrir(false); fab.focus(); } });
+    document.addEventListener("click", (e) => { if (!liste.hidden && !mob.contains(e.target as Node)) ouvrir(false); });
+    let attente = false;
+
+    const maj = () => {
+      attente = false;
+      const repere = window.innerHeight * 0.3;
+      const haut = (el: Element | null) => (el ? el.getBoundingClientRect().top - repere : Infinity);
+      const bas = fin ? fin.getBoundingClientRect().top - repere : document.documentElement.scrollHeight;
+      let actif = -1;
+      titres.forEach((t, i) => { if (haut(t) <= 0) actif = i; });
+      let p = 0;
+      if (actif >= 0) {
+        const debut = haut(titres[actif]);
+        const suivant = actif + 1 < n ? haut(titres[actif + 1]) : bas;
+        const f = Math.min(1, Math.max(0, -debut / Math.max(1, suivant - debut)));
+        p = Math.min(1, (actif + f) / (n - 1));
+        if (actif === n - 1) p = Math.min(1, (n - 1 + f) / (n - 1));
+      }
+      const total = Math.round(p * 100);
+      rail.style.setProperty("--p", `${p * 100}%`);
+      pct.textContent = `${total} %`;
+      mobPct.textContent = `${total} %`;
+      trait.style.transform = `scaleX(${p})`;
+      mobLiens.forEach((a, i) => {
+        a.classList.toggle("fait", i < actif);
+        a.classList.toggle("actif", i === actif);
+      });
+      liens.forEach((a, i) => {
+        a.classList.toggle("fait", i < actif);
+        a.classList.toggle("actif", i === actif);
+        if (i === actif) a.setAttribute("aria-current", "location"); else a.removeAttribute("aria-current");
+      });
+      const vu = actif >= 0 || window.scrollY > 200;
+      rail.classList.toggle("visible", vu);
+      mob.classList.toggle("visible", vu);
+    };
+    const planifier = () => { if (!attente) { attente = true; requestAnimationFrame(maj); } };
+    addEventListener("scroll", planifier, { passive: true });
+    addEventListener("resize", planifier);
+    maj();
+  }
+</script>
+
+<style>
+  .rail {
+    --pas: 2.1rem;
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 0.8rem 0.55rem;
+    border-radius: var(--r-l);
+    font-family: var(--sans);
+    background: transparent;
+    opacity: 0;
+    transform: translateY(-50%) translateX(0.8rem);
+    transition: opacity 0.35s, transform 0.35s cubic-bezier(0.2, 0, 0, 1), background 0.25s, box-shadow 0.25s;
+  }
+  .rail.visible { opacity: 1; transform: translateY(-50%); }
+  .rail:hover, .rail:focus-within { background: var(--surface); box-shadow: 0 6px 24px rgb(0 0 0 / 0.12); }
+  @media (min-width: 1200px) { .rail { display: flex; } }
+
+  ol { list-style: none; margin: 0; padding: 0; position: relative; display: grid; }
+  /* Track and its fill, centred on the dots. */
+  ol::before, ol::after {
+    content: ""; position: absolute; right: calc(0.4rem - 1.5px); top: 0.4rem; width: 3px; border-radius: 3px;
+  }
+  ol::before { bottom: 0.4rem; background: var(--rule); }
+  ol::after {
+    height: calc((100% - 0.8rem) * var(--p, 0%) / 100%);
+    background: var(--tone);
+    transition: height 0.3s cubic-bezier(0.2, 0, 0, 1);
+  }
+  li { height: var(--pas); }
+  li:last-child { height: 0.8rem; }
+  a {
+    position: relative; display: flex; align-items: center; justify-content: flex-end; gap: 0.7rem;
+    height: 0.8rem; color: var(--ink-2); text-decoration: none; font-size: 0.82rem; line-height: 1.2;
+  }
+  .titre {
+    max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: right;
+    transition: max-width 0.35s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s;
+  }
+  .rail:hover .titre, .rail:focus-within .titre { max-width: 16rem; opacity: 1; }
+  .point {
+    flex: none; width: 0.8rem; height: 0.8rem; border-radius: 50%; box-sizing: border-box;
+    background: var(--bg); border: 2px solid var(--rule);
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.25s, border-color 0.25s, border-radius 0.4s;
+  }
+  a.fait .point { background: var(--tone); border-color: var(--tone); }
+  /* Active chapter: the dot morphs into a tall pill (M3 Expressive shape change). */
+  a.actif .point { height: 1.5rem; margin: -0.35rem 0; border-radius: 0.4rem; background: var(--tone); border-color: var(--tone); }
+  a.actif { color: var(--ink); font-weight: 650; }
+  a:hover .point, a:focus-visible .point { border-color: var(--tone); }
+  a:focus-visible { outline: 2px solid var(--tone); outline-offset: 4px; border-radius: 6px; }
+  .pct { font-size: 0.72rem; font-variant-numeric: tabular-nums; color: var(--ink-3); padding-right: 0.05rem; }
+
+  /* Small screens: thin progress line at the top and a chapter button bottom right. */
+  .mob { display: none; }
+  @media (max-width: 1199.98px) { .mob { display: block; } }
+  .trait {
+    position: fixed; inset: 0 0 auto 0; z-index: 30; height: 4px; background: var(--tone);
+    transform-origin: left; transform: scaleX(0); transition: transform 0.2s linear;
+  }
+  .mob-boite {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 30; display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;
+    font-family: var(--sans); opacity: 0; transform: translateY(0.8rem); pointer-events: none;
+    transition: opacity 0.3s, transform 0.35s cubic-bezier(0.2, 0, 0, 1);
+  }
+  .mob.visible .mob-boite { opacity: 1; transform: none; pointer-events: auto; }
+  .fab {
+    display: inline-flex; align-items: center; gap: 0.5rem; min-height: 3rem; padding: 0 1.2rem; border: 0; border-radius: 1rem;
+    background: var(--tone-container); color: var(--on-tone-container); font: 650 0.9rem var(--sans); cursor: pointer;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.18); transition: border-radius 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .fab[aria-expanded="true"] { border-radius: 1.5rem; }
+  .fab span { font-variant-numeric: tabular-nums; font-weight: 500; opacity: 0.8; }
+  .fab:focus-visible, .mob-liste a:focus-visible { outline: 2px solid var(--tone); outline-offset: 3px; }
+  .mob-liste {
+    list-style: none; margin: 0; padding: 0.4rem; width: min(22rem, calc(100vw - 2rem)); max-height: 60vh; overflow-y: auto;
+    border-radius: var(--r-l); background: var(--surface); box-shadow: 0 8px 28px rgb(0 0 0 / 0.22);
+  }
+  .mob-liste[hidden] { display: none; }
+  .mob-liste a {
+    display: block; padding: 0.7rem 0.9rem; border-radius: var(--r-s); color: var(--ink-2); text-decoration: none; font-size: 0.92rem; line-height: 1.3;
+  }
+  .mob-liste a.fait { color: var(--ink-3); }
+  .mob-liste a.actif { background: var(--tone-container); color: var(--on-tone-container); font-weight: 650; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rail, .titre, .point, ol::after, .trait, .mob-boite, .fab { transition: none; }
+  }
+  @media print { .rail, .mob { display: none; } }
+</style>

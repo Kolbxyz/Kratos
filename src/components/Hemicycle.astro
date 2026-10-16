@@ -1,0 +1,60 @@
+---
+// Seat distribution of an assembly. CSV columns: groupe, sieges. File order = order drawn, left to right:
+// pass `note` whenever it is not the real seating order, so the picture cannot be read as a seating plan.
+import Source from "./Source.astro";
+import { disposer } from "../lib/hemicycle";
+import { charger, exigerColonnes } from "../lib/donnees";
+
+interface Props {
+  src: string; // path under data/, e.g. "pouvoir/assemblee-sieges"
+  titre: string;
+  total?: number; // expected sum; the build fails if the CSV does not add up
+  unite?: string; // what one dot is (sièges, députés, sénateurs)
+  note?: string;
+}
+const { src, titre, total, unite = "sièges", note } = Astro.props;
+
+const { rows, source } = charger(src);
+exigerColonnes(src, rows, ["groupe", "sieges"]);
+const groupes = rows.map((r) => ({ nom: String(r.groupe), sieges: Number(r.sieges) }));
+const somme = groupes.reduce((a, g) => a + g.sieges, 0);
+if (total != null && somme !== total) throw new Error(`${src}.csv : ${somme} sièges, ${total} attendus`);
+
+const { sieges, rayon } = disposer(groupes.map((g) => g.sieges));
+// Colour only separates neighbouring wedges; identity comes from the legend and the tooltips.
+// Every other wedge is lightened so two neighbours with close hues still read as two groups.
+const teinte = (i: number) => `color-mix(in oklch, color-mix(in oklch, var(--series-1), var(--series-2) ${groupes.length < 2 ? 0 : (100 * i) / (groupes.length - 1)}%), white ${i % 2 ? 30 : 0}%)`;
+const f = (n: number) => n.toFixed(3);
+---
+<figure class="hemicycle">
+  <figcaption class="titre">{titre}</figcaption>
+  <svg viewBox="-1.05 -1.05 2.1 1.15" role="img" aria-label={`${titre} : ${somme} ${unite} répartis en ${groupes.length} groupes, effectifs détaillés dans la légende`}>
+    {groupes.map((g, gi) => (
+      <g fill={teinte(gi)}>
+        <title>{g.nom} : {g.sieges} {unite}</title>
+        {sieges.filter((s) => s.groupe === gi).map((s) => <circle cx={f(s.x)} cy={f(s.y)} r={f(rayon)} />)}
+      </g>
+    ))}
+    <text x="0" y="-0.12" text-anchor="middle" class="total" font-size="0.2">{somme}</text>
+    <text x="0" y="-0.02" text-anchor="middle" class="sous" font-size="0.06">{unite}</text>
+  </svg>
+  <ul class="legende">
+    {groupes.map((g, gi) => (
+      <li><span class="pastille" style={`background:${teinte(gi)}`}></span>{g.nom} <strong>{g.sieges}</strong></li>
+    ))}
+  </ul>
+  {note && <p class="note">{note}</p>}
+  <Source source={source} />
+</figure>
+
+<style>
+  .hemicycle { margin: 2rem 0; padding: 1.2rem 1.2rem 1rem; background: var(--surface); border-radius: var(--r-l); font-family: var(--sans); }
+  .titre { font: 750 1.08rem/1.3 var(--display); margin-bottom: 0.6rem; }
+  svg { display: block; width: 100%; max-width: 40rem; height: auto; margin: 0 auto; }
+  .total { font-weight: 800; font-family: var(--display); fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .sous { fill: var(--ink-3); }
+  .legende { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; list-style: none; padding: 0; margin: 0.8rem 0 0; font-size: 0.85rem; color: var(--ink-2); }
+  .pastille { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 50%; margin-right: 0.4rem; vertical-align: -0.1rem; }
+  .note { margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--ink-2); }
+  strong { background: none; padding: 0; font-variant-numeric: tabular-nums; color: var(--ink); }
+</style>

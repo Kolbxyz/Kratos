@@ -1,0 +1,8 @@
+{
+  "titre": "Dépenses militaires des pays du Moyen-Orient, en % du PIB, 2025",
+  "producteur": "SIPRI Military Expenditure Database, diffusé par la Banque mondiale",
+  "jeu": "MS.MIL.XPND.GD.ZS",
+  "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS",
+  "traitement": "Arrondi à deux décimales. Année 2025 pour tous les pays du jeu. Les pays sans valeur dans la série (Qatar, Émirats arabes unis, Yémen, Palestine, Syrie) ne sont pas dessinés avec une teinte.",
+  "consulte": "2026-10-16"
+}

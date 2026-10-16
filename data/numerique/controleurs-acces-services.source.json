@@ -1,0 +1,8 @@
+{
+  "titre": "Services de plateforme essentiels désignés au titre du DMA, par contrôleur d'accès (23 au total)",
+  "producteur": "Commission européenne, portail du règlement sur les marchés numériques",
+  "jeu": "Gatekeepers Portal",
+  "url": "https://digital-markets-act.ec.europa.eu/gatekeepers_en",
+  "traitement": "Comptage des lignes « Case DMA.xxxxx » sous chaque entreprise de la page. Le script échoue si le total diffère du nombre que la page annonce (23). Alphabet : 8 services, Meta : 5, Apple : 4, Amazon : 2, Microsoft : 2, Booking : 1, ByteDance : 1.",
+  "consulte": "2026-10-16"
+}

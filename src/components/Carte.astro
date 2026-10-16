@@ -1,0 +1,138 @@
+---
+// Choropleth rendered to static SVG at build time, with a hover highlight (script below). CSV columns: code (ISO alpha-3), valeur.
+// Base map: Natural Earth via world-atlas (public domain). Countries without a value stay neutral.
+import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import { geoConicConformal, geoPath } from "d3-geo";
+import { feature } from "topojson-client";
+import Source from "./Source.astro";
+import { charger, exigerColonnes, fmt } from "../lib/donnees";
+import { ZONES, type Zone } from "../lib/zones";
+
+interface Props {
+  src: string; // path under data/, e.g. "defense/depenses-militaires-2024"
+  titre: string;
+  unite: string;
+  zone?: Zone; // which countries are drawn: "europe" (default) or "moyen-orient"
+  plafond?: number; // values above are drawn in the darkest tone, so one outlier cannot flatten the rest of the map
+}
+const { src, titre, unite, zone = "europe", plafond } = Astro.props;
+const PAYS = ZONES[zone];
+
+const { rows, source } = charger(src);
+exigerColonnes(src, rows, ["code", "valeur"]);
+const valeurs = new Map(rows.map((r) => [String(r.code), Number(r.valeur)]));
+for (const code of valeurs.keys()) if (!PAYS[code]) throw new Error(`${src}.csv : code pays inconnu pour la zone « ${zone} » : « ${code} »`);
+
+const topo = JSON.parse(readFileSync(createRequire(import.meta.url).resolve("world-atlas/countries-110m.json"), "utf8"));
+const ids = new Map(Object.entries(PAYS).map(([code, p]) => [p.id, code]));
+const pays = (feature(topo, topo.objects.countries) as any).features.filter((f: any) => ids.has(String(f.id).padStart(3, "0")));
+
+// Europe: fixed projection and clip window, because Russia and Norway reach the Pacific and the Arctic and would wreck an auto-fit.
+// Other zones: fitted to the drawn countries.
+const L = 560, H = 480;
+const projection = zone === "europe"
+  ? geoConicConformal().parallels([40, 62]).rotate([-14, 0]).center([0, 55]).scale(740).translate([L / 2, H / 2]).clipExtent([[0, 0], [L, H]])
+  : geoConicConformal().parallels([20, 40]).rotate([-45, 0]).fitExtent([[6, 6], [L - 6, H - 6]], { type: "FeatureCollection", features: pays } as any);
+const chemin = geoPath(projection);
+
+const vals = [...valeurs.values()];
+const min = Math.min(...vals), max = plafond ?? Math.max(...vals);
+const teinte = (v: number) => `color-mix(in oklch, var(--tone-container), var(--tone) ${Math.round(100 * (max === min ? 1 : Math.min(1, (v - min) / (max - min))))}%)`;
+const classes = pays.map((f: any) => {
+  const code = ids.get(String(f.id).padStart(3, "0"))!;
+  return { code, nom: PAYS[code].nom, d: chemin(f) ?? "", v: valeurs.get(code) };
+});
+const classement = [...valeurs.entries()].map(([c, v]) => ({ nom: PAYS[c].nom, v })).sort((a, b) => b.v - a.v);
+const texte = (c: { nom: string; v?: number }) => (c.v != null ? `${fmt(c.v)} ${unite}` : "pas de donnée");
+---
+<figure class="carte">
+  <figcaption class="titre">{titre}</figcaption>
+  <div class="cadre">
+    <svg viewBox={`0 0 ${L} ${H}`} role="img" aria-label={`${titre}, de ${fmt(min)} à ${fmt(Math.max(...vals))} ${unite}. Valeurs détaillées sous la carte.`}>
+      {classes.map((c) => (
+        <path class="pays" d={c.d} fill={c.v == null ? "var(--surface-2)" : teinte(c.v)} data-nom={c.nom} data-texte={texte(c)} />
+      ))}
+      <path class="halo" d="" fill="none" pointer-events="none" />
+    </svg>
+    <div class="bulle" hidden aria-hidden="true"></div>
+  </div>
+  <p class="lecture no-print" aria-hidden="true">Survolez ou touchez un pays pour lire sa valeur.</p>
+  <div class="echelle" aria-hidden="true">
+    <span>{fmt(min)}</span><i style={`background:linear-gradient(90deg, ${teinte(min)}, ${teinte(max)})`}></i><span>{plafond != null ? `${fmt(max)} et plus` : fmt(max)} {unite}</span>
+  </div>
+  <Source source={source} />
+  <details class="no-print">
+    <summary>Voir les valeurs</summary>
+    <ol class="valeurs">{classement.map((c) => <li>{c.nom} <strong>{fmt(c.v)}</strong></li>)}</ol>
+  </details>
+</figure>
+
+<script>
+  // The hovered country is outlined by a separate "halo" path (no DOM reordering, so no flicker) and the others are dimmed.
+  document.querySelectorAll<HTMLElement>(".carte").forEach((fig) => {
+    const svg = fig.querySelector("svg")!;
+    const cadre = fig.querySelector<HTMLElement>(".cadre")!;
+    const halo = svg.querySelector<SVGPathElement>(".halo")!;
+    const bulle = fig.querySelector<HTMLElement>(".bulle")!;
+    const lecture = fig.querySelector<HTMLElement>(".lecture")!;
+    const invite = lecture.textContent ?? "";
+    let actif: SVGPathElement | null = null;
+
+    const placer = (x: number, y: number) => {
+      const r = cadre.getBoundingClientRect();
+      const moitie = bulle.offsetWidth / 2;
+      bulle.style.left = `${Math.min(Math.max(x - r.left, moitie), r.width - moitie)}px`;
+      bulle.style.top = `${y - r.top - 14}px`;
+    };
+    const quitter = () => {
+      actif?.classList.remove("actif");
+      actif = null;
+      svg.classList.remove("survol");
+      halo.setAttribute("d", "");
+      bulle.hidden = true;
+      lecture.textContent = invite;
+    };
+    svg.addEventListener("pointerover", (e) => {
+      const p = (e.target as Element).closest<SVGPathElement>(".pays");
+      if (!p) return quitter();
+      if (p !== actif) {
+        actif?.classList.remove("actif");
+        actif = p;
+        p.classList.add("actif");
+        svg.classList.add("survol");
+        halo.setAttribute("d", p.getAttribute("d") ?? "");
+        bulle.innerHTML = "";
+        const nom = document.createElement("strong");
+        nom.textContent = p.dataset.nom ?? "";
+        bulle.append(nom, document.createElement("br"), p.dataset.texte ?? "");
+        bulle.hidden = false;
+        lecture.textContent = `${p.dataset.nom} : ${p.dataset.texte}`;
+      }
+      placer(e.clientX, e.clientY);
+    });
+    svg.addEventListener("pointermove", (e) => actif && placer(e.clientX, e.clientY));
+    svg.addEventListener("pointerleave", quitter);
+  });
+</script>
+
+<style>
+  .carte { margin: 2rem 0; padding: 1.2rem 1.2rem 1rem; background: var(--surface); border-radius: var(--r-l); font-family: var(--sans); }
+  .titre { font: 750 1.08rem/1.3 var(--display); margin-bottom: 0.4rem; }
+  .cadre { position: relative; max-width: 38rem; margin: 0 auto; }
+  svg { display: block; width: 100%; height: auto; }
+  .pays { stroke: var(--surface); stroke-width: 0.8; transition: opacity 0.12s; }
+  .survol .pays:not(.actif) { opacity: 0.45; }
+  .halo { stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+  .bulle { position: absolute; transform: translate(-50%, -100%); padding: 0.35rem 0.65rem; border-radius: var(--r-s, 0.5rem); background: var(--ink); color: var(--surface); font-size: 0.82rem; line-height: 1.35; white-space: nowrap; pointer-events: none; z-index: 1; }
+  .bulle[hidden] { display: none; }
+  .bulle :global(strong) { background: none; padding: 0; color: inherit; }
+  .lecture { min-height: 1.4em; margin: 0.4rem 0; text-align: center; font-size: 0.85rem; color: var(--ink-2); }
+  .echelle { display: flex; align-items: center; gap: 0.6rem; justify-content: center; font-size: 0.8rem; color: var(--ink-2); }
+  .echelle i { width: 8rem; height: 0.6rem; border-radius: 999px; }
+  details { margin-top: 0.8rem; font-size: 0.85rem; }
+  summary { display: inline-block; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 999px; background: var(--surface-2); font-weight: 600; }
+  summary:hover { background: var(--tone-container); color: var(--on-tone-container); }
+  .valeurs { columns: 2 12rem; margin: 0.6rem 0 0; padding-left: 1.4rem; color: var(--ink-2); }
+  strong { background: none; padding: 0; font-variant-numeric: tabular-nums; color: var(--ink); }
+</style>

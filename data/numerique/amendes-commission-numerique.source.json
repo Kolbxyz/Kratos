@@ -1,0 +1,8 @@
+{
+  "titre": "Amendes de la Commission européenne contre des plateformes numériques, montant décidé (millions d'euros)",
+  "producteur": "Commission européenne (communiqués de presse)",
+  "jeu": "Communiqués IP/17/1784, IP/18/4581, IP/19/1770, IP/24/5801, IP/25/1085, IP/25/1992, IP/25/2934, IP/26/1670",
+  "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_17_1784",
+  "traitement": "Saisie manuelle de dix montants, chacun contrôlé par le script contre le texte du communiqué (échec si le montant n'y figure plus). Montants tels que décidés par la Commission, avant tout recours : l'amende Android a été ramenée à 4 125 millions par le Tribunal (14 septembre 2022) puis confirmée par la Cour de justice (2 juillet 2026), la décision AdSense a été annulée par le Tribunal (18 septembre 2024). L'amende de plus de 1,8 milliard contre Apple (4 mars 2024, communiqué IP/24/1161) est absente : le communiqué ne donne pas le montant exact. Communiqués : IP/17/1784 https://ec.europa.eu/commission/presscorner/detail/en/ip_17_1784 ; IP/18/4581 https://ec.europa.eu/commission/presscorner/detail/en/ip_18_4581 ; IP/19/1770 https://ec.europa.eu/commission/presscorner/detail/en/ip_19_1770 ; IP/24/5801 https://ec.europa.eu/commission/presscorner/detail/en/ip_24_5801 ; IP/25/1992 https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1992 ; IP/25/1085 https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085 ; IP/26/1670 https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670 ; IP/25/2934 https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934",
+  "consulte": "2026-10-16"
+}

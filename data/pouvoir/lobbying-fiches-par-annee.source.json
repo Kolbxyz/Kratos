@@ -1,0 +1,8 @@
+{
+  "titre": "Fiches d'activités de représentation d'intérêts, par année d'exercice, 2021-2025",
+  "producteur": "Haute Autorité pour la transparence de la vie publique (HATVP)",
+  "jeu": "Répertoire des représentants d'intérêts, vues fusionnées (1_informations_generales.csv, 2_actions.csv)",
+  "url": "https://www.data.gouv.fr/datasets/5d13692f634f41364f8929b8",
+  "traitement": "Fiches distinctes (identifiant activite_id) rattachées à l'année de fin d'exercice (annee_fin). Décompte au jour du téléchargement : ne pas le comparer aux totaux des bilans annuels de la HATVP, arrêtés à une autre date. Années antérieures à 2021 écartées : le fichier ne publie plus les entités désinscrites depuis plus de cinq ans.",
+  "consulte": "2026-10-16"
+}

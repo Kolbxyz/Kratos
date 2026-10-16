@@ -1,0 +1,8 @@
+{
+  "titre": "Vieillissement, emploi des seniors et dépenses de vieillesse, France, Allemagne et Italie, dernière année publiée",
+  "producteur": "Eurostat",
+  "jeu": "demo_pjangroup (population par groupe d'âge), demo_pjanind (OLDDEP1), lfsi_emp_a (55-64 ans), gov_10a_exp (COFOG GF1002)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjangroup/default/table",
+  "traitement": "Part des 65 ans et plus parmi les 20 ans et plus : somme des groupes 65-69, 70-74, 75-79, 80-84 et 85 ans et plus, divisée par la population totale moins les moins de 20 ans, au 1er janvier 2025, arrondie à une décimale (indicateur de poids des âgés parmi les adultes, qui ne mesure pas le corps électoral). Les autres lignes reprennent la dernière année publiée des séries saisies par le même script.",
+  "consulte": "2026-10-16"
+}

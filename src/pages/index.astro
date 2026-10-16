@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import Forme from "../components/Forme.astro";
+import Medaillon from "../components/Medaillon.astro";
 import { PARCOURS, type ParcoursId } from "../parcours";
 
 const lecons = (await getCollection("lecons")).sort((a, b) => a.data.ordre - b.data.ordre);
@@ -13,62 +14,49 @@ const ordre = [...ids].sort(
 );
 const nbSources = lecons.reduce((n, l) => n + l.data.sources.length, 0);
 ---
-<Base titre="Leçons de pouvoir" description="Leçons sourcées sur le pouvoir, les institutions, l'économie et la guerre.">
+<Base titre="Kratos" description="Leçons sourcées sur le pouvoir, les institutions, l'économie et la guerre.">
   <section class="hero wrap">
     <div class="hero-texte">
-      <h1>Comprendre le pouvoir, <span class="surligne">chiffres et textes à l'appui</span></h1>
+      <h1>Comprendre les rouages du monde, <span class="surligne">sources à l'appui</span></h1>
       <p class="lede">
-        Des leçons de 30 à 60 minutes, découpées en chapitres, sur la politique, le droit, l'économie et la guerre.
-        Théorie, histoire, données officielles et citations exactes, chaque fois avec la source.
+        Des leçons longues sur la politique, le droit, l'économie et la guerre : comment les institutions,
+        l'argent et la force fonctionnent, avec la source de chaque fait.
       </p>
       <div class="meta">
         <span class="chip">{lecons.length} leçons</span>
         <span class="chip">{nbSources} sources citées</span>
-        <span class="chip">PDF pour chaque leçon</span>
       </div>
     </div>
     <div class="grappe" aria-hidden="true">
-      {ids.map((id) => <a href={`#${id}`} tabindex="-1" data-parcours={id}><Forme nom={PARCOURS[id].forme} /></a>)}
+      {ids.map((id) => <a href={`${base}parcours/${id}/`} tabindex="-1" data-parcours={id}><Forme nom={PARCOURS[id].forme} /></a>)}
     </div>
   </section>
 
-  <nav class="wrap filtres" aria-label="Parcours">
-    {ordre.map((id) => <a class="chip" href={`#${id}`} data-parcours={id}><Forme nom={PARCOURS[id].forme} />{PARCOURS[id].nom}</a>)}
-  </nav>
-
-  <div class="wrap">
-    {ordre.map((id) => {
-      const p = PARCOURS[id];
-      const items = lecons.filter((l) => l.data.parcours === id);
-      return (
-        <section class="parcours" id={id} data-parcours={id}>
-          <div class="parcours-tete">
-            <Forme nom={p.forme} class="parcours-forme" />
-            <div>
-              <h2>{p.nom}</h2>
-              <p class="accroche">{p.accroche}</p>
-            </div>
-          </div>
-          <ul class="cards">
-            {items.map((l) => (
-              <li class="card">
-                <a href={`${base}lecons/${l.id}/`}>
-                  <strong>{l.data.titre}</strong>
-                  <span>{l.data.resume}</span>
-                  <small>
-                    <span class="chip">{l.data.lecture_min} min</span>
-                    <span class="chip">{l.data.sources.length} sources</span>
-                    {!l.data.verifie_le && <span class="chip">Relecture en cours</span>}
-                  </small>
-                </a>
-              </li>
-            ))}
-            {p.a_venir.map((t) => <li class="card soon"><strong>{t}</strong><small>À venir</small></li>)}
-          </ul>
-        </section>
-      );
-    })}
-  </div>
+  <section class="wrap tuiles-zone" aria-label="Parcours">
+    <a class="btn continuer" data-continuer data-base={base} data-titres={JSON.stringify(Object.fromEntries(lecons.map((l) => [l.id, l.data.titre])))} href={base} hidden>Reprendre la dernière leçon<span data-nom-lecon></span></a>
+    <ul class="tuiles">
+      {ordre.map((id) => {
+        const p = PARCOURS[id];
+        const items = lecons.filter((l) => l.data.parcours === id);
+        const h = Math.round(items.reduce((n, l) => n + l.data.lecture_min, 0) / 60);
+        return (
+          <li data-parcours={id} data-tuile data-ids={items.map((l) => l.id).join(",")}>
+            <a href={`${base}parcours/${id}/`}>
+              <Medaillon id={id} class="tuile-forme" />
+              <strong>{p.nom}</strong>
+              <span class="acc">{p.accroche}</span>
+              <span class="infos">
+                <span class="chip">{items.length} leçons</span>
+                <span class="chip">{h} h</span>
+                <span class="chip" data-avancement>0/{items.length} lues</span>
+              </span>
+              <span class="barre" aria-hidden="true"></span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
 </Base>
 
 <style>
@@ -88,26 +76,19 @@ const nbSources = lecons.reduce((n, l) => n + l.data.sources.length, 0);
     .grappe { order: -1; grid-template-columns: repeat(4, 3.2rem); gap: 0.4rem; }
   }
 
-  .filtres { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-  .filtres .chip { padding: 0.45rem 0.9rem 0.45rem 0.55rem; font-size: 0.88rem; background: var(--tone-container); color: var(--on-tone-container); transition: border-radius 0.35s var(--spring); }
-  .filtres .chip:hover { border-radius: var(--r-s); }
-  .filtres :global(.forme) { width: 1.2rem; fill: var(--tone); }
-
-  .parcours { margin-top: 3.5rem; }
-  .parcours-tete { display: flex; align-items: center; gap: 1rem; }
-  .parcours-tete h2 { margin: 0; }
-  :global(.parcours-forme) { flex: none; width: 3.4rem; fill: var(--tone); }
-  .accroche { color: var(--ink-2); margin: 0.2rem 0 0; font-size: 1rem; }
-
-  .cards { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0.8rem; }
-  .card { font-family: var(--sans); border-radius: var(--r-l); background: var(--tone-container); color: var(--on-tone-container); transition: border-radius 0.45s var(--spring), transform 0.45s var(--spring); }
-  .card:not(.soon):hover { border-radius: var(--r-xl) var(--r-s) var(--r-xl) var(--r-s); transform: translateY(-3px); }
-  .card a, .card.soon { display: flex; flex-direction: column; gap: 0.55rem; padding: 1.3rem; height: 100%; color: inherit; text-decoration: none; }
-  .card strong { font: 750 1.22rem/1.2 var(--display); font-stretch: 105%; }
-  .card span { font-size: 0.92rem; line-height: 1.45; }
-  .card small { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.35rem; padding-top: 0.4rem; }
-  .card small .chip { background: color-mix(in srgb, var(--bg) 55%, transparent); color: inherit; font-size: 0.75rem; }
-  .card.soon { align-self: start; background: transparent; color: var(--ink-3); border: 2px dashed var(--rule); }
-  .card.soon strong { font-size: 1.02rem; font-weight: 650; }
-  .card.soon small { font-weight: 600; }
+  .tuiles-zone { margin-top: 1.5rem; }
+  .continuer { margin-bottom: 1rem; }
+  .continuer[hidden] { display: none; }
+  .tuiles { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 0.9rem; font-family: var(--sans); }
+  .tuiles li { display: flex; border-radius: var(--r-xl); background: var(--tone-container); color: var(--on-tone-container); overflow: hidden; transition: border-radius 0.45s var(--spring), transform 0.45s var(--spring); }
+  .tuiles li:hover { border-radius: var(--r-xl) var(--r-s) var(--r-xl) var(--r-s); transform: translateY(-4px); }
+  .tuiles a { flex: 1; position: relative; display: flex; flex-direction: column; gap: 0.6rem; min-height: 15rem; padding: 1.5rem; color: inherit; text-decoration: none; }
+  .tuiles :global(.tuile-forme) { width: 4.2rem; }
+  .tuiles li:hover :global(.tuile-forme .forme) { transform: rotate(45deg) scale(1.1); }
+  .tuiles strong { font: 800 1.5rem/1.15 var(--display); font-stretch: 110%; }
+  .acc { font-size: 0.95rem; line-height: 1.45; }
+  .infos { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.35rem; padding-bottom: 0.6rem; }
+  .infos .chip { background: color-mix(in srgb, var(--bg) 55%, transparent); color: inherit; font-size: 0.75rem; }
+  .barre { position: absolute; left: 0; bottom: 0; height: 0.45rem; width: 100%; background: color-mix(in srgb, var(--bg) 45%, transparent); }
+  .barre::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--avancement, 0%); background: var(--tone); border-radius: 0 999px 999px 0; transition: width 0.6s var(--ease-radius); }
 </style>

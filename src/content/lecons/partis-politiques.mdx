@@ -14,6 +14,7 @@ lectures:
     titre: "Politik als Beruf (Le Savant et le politique)"
     annee: 1919
     pourquoi: "La conférence de Munich : vivre « pour » ou « de » la politique, et la « machine » qui sélectionne les chefs."
+    incontournable: true
   - auteur: "Maurice Duverger"
     titre: "Les Partis politiques"
     annee: 1951
@@ -45,10 +46,12 @@ sources:
   - titre: "Iron law of oligarchy"
     auteur: "Wikipédia"
     url: "https://en.wikipedia.org/wiki/Iron_law_of_oligarchy"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Robert Michels"
     auteur: "Wikipédia"
     url: "https://en.wikipedia.org/wiki/Robert_Michels"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Note sur la suppression générale des partis politiques (reproduction du texte)"
     auteur: "Simone Weil, sur Wikiberal"
@@ -58,6 +61,7 @@ sources:
   - titre: "Loi de Duverger"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Loi_de_Duverger"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Changing Models of Party Organization and Party Democracy, Party Politics, 1(1), 1995"
     auteur: "Richard S. Katz, Peter Mair"
@@ -72,22 +76,27 @@ sources:
   - titre: "Parti radical (France)"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Parti_radical_(France)"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Renaissance (parti politique)"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Renaissance_(parti_politique)"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Élection présidentielle française de 2017"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2017"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Élection présidentielle française de 2022"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2022"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Financement des partis politiques français"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Financement_des_partis_politiques_fran%C3%A7ais"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Répartition de l'aide publique aux partis et groupements politiques pour l'année 2026"
     auteur: "Blog Landot et associés"
@@ -97,6 +106,10 @@ sources:
     auteur: "Public Sénat"
     url: "https://www.publicsenat.fr/actualites/politique/explosion-des-micro-partis-formations-dans-le-rouge-aides-publiques-et-surprises-ce-que-revele-le-rapport-de-la-commission-des-comptes-de-campagne"
     consulte: "2026-10-15"
+  - titre: "Liste des députés par groupe politique, XVIIe législature"
+    auteur: "Assemblée nationale"
+    url: "https://www2.assemblee-nationale.fr/deputes/liste/groupe-politique"
+    consulte: "2026-10-16"
   - titre: "Statistiques de l'Assemblée nationale, XVIIe législature"
     auteur: "Datan"
     url: "https://datan.fr/statistiques"
@@ -114,6 +127,7 @@ sources:
   - titre: "Élections législatives françaises de 2024"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_fran%C3%A7aises_de_2024"
+    secondaire: true
     consulte: "2026-10-15"
 ---
 import Citation from "../../components/Citation.astro";
@@ -122,6 +136,7 @@ import ARetenir from "../../components/ARetenir.astro";
 import Chiffre from "../../components/Chiffre.astro";
 import Positions from "../../components/Positions.astro";
 import Chart from "../../components/Chart.astro";
+import Hemicycle from "../../components/Hemicycle.astro";
 
 ## Prologue : un parti naît, deux partis meurent
 
@@ -143,7 +158,7 @@ Le langage courant présente le parti comme une **famille d'idées** : la gauche
 
 Max Weber le dit sans détour dans sa conférence de Munich de janvier 1919, *Politik als Beruf* (« La politique comme métier »), en décrivant les partis modernes, nés en Angleterre et aux États-Unis :
 
-<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conférence de Munich, 28 janvier 1919 (traduction)" url="http://www.zeno.org/Soziologie/M/Weber,+Max/Schriften+zur+Politik/Politik+als+Beruf">
+<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conférence de Munich, 28 janvier 1919 (traduction)" url="http://www.zeno.org/Soziologie/M/Weber,+Max/Schriften+zur+Politik/Politik+als+Beruf" original="Das Entscheidende ist, daß dieser ganze Menschenapparat – die „Maschine“, wie man ihn in den angelsächsischen Ländern bezeichnenderweise nennt – oder vielmehr diejenigen, die ihn leiten, den Parlamentariern Schach bieten und ihnen ihren Willen ziemlich weitgehend aufzuzwingen in der Lage sind. [...] Führer wird nun derjenige, dem die Maschine folgt, auch über den Kopf des Parlaments." langue="de">
   L'essentiel est que tout cet appareil humain, la « machine », comme on l'appelle de manière significative dans les pays anglo-saxons, ou plutôt ceux qui le dirigent, sont en mesure de faire échec aux parlementaires et de leur imposer assez largement leur volonté. [...] Devient chef celui que la machine suit, même par-dessus la tête du Parlement.
 </Citation>
 
@@ -163,7 +178,7 @@ Le verbe est choisi : ils « concourent » à l'expression du suffrage, ils ne l
 
 En 1796, au terme de son second mandat, George Washington publie un message d'adieu à la nation. Il y consacre un long passage à ce qu'il redoute le plus pour la jeune République :
 
-<Citation auteur="George Washington" oeuvre="Farewell Address" annee="1796" reference="Message d'adieu, 19 septembre 1796 (traduction)" url="https://avalon.law.yale.edu/18th_century/washing.asp">
+<Citation auteur="George Washington" oeuvre="Farewell Address" annee="1796" reference="Message d'adieu, 19 septembre 1796 (traduction)" url="https://avalon.law.yale.edu/18th_century/washing.asp" original="Let me now take a more comprehensive view, and warn you in the most solemn manner against the baneful effects of the spirit of party generally. This spirit, unfortunately, is inseparable from our nature, having its root in the strongest passions of the human mind. [...] in those of the popular form, it is seen in its greatest rankness, and is truly their worst enemy." langue="en">
   Permettez-moi [...] de vous mettre en garde de la manière la plus solennelle contre les effets funestes de l'esprit de parti en général. Cet esprit, malheureusement, est inséparable de notre nature, puisqu'il a ses racines dans les plus fortes passions de l'esprit humain. [...] Dans les gouvernements de forme populaire, on le voit dans toute sa vigueur, et il est véritablement leur pire ennemi.
 </Citation>
 
@@ -256,6 +271,16 @@ Entre les deux tours, le « front républicain » produit un nombre record de **
 
 Les partis ont fait ici ce que Weber décrivait : des machines qui négocient des sièges. Le scrutin majoritaire ne mesure pas seulement les préférences des électeurs ; il récompense la **capacité de coalition** des appareils.
 
+Cette logique de machines se lit encore dans l'hémicycle. D'après la liste publiée par l'Assemblée nationale (consultée le 16 octobre 2026), 574 députés sont répartis en douze groupes. Le plus important, le Rassemblement national, compte 121 députés, et aucun des douze groupes n'en compte davantage[^ag].
+
+<Hemicycle
+  src="pouvoir/assemblee-groupes"
+  titre="Les groupes de l'Assemblée nationale, XVIIe législature"
+  unite="députés"
+  total={574}
+  note="Groupes classés par effectif décroissant : l'ordre ne reproduit pas la disposition des places dans l'hémicycle."
+/>
+
 ## Chapitre 7 : l'argent des partis
 
 ### De l'argent opaque au financement public
@@ -343,21 +368,22 @@ L'effondrement des partis ne signifie pas la fin des partis. Les mouvements qui 
 5. En France : 635 partis déclarés en 2024, 66 millions d'euros d'aide publique, dons plafonnés à 7 500 euros ; PS et droite gaulliste passent de 57 % (2007) à 6,5 % (2022) au premier tour de la présidentielle.
 </ARetenir>
 
-[^enmarche]: Wikipédia, « Renaissance (parti politique) » : annonce d'Amiens du 6 avril 2016, dépôt des statuts le 7 mai 2017, 380 000 militants revendiqués et conseil national tiré au sort.
-[^presidentielles]: Wikipédia, pages des élections présidentielles françaises de 2002 à 2022, tableaux des résultats du premier tour (voir le jeu de données du graphique) ; page de l'élection de 2017 pour les primaires de la droite et de la gauche.
-[^weber]: Max Weber, *Politik als Beruf*, 1919, texte allemand sur Zeno.org. Originaux : « Das Entscheidende ist, daß dieser ganze Menschenapparat [...] die »Maschine«, wie man ihn in den angelsächsischen Ländern bezeichnenderweise nennt [...] oder vielmehr diejenigen, die ihn leiten, den Parlamentariern Schach bieten und ihnen ihren Willen ziemlich weitgehend aufzuzwingen in der Lage sind. [...] Führer wird nun derjenige, dem die Maschine folgt, auch über den Kopf des Parlaments. » et « Es gibt zwei Arten, aus der Politik seinen Beruf zu machen. Entweder: man lebt »für« die Politik, oder aber: »von« der Politik. »
-[^washington]: George Washington, Farewell Address, 1796, The Avalon Project. Original : « Let me [...] warn you in the most solemn manner against the baneful effects of the spirit of party generally. This spirit, unfortunately, is inseparable from our nature, having its root in the strongest passions of the human mind. [...] in those of the popular form, it is seen in its greatest rankness, and is truly their worst enemy. » et « It opens the door to foreign influence and corruption ».
-[^radical]: Wikipédia, « Parti radical (France) ».
-[^michels]: Wikipédia, « Robert Michels » (publication de 1911, adhésion au Parti national fasciste en 1924, théorie de la modération).
-[^ironlaw]: Wikipédia, « Iron law of oligarchy », qui cite la traduction anglaise : « Who says organization, says oligarchy. », Michels : « The desire to dominate [...] is universal », le résumé de Darcy K. Leach : « Bureaucracy happens. If bureaucracy happens, power rises. Power corrupts. », et l'exception étudiée par Lipset dans *Union Democracy* (1956).
-[^weil]: Simone Weil, *Note sur la suppression générale des partis politiques*, reproduction du texte des *Écrits de Londres*.
-[^katzmair]: Richard S. Katz et Peter Mair, « Changing Models of Party Organization and Party Democracy: The Emergence of the Cartel Party », *Party Politics*, 1(1), 1995, résumé. Original : « colluding parties become agents of the state and employ the resources of the state (the party state) to ensure their own collective survival ».
-[^vanbiezen]: Ingrid van Biezen, Peter Mair et Thomas Poguntke, « Going, going, . . . gone? The decline of party membership in contemporary Europe », *European Journal of Political Research*, 51(1), 2012, résumé.
-[^duverger]: Wikipédia, « Loi de Duverger ».
-[^financement]: Wikipédia, « Financement des partis politiques français ».
-[^aide2026]: Blog Landot et associés, « Répartition de l'aide publique aux partis et groupements politiques pour l'année 2026 », 10 mars 2026, qui commente le décret n° 2026-149 du 3 mars 2026.
-[^cnccfp]: Public Sénat, « Explosion des micro-partis, formations dans le rouge, aides publiques et surprises », sur le rapport 2025 de la CNCCFP (exercice 2024).
-[^datan]: Datan, page « Statistiques » de la XVIIe législature (taux de loyauté et cohésion des groupes).
-[^pcc]: Département de l'organisation du Comité central du Parti communiste chinois, bulletin statistique publié le 30 juin 2026 sur 12371.cn (données au 31 décembre 2025).
-[^cevipof]: CEVIPOF, Baromètre de la confiance politique, vague 17, premiers résultats, février 2026.
-[^leg24]: Wikipédia, « Élections législatives françaises de 2024 » (résultats du premier tour et du second tour, désistements, triangulaires).
+[^enmarche]: Wikipédia, « Renaissance (parti politique) » : annonce d'Amiens du 6 avril 2016, dépôt des statuts le 7 mai 2017, 380 000 militants revendiqués et conseil national tiré au sort. https://fr.wikipedia.org/wiki/Renaissance_(parti_politique)
+[^presidentielles]: Wikipédia, pages des élections présidentielles françaises de 2002 à 2022, tableaux des résultats du premier tour (voir le jeu de données du graphique) ; page de l'élection de 2017 pour les primaires de la droite et de la gauche. https://fr.wikipedia.org/wiki/%C3%89lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2022
+[^weber]: Max Weber, *Politik als Beruf*, 1919, texte allemand sur Zeno.org. Originaux : « Das Entscheidende ist, daß dieser ganze Menschenapparat [...] die »Maschine«, wie man ihn in den angelsächsischen Ländern bezeichnenderweise nennt [...] oder vielmehr diejenigen, die ihn leiten, den Parlamentariern Schach bieten und ihnen ihren Willen ziemlich weitgehend aufzuzwingen in der Lage sind. [...] Führer wird nun derjenige, dem die Maschine folgt, auch über den Kopf des Parlaments. » et « Es gibt zwei Arten, aus der Politik seinen Beruf zu machen. Entweder: man lebt »für« die Politik, oder aber: »von« der Politik. » http://www.zeno.org/Soziologie/M/Weber,+Max/Schriften+zur+Politik/Politik+als+Beruf
+[^washington]: George Washington, Farewell Address, 1796, The Avalon Project. Original : « Let me [...] warn you in the most solemn manner against the baneful effects of the spirit of party generally. This spirit, unfortunately, is inseparable from our nature, having its root in the strongest passions of the human mind. [...] in those of the popular form, it is seen in its greatest rankness, and is truly their worst enemy. » et « It opens the door to foreign influence and corruption ». https://avalon.law.yale.edu/18th_century/washing.asp
+[^radical]: Wikipédia, « Parti radical (France) ». https://fr.wikipedia.org/wiki/Parti_radical_(France)
+[^michels]: Wikipédia, « Robert Michels » (publication de 1911, adhésion au Parti national fasciste en 1924, théorie de la modération). https://en.wikipedia.org/wiki/Robert_Michels
+[^ironlaw]: Wikipédia, « Iron law of oligarchy », qui cite la traduction anglaise : « Who says organization, says oligarchy. », Michels : « The desire to dominate [...] is universal », le résumé de Darcy K. Leach : « Bureaucracy happens. If bureaucracy happens, power rises. Power corrupts. », et l'exception étudiée par Lipset dans *Union Democracy* (1956). https://en.wikipedia.org/wiki/Iron_law_of_oligarchy
+[^weil]: Simone Weil, *Note sur la suppression générale des partis politiques*, reproduction du texte des *Écrits de Londres*. https://www.wikiberal.org/images/9/98/Simone_Weil_Note_sur_la_suppression_generale_des_partis_politiques.pdf
+[^katzmair]: Richard S. Katz et Peter Mair, « Changing Models of Party Organization and Party Democracy: The Emergence of the Cartel Party », *Party Politics*, 1(1), 1995, résumé. Original : « colluding parties become agents of the state and employ the resources of the state (the party state) to ensure their own collective survival ». https://doi.org/10.1177/1354068895001001001
+[^vanbiezen]: Ingrid van Biezen, Peter Mair et Thomas Poguntke, « Going, going, . . . gone? The decline of party membership in contemporary Europe », *European Journal of Political Research*, 51(1), 2012, résumé. https://doi.org/10.1111/j.1475-6765.2011.01995.x
+[^duverger]: Wikipédia, « Loi de Duverger ». https://fr.wikipedia.org/wiki/Loi_de_Duverger
+[^financement]: Wikipédia, « Financement des partis politiques français ». https://fr.wikipedia.org/wiki/Financement_des_partis_politiques_fran%C3%A7ais
+[^aide2026]: Blog Landot et associés, « Répartition de l'aide publique aux partis et groupements politiques pour l'année 2026 », 10 mars 2026, qui commente le décret n° 2026-149 du 3 mars 2026. https://blog.landot-avocats.net/2026/03/10/repartition-de-laide-publique-aux-partis-et-groupements-politiques-pour-lannee-2026/
+[^cnccfp]: Public Sénat, « Explosion des micro-partis, formations dans le rouge, aides publiques et surprises », sur le rapport 2025 de la CNCCFP (exercice 2024). https://www.publicsenat.fr/actualites/politique/explosion-des-micro-partis-formations-dans-le-rouge-aides-publiques-et-surprises-ce-que-revele-le-rapport-de-la-commission-des-comptes-de-campagne
+[^datan]: Datan, page « Statistiques » de la XVIIe législature (taux de loyauté et cohésion des groupes). https://datan.fr/statistiques
+[^pcc]: Département de l'organisation du Comité central du Parti communiste chinois, bulletin statistique publié le 30 juin 2026 sur 12371.cn (données au 31 décembre 2025). https://www.12371.cn/2026/06/30/ARTI1782784973166823.shtml
+[^cevipof]: CEVIPOF, Baromètre de la confiance politique, vague 17, premiers résultats, février 2026. https://www.sciencespo.fr/cevipof/sites/sciencespo.fr.cevipof/files/BaroConf2026_infographieFChanvril_V17_PremiersResultats.pdf
+[^leg24]: Wikipédia, « Élections législatives françaises de 2024 » (résultats du premier tour et du second tour, désistements, triangulaires). https://fr.wikipedia.org/wiki/%C3%89lections_l%C3%A9gislatives_fran%C3%A7aises_de_2024
+[^ag]: Assemblée nationale, « Liste des députés par groupe politique », XVIIe législature, consultée le 16 octobre 2026 (effectifs de chaque groupe, 12 groupes, 574 députés). https://www2.assemblee-nationale.fr/deputes/liste/groupe-politique

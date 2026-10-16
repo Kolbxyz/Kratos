@@ -1,4 +1,4 @@
-# Leçons de pouvoir
+# Kratos
 
 Leçons sourcées sur le pouvoir, les institutions, l'économie et la guerre. Site statique (Astro + MDX), hébergé sur GitHub Pages.
 
@@ -17,7 +17,7 @@ Leçons sourcées sur le pouvoir, les institutions, l'économie et la guerre. Si
 
 1. Créer `src/content/lecons/<identifiant>.mdx` en copiant une leçon existante.
 2. Plan : accroche, idée centrale, histoire, données, penseurs, débat, à retenir.
-3. Graphique : déposer `data/<dossier>/<nom>.csv` et `<nom>.source.json`, puis `<Chart src="<dossier>/<nom>" ... />`.
+3. Graphique : déposer `data/<dossier>/<nom>.csv` et `<nom>.source.json`, puis `<Chart src="<dossier>/<nom>" ... />`. Les autres supports (hémicycle, carte, comparatif, schéma) sont décrits dans `CLAUDE.md`, section 5.
 4. Citation : `<Citation auteur oeuvre annee reference url>`, texte vérifié mot pour mot contre la source.
 5. Laisser `verifie_le: null` jusqu'à la relecture humaine de chaque chiffre, puis indiquer la date.
 

@@ -14,6 +14,7 @@ sources:
   - titre: "Carl von Clausewitz"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Carl_von_Clausewitz"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Grundgedanken über Krieg und Kriegführung (extraits en allemand)"
     auteur: "Carl von Clausewitz, Projet Gutenberg"
@@ -23,7 +24,18 @@ sources:
   - titre: "A History of Warfare (John Keegan, 1993)"
     auteur: "Wikipédia"
     url: "https://en.wikipedia.org/wiki/A_History_of_Warfare"
+    secondaire: true
     consulte: "2026-10-15"
+lectures:
+  - auteur: "Carl von Clausewitz"
+    titre: "De la guerre"
+    annee: 1832
+    pourquoi: "Le texte lui-même, publié après la mort de l'auteur. La formule de la guerre comme continuation de la politique y est exposée au livre I, chapitre 1."
+    incontournable: true
+  - auteur: "Raymond Aron"
+    titre: "Penser la guerre, Clausewitz"
+    annee: 1976
+    pourquoi: "Le commentaire le plus complet en français : Aron suit le raisonnement de Clausewitz chapitre par chapitre et le confronte à l'âge nucléaire."
 ---
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
@@ -33,20 +45,20 @@ import Positions from "../../components/Positions.astro";
 
 ## Le vaincu d'Auerstaedt
 
-Le 14 octobre 1806, à Iéna et Auerstaedt, Napoléon anéantit en une journée l'armée prussienne, réputée la meilleure d'Europe depuis Frédéric II. Parmi les prisonniers : un capitaine de 26 ans, aide de camp du prince Auguste de Prusse. Il s'appelle Carl von Clausewitz. Il passera deux ans en captivité, en France et en Suisse[^bio].
+Le 14 octobre 1806, les armées prussiennes affrontent Napoléon à Iéna et à Auerstaedt ; à Auerstaedt, selon Clausewitz lui-même, 25 000 Prussiens tiennent jusqu'à midi contre 28 000 hommes de Davout[^bio]. Aide de camp du prince Auguste de Prusse dans la campagne de 1806, Clausewitz est blessé et fait prisonnier, puis envoyé en France jusqu'à la fin de cette guerre, rapporte sa veuve Marie dans sa préface de *De la guerre*[^bio].
 
 Cette défaite pose la question qui l'occupera toute sa vie : **comment un empereur corse a-t-il pu balayer des armées professionnelles, disciplinées, savamment manœuvrées ?** Sa réponse : Napoléon n'a pas seulement mieux manœuvré. Il a fait une autre guerre, celle d'une nation entière mobilisée par la Révolution, au service d'un projet politique.
 
 <div class="chiffres">
-  <Chiffre valeur="1806" label="Clausewitz capturé par les Français après Auerstaedt, deux ans de captivité" source="Wikipédia, Carl von Clausewitz" url="https://fr.wikipedia.org/wiki/Carl_von_Clausewitz" date="14 octobre 1806" forme="gemme" />
-  <Chiffre valeur="1832" label="De la guerre paraît, posthume et inachevé, publié par son épouse Marie von Brühl" source="Wikipédia, Carl von Clausewitz" url="https://fr.wikipedia.org/wiki/Carl_von_Clausewitz" date="1832-1837" forme="soleil" />
+  <Chiffre valeur="1806" label="Clausewitz, aide de camp du prince Auguste de Prusse, blessé et fait prisonnier pendant la campagne, puis envoyé en France jusqu'à la fin de la guerre" source="Marie von Clausewitz, préface de De la guerre (trad. J. J. Graham)" url="https://www.gutenberg.org/cache/epub/1946/pg1946.txt" date="campagne de 1806" forme="gemme" />
+  <Chiffre valeur="1832" label="Préface de Marie von Clausewitz à l'édition posthume de De la guerre" source="Marie von Clausewitz, préface de De la guerre (trad. J. J. Graham)" url="https://www.gutenberg.org/cache/epub/1946/pg1946.txt" date="préface datée du 30 juin 1832" forme="soleil" />
 </div>
 
 ## L'idée centrale : la guerre a une grammaire, pas de logique propre
 
-Clausewitz meurt du choléra le 16 novembre 1831 à Breslau, laissant un manuscrit qu'il jugeait lui-même inachevé. Dans une note, il écrit que le premier chapitre du livre I est « le seul » qu'il considère comme achevé. C'est là que se trouve la formule la plus célèbre de la pensée stratégique :
+Clausewitz meurt du choléra à Breslau en novembre 1831, laissant un manuscrit qu'il jugeait lui-même inachevé. Dans une note, il écrit que le premier chapitre du livre I est « le seul » qu'il considère comme achevé. C'est là que se trouve la formule la plus célèbre de la pensée stratégique :
 
-<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 1, § 24 (traduit de la version anglaise de J. J. Graham, 1873)" url="https://www.gutenberg.org/ebooks/1946">
+<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 1, § 24 (traduit de la version anglaise de J. J. Graham, 1873)" url="https://www.gutenberg.org/cache/epub/1946/pg1946.txt" original="War is not merely a political act, but also a real political instrument, a continuation of political commerce, a carrying out of the same by other means." langue="en">
   La guerre n'est pas seulement un acte politique, mais un véritable instrument politique, une continuation des relations politiques, leur poursuite par d'autres moyens.
 </Citation>
 
@@ -78,7 +90,7 @@ Pour Clausewitz, chaque guerre est un « caméléon » qui change de couleur sel
 
 Le chapitre 7 du livre I est l'un des plus lus par les militaires d'aujourd'hui. Clausewitz y explique pourquoi la guerre réelle ne ressemble jamais à la guerre sur la carte :
 
-<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 7, « La friction dans la guerre » (traduit de la version de J. J. Graham)" url="https://www.gutenberg.org/ebooks/1946">
+<Citation auteur="Carl von Clausewitz" oeuvre="De la guerre" annee="1832" reference="Livre I, chapitre 7, « La friction dans la guerre » (traduit de la version de J. J. Graham)" url="https://www.gutenberg.org/cache/epub/1946/pg1946.txt" original="Everything is very simple in War, but the simplest thing is difficult. These difficulties accumulate and produce a friction which no man can imagine exactly who has not seen War" langue="en">
   Tout est très simple à la guerre, mais la chose la plus simple est difficile. Ces difficultés s'accumulent et produisent une friction que personne ne peut se représenter exactement s'il n'a pas vu la guerre.
 </Citation>
 
@@ -88,9 +100,9 @@ Un ordre mal transmis, une route boueuse, un régiment épuisé, un renseignemen
 
 <Timeline items={[
   { date: "1806", texte: "Défaite prussienne d'Iéna-Auerstaedt. Clausewitz est fait prisonnier." },
-  { date: "1812-1815", texte: "Refusant l'alliance forcée de la Prusse avec Napoléon, il sert dans l'armée russe. En 1815, il est chef d'état-major d'un corps d'armée prussien lors de la campagne de Belgique." },
-  { date: "16 novembre 1831", texte: "Il meurt du choléra à Breslau, à 51 ans." },
-  { date: "1832-1837", texte: "Son épouse, Marie von Brühl, publie ses œuvres, dont <strong>De la guerre</strong>." },
+  { date: "1812", texte: "Entré avec plusieurs autres officiers prussiens au service de la Russie, il est d'abord aide de camp du général Phul, puis participe, dans l'armée de Wittgenstein, à la négociation de la convention de Tauroggen avec York." },
+  { date: "Novembre 1831", texte: "Il meurt du choléra à Breslau." },
+  { date: "1832", texte: "Son épouse, Marie von Brühl, publie ses œuvres posthumes, dont <strong>De la guerre</strong>." },
   { date: "XIXe-XXe siècles", texte: "Moltke, Lénine, Mao, Eisenhower, Kissinger, Raymond Aron en font une référence intellectuelle." },
 ]} />
 
@@ -118,5 +130,5 @@ Le livre a servi des lecteurs que tout oppose. En France, Raymond Aron lui consa
 5. De la guerre, publié en 1832 par sa veuve, est inachevé : sa postérité, de Lénine à Aron, vient aussi de ses ambiguïtés.
 </ARetenir>
 
-[^bio]: Wikipédia, « Carl von Clausewitz » : capture après la bataille d'Auerstaedt le 14 octobre 1806 et deux ans de captivité ; service dans l'armée russe (1812-1815) ; mort du choléra à Breslau le 16 novembre 1831 ; publication de ses œuvres par Marie von Brühl entre 1832 et 1837 ; liste de ses lecteurs (Moltke, Lénine, Mao, Eisenhower, Kissinger, Aron).
-[^trinite]: Carl von Clausewitz, *De la guerre*, livre I, chapitre 1, § 28, « Résultat pour la théorie » (traduction de J. J. Graham, 1873).
+[^bio]: Marie von Clausewitz, préface à *De la guerre* (traduction anglaise de J. J. Graham, Project Gutenberg) : « In the campaign of 1806 he served as Aide-de-camp to Prince Augustus of Prussia; and being wounded and taken prisoner, he was sent into France until the close of that war. » ; « In 1812 Clausewitz, with several other Prussian officers, having entered the Russian service, his first appointment was as Aide-de-camp to General Phul. » ; « His death took place in November 1831. » Combat d'Auerstaedt : texte du livre, « the Prussians maintained a combat with 25,000, against Davoust, who had 28,000 ». https://www.gutenberg.org/cache/epub/1946/pg1946.txt
+[^trinite]: Carl von Clausewitz, *De la guerre*, livre I, chapitre 1, § 28, « Résultat pour la théorie » (traduction de J. J. Graham, 1873). https://www.gutenberg.org/cache/epub/1946/pg1946.txt

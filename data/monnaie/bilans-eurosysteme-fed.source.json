@@ -1,0 +1,8 @@
+{
+  "titre": "Total des actifs de l'Eurosystème et de la Réserve fédérale, fin d'année, 2002-2025, en billions (milliers de milliards) d'unités monétaires",
+  "producteur": "Banque centrale européenne (ECB Data Portal, bilan consolidé de l'Eurosystème) ; Réserve fédérale (rapport H.4.1, série WALCL diffusée par FRED)",
+  "jeu": "ECB ILM.W.U2.C.T000000.Z5.Z01 (millions d'euros, hebdomadaire) ; FRED WALCL (millions de dollars, hebdomadaire)",
+  "url": "https://data.ecb.europa.eu/data/datasets/ILM/ILM.W.U2.C.T000000.Z5.Z01",
+  "traitement": "Dernière observation hebdomadaire de chaque année, divisée par un million (billions = milliers de milliards). Les deux courbes sont en devises différentes (euro, dollar), sans conversion : elles montrent chacune l'ordre de grandeur et la trajectoire, pas un écart en valeur commune. Dernière semaine disponible au téléchargement : Eurosystème 2026-W41 = 5943911 millions d'euros ; Fed 2026-10-14 = 6755639 millions de dollars.",
+  "consulte": "2026-10-16"
+}

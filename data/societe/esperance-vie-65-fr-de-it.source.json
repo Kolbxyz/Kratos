@@ -1,0 +1,8 @@
+{
+  "titre": "Espérance de vie à 65 ans, France, Allemagne et Italie, 2005-2024",
+  "producteur": "Eurostat",
+  "jeu": "demo_mlexpec (âge Y65, sexes confondus, en années)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table",
+  "traitement": "Nombre d'années qu'une personne de 65 ans peut espérer vivre selon les taux de mortalité de l'année, arrondi à une décimale.",
+  "consulte": "2026-10-16"
+}

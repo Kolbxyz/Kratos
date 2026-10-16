@@ -1,0 +1,8 @@
+{
+  "titre": "Recettes de l'impôt sur les bénéfices des sociétés, en % du PIB, France, Irlande et Luxembourg, 2005 à 2024",
+  "producteur": "Eurostat, comptes nationaux des administrations publiques",
+  "jeu": "gov_10a_taxag (secteur S13, poste D51B, unité PC_GDP)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_taxag/default/table",
+  "traitement": "Arrondi à une décimale. Le dénominateur est le PIB de chaque pays, lui-même affecté par les profits des multinationales (Tørsløv, Wier et Zucman, 2018, rév. 2020).",
+  "consulte": "2026-10-16"
+}

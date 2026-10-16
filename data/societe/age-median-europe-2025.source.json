@@ -1,0 +1,8 @@
+{
+  "titre": "Âge médian de la population des pays européens, 2025",
+  "producteur": "Eurostat",
+  "jeu": "demo_pjanind (indicateur MEDAGEPOP)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table",
+  "traitement": "Âge médian au 1er janvier 2025, arrondi à une décimale, pour tous les pays du jeu publiés par Eurostat parmi ceux dessinés sur la carte.",
+  "consulte": "2026-10-16"
+}

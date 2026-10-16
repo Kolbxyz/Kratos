@@ -1,0 +1,74 @@
+---
+import Base from "../../layouts/Base.astro";
+import Medaillon from "../../components/Medaillon.astro";
+import { getLivres } from "../../lib/bibliotheque";
+import { PARCOURS } from "../../parcours";
+
+export async function getStaticPaths() {
+  return (await getLivres()).map((livre) => ({ params: { id: livre.id }, props: { livre } }));
+}
+const { livre } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const theme = PARCOURS[livre.parcours];
+const [titre] = livre.titre.split(/ \(/);
+---
+<Base titre={`${titre} · Bibliothèque`} description={livre.lecons[0].pourquoi}>
+  <article class="wrap" data-parcours={livre.parcours} data-pagefind-body>
+    <a class="chip retour" href={`${base}bibliotheque/`}>Bibliothèque</a>
+    <div class="fiche">
+      <div class="couv">
+        {livre.couverture
+          ? <img src={`${base}couvertures/${livre.couverture}`} alt={`Couverture : ${livre.titre}`} />
+          : <Medaillon id={livre.parcours} class="couv-forme" />}
+      </div>
+      <div class="texte">
+        <h1>{titre}</h1>
+        <p class="lede">{livre.auteur}, {livre.annee}</p>
+        <div class="meta">
+          <span class="chip tone">{theme.nom}</span>
+          {livre.pages && <span class="chip">{livre.pages} pages</span>}
+        </div>
+        <div class="actions">
+          {livre.url && <a class="btn" href={livre.url} rel="noopener">Lire ou consulter</a>}
+          {livre.ol && <a class="btn secondaire" href={livre.ol} rel="noopener">Fiche Open Library</a>}
+        </div>
+      </div>
+    </div>
+
+    <h2>Pourquoi le lire</h2>
+    <ul class="lecons">
+      {livre.lecons.map((l) => (
+        <li data-parcours={l.parcours}>
+          <p>{l.pourquoi}</p>
+          <a href={`${base}lecons/${l.id}/`}>Cité dans la leçon « {l.titre} »</a>
+        </li>
+      ))}
+    </ul>
+
+    {livre.sujets.length > 0 && (
+      <>
+        <h2>Sujets</h2>
+        <div class="meta">{livre.sujets.map((s) => <span class="chip">{s}</span>)}</div>
+        <p class="note sujets-note">Sujets, pages et couverture : Open Library. Titre, année et résumé viennent des leçons.</p>
+      </>
+    )}
+  </article>
+</Base>
+
+<style>
+  .wrap { max-width: 52rem; padding-top: 1.5rem; }
+  .fiche { display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; gap: 1.5rem 2rem; align-items: start; margin-top: 1rem; }
+  .couv { position: relative; display: grid; place-items: center; aspect-ratio: 2 / 3; overflow: hidden; border-radius: var(--r-xl) var(--r-m) var(--r-xl) var(--r-m); background: var(--tone-container); }
+  .couv img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .couv :global(.couv-forme) { width: 45%; }
+  .texte h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-stretch: 112%; margin-top: 0; }
+  .lede { margin: 0; }
+  .secondaire { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--rule); }
+  .lecons { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; font-family: var(--sans); }
+  .lecons li { padding: 1.1rem 1.3rem; border-radius: var(--r-l); background: var(--tone-container); color: var(--on-tone-container); }
+  .lecons p { margin: 0 0 0.5rem; font: 1rem/1.5 var(--serif); }
+  .lecons a { color: inherit; font-weight: 700; font-size: 0.9rem; }
+  .sujets-note { margin-top: 0.8rem; }
+  .retour { margin-top: 0.5rem; }
+  @media (max-width: 560px) { .fiche { grid-template-columns: 1fr; } .couv { max-width: 12rem; } }
+</style>

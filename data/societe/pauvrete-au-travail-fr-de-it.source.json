@@ -1,0 +1,8 @@
+{
+  "titre": "Taux de pauvreté des personnes en emploi de 18 à 64 ans, France, Allemagne et Italie, jusqu'en 2025",
+  "producteur": "Eurostat",
+  "jeu": "ilc_iw01 (âge Y18-64, sexes confondus, statut EMP : personnes en emploi ; enquête EU-SILC)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_iw01/default/table",
+  "traitement": "Part des personnes en emploi de 18 à 64 ans dont le revenu équivalent du ménage est sous 60 % du revenu équivalent médian national, arrondie à une décimale. Début de série variable selon le pays, d'après la disponibilité publiée par Eurostat.",
+  "consulte": "2026-10-16"
+}

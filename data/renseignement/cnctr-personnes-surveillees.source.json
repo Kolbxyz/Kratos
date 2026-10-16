@@ -1,0 +1,8 @@
+{
+  "titre": "Personnes ayant fait l'objet d'au moins une technique de renseignement, 2021-2025 (estimation de la CNCTR)",
+  "producteur": "Commission nationale de contrôle des techniques de renseignement (CNCTR)",
+  "jeu": "Rapport d'activité 2025, tableau de la p. 34",
+  "url": "https://cms.cnctr.fr/uploads/RAPPORT_CNCTR_2025_d5b15664a7.pdf",
+  "traitement": "Saisie manuelle de la ligne « Nombre de personnes surveillées ». Estimation de la CNCTR, avec une marge d'incertitude de 10 % depuis l'origine (p. 33). Les accès aux données de connexion en temps différé qui se bornent à identifier un abonné ne sont pas comptés. Le chiffre 2025 intègre la correction d'une erreur de comptage qui, selon la CNCTR, aurait donné environ 800 personnes de moins sans correction.",
+  "consulte": "2026-10-16"
+}

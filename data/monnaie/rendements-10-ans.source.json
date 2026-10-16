@@ -1,0 +1,8 @@
+{
+  "titre": "Rendement des obligations d'État à 10 ans (critère de convergence de Maastricht), moyenne annuelle en %, 2000-2025",
+  "producteur": "Eurostat",
+  "jeu": "irt_lt_mcby_a (rendements des obligations d'État à long terme, critère de convergence de Maastricht, moyenne annuelle)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/irt_lt_mcby_a/default/table",
+  "traitement": "Aucun : valeurs telles que publiées. Moyenne annuelle : elle lisse les pics de l'été 2011 et de juillet 2012.",
+  "consulte": "2026-10-16"
+}

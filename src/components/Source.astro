@@ -1,0 +1,14 @@
+---
+// One-line credit under a figure, built from the dataset's .source.json.
+import type { SourceMeta } from "../lib/donnees";
+interface Props { source: SourceMeta }
+const { source } = Astro.props;
+---
+<p class="source">
+  Source : <a href={source.url}>{source.producteur}</a>{source.jeu && <>, {source.jeu}</>}. Consulté le {source.consulte}.
+  {source.traitement && <> {source.traitement}</>}
+</p>
+
+<style>
+  .source { font: 0.8rem/1.4 var(--sans); color: var(--ink-3); margin: 0.6rem 0 0; }
+</style>

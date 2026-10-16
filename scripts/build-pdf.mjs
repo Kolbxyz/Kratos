@@ -35,7 +35,7 @@ for (const id of ids) {
     printBackground: true,
     displayHeaderFooter: true,
     headerTemplate: "<span></span>",
-    footerTemplate: `<div style="font:8px sans-serif;width:100%;padding:0 16mm;display:flex;justify-content:space-between;color:#666"><span>Leçons de pouvoir</span><span class="pageNumber"></span></div>`,
+    footerTemplate: `<div style="font:8px sans-serif;width:100%;padding:0 16mm;display:flex;justify-content:space-between;color:#666"><span>Kratos</span><span class="pageNumber"></span></div>`,
     margin: { top: "18mm", bottom: "20mm", left: "16mm", right: "16mm" },
   });
   console.log(`dist/pdf/${id}.pdf`);

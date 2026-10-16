@@ -8,6 +8,8 @@ const source = z.object({
   url: z.url(),
   consulte: z.iso.date(),
   primaire: z.boolean().default(false),
+  // Encyclopedia, press or popularisation, kept only to cross-check: never alone behind a figure or a quotation.
+  secondaire: z.boolean().default(false),
 });
 
 const image = z.object({
@@ -25,6 +27,8 @@ const lecture = z.object({
   annee: z.union([z.string(), z.number()]),
   pourquoi: z.string(),
   url: z.url().optional(),
+  // Shown in the library's "Pour commencer" shelf.
+  incontournable: z.boolean().default(false),
 });
 
 const lecons = defineCollection({

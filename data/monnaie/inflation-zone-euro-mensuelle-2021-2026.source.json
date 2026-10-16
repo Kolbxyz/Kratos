@@ -1,0 +1,8 @@
+{
+  "titre": "Inflation en zone euro (IPCH), variation annuelle mensuelle en %, depuis janvier 2021",
+  "producteur": "Eurostat",
+  "jeu": "prc_hicp_manr (taux de variation annuel, zone euro, tous produits)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_manr/default/table",
+  "traitement": "Aucun : valeurs telles que publiées. Sert à lire le pic de 2022 et le dernier mois disponible ; non tracée.",
+  "consulte": "2026-10-16"
+}

@@ -16,14 +16,25 @@ sources:
     url: "https://www.sciencespo.fr/cevipof/sites/sciencespo.fr.cevipof/files/BaroConf2026_infographieFChanvril_V17_PremiersResultats.pdf"
     consulte: "2026-10-15"
     primaire: true
-  - titre: "En 1969, le référendum qui chasse de Gaulle de l'Élysée"
-    auteur: "Public Sénat"
-    url: "https://www.publicsenat.fr/article/politique/en-1969-le-referendum-qui-chasse-de-gaulle-de-l-elysee-140357"
-    consulte: "2026-10-15"
-  - titre: "27 avril 1969 : de Gaulle perd son référendum"
-    auteur: "Hérodote"
-    url: "https://www.herodote.net/almanach-ID-807.php"
-    consulte: "2026-10-15"
+  - titre: "Le référendum de 1969 et le départ du général de Gaulle"
+    auteur: "Sénat, archives"
+    url: "https://archives.senat.fr/en-2025-le-senat-fete-ses-150-ans/le-referendum-de-1969-et-le-depart-du-general-de-gaulle.html"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Tableau récapitulatif des référendums de la Vᵉ République"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/referendum-sous-la-ve-republique/tableau-recapitulatif-des-referendums-de-la-veme-republique"
+    consulte: "2026-10-16"
+    primaire: true
+lectures:
+  - auteur: "Max Weber"
+    titre: "Économie et société"
+    annee: 1922
+    pourquoi: "Le texte où Weber expose les trois types de domination légitime : traditionnelle, charismatique et légale rationnelle."
+  - auteur: "Raymond Aron"
+    titre: "Les Étapes de la pensée sociologique"
+    annee: 1967
+    pourquoi: "Une présentation de Weber à côté de Marx, Durkheim et Pareto, pour situer sa méthode et ses concepts."
 ---
 import Chart from "../../components/Chart.astro";
 import Citation from "../../components/Citation.astro";
@@ -38,7 +49,7 @@ L'Allemagne vient de perdre la guerre. L'empereur a abdiqué, des conseils ouvri
 
 Ses auditeurs veulent entendre parler de révolution et de morale. Weber commence par une définition froide, devenue la plus citée de la science politique :
 
-<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conférence de Munich (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf">
+<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conférence de Munich (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf" original="Staat ist diejenige menschliche Gemeinschaft, welche innerhalb eines bestimmten Gebietes – dies: das „Gebiet“, gehört zum Merkmal – das Monopol legitimer physischer Gewaltsamkeit für sich (mit Erfolg) beansprucht." langue="de">
   L'État est cette communauté humaine qui, à l'intérieur d'un territoire déterminé, revendique avec succès pour elle-même le monopole de la violence physique légitime.
 </Citation>
 
@@ -86,7 +97,7 @@ La France de 1958 est un cas d'école. La Constitution crée un pouvoir **légal
   { date: "27 avril 1969", texte: "Référendum sur les régions et le Sénat : le non l'emporte avec <strong>52,41 %</strong>. Dans la nuit, de Gaulle annonce qu'il cesse d'exercer ses fonctions. Le charisme, désavoué, se retire." },
 ]} />
 
-Sources : Public Sénat et Hérodote (1969)[^1969].
+Sources : Conseil constitutionnel et archives du Sénat (1969)[^1969].
 
 Dans *Économie et société* (posthume, 1922), Weber a un nom pour ce que fait de Gaulle en 1962 : la **routinisation du charisme** (*Veralltäglichung*). Un pouvoir fondé sur une personne exceptionnelle doit, pour survivre à cette personne, se transformer en institution. L'élection présidentielle au suffrage universel transforme le charisme du fondateur en procédure.
 
@@ -111,7 +122,7 @@ Lu avec Weber, ce graphique dit quelque chose de précis :
 
 Weber termine sa conférence sur un avertissement aux idéalistes : l'éthique de **conviction** (agir selon ses principes, quelles qu'en soient les conséquences) ne suffit pas en politique. Il faut aussi une éthique de **responsabilité** (répondre des conséquences prévisibles de ses actes). Et il conclut :
 
-<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conclusion (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf">
+<Citation auteur="Max Weber" oeuvre="Politik als Beruf" annee="1919" reference="Conclusion (traduction)" url="https://de.wikisource.org/wiki/Politik_als_Beruf" original="Die Politik bedeutet ein starkes langsames Bohren von harten Brettern mit Leidenschaft und Augenmaß zugleich." langue="de">
   La politique consiste à percer lentement et vigoureusement des planches dures, avec à la fois de la passion et du coup d'œil.
 </Citation>
 
@@ -139,5 +150,5 @@ Weber termine sa conférence sur un avertissement aux idéalistes : l'éthique d
 5. Éthique de conviction et éthique de responsabilité : le politique doit répondre des conséquences de ses actes.
 </ARetenir>
 
-[^weber]: Max Weber, *Politik als Beruf*, conférence prononcée devant le Freistudentischer Bund de Munich, publiée chez Duncker & Humblot en 1919 (texte intégral sur Wikisource allemand).
-[^1969]: Public Sénat, « En 1969, le référendum qui chasse de Gaulle de l'Élysée » ; Hérodote, « 27 avril 1969 ». Le référendum de 1958 est sourcé dans la leçon sur le 49.3.
+[^weber]: Max Weber, *Politik als Beruf*, conférence prononcée devant le Freistudentischer Bund de Munich, publiée chez Duncker & Humblot en 1919 (texte intégral sur Wikisource allemand). https://de.wikisource.org/wiki/Politik_als_Beruf
+[^1969]: Conseil constitutionnel, « Tableau récapitulatif des référendums de la Vᵉ République » (27 avril 1969 : non 52,41 %) https://www.conseil-constitutionnel.fr/referendum-sous-la-ve-republique/tableau-recapitulatif-des-referendums-de-la-veme-republique ; Sénat, archives, « Le référendum de 1969 et le départ du général de Gaulle » (communiqué de la nuit du 27 au 28 avril : « Je cesse d'exercer mes fonctions de Président de la République ») https://archives.senat.fr/en-2025-le-senat-fete-ses-150-ans/le-referendum-de-1969-et-le-depart-du-general-de-gaulle.html. Le référendum de 1958 est sourcé dans la leçon sur le 49.3.

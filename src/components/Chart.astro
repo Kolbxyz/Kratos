@@ -1,10 +1,9 @@
 ---
 // Rendered to static SVG at build time so the chart is identical on screen, without JavaScript and in the PDF.
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import * as Plot from "@observablehq/plot";
-import { csvParse, autoType } from "d3-dsv";
 import { parseHTML } from "linkedom";
+import Source from "./Source.astro";
+import { charger, fmt } from "../lib/donnees";
 
 interface Props {
   src: string; // path under data/, e.g. "dette/dette-pib"
@@ -20,11 +19,7 @@ interface Props {
 }
 const { src, kind, x, y, series, titre, unite, label = unite, seuil, seuilLabel } = Astro.props;
 
-// Builds always run from the project root; import.meta.url points into the bundle, not the source tree.
-const root = join(process.cwd(), "data");
-const rows = csvParse(readFileSync(join(root, `${src}.csv`), "utf8"), autoType);
-const source = JSON.parse(readFileSync(join(root, `${src}.source.json`), "utf8"));
-const fmt = (v: number) => v.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
+const { rows, source } = charger(src);
 
 // Order follows first appearance in the CSV so colours stay attached to the entity, not to its rank.
 const names = series ? [...new Set(rows.map((r) => r[series]))] : [];
@@ -112,10 +107,7 @@ const cols = Object.keys(rows[0]);
   )}
   <div class="chart-svg wide" set:html={svgWide} />
   <div class="chart-svg narrow" set:html={svgNarrow} />
-  <p class="chart-source">
-    Source : <a href={source.url}>{source.producteur}</a>, {source.jeu}. Consulté le {source.consulte}.
-    {source.traitement && <> {source.traitement}</>}
-  </p>
+  <Source source={source} />
   <details class="no-print">
     <summary>Voir les données</summary>
     <div class="table-scroll">
@@ -138,7 +130,6 @@ const cols = Object.keys(rows[0]);
   @media print { .wide { display: block !important; } .narrow { display: none !important; } }
   .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; list-style: none; padding: 0; margin: 0 0 0.5rem; font: 0.85rem var(--sans); color: var(--ink-2); }
   .swatch { display: inline-block; width: 12px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
-  .chart-source { font: 0.8rem/1.4 var(--sans); color: var(--ink-3); margin: 0.6rem 0 0; }
   details { margin-top: 0.8rem; font-family: var(--sans); font-size: 0.85rem; }
   summary { display: inline-block; cursor: pointer; padding: 0.4rem 0.9rem; border-radius: 999px; background: var(--surface-2); font-weight: 600; }
   summary:hover { background: var(--tone-container); color: var(--on-tone-container); }

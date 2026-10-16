@@ -1,0 +1,8 @@
+{
+  "titre": "Représentants d'intérêts selon l'année de leur première publication au répertoire",
+  "producteur": "Haute Autorité pour la transparence de la vie publique (HATVP)",
+  "jeu": "Répertoire des représentants d'intérêts, vues fusionnées (1_informations_generales.csv, 2_actions.csv)",
+  "url": "https://www.data.gouv.fr/datasets/5d13692f634f41364f8929b8",
+  "traitement": "Une ligne par entité (identifiant representants_id), année de date_premiere_publication. Entités encore présentes dans le fichier, désinscrites comprises : les désinscriptions anciennes ne sont plus publiées, les premières années sont donc un minimum. Année en cours exclue (incomplète).",
+  "consulte": "2026-10-16"
+}

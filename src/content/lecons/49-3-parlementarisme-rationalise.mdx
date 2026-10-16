@@ -29,6 +29,7 @@ sources:
   - titre: "Liste des usages de l'article 49 alinéa 3 de la Constitution"
     auteur: "Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Liste_des_usages_de_l'article_49_alin%C3%A9a_3_de_la_Constitution_de_la_Cinqui%C3%A8me_R%C3%A9publique_fran%C3%A7aise"
+    secondaire: true
     consulte: "2026-10-15"
   - titre: "Motion de censure du gouvernement de Michel Barnier (scrutin du 4 décembre 2024)"
     auteur: "Datan, d'après les données de l'Assemblée nationale"
@@ -43,12 +44,22 @@ sources:
     url: "https://www.conseil-constitutionnel.fr/decision/1961/611AR16.htm"
     consulte: "2026-10-15"
     primaire: true
+lectures:
+  - auteur: "Michel Debré"
+    titre: "Discours devant le Conseil d'État, 27 août 1958"
+    annee: 1958
+    pourquoi: "Le texte où le principal rédacteur de la Constitution expose pourquoi le gouvernement reçoit des armes contre l'instabilité parlementaire. La source directe de l'article 49.3."
+  - auteur: "Boris Mirkine-Guetzévitch"
+    titre: "Les nouvelles tendances du droit constitutionnel"
+    annee: 1931
+    pourquoi: "Le livre où naît l'idée de parlementarisme rationalisé : encadrer par des règles écrites les mécanismes que la pratique laissait au rapport de forces."
 ---
 import Chart from "../../components/Chart.astro";
 import Citation from "../../components/Citation.astro";
 import Timeline from "../../components/Timeline.astro";
 import ARetenir from "../../components/ARetenir.astro";
 import Chiffre from "../../components/Chiffre.astro";
+import Schema from "../../components/Schema.astro";
 
 ## Un texte adopté sans vote
 
@@ -79,6 +90,21 @@ Le texte actuel de l'alinéa 3 est court :
 > « Le Premier ministre peut, après délibération du conseil des ministres, engager la responsabilité du Gouvernement devant l'Assemblée nationale sur le vote d'un projet de loi de finances ou de financement de la sécurité sociale. Dans ce cas, ce projet est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures qui suivent, est votée dans les conditions prévues à l'alinéa précédent. Le Premier ministre peut, en outre, recourir à cette procédure pour un autre projet ou une proposition de loi par session. »
 >
 > Constitution du 4 octobre 1958, article 49, alinéa 3.
+
+<Schema
+  titre="La procédure de l'article 49, alinéa 3, étape par étape"
+  noeuds={[
+    { id: "pm", nom: "Premier ministre" },
+    { id: "an", nom: "Assemblée nationale" },
+    { id: "adopte", nom: "Texte considéré comme adopté" },
+    { id: "demission", nom: "Démission du Gouvernement" },
+  ]}
+  liens={[
+    { de: "pm", vers: "an", verbe: "engage la responsabilité du Gouvernement sur un texte, après délibération du conseil des ministres", source: "Constitution, article 49, alinéa 3", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_49" },
+    { de: "an", vers: "adopte", verbe: "le texte est considéré comme adopté, sauf si une motion de censure, déposée dans les vingt-quatre heures, est votée", source: "Constitution, article 49, alinéa 3", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_49" },
+    { de: "an", vers: "demission", verbe: "la motion adoptée à la majorité des membres composant l'Assemblée oblige le Premier ministre à remettre la démission du Gouvernement", source: "Constitution, articles 49 (alinéa 2) et 50", url: "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur#article_50" },
+  ]}
+/>
 
 Le génie (ou le vice) du dispositif tient en une inversion : ce n'est plus au gouvernement de prouver qu'il a une majorité, c'est à l'opposition de prouver qu'il n'en a pas. Et une opposition divisée, qui refuse de mêler ses voix à celles d'adversaires qu'elle combat, y parvient rarement.
 
@@ -160,6 +186,6 @@ Plusieurs propositions de suppression ou d'encadrement supplémentaire ont été
 5. Seules deux censures ont abouti sous la Ve République : en 1962 et en 2024.
 </ARetenir>
 
-[^censure2023]: Assemblée nationale, tableau des motions de censure depuis 1958 (majorité requise : 287 ; voix obtenues : 278), et Datan, scrutin n° 1240 du 20 mars 2023.
-[^mirkine]: Boris Mirkine-Guetzévitch, *Les Nouvelles Tendances du droit constitutionnel*, Paris, Giard, 1928.
-[^art16]: Conseil constitutionnel, décision n° 61-1 AR16 du 23 avril 1961, qui constate la réunion des conditions de l'article 16. Le président de la République met fin à son application le 29 septembre 1961.
+[^censure2023]: Assemblée nationale, tableau des motions de censure depuis 1958 (majorité requise : 287 ; voix obtenues : 278), et Datan, scrutin n° 1240 du 20 mars 2023. https://www.assemblee-nationale.fr/dyn/16/scrutins/1240
+[^mirkine]: Boris Mirkine-Guetzévitch, « Les nouvelles tendances du droit constitutionnel », *Revue du droit public*, t. XLV, 1928, p. 5-53, repris dans *Les Nouvelles Tendances du droit constitutionnel*, Paris, Giard, 1931 (notice de la Bibliothèque nationale de France). https://catalogue.bnf.fr/ark:/12148/cb30953342f.public
+[^art16]: Conseil constitutionnel, décision n° 61-1 AR16 du 23 avril 1961, qui constate la réunion des conditions de l'article 16. Le président de la République met fin à son application le 29 septembre 1961. https://www.conseil-constitutionnel.fr/decision/1961/611AR16.htm

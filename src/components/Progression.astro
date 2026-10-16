@@ -1,0 +1,72 @@
+---
+// Reading progress lives in this browser only (localStorage): no account, no tracking.
+---
+<script>
+  const CLE_LUES = "lecons-lues";
+  const CLE_DERNIERE = "lecons-derniere";
+  const lire = (): string[] => {
+    try { return JSON.parse(localStorage.getItem(CLE_LUES) ?? "[]"); } catch { return []; }
+  };
+  const ecrire = (lues: string[], derniere?: string) => {
+    try {
+      localStorage.setItem(CLE_LUES, JSON.stringify(lues));
+      if (derniere) localStorage.setItem(CLE_DERNIERE, derniere);
+    } catch {}
+  };
+  const lues = new Set(lire());
+
+  // Home tiles: "3/6 leçons lues" and a bar.
+  document.querySelectorAll<HTMLElement>("[data-tuile]").forEach((t) => {
+    const ids = (t.dataset.ids ?? "").split(",").filter(Boolean);
+    const n = ids.filter((i) => lues.has(i)).length;
+    t.style.setProperty("--avancement", ids.length ? `${(n / ids.length) * 100}%` : "0%");
+    const txt = t.querySelector<HTMLElement>("[data-avancement]");
+    if (txt && n > 0) txt.textContent = `${n}/${ids.length} lues`;
+  });
+
+  // Parcours page: mark lessons already read.
+  document.querySelectorAll<HTMLElement>("[data-lecon]").forEach((li) => {
+    if (lues.has(li.dataset.lecon!)) li.classList.add("lue");
+  });
+
+  // Home: "Continue where you left off".
+  const suite = document.querySelector<HTMLAnchorElement>("[data-continuer]");
+  if (suite) {
+    let derniere: string | null = null;
+    try { derniere = localStorage.getItem(CLE_DERNIERE); } catch {}
+    if (derniere) {
+      suite.href = `${suite.dataset.base}lecons/${derniere}/`;
+      suite.hidden = false;
+      try {
+        const titre = JSON.parse(suite.dataset.titres ?? "{}")[derniere];
+        const nom = suite.querySelector("[data-nom-lecon]");
+        if (titre && nom) nom.textContent = ` : ${titre}`;
+      } catch {}
+    }
+  }
+
+  // Lesson page: remember the lesson, mark it read on button or at the end of the article.
+  const bouton = document.querySelector<HTMLButtonElement>("[data-marquer-lue]");
+  if (bouton) {
+    const id = bouton.dataset.marquerLue!;
+    const maj = () => {
+      const lue = lues.has(id);
+      bouton.setAttribute("aria-pressed", String(lue));
+      bouton.textContent = lue ? "Leçon lue ✓" : "Marquer comme lue";
+    };
+    const marquer = (v: boolean) => {
+      v ? lues.add(id) : lues.delete(id);
+      ecrire([...lues], id);
+      maj();
+    };
+    ecrire([...lues], id);
+    maj();
+    bouton.addEventListener("click", () => marquer(!lues.has(id)));
+    const fin = document.querySelector("[data-fin-lecon]");
+    if (fin) {
+      new IntersectionObserver((e, obs) => {
+        if (e.some((x) => x.isIntersecting)) { if (!lues.has(id)) marquer(true); obs.disconnect(); }
+      }).observe(fin);
+    }
+  }
+</script>

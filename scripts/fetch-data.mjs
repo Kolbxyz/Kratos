@@ -1,15 +1,5 @@
 // Re-downloads every automated dataset so figures can be re-checked against their source at any time.
-import { writeFile } from "node:fs/promises";
-
-const today = new Date().toISOString().slice(0, 10);
-
-async function save(base, rows, meta) {
-  const cols = Object.keys(rows[0]);
-  const csv = [cols.join(","), ...rows.map((r) => cols.map((c) => r[c]).join(","))].join("\n") + "\n";
-  await writeFile(`${base}.csv`, csv);
-  await writeFile(`${base}.source.json`, JSON.stringify({ ...meta, consulte: today }, null, 2) + "\n");
-  console.log(`${base}.csv: ${rows.length} lignes`);
-}
+import { save } from "./lib/save.mjs";
 
 async function eurostatDebt() {
   // France first: the first series takes the primary colour slot.

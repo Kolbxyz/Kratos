@@ -1,0 +1,8 @@
+{
+  "titre": "Indice de démocratie électorale (V-Dem) : France depuis 1789, Russie et Iran depuis 1900",
+  "producteur": "V-Dem Institute (Université de Göteborg), jeu de données v16 (mars 2026), traité par Our World in Data",
+  "jeu": "Electoral democracy index (electdem_vdem__estimate_best), estimation centrale, de 0 à 1",
+  "url": "https://ourworldindata.org/grapher/electoral-democracy-index",
+  "traitement": "Téléchargement du fichier complet, filtre sur trois entités (France depuis 1789, Russia et Iran depuis 1900), années sans valeur écartées. « Russia » désigne dans V-Dem le territoire russe, URSS comprise. L'indice mesure l'élection des dirigeants au suffrage étendu, des élections libres et équitables, et les libertés d'association et d'expression : c'est une estimation d'experts, pas un décompte d'événements. Licence V-Dem CC BY-SA 4.0, traitement Our World in Data CC BY.",
+  "consulte": "2026-10-16"
+}

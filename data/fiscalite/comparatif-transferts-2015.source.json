@@ -1,0 +1,8 @@
+{
+  "titre": "The Missing Profits of Nations, tableau 2 : profits transférés, estimations par pays (2015)",
+  "producteur": "Thomas Tørsløv, Ludvig Wier, Gabriel Zucman, NBER Working Paper 24701 (juin 2018, révisé en avril 2020)",
+  "url": "https://www.nber.org/system/files/working_papers/w24701/w24701.pdf",
+  "jeu": "Colonnes « Shifted profits » et « Corp. tax revenue loss/gain (% collected) » du tableau 2, lignes France, Germany, Italy",
+  "traitement": "Saisie manuelle de trois lignes du tableau. Estimations de modèle pour 2015, pas des montants observés.",
+  "consulte": "2026-10-16"
+}

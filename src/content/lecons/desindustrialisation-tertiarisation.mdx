@@ -1,0 +1,207 @@
+---
+titre: "Désindustrialisation et tertiarisation : ce que disent les emplois"
+resume: "L'industrie française a perdu 1,9 million d'emplois entre 1980 et 2007, et les services en emploient 81 % en 2025. Qui l'explique, comment, et ce que la France, l'Allemagne et l'Italie ont fait différemment."
+parcours: economie
+ordre: 10
+lecture_min: 15
+verifie_le: null
+sources:
+  - titre: "Le recul de l'emploi industriel en France entre 1980 et 2007 : ampleur et principaux déterminants, un état des lieux (Économie et Statistique n° 438-440)"
+    auteur: "Lilas Demmou, Insee"
+    url: "https://www.insee.fr/fr/statistiques/fichier/1377172/ES438R.pdf"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "National accounts employment data by industry up to NACE A*10 (nama_10_a10_e) : emploi, concept intérieur, milliers de personnes"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Manufacturing, value added (% of GDP), NV.IND.MANF.ZS"
+    auteur: "Banque mondiale, comptes nationaux (données de la Banque mondiale et de l'OCDE)"
+    url: "https://data.worldbank.org/indicator/NV.IND.MANF.ZS"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "The China Syndrome: Local Labor Market Effects of Import Competition in the United States (NBER Working Paper 18054)"
+    auteur: "David Autor, David Dorn et Gordon Hanson"
+    url: "https://www.nber.org/papers/w18054"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Gross value added and income by main industry (nama_10_a10) : valeur ajoutée brute en volumes chaînés"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+lectures:
+  - auteur: "Pierre Veltz"
+    titre: "La Société hyper-industrielle : le nouveau capitalisme productif"
+    annee: 2017
+    pourquoi: "L'argument selon lequel l'industrie et les services s'imbriquent, ce qui change la lecture des statistiques de tertiarisation."
+  - auteur: "Dani Rodrik"
+    titre: "Premature Deindustrialization (Journal of Economic Growth, vol. 21)"
+    annee: 2016
+    pourquoi: "L'extension de la question aux pays en développement : la part de l'industrie y recule à des niveaux de revenu plus bas que dans les pays riches."
+---
+import Chart from "../../components/Chart.astro";
+import Comparatif from "../../components/Comparatif.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+Entre 1980 et 2007, l'industrie française est passée de **5 327 400 à 3 414 000 emplois**, soit **1 913 500 emplois de moins** et une baisse de 36 % de ses effectifs[^demmou]. Dans le même temps, les services ont pris le relais : selon Eurostat, ils représentent **56,3 % de l'emploi français en 1975 et 81,1 % en 2025**, pendant que l'industrie passe de **24,7 % à 10,1 %**[^emploi].
+
+<div class="chiffres">
+  <Chiffre valeur="1 913 500" label="emplois industriels perdus en France entre 1980 et 2007 (5 327 400 puis 3 414 000, soit moins 36 %)" source="Insee, Économie et Statistique n° 438-440, Demmou" url="https://www.insee.fr/fr/statistiques/fichier/1377172/ES438R.pdf" date="1980-2007" forme="gemme" />
+  <Chiffre valeur="24,7 % à 10,1 %" label="part de l'industrie (NACE B à E) dans l'emploi total en France, de 1975 à 2025" source="Eurostat, nama_10_a10_e" url="https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table" date="1975-2025" forme="soleil" />
+  <Chiffre valeur="17,5 %" label="part de l'industrie dans l'emploi allemand, contre 10,1 % en France et 16,3 % en Italie" source="Eurostat, nama_10_a10_e" url="https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table" date="2024" forme="trefle" />
+</div>
+
+**Idée centrale : le recul de l'industrie est un fait mesurable dans les trois pays, mais sa cause n'est pas unique, et une partie du recul est apparente.** Lilas Demmou, de l'Insee, distingue trois déterminants : l'externalisation de tâches vers les services, les gains de productivité conjugués à l'évolution de la demande, et la concurrence étrangère[^demmou]. Le recul de l'emploi industriel ne signifie donc pas que les mêmes emplois ont disparu : une partie a changé d'étiquette statistique.
+
+Cette leçon s'arrête à l'emploi et à la valeur ajoutée. Le commerce international et le « choc chinois » sont dans la leçon sur Ricardo, qu'elle ne répète pas. Elle ne traite pas des territoires : aucune source locale (bassins d'emploi) n'a été lue.
+
+## Chapitre 1 : définir et mesurer
+
+Eurostat classe les emplois par branche d'activité selon la nomenclature européenne NACE. L'**industrie** au sens de cette leçon regroupe les branches B à E : industries extractives, industrie manufacturière, énergie, eau et déchets. La construction (F) n'en fait pas partie. Les **services** regroupent les branches G à U : commerce, transports, information, finance, immobilier, services aux entreprises, administration publique, éducation, santé et autres services[^emploi].
+
+Cette définition des services inclut les services publics. Le mot « tertiarisation » désigne la croissance de cette part dans l'emploi ; Demmou parle, elle, de la « forte croissance du secteur des services marchands », qu'elle définit comme le commerce, les transports, les activités financières et immobilières, les services aux entreprises et les services aux particuliers[^demmou].
+
+Trois évolutions vont ensemble, selon Demmou : un recul de l'emploi industriel, un recul de la contribution de l'industrie au PIB et une forte croissance du secteur des services marchands. Elle écrit que ce phénomène « touche la France comme l'ensemble des économies développées »[^demmou].
+
+## Chapitre 2 : la France, de 1980 à 2007
+
+La perte de 1 913 500 emplois industriels entre 1980 et 2007 se concentre sur l'industrie manufacturière, qui représente **96 %** des pertes[^demmou]. Selon Demmou, la baisse varie fortement selon les branches sur 25 ans :
+
+- **Biens de consommation** : 52 % des effectifs en moins.
+- **Automobile et biens intermédiaires** : de l'ordre de 40 %.
+- **Énergie et biens d'équipement** : environ 30 %.
+- **Industrie agroalimentaire** : seulement 1 %[^demmou].
+
+<Chart
+  src="economie/emploi-industrie-part-fr-de-it"
+  kind="line"
+  x="annee"
+  y="part"
+  series="pays"
+  titre="Part de l'industrie (NACE B à E) dans l'emploi total, France, Allemagne et Italie (Eurostat)"
+  unite="%"
+/>
+
+Selon Eurostat, la part de l'industrie dans l'emploi total français tombe de **24,7 % en 1975 à 14,9 % en 2000 et 10,1 % en 2025**[^emploi]. Les deux autres pays ont une série plus courte : l'Allemagne passe de 28,2 % en 1991 à 19,6 % en 2008 et 17,3 % en 2025, l'Italie de 22,3 % en 1995 à 17,9 % en 2010 et 16,0 % en 2025[^emploi].
+
+## Chapitre 3 : la France, l'Allemagne et l'Italie
+
+<Chart
+  src="economie/industrie-manufacturiere-part-pib-fr-de-it"
+  kind="line"
+  x="annee"
+  y="part_pib"
+  series="pays"
+  titre="Valeur ajoutée de l'industrie manufacturière, en % du PIB, France, Allemagne et Italie (Banque mondiale)"
+  unite="% du PIB"
+/>
+
+La valeur ajoutée de l'industrie manufacturière française passe de **20,1 % du PIB en 1970 à 14,5 % en 1998 et 9,5 % en 2025**. L'Allemagne, dont la série de la Banque mondiale commence en 1991, passe de 24,6 % à 19,8 % en 2008 puis 17,6 % en 2025. L'Italie, de 20,2 % en 1990 à 15,5 % en 2008 puis 15,0 % en 2025[^va].
+
+<Comparatif
+  src="economie/comparatif-industrie-fr-de-it-2024"
+  titre="France, Allemagne, Italie en 2024 : industrie et services dans l'emploi, industrie manufacturière dans le PIB"
+/>
+
+En 2024, l'industrie représente **10,1 % de l'emploi en France**, 17,5 % en Allemagne et 16,3 % en Italie ; les services 81,0 %, 75,5 % et 73,2 %. L'industrie manufacturière pèse 9,6 % du PIB français, 18,0 % du PIB allemand et 15,1 % du PIB italien[^emploi][^va].
+
+Ces séries montrent un écart de niveau et de rythme. Elles n'expliquent pas pourquoi l'écart existe : aucune source lue pour cette leçon n'étudie la comparaison France-Allemagne.
+
+## Chapitre 4 : les trois déterminants selon Demmou
+
+Demmou chiffre trois causes du recul de l'emploi industriel français entre 1980 et 2007. Ses résultats, tels que publiés dans le résumé de l'article :
+
+<Positions items={[
+  { titre: "L'externalisation vers les services", sous_titre: "déterminant interne", forme: "arche", points: [
+    "Contribue pour 25 % aux destructions d'emplois industriels de 1980 à 2007[^demmou].",
+    "Dans le texte, l'auteur la chiffre à 20-25 % sur la période et à seulement 1 à 5 % depuis 2000[^demmou].",
+    "Estimation : 380 000 emplois transférés de l'industrie vers les services aux entreprises, soit 14 000 par an, contre 71 000 pertes d'emplois industriels par an en moyenne. Ces pertes sont dites « fictives » : ce sont des emplois transférés et non détruits[^demmou].",
+  ]},
+  { titre: "Productivité et structure de la demande", sous_titre: "déterminant interne", forme: "gemme", points: [
+    "Contribue pour 30 % aux destructions d'emplois industriels de 1980 à 2007[^demmou].",
+    "Mécanisme décrit : les gains de productivité réduisent, toutes choses égales par ailleurs, les besoins en travail, et la structure de la demande se déplace avec le temps[^demmou].",
+  ]},
+  { titre: "La concurrence étrangère", sous_titre: "déterminant externe", forme: "soleil", points: [
+    "Rôle estimé entre 13 % (approche comptable) et 40 % (approche économétrique) des destructions d'emplois observées[^demmou].",
+    "L'auteur écrit que l'évaluation est moins précise que pour les deux autres déterminants[^demmou].",
+  ]},
+]} />
+
+Les trois pourcentages ne forment pas une décomposition en 100 % : 25 % plus 30 % plus une fourchette de 13 à 40 % donnent entre 68 % et 95 %[^demmou].
+
+L'étude porte sur la France jusqu'en 2007. Le cas américain, étudié par Autor, Dorn et Hanson sur 1990-2007, se trouve dans la leçon sur Ricardo : leur résultat est que la concurrence chinoise explique, au minimum, un quart du recul de l'emploi industriel américain[^adh]. Les deux études n'ont ni le même pays, ni la même méthode, ni le même résultat : la leçon ne les additionne pas.
+
+## Chapitre 5 : la productivité de l'industrie
+
+<Chart
+  src="economie/productivite-france-industrie-ensemble"
+  kind="line"
+  x="annee"
+  y="indice"
+  series="branche"
+  titre="France : productivité apparente du travail (valeur ajoutée en volume par personne en emploi), industrie et ensemble de l'économie, base 100 en 2000 (Eurostat)"
+  unite="indice"
+/>
+
+Le deuxième déterminant de Demmou, les gains de productivité, se mesure par la valeur ajoutée en volume rapportée à l'emploi. Selon Eurostat, la productivité apparente par personne en emploi de l'**industrie française** augmente de **41,6 % entre 2000 et 2025**, celle de l'ensemble de l'économie de 15,6 %[^prod].
+
+<Comparatif
+  src="economie/comparatif-productivite-fr-de-it"
+  titre="France, Allemagne, Italie : hausse de la productivité apparente du travail entre 2000 et 2025, industrie et ensemble de l'économie (Eurostat)"
+/>
+
+La même comparaison donne **+35,3 % pour l'industrie allemande** contre +14,6 % pour l'ensemble de l'économie, et **+8,6 % pour l'industrie italienne** contre un recul de 3,0 % pour l'ensemble de l'économie italienne[^prod].
+
+Dans les trois pays, l'industrie produit donc plus par personne en emploi qu'en 2000, et davantage que l'ensemble de l'économie. Cela correspond au mécanisme que décrit Demmou : les gains de productivité réduisent, toutes choses égales par ailleurs, les besoins en travail[^demmou]. Les données ne mesurent pas la part du recul de l'emploi due à ces gains : cette part est celle que Demmou chiffre à 30 % pour la France de 1980 à 2007, avec la structure de la demande. La mesure d'Eurostat est une productivité par emploi, non par heure travaillée.
+
+## Chapitre 6 : la tertiarisation
+
+<Chart
+  src="economie/emploi-services-part-fr-de-it"
+  kind="line"
+  x="annee"
+  y="part"
+  series="pays"
+  titre="Part des services (NACE G à U) dans l'emploi total, France, Allemagne et Italie (Eurostat)"
+  unite="%"
+/>
+
+La part des services dans l'emploi total français passe de **56,3 % en 1975 à 75,6 % en 2000 et 81,1 % en 2025**. L'Allemagne passe de 61,3 % en 1991 à 73,1 % en 2008 et 75,9 % en 2025, l'Italie de 65,5 % en 1995 à 70,6 % en 2010 et 73,4 % en 2025[^emploi].
+
+Cette hausse est la contrepartie de la baisse de l'industrie, mais pas sa copie : les services de la série d'Eurostat incluent l'administration publique, l'éducation et la santé, qui n'ont pas de lien direct avec les usines. Et une partie des emplois de services est d'origine industrielle : c'est l'externalisation mesurée par Demmou, qui fait passer des emplois d'une branche à l'autre sans les détruire[^demmou].
+
+## Le débat : déclin ou mutation ?
+
+Demmou ouvre son article par la question que se posent les pouvoirs publics, et qui structure le débat :
+
+<Positions items={[
+  { titre: "Une société postindustrielle", sous_titre: "première lecture formulée par Demmou", forme: "arche", points: [
+    "Les destructions d'emplois industriels accompagnent un processus où la fabrication de produits serait abandonnée au profit des activités de services[^demmou].",
+  ]},
+  { titre: "Une mauvaise performance économique", sous_titre: "seconde lecture formulée par Demmou", forme: "gemme", points: [
+    "Les destructions d'emplois industriels seraient à associer à de mauvaises performances économiques, contre lesquelles il serait nécessaire et possible de lutter[^demmou].",
+  ]},
+]} />
+
+Les résultats de l'article donnent des éléments aux deux lectures : le poids de l'externalisation et de la productivité (55 % cumulés) plaide pour un changement de structure, la fourchette de 13 à 40 % attribuée à la concurrence étrangère pour une part de perte de compétitivité[^demmou]. La leçon reprend ce cadrage et ne tranche pas.
+
+## À retenir
+
+<ARetenir>
+1. L'industrie française a perdu 1 913 500 emplois entre 1980 et 2007 (de 5 327 400 à 3 414 000, moins 36 %), dont 96 % dans l'industrie manufacturière.
+2. En 2024, l'industrie représente 10,1 % de l'emploi en France, 17,5 % en Allemagne, 16,3 % en Italie ; les services 81,0 %, 75,5 %, 73,2 %.
+3. Selon Demmou (Insee), l'externalisation explique 25 % des pertes industrielles, la productivité et la demande 30 %, la concurrence étrangère entre 13 et 40 % selon la méthode.
+4. Une partie du recul industriel est apparente : des emplois transférés vers les services aux entreprises (380 000 sur 1980-2007), non détruits.
+5. La leçon n'étudie ni les territoires ni les politiques industrielles : aucune source locale n'a été lue.
+</ARetenir>
+
+[^demmou]: Lilas Demmou, « Le recul de l'emploi industriel en France entre 1980 et 2007 : ampleur et principaux déterminants, un état des lieux », Économie et Statistique n° 438-440, Insee, 2010 : résumé (trois transformations concomitantes ; 25 % et 30 % pour les deux déterminants internes ; 13 % et 40 % pour la concurrence étrangère), introduction (1 913 500 emplois perdus, de 5 327 400 à 3 414 000, moins 36 %, 96 % dans l'industrie manufacturière ; baisses par branche : 52 % pour les biens de consommation, environ 40 % pour l'automobile et les biens intermédiaires, environ 30 % pour l'énergie et les biens d'équipement, 1 % pour l'agroalimentaire), partie sur l'externalisation (380 000 emplois, 14 000 par an, 71 000 pertes annuelles, 20 à 25 % de la baisse, 1 à 5 % depuis 2000, pertes « fictives »). https://www.insee.fr/fr/statistiques/fichier/1377172/ES438R.pdf
+[^emploi]: Eurostat, nama_10_a10_e (emploi, concept intérieur, milliers de personnes ; branches NACE B-E pour l'industrie, G-I à R-U pour les services), traité dans `data/economie/emploi-industrie-part-fr-de-it.csv`, `data/economie/emploi-services-part-fr-de-it.csv` et `data/economie/comparatif-industrie-fr-de-it-2024.csv` : industrie France 24,7 % (1975), 14,9 % (2000), 10,1 % (2025) ; Allemagne 28,2 % (1991), 19,6 % (2008), 17,3 % (2025) ; Italie 22,3 % (1995), 17,9 % (2010), 16,0 % (2025) ; services France 56,3 % (1975), 75,6 % (2000), 81,1 % (2025) ; Allemagne 61,3 % (1991), 73,1 % (2008), 75,9 % (2025) ; Italie 65,5 % (1995), 70,6 % (2010), 73,4 % (2025) ; 2024 : industrie 10,1 % (France), 17,5 % (Allemagne), 16,3 % (Italie), services 81,0 %, 75,5 %, 73,2 %. https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10_e/default/table
+[^va]: Banque mondiale, NV.IND.MANF.ZS (valeur ajoutée de l'industrie manufacturière, % du PIB), traité dans `data/economie/industrie-manufacturiere-part-pib-fr-de-it.csv` : France 20,1 % (1970), 14,5 % (1998), 9,5 % (2025) ; Allemagne 24,6 % (1991), 19,8 % (2008), 17,6 % (2025) ; Italie 20,2 % (1990), 15,5 % (2008), 15,0 % (2025) ; 2024 : 9,6 % (France), 18,0 % (Allemagne), 15,1 % (Italie). https://data.worldbank.org/indicator/NV.IND.MANF.ZS
+[^adh]: David Autor, David Dorn et Gordon Hanson, « The China Syndrome: Local Labor Market Effects of Import Competition in the United States », NBER Working Paper 18054, mai 2012, résumé : l'exposition à la concurrence chinoise « explains one-quarter of the contemporaneous aggregate decline in U.S. manufacturing employment » (estimation conservatrice, 1990-2007). https://www.nber.org/papers/w18054
+[^prod]: Eurostat, nama_10_a10 (valeur ajoutée brute B1G, volumes chaînés 2020, branche B à E et total) divisée par nama_10_a10_e (emploi, concept intérieur), traité dans `data/economie/productivite-france-industrie-ensemble.csv` et `data/economie/comparatif-productivite-fr-de-it.csv` : hausse 2000-2025 de la productivité par emploi, industrie / ensemble de l'économie : France +41,6 % / +15,6 % ; Allemagne +35,3 % / +14,6 % ; Italie +8,6 % / moins 3,0 %. https://ec.europa.eu/eurostat/databrowser/view/nama_10_a10/default/table

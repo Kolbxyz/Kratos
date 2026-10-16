@@ -1,0 +1,251 @@
+---
+titre: "Vieillir en démocratie : âge, travail et retraites"
+resume: "L'âge médian monte, les seniors travaillent plus, les dépenses de retraite pèsent 10 à 14 % du PIB. Comment la France, l'Allemagne et l'Italie ont modifié l'âge de départ, avec leurs textes."
+parcours: societe
+ordre: 6
+lecture_min: 16
+verifie_le: null
+sources:
+  - titre: "Décision n° 2023-849 DC du 14 avril 2023, loi de financement rectificative de la sécurité sociale pour 2023"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/2023/2023849DC.htm"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Sozialgesetzbuch (SGB) VI, § 35 : Regelaltersrente (67 ans)"
+    auteur: "Bundesministerium der Justiz, Gesetze im Internet"
+    url: "https://www.gesetze-im-internet.de/sgb_6/__35.html"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Sozialgesetzbuch (SGB) VI, § 235 : Regelaltersrente, relèvement progressif pour les assurés nés avant 1964"
+    auteur: "Bundesministerium der Justiz, Gesetze im Internet"
+    url: "https://www.gesetze-im-internet.de/sgb_6/__235.html"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Decreto-legge 6 dicembre 2011, n. 201, art. 24 : disposizioni in materia di trattamenti pensionistici (texte consolidé)"
+    auteur: "Normattiva, Presidenza del Consiglio dei ministri"
+    url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2011-12-06;201~art24"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Decreto-legge 6 dicembre 2011, n. 201 (Gazzetta Ufficiale n. 284 du 6 décembre 2011)"
+    auteur: "Gazzetta Ufficiale della Repubblica Italiana"
+    url: "https://www.gazzettaufficiale.it/eli/id/2011/12/06/011G0247/sg"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Population structure indicators at national level (demo_pjanind) : âge médian et rapport de dépendance"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Population on 1 January by age group and sex (demo_pjangroup)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/demo_pjangroup/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Life expectancy by age and sex (demo_mlexpec)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Population on 1st January by age, sex and type of projection (proj_23np, EUROPOP2023)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/proj_23np/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "Employment and labour force by sex and age, annual data (lfsi_emp_a)"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+  - titre: "General government expenditure by function, COFOG (gov_10a_exp), fonction 10.2 Vieillesse"
+    auteur: "Eurostat"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table"
+    consulte: "2026-10-16"
+    primaire: true
+lectures:
+  - auteur: "Gøsta Esping-Andersen"
+    titre: "The Three Worlds of Welfare Capitalism"
+    annee: 1990
+    pourquoi: "La typologie classique des États-providence (libéral, conservateur, social-démocrate), qui aide à comparer les systèmes de retraite de la France, de l'Allemagne et de l'Italie."
+  - auteur: "Bruno Palier"
+    titre: "La Réforme des retraites"
+    annee: 2010
+    pourquoi: "Un panorama des réformes des retraites en France et en Europe, avec leurs logiques institutionnelles."
+---
+import Chart from "../../components/Chart.astro";
+import Carte from "../../components/Carte.astro";
+import Comparatif from "../../components/Comparatif.astro";
+import Timeline from "../../components/Timeline.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+Au 1er janvier 2025, la moitié des Français a plus de **42,8 ans**, la moitié des Allemands plus de **45,5 ans** et la moitié des Italiens plus de **49,1 ans**[^medage]. En 1990 (1991 pour la France), les trois âges médians étaient de 34,7, 38,1 et 36,9 ans[^medage]. En trente-cinq ans, l'Italie a gagné 12,2 ans d'âge médian.
+
+<div class="chiffres">
+  <Chiffre valeur="49,1 ans" label="âge médian de l'Italie, le plus élevé des 36 pays de la carte ; France 42,8 ans, Allemagne 45,5 ans" source="Eurostat, demo_pjanind (MEDAGEPOP)" url="https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table" date="1er janvier 2025" forme="gemme" />
+  <Chiffre valeur="28,3 %" label="des Français de 20 ans et plus ont 65 ans ou plus (Allemagne 28,0 %, Italie 29,8 %)" source="Eurostat, demo_pjangroup, calcul de la leçon" url="https://ec.europa.eu/eurostat/databrowser/view/demo_pjangroup/default/table" date="1er janvier 2025" forme="soleil" />
+  <Chiffre valeur="62 à 64 ans" label="report de l'âge légal de départ en France, validé par le Conseil constitutionnel (article 10 de la loi de 2023)" source="Conseil constitutionnel, décision 2023-849 DC, paragraphe 92" url="https://www.conseil-constitutionnel.fr/decision/2023/2023849DC.htm" date="14 avril 2023" forme="trefle" />
+</div>
+
+**Idée centrale : trois démocraties voisines vieillissent au même rythme, mais choisissent des instruments juridiques différents pour réagir.** Une loi de financement de la sécurité sociale en France, un code social à relèvement progressif en Allemagne, un décret-loi d'urgence en Italie. Cette leçon met côte à côte les chiffres (Eurostat) et les textes (Conseil constitutionnel, SGB VI, décret-loi 201/2011).
+
+Elle ne traite ni de la natalité ni de la taille des ménages, déjà vues dans la leçon sur l'individu, ni de la procédure du 49.3 et des manifestations de 2023, vues dans les leçons sur le 49.3 et la psychologie des foules.
+
+## Chapitre 1 : les chiffres du vieillissement
+
+<Chart
+  src="societe/age-median-fr-de-it"
+  kind="line"
+  x="annee"
+  y="age_median"
+  series="pays"
+  titre="Âge médian de la population, France, Allemagne et Italie, depuis 1990 (Eurostat)"
+  unite="ans"
+/>
+
+L'âge médian est l'âge qui partage la population en deux moitiés égales. Il augmente dans les trois pays depuis 1990, à des vitesses différentes : **+8,1 ans en France** (de 34,7 en 1991 à 42,8 en 2025), **+7,4 ans en Allemagne** (de 38,1 en 1990 à 45,5) et **+12,2 ans en Italie** (de 36,9 à 49,1)[^medage]. L'Allemagne était plus âgée que l'Italie en 1990 ; l'Italie l'a dépassée.
+
+<Carte
+  src="societe/age-median-europe-2025"
+  titre="Âge médian de la population des pays européens, au 1er janvier 2025 (Ukraine : non publié par Eurostat dans ce jeu)"
+  unite="ans"
+/>
+
+La carte donne l'écart au sein de l'Europe : de **34,4 ans en Turquie** et 37,2 ans en Islande à **49,1 ans en Italie**, avec 47,3 ans en Bulgarie et au Portugal[^medage].
+
+Deux autres indicateurs complètent l'âge médian :
+
+<Comparatif
+  src="societe/comparatif-vieillissement-fr-de-it"
+  titre="France, Allemagne, Italie : poids des 65 ans et plus, emploi des 55-64 ans, dépenses de vieillesse (dernière année publiée)"
+/>
+
+Le **rapport de dépendance des personnes âgées** compte les personnes de 65 ans et plus pour 100 personnes de 15 à 64 ans : 35,5 en France, 35,9 en Allemagne et 39,0 en Italie au 1er janvier 2025, contre 21,2 en France (1991), 22,0 en Allemagne et 21,5 en Italie (1990)[^dep]. La **part des 65 ans et plus parmi les 20 ans et plus** vaut 28,3 % en France, 28,0 % en Allemagne et 29,8 % en Italie[^adultes]. Ce dernier chiffre mesure le poids des personnes âgées parmi les adultes ; il ne mesure pas le corps électoral, dont la définition (âge du vote, nationalité, inscription) varie d'un pays à l'autre.
+
+## Chapitre 2 : le travail des seniors
+
+<Chart
+  src="societe/emploi-55-64-fr-de-it"
+  kind="line"
+  x="annee"
+  y="taux"
+  series="pays"
+  titre="Taux d'emploi des 55 à 64 ans, France, Allemagne et Italie (Eurostat, en % de la population du même âge)"
+  unite="%"
+/>
+
+Le taux d'emploi des 55 à 64 ans a fortement augmenté. En France, il passe de **39,8 % en 2005 à 50,1 % en 2015 puis 61,7 % en 2025**. En Allemagne, la série d'Eurostat commence en 2009 à 55,3 % et atteint **75,3 % en 2025**. En Italie, elle passe de 35,3 % en 2009 à 51,9 % en 2017 et **61,2 % en 2025**[^emploi].
+
+En 2025, le taux d'emploi des 55-64 ans est inférieur d'environ 14 points en France et en Italie à celui de l'Allemagne (75,3 % contre 61,7 % et 61,2 %). Les séries ne permettent pas d'attribuer la hausse à une réforme précise : un taux d'emploi dépend aussi de la composition des générations et de la conjoncture, et ces facteurs ne sont pas mesurés ici.
+
+## Chapitre 3 : ce que coûtent les retraites
+
+<Chart
+  src="societe/depenses-vieillesse-fr-de-it"
+  kind="line"
+  x="annee"
+  y="part_pib"
+  series="pays"
+  titre="Dépenses publiques de vieillesse, en % du PIB, France, Allemagne et Italie (Eurostat, COFOG fonction 10.2)"
+  unite="% du PIB"
+/>
+
+Selon Eurostat, les administrations publiques ont consacré en 2024 **13,4 % du PIB** à la fonction « vieillesse » en France, **13,9 %** en Italie et **9,9 %** en Allemagne. La série française part de 11,0 % en 1995 et monte à 13,0 % en 2010 ; l'italienne va de 11,3 % en 2001 à 13,8 % en 2013 ; l'allemande reste proche de 9 % (9,2 % en 2000, 9,1 % en 2012)[^depenses].
+
+Ces chiffres suivent la classification COFOG des administrations publiques : ils comptent la dépense publique classée en fonction « vieillesse » et ne couvrent pas les régimes privés ou professionnels. La leçon compare les séries telles qu'Eurostat les publie et n'en tire pas d'explication sur l'écart entre l'Allemagne et les deux autres pays.
+
+## Chapitre 4 : vivre plus longtemps
+
+<Chart
+  src="societe/esperance-vie-65-fr-de-it"
+  kind="line"
+  x="annee"
+  y="annees"
+  series="pays"
+  titre="Espérance de vie à 65 ans, France, Allemagne et Italie, 2005-2024 (Eurostat, en années)"
+  unite="ans"
+/>
+
+L'espérance de vie à 65 ans est le nombre d'années qu'une personne de cet âge peut espérer vivre si elle subit les taux de mortalité de l'année. En 2024, elle est de **21,9 ans en France, 19,7 ans en Allemagne et 21,4 ans en Italie**, contre 20,1, 18,7 et 19,4 ans en 2005 : un gain de 1,8 an en France, 1,0 an en Allemagne et 2,0 ans en Italie[^esp].
+
+L'allongement de la vie après 65 ans est la raison que donnent les textes des chapitres suivants : le Conseil constitutionnel relève que le législateur français « a notamment tenu compte de l'allongement de l'espérance de vie »[^cc], et l'article 24 du décret-loi italien prévoit l'adaptation des âges d'accès à l'espérance de vie[^it].
+
+## Chapitre 5 : demain, selon les projections
+
+<Comparatif
+  src="societe/projection-65-plus-fr-de-it"
+  titre="France, Allemagne, Italie : part des 65 ans et plus dans la population, projection de référence d'Eurostat, 2025, 2050 et 2100"
+/>
+
+Eurostat publie des projections démographiques (EUROPOP2023). Dans la projection de référence, les 65 ans et plus passeraient de **21,8 % de la population française en 2025 à 27,3 % en 2050 puis 31,9 % en 2100** ; de 22,5 % à 27,1 % puis 31,3 % en Allemagne ; de 24,7 % à **33,7 %** puis 35,1 % en Italie[^proj].
+
+Ces chiffres sont un scénario, non une observation. Eurostat publie, pour le même jeu, d'autres variantes (fécondité plus basse, mortalité plus basse, migration plus haute, plus basse ou nulle) que la leçon ne reproduit pas[^proj]. Le calcul de la part des 65 ans et plus rapportée à la population totale (21,8 % en France en 2025) diffère de celle rapportée aux 20 ans et plus (28,3 %, chapitre 1) : les deux ont un dénominateur différent.
+
+## Chapitre 6 : trois pays, trois instruments
+
+<Timeline items={[
+  { date: "6 décembre 2011", texte: "Italie : le décret-loi n° 201 est publié à la Gazzetta Ufficiale. Son article 24 modifie les règles de pension[^it]." },
+  { date: "1er janvier 2012", texte: "Italie : les âges d'accès à la pension de vieillesse sont redéfinis par l'article 24 du décret-loi 201/2011[^it]." },
+  { date: "1er janvier 2018", texte: "Italie : l'âge atteint 66 ans dans les catégories énumérées par le texte, avec une règle d'ajustement des âges à l'espérance de vie qui reste applicable[^it]." },
+  { date: "14 avril 2023", texte: "France : le Conseil constitutionnel valide le report de l'âge légal de 62 à 64 ans (décision 2023-849 DC)[^cc]." },
+]} />
+
+### France : une loi de financement rectificative, 2023
+
+La décision 2023-849 DC du 14 avril 2023 porte sur la loi de financement rectificative de la sécurité sociale pour 2023. L'article 10 de la loi reporte l'âge légal de départ à la retraite de 62 à 64 ans et accélère le calendrier de relèvement de la durée d'assurance requise pour une retraite à taux plein[^cc]. Le Conseil constate que, par ces dispositions, le législateur a voulu « assurer l'équilibre financier du système de retraite par répartition » et en garantir la pérennité, en tenant compte de l'allongement de l'espérance de vie[^cc].
+
+Il note aussi que le législateur a maintenu ou étendu des possibilités de retraite anticipée (carrières longues, incapacité, travailleurs handicapés) et maintenu à 67 ans l'âge d'annulation de la décote pour les salariés du secteur privé[^cc]. Le dispositif de sa décision déclare conformes à la Constitution les mots « soixante-quatre » et l'année « 1968 » de l'article L. 161-17-2 du code de la sécurité sociale, et contraires à la Constitution les articles 2, 3, 6, 27, une partie de l'article 10 et une disposition de l'article 17[^cc].
+
+Pour la procédure d'adoption (l'article 49 alinéa 3) et pour les manifestations, voir les leçons sur le 49.3 et sur la psychologie des foules.
+
+### Allemagne : un code social à relèvement progressif
+
+L'article 35 du livre VI du code social (SGB VI) dispose que l'âge de la retraite normale (*Regelaltersgrenze*) est atteint à 67 ans[^sgb35]. L'article 235 prévoit un relèvement progressif pour les assurés nés avant le 1er janvier 1964 : l'âge passe de 65 ans et 1 mois pour la génération 1947 à 66 ans pour la génération 1958, puis à 66 ans et 10 mois pour la génération 1963[^sgb235].
+
+### Italie : un décret-loi d'urgence, 2011
+
+L'article 24 du décret-loi n° 201 du 6 décembre 2011, « Disposizioni urgenti per la crescita, l'equità e il consolidamento dei conti pubblici », déclare que ses dispositions visent à garantir le respect des engagements internationaux et envers l'Union européenne, des contraintes budgétaires et la stabilité économico-financière, et à renforcer la soutenabilité à long terme du système en termes de part de la dépense de retraite dans le PIB[^it]. Il prévoit une convergence vers un âge uniforme entre hommes et femmes et entre salariés et indépendants, un relèvement de l'âge d'accès à la pension de vieillesse, qui atteint 66 ans à partir du 1er janvier 2018 pour les catégories visées, et un ajustement des conditions d'accès à l'espérance de vie[^it].
+
+Le décret-loi a été converti avec modifications par la loi n° 214 du 22 décembre 2011[^itgu].
+
+## Le débat : équilibre financier ou solidarité ?
+
+<Positions items={[
+  { titre: "Le législateur français (2023)", sous_titre: "tel que décrit par le Conseil constitutionnel", forme: "arche", points: [
+    "Objectif : assurer l'équilibre financier du système par répartition et en garantir la pérennité[^cc].",
+    "Argument : l'allongement de l'espérance de vie, avec des départs anticipés maintenus pour les carrières longues, l'incapacité et le handicap[^cc].",
+  ]},
+  { titre: "Les députés auteurs de la troisième saisine", sous_titre: "devant le Conseil constitutionnel", forme: "gemme", points: [
+    "Grief : le report à 64 ans et l'accélération de la durée de cotisation compromettraient la politique de solidarité nationale en faveur des travailleurs retraités et la sécurité matérielle des vieux travailleurs[^cc].",
+    "Réponse du Conseil : les mesures « ne sont pas inappropriées au regard de l'objectif » fixé par le législateur, et ne privent pas de garanties légales les exigences constitutionnelles invoquées[^cc].",
+  ]},
+  { titre: "Le gouvernement italien (2011)", sous_titre: "tel qu'écrit dans le décret-loi", forme: "soleil", points: [
+    "Objectif déclaré : respecter les engagements internationaux et européens, les contraintes budgétaires et la soutenabilité de la dépense de retraite par rapport au PIB[^it].",
+    "Principes retenus : équité intra et intergénérationnelle, flexibilité d'accès, adaptation à l'espérance de vie[^it].",
+  ]},
+]} />
+
+Les finalités affichées par la loi française (validée par le Conseil constitutionnel) et par le décret-loi italien sont budgétaires ; les articles 35 et 235 du code social allemand, tels que lus ici, ne contiennent pas d'exposé des motifs. Aucune des sources lues ne donne la position des syndicats, des organisations d'employeurs ou des économistes qui ont critiqué ou soutenu ces réformes : la leçon ne les reproduit pas.
+
+## À retenir
+
+<ARetenir>
+1. L'âge médian au 1er janvier 2025 est de 42,8 ans en France, 45,5 ans en Allemagne et 49,1 ans en Italie, le plus élevé des 36 pays de la carte.
+2. Plus d'un adulte de 20 ans et plus sur quatre a 65 ans ou plus dans les trois pays (28,3 %, 28,0 %, 29,8 %).
+3. Le taux d'emploi des 55-64 ans atteint 61,7 % en France, 75,3 % en Allemagne et 61,2 % en Italie en 2025.
+4. Les dépenses publiques de vieillesse représentent 13,4 % du PIB en France, 13,9 % en Italie et 9,9 % en Allemagne en 2024.
+5. La France a reporté l'âge légal de 62 à 64 ans par une loi validée par le Conseil constitutionnel le 14 avril 2023 ; l'Allemagne fixe 67 ans dans son code social ; l'Italie a relevé les âges par un décret-loi d'urgence en décembre 2011.
+</ARetenir>
+
+[^medage]: Eurostat, demo_pjanind (indicateur MEDAGEPOP, âge médian au 1er janvier), traité dans `data/societe/age-median-fr-de-it.csv` et `data/societe/age-median-europe-2025.csv` : France 34,7 (1991) et 42,8 (2025) ; Allemagne 38,1 (1990) et 45,5 ; Italie 36,9 (1990) et 49,1 ; Bulgarie et Portugal 47,3 ; Islande 37,2 ; Turquie 34,4. https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table
+[^dep]: Eurostat, demo_pjanind (indicateur OLDDEP1, personnes de 65 ans et plus pour 100 personnes de 15 à 64 ans), traité dans `data/societe/rapport-dependance-fr-de-it.csv` : France 21,2 (1991) et 35,5 (2025) ; Allemagne 22,0 (1990) et 35,9 ; Italie 21,5 (1990) et 39,0. https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table
+[^adultes]: Eurostat, demo_pjangroup (population au 1er janvier 2025 par groupe d'âge), calcul de la leçon dans `scripts/fetch-vieillissement.mjs` : somme des groupes de 65 ans et plus divisée par la population totale moins les moins de 20 ans = 28,3 % (France), 28,0 % (Allemagne), 29,8 % (Italie). https://ec.europa.eu/eurostat/databrowser/view/demo_pjangroup/default/table
+[^emploi]: Eurostat, lfsi_emp_a (âge Y55-64, sexes confondus, indicateur EMP_LFS, % de la population), traité dans `data/societe/emploi-55-64-fr-de-it.csv` : France 39,8 (2005), 50,1 (2015), 61,7 (2025) ; Allemagne 55,3 (2009), 69,2 (2017), 75,3 (2025) ; Italie 35,3 (2009), 51,9 (2017), 61,2 (2025). https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table
+[^depenses]: Eurostat, gov_10a_exp (COFOG GF1002, administrations publiques S13, % du PIB), traité dans `data/societe/depenses-vieillesse-fr-de-it.csv` : France 11,0 (1995), 13,0 (2010), 13,4 (2024) ; Italie 11,3 (2001), 13,8 (2013), 13,9 (2024) ; Allemagne 9,2 (2000), 9,1 (2012), 9,9 (2024). https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp/default/table
+[^cc]: Conseil constitutionnel, décision n° 2023-849 DC du 14 avril 2023 : paragraphe 87 (grief des députés de la troisième saisine), paragraphes 92 et 93 (report de soixante-deux à soixante-quatre ans ; « assurer l'équilibre financier du système de retraite par répartition » ; retraites anticipées maintenues ; âge d'annulation de la décote maintenu à soixante-sept ans ; mesures « qui ne sont pas inappropriées »), articles 1er et 2 du dispositif. https://www.conseil-constitutionnel.fr/decision/2023/2023849DC.htm
+[^sgb35]: SGB VI, § 35 : « Die Regelaltersgrenze wird mit Vollendung des 67. Lebensjahres erreicht. » https://www.gesetze-im-internet.de/sgb_6/__35.html
+[^sgb235]: SGB VI, § 235, alinéa 2 : relèvement de 1 mois (génération 1947, 65 ans et 1 mois) à 12 mois (génération 1958, 66 ans) et 22 mois (génération 1963, 66 ans et 10 mois). https://www.gesetze-im-internet.de/sgb_6/__235.html
+[^it]: Decreto-legge 6 dicembre 2011, n. 201, art. 24, commi 1, 2, 6 (texte consolidé publié par Normattiva, consulté le 2026-10-16) : finalités (engagements internationaux et européens, contraintes budgétaires, soutenabilité de la dépense de retraite par rapport au PIB), principes (équité, flexibilité, adaptation à l'espérance de vie), âges redéfinis à partir du 1er janvier 2012 jusqu'à « 66 anni a decorrere dal 1° gennaio 2018 » pour les catégories énumérées. https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2011-12-06;201~art24
+[^itgu]: Gazzetta Ufficiale, décret-loi n° 201 du 6 décembre 2011 (GU n° 284 du 6 décembre 2011), « convertito con modificazioni dalla L. 22 dicembre 2011, n. 214 ». https://www.gazzettaufficiale.it/eli/id/2011/12/06/011G0247/sg
+[^esp]: Eurostat, demo_mlexpec (âge Y65, sexes confondus), traité dans `data/societe/esperance-vie-65-fr-de-it.csv` : France 20,1 (2005), 21,2 (2015), 21,9 (2024) ; Allemagne 18,7, 19,4, 19,7 ; Italie 19,4, 20,4, 21,4. https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table
+[^proj]: Eurostat, proj_23np (EUROPOP2023, projection de référence BSL, population au 1er janvier), traité dans `data/societe/projection-65-plus-fr-de-it.csv` : France 21,8 % (2025), 27,3 % (2050), 31,9 % (2100) ; Allemagne 22,5 %, 27,1 %, 31,3 % ; Italie 24,7 %, 33,7 %, 35,1 %. Variantes listées dans le jeu : fécondité plus basse (LFRT), mortalité plus basse (LMRT), migration plus haute (HMIGR), plus basse (LMIGR) ou nulle (NMIGR). https://ec.europa.eu/eurostat/databrowser/view/proj_23np/default/table

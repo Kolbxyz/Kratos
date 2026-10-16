@@ -1,0 +1,8 @@
+{
+  "titre": "Part des 65 ans et plus dans la population, projection de référence d'Eurostat, France, Allemagne et Italie, 2025, 2050 et 2100",
+  "producteur": "Eurostat",
+  "jeu": "proj_23np (EUROPOP2023, projection de référence BSL, population au 1er janvier)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/proj_23np/default/table",
+  "traitement": "Population de 65 ans et plus divisée par la population totale, au 1er janvier de l'année indiquée, en %, arrondie à une décimale. Il s'agit d'une projection de référence (BSL) : les années 2050 et 2100 sont des scénarios, non des observations.",
+  "consulte": "2026-10-16"
+}

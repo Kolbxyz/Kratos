@@ -1,0 +1,8 @@
+{
+  "titre": "Inflation en zone euro (IPCH), variation annuelle moyenne en %, 1999-2025",
+  "producteur": "Eurostat",
+  "jeu": "prc_hicp_aind (indice des prix à la consommation harmonisé, taux de variation annuel moyen, zone euro, tous produits)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table",
+  "traitement": "Aucun : valeurs telles que publiées. Le groupe « EA » correspond à la zone euro dans sa composition changeante.",
+  "consulte": "2026-10-16"
+}

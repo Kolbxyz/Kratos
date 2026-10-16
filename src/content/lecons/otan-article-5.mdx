@@ -36,8 +36,18 @@ sources:
     url: "https://www.assemblee-nationale.fr/14/pdf/rapports/r3620.pdf"
     consulte: "2026-10-15"
     primaire: true
+lectures:
+  - auteur: "Lawrence S. Kaplan"
+    titre: "The United States and NATO. The Formative Years"
+    annee: 1984
+    pourquoi: "L'histoire de la négociation du traité de 1949, dont la rédaction de l'article 5 et le compromis avec le Sénat américain."
+  - auteur: "Mary Elise Sarotte"
+    titre: "Not One Inch. America, Russia, and the Making of Post-Cold War Stalemate"
+    annee: 2021
+    pourquoi: "Le débat sur l'élargissement de l'Alliance après 1990, documenté par les archives américaines, allemandes et russes."
 ---
 import Chart from "../../components/Chart.astro";
+import Carte from "../../components/Carte.astro";
 import Timeline from "../../components/Timeline.astro";
 import ARetenir from "../../components/ARetenir.astro";
 import Chiffre from "../../components/Chiffre.astro";
@@ -112,6 +122,15 @@ Sources : article 6 du traité et ses notes officielles[^traite].
 - **Les États-Unis (3,1 %) restent au-dessus de leurs alliés d'Europe occidentale**, ce qui nourrit depuis des années le reproche américain de « passager clandestin ».
 - **La France (2,0 %) est sous l'objectif de 3,5 %** fixé pour 2035, comme l'Allemagne, l'Italie et l'Espagne. Il lui manque 1,5 point de PIB.
 
+La carte élargit la comparaison aux 41 pays d'Europe de la base SIPRI. En 2025, l'Ukraine consacre 39,6 % de son PIB à ses dépenses militaires, la Russie 7,5 % et la Pologne 4,5 %. La France (2,03 %) se classe au 21e rang, derrière le Royaume-Uni (2,35 %) et l'Allemagne (2,27 %).
+
+<Carte
+  src="defense/depenses-militaires-europe-2025"
+  titre="Dépenses militaires des pays européens, en % du PIB, 2025"
+  unite="% du PIB"
+  plafond={5}
+/>
+
 ## Le débat : l'article 5 tient-il encore ?
 
 **Ceux qui doutent :**
@@ -134,5 +153,5 @@ Sources : article 6 du traité et ses notes officielles[^traite].
 5. Objectif fixé à La Haye en 2025 : 5 % du PIB d'ici 2035, dont 3,5 % de défense au sens strict. La France est à 2,0 % en 2025.
 </ARetenir>
 
-[^a5]: OTAN, « La défense collective et l'article 5 » : invocation « pour la première et unique fois de son histoire » après le 11 septembre 2001 ; opération de patrouille aérienne (830 membres d'équipage de 13 pays, plus de 360 sorties).
-[^traite]: OTAN, Traité de l'Atlantique Nord, article 6 et notes 1 et 2 : modification par le protocole d'accession de la Grèce et de la Turquie (22 octobre 1951) ; constat du Conseil de l'Atlantique Nord du 16 janvier 1963 concernant les anciens départements français d'Algérie.
+[^a5]: OTAN, « La défense collective et l'article 5 » : invocation « pour la première et unique fois de son histoire » après le 11 septembre 2001 ; opération de patrouille aérienne (830 membres d'équipage de 13 pays, plus de 360 sorties). https://www.nato.int/cps/fr/natohq/topics_110496.htm?selectedLocale=fr
+[^traite]: OTAN, Traité de l'Atlantique Nord, article 6 et notes 1 et 2 : modification par le protocole d'accession de la Grèce et de la Turquie (22 octobre 1951) ; constat du Conseil de l'Atlantique Nord du 16 janvier 1963 concernant les anciens départements français d'Algérie. https://www.nato.int/cps/en/natohq/official_texts_17120.htm

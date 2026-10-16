@@ -1,0 +1,8 @@
+{
+  "titre": "Taux de pauvreté monétaire (seuil de 60 % du revenu médian), France, Allemagne et Italie, jusqu'en 2025",
+  "producteur": "Eurostat",
+  "jeu": "ilc_li02 (statinfo MED_EI, seuil B_60 « sous 60 % », % de la population, tous âges, sexes confondus ; enquête EU-SILC)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table",
+  "traitement": "Part de la population dont le revenu équivalent est inférieur à 60 % du revenu équivalent médian national, arrondie à une décimale. Début de série variable selon le pays, d'après la disponibilité publiée par Eurostat. Eurostat signale des ruptures de série (drapeau « b »), notamment pour la France en 2020 et en 2022.",
+  "consulte": "2026-10-16"
+}

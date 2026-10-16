@@ -1,0 +1,8 @@
+{
+  "titre": "Prix des logements, loyers et prix à la consommation en France, base 100 en 2015, jusqu'en 2025",
+  "producteur": "Eurostat",
+  "jeu": "prc_hpi_a (indice des prix des logements, total) ; prc_hicp_aind (IPCH : CP041 loyers effectifs, CP00 ensemble)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table",
+  "traitement": "Moyennes annuelles. Chaque série est rebasée à 100 en 2015 en la divisant par sa propre valeur de 2015, puis arrondie à une décimale, pour que les trois courbes partent du même point.",
+  "consulte": "2026-10-16"
+}
