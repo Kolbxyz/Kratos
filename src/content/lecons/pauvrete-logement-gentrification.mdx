@@ -31,6 +31,11 @@ sources:
     url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_iw01/default/table"
     consulte: "2026-10-16"
     primaire: true
+  - titre: "Décision n° 2000-436 DC du 7 décembre 2000, loi relative à la solidarité et au renouvellement urbains (article 55)"
+    auteur: "Conseil constitutionnel"
+    url: "https://www.conseil-constitutionnel.fr/decision/2000/2000436DC.htm"
+    consulte: "2026-10-16"
+    primaire: true
   - titre: "Les arrondissements de Lyon : de profondes mutations socio-économiques en 40 ans (Insee Analyses Auvergne-Rhône-Alpes n° 29, 21 décembre 2016)"
     auteur: "Serge Maury, Axel Gilbert, Insee"
     url: "https://www.insee.fr/fr/statistiques/2534541"
@@ -68,7 +73,7 @@ Selon Eurostat, **16,3 % des personnes vivant en France** ont en 2025 un revenu 
 
 **Idée centrale : la pauvreté, le coût du logement et la composition sociale d'un quartier sont trois mesures différentes, que l'on confond souvent.** La première mesure un revenu, la deuxième un poids financier, la troisième une population résidente. Cette leçon les sépare, avec les chiffres d'Eurostat et deux études de l'Insee sur Lyon.
 
-Elle ne traite pas des politiques du logement (loi SRU, encadrement des loyers, logement social) : leurs textes officiels n'ont pas pu être lus, Légifrance refusant les requêtes automatiques. Elle ne reprend ni les délocalisations ni l'emploi industriel, vus dans la leçon sur la désindustrialisation.
+Elle ne traite des politiques du logement que par la loi SRU, lue dans la décision de 2000 du Conseil constitutionnel : l'encadrement des loyers et la politique actuelle du logement social n'ont pas pu être lus, Légifrance refusant les requêtes automatiques. Elle ne reprend ni les délocalisations ni l'emploi industriel, vus dans la leçon sur la désindustrialisation.
 
 ## Chapitre 1 : mesurer la pauvreté
 
@@ -148,7 +153,17 @@ Entre 2015 et 2025, les prix des logements ont donc augmenté de 27,3 %, l'ensem
 
 Ces données ne renseignent pas sur les ménages touchés : un indice des prix des logements ne dit rien de qui achète, vend ou loue.
 
-## Chapitre 5 : un quartier qui change de classe sociale, le 1er arrondissement de Lyon
+## Chapitre 5 : la loi SRU, une obligation de logement social
+
+La loi du 13 décembre 2000 relative à la solidarité et au renouvellement urbains (SRU) impose à certaines communes un objectif de logements sociaux. La leçon lit son article 55 dans la décision 2000-436 DC du Conseil constitutionnel, rendue le 7 décembre 2000. Le texte actuel du code de la construction n'a pas pu être lu, Légifrance refusant les requêtes automatiques : les seuils de 2000 ne sont donc pas ceux d'aujourd'hui, et la leçon ne les actualise pas[^sru].
+
+Selon le Conseil, l'article 55 réécrit les articles L. 302-5 et suivants du code de la construction et de l'habitation. Il s'applique aux communes d'au moins **1 500 habitants en Île-de-France et 3 500 habitants dans les autres régions**, comprises dans une agglomération de plus de 50 000 habitants comptant au moins une commune de plus de 15 000 habitants. Son objectif est que les logements sociaux représentent **20 % des résidences principales** de la commune. Tant que l'objectif n'est pas atteint, un prélèvement sur les recettes fiscales de la commune (article L. 302-7) constitue une charge obligatoire ; les sommes sont affectées à des organismes intercommunaux, à des établissements publics fonciers ou à un fonds d'aménagement urbain destinés à réaliser des opérations en faveur du logement social[^sru].
+
+Les auteurs des saisines contestaient notamment le caractère rétroactif de l'obligation, l'égalité entre communes et entre bailleurs, et l'atteinte à la libre administration des communes[^sru]. Le Conseil écarte ces griefs dans les paragraphes lus : les dispositions n'ont pas d'effet rétroactif, elles mettent en œuvre l'objectif de mixité sociale, le seuil de 20 % « n'est pas arbitraire » et les logements sociaux représentaient déjà globalement un peu plus de 20 % des résidences principales dans l'ensemble des agglomérations concernées. Il justifie des seuils plus bas en Île-de-France par une région « particulièrement urbanisée »[^sru].
+
+Cette décision est un texte de 2000 : elle ne dit rien du nombre de communes qui atteignent aujourd'hui l'objectif, ni de l'effet de la loi sur les loyers ou sur la gentrification. Ces chiffres demandent des sources que la leçon n'a pas lues.
+
+## Chapitre 6 : un quartier qui change de classe sociale, le 1er arrondissement de Lyon
 
 L'Insee écrit que « les sociologues définissent » la **gentrification** par « l'installation, dans un quartier originellement vétuste et populaire, de nouveaux habitants appartenant aux classes moyennes et supérieures ». Elle entraîne « un changement de la composition sociale du lieu ; les catégories populaires sont progressivement marginalisées, tandis que les classes moyennes supérieures donnent le « ton » à la vie de quartier »[^lyon].
 
@@ -197,3 +212,4 @@ La leçon expose les deux constats de la même source et ne les hiérarchise pas
 [^lyon2]: Bruno Balouzat, Jean Geymond et Philippe Bertrand, « Quartiers de Lyon : de profondes mutations en 30 ans, avec une forte dynamique à l'est », Insee Analyses Auvergne-Rhône-Alpes n° 83, 4 juillet 2019, résumé : « La population de Lyon a augmenté d'un quart entre 1982 et 2014 » ; « Dans des quartiers proches de la presqu'île, l'amélioration de l'habitat s'est accompagnée d'un phénomène de gentrification ». https://www.insee.fr/fr/statistiques/4183283
 [^age]: Eurostat, ilc_li02 (seuil B_60, groupes d'âge Y_LT18, Y18-64, Y_GE65), traité dans `data/societe/comparatif-pauvrete-age-fr-de-it-2025.csv` : France 22,8 %, 15,8 %, 11,6 % ; Allemagne 16,0 %, 15,0 %, 19,5 % ; Italie 23,2 %, 18,1 %, 17,2 %. https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table
 [^iw]: Eurostat, ilc_iw01 (âge Y18-64, sexes confondus, personnes en emploi), traité dans `data/societe/pauvrete-au-travail-fr-de-it.csv` : France 6,5 % (2010), 7,1 % (2018), 8,7 % (2025) ; Allemagne 7,1 %, 9,0 %, 6,7 % ; Italie 9,7 %, 12,3 %, 10,2 %. https://ec.europa.eu/eurostat/databrowser/view/ilc_iw01/default/table
+[^sru]: Conseil constitutionnel, décision n° 2000-436 DC du 7 décembre 2000, paragraphes 33 à 44 (article 55 de la loi SRU) : champ d'application (« communes dont la population est au moins égale à 1 500 habitants en Ile de France et 3 500 habitants dans les autres régions »), objectif de 20 % de logements sociaux parmi les résidences principales, prélèvement de l'article L. 302-7, affectation des sommes, absence d'effet rétroactif, mixité sociale, seuil « non arbitraire », région Île-de-France « particulièrement urbanisée ». https://www.conseil-constitutionnel.fr/decision/2000/2000436DC.htm
