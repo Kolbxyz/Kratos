@@ -1,0 +1,57 @@
+name: APK Android
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/**", "public/app/**", "mobile/**", "astro.config.mjs", ".github/workflows/apk.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apk
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      # Optional: base64 of a keystore reused for every build, so a new APK installs over the old one.
+      KEYSTORE: ${{ secrets.ANDROID_DEBUG_KEYSTORE }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            mobile/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm run check-content
+      # Only dist/app is needed: the app and the content generated from the lessons.
+      - run: npx astro build
+      - working-directory: mobile
+        run: |
+          npm ci
+          npx cap add android
+          sed -i "s/versionCode 1$/versionCode ${{ github.run_number }}/" android/app/build.gradle
+      - if: env.KEYSTORE != ''
+        run: mkdir -p ~/.android && echo "$KEYSTORE" | base64 -d > ~/.android/debug.keystore
+      - working-directory: mobile/android
+        run: ./gradlew assembleDebug
+      - run: cp mobile/android/app/build/outputs/apk/debug/app-debug.apk kratos.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kratos-apk
+          path: kratos.apk
+      # A fixed release holds the latest APK, so the phone download link never changes.
+      - run: |
+          gh release view apk >/dev/null 2>&1 || gh release create apk --title "Kratos Android" --notes "Dernier APK, reconstruit à chaque modification des leçons." --prerelease
+          gh release upload apk kratos.apk --clobber

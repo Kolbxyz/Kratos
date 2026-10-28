@@ -1,0 +1,10 @@
+{
+  "name": "kratos-mobile",
+  "private": true,
+  "description": "Android shell of the training app (public/app/), built by .github/workflows/apk.yml.",
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/core": "8.5.3"
+  }
+}
