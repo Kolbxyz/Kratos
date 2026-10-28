@@ -1,5 +1,8 @@
 {
   "appId": "xyz.kolbxyz.kratos",
   "appName": "Kratos",
-  "webDir": "../dist/app"
+  "webDir": "../dist/app",
+  "android": {
+    "backgroundColor": "#00000000"
+  }
 }

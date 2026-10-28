@@ -40,7 +40,7 @@ jobs:
       - working-directory: mobile
         run: |
           npm ci
-          npx cap add android
+          npx cap sync android
           sed -i "s/versionCode 1$/versionCode ${{ github.run_number }}/" android/app/build.gradle
       - if: env.KEYSTORE != ''
         run: mkdir -p ~/.android && echo "$KEYSTORE" | base64 -d > ~/.android/debug.keystore

@@ -3,5 +3,4 @@ dist/
 .astro/
 
 .cache/
-mobile/android/
 *.keystore

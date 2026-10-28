@@ -1,3 +1,9 @@
+/* Nunito, bundled so the app renders offline with its real font (SIL Open Font License, polices/OFL.txt). */
+@font-face { font-family: "Nunito"; font-weight: 600 900; font-display: swap; src: url(polices/nunito-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Nunito"; font-weight: 600 900; font-display: swap; src: url(polices/nunito-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
 /* Training app. Brighter than the site on purpose (a game, not a reading page), same hue per track.
    Each tone keeps >= 3:1 with white bold text. Motion eases out, never overshoots. */
 :root {
@@ -20,6 +26,9 @@
   --militaire: #e53838; --militaire-d: #b22424; --militaire-c: #ffe3e3;
   --societe: #e07a00; --societe-d: #ad5e00; --societe-c: #fff0d9;
 
+  /* Safe areas: Capacitor injects --safe-area-inset-* in the Android app; browsers provide env(). */
+  --sa-t: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --sa-b: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
   --font: "Nunito", "Varela Round", system-ui, sans-serif;
   --sortie: cubic-bezier(0.2, 0, 0, 1);
   --r: 16px;
@@ -43,12 +52,21 @@
 [data-parcours="societe"] { --tone: var(--societe); --tone-d: var(--societe-d); --tone-c: var(--societe-c); }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font: 700 16px/1.4 var(--font); }
-body { overscroll-behavior-y: none; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--ink); font: 700 16px/1.4 var(--font); }
+/* An app, not a page: no text selection or long-press menu outside the lesson text. */
+body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.prose, .cite, .chrono, .positions, .retenir { -webkit-user-select: text; user-select: text; }
+button, a { touch-action: manipulation; }
 button { font: inherit; color: inherit; cursor: pointer; }
 a { color: inherit; }
 svg.ico { width: 1.4em; height: 1.4em; flex: none; }
-#app { max-width: 34rem; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; }
+/* Screens are stacked layers; each scrolls on its own, so the path keeps its position underneath. */
+.couche {
+  position: fixed; inset: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); transform-origin: 50% 50%; -webkit-overflow-scrolling: touch;
+}
+.couche > * { max-width: 34rem; margin-inline: auto; }
+.couche.accueil > .top { max-width: none; }
 
 /* Chunky button: a darker 4px ledge underneath that disappears when pressed. */
 .btn {
@@ -67,13 +85,20 @@ svg.ico { width: 1.4em; height: 1.4em; flex: none; }
 
 /* Characters: the track's shape with feet, arms, face and accessory. Only the eyes move (a blink). */
 .perso { display: block; overflow: visible; }
+.perso .corps-entier { transform-origin: 60px 120px; }
+.perso.neutre .corps-entier { animation: respire 3.2s ease-in-out infinite; }
+.perso.joie .corps-entier { animation: saut 0.55s var(--sortie); }
+.perso.triste .corps-entier { animation: affaisse 0.4s var(--sortie) both; }
+@keyframes respire { 50% { transform: scale(1.02, 0.98); } }
+@keyframes saut { 40% { transform: translateY(-12px); animation-timing-function: ease-in; } }
+@keyframes affaisse { to { transform: translateY(3px) scale(1.02, 0.97); } }
 .perso .pupilles { animation: cligne 5s infinite; transform-origin: 60px 55px; }
 @keyframes cligne { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
 
 /* Home */
 .top {
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 1rem;
-  padding: calc(env(safe-area-inset-top) + 0.7rem) 16px 0.7rem; background: var(--bg); border-bottom: 2px solid var(--rule);
+  padding: calc(var(--sa-t) + 0.7rem) 16px 0.7rem; background: var(--bg); border-bottom: 2px solid var(--rule);
 }
 .marque { margin-right: auto; font: 900 1.45rem/1 var(--font); color: var(--tone); }
 .stat { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.35rem 0.5rem; border: 0; border-radius: 12px; background: none; font: 900 1.05rem/1 var(--font); }
@@ -83,7 +108,7 @@ svg.ico { width: 1.4em; height: 1.4em; flex: none; }
 .stat.xp { color: var(--or-d); }
 .stat.eteint { color: var(--ink-3); }
 
-.chemin { padding: 0 16px calc(env(safe-area-inset-bottom) + 4rem); }
+.chemin { padding: 0 16px calc(var(--sa-b) + 4rem); }
 .section { display: flex; align-items: center; gap: 0.8rem; margin: 2.2rem 0 0.4rem; color: var(--tone); font: 900 0.85rem/1.2 var(--font); letter-spacing: 0.05em; text-transform: uppercase; }
 .section::before, .section::after { content: ""; flex: 1; height: 2px; background: var(--rule); }
 .unite { margin-top: 1.2rem; }
@@ -107,6 +132,8 @@ svg.ico { width: 1.4em; height: 1.4em; flex: none; }
 .pastille:active { transform: translateY(7px); box-shadow: 0 0 0 var(--ledge); }
 .pastille .ico { width: 2.1rem; height: 2.1rem; }
 .noeud.fait .pastille, .noeud.actuel .pastille { --face: var(--tone); --ledge: var(--tone-d); --txt: #fff; }
+.noeud.vient-detre-fait .pastille { animation: remplit 0.7s 0.25s var(--sortie) backwards; }
+@keyframes remplit { from { background: var(--gris); box-shadow: 0 7px 0 var(--gris-d); color: var(--on-gris); transform: scale(0.92); } }
 .noeud.or .pastille { --face: var(--or); --ledge: var(--or-d); --txt: #fff; }
 .noeud.actuel::before {
   content: ""; position: absolute; inset: 0; border-radius: 50%; border: 6px solid var(--gris);
@@ -132,15 +159,17 @@ svg.ico { width: 1.4em; height: 1.4em; flex: none; }
 @keyframes deplie { from { opacity: 0; transform: translateX(calc(-50% - var(--dx))) translateY(-6px); } }
 
 /* Session */
-.session { flex: 1; display: flex; flex-direction: column; padding: calc(env(safe-area-inset-top) + 0.9rem) 16px 0; }
+.couche.session { padding: calc(var(--sa-t) + 0.9rem) 16px 0; }
+.couche.session > .barre { position: sticky; top: calc(-1 * var(--sa-t) - 0.9rem); z-index: 2; margin-top: calc(-1 * var(--sa-t) - 0.9rem); padding: calc(var(--sa-t) + 0.9rem) 0 0.6rem; background: var(--bg); }
+.scene { position: relative; }
+.vue.partante { position: absolute; top: 0; left: 0; right: 0; pointer-events: none; }
 .barre { display: flex; align-items: center; gap: 0.9rem; }
 .fermer { display: grid; place-items: center; border: 0; background: none; padding: 0.2rem; color: var(--ink-3); }
 .progres { flex: 1; height: 1rem; border-radius: 1rem; background: var(--gris); overflow: hidden; }
 .progres span { display: block; height: 100%; width: var(--p); border-radius: inherit; background: var(--ok); transition: width 0.4s var(--sortie); box-shadow: inset 0 4px 0 -1px rgb(255 255 255 / 0.3); }
 .combo { display: inline-flex; align-items: center; gap: 0.15rem; min-width: 3rem; justify-content: flex-end; font: 900 1rem/1 var(--font); color: var(--feu); }
 
-.question { flex: 1; padding: 1.5rem 0 10rem; animation: entre 0.25s var(--sortie); }
-@keyframes entre { from { opacity: 0; transform: translateX(16px); } }
+.question, .lecture-carte { padding: 1rem 0 14rem; }
 .consigne { margin: 0 0 1.2rem; font: 900 1.45rem/1.2 var(--font); }
 .dialogue { display: flex; align-items: flex-end; gap: 0.6rem; margin-bottom: 1.5rem; }
 .dialogue .perso { width: 6rem; flex: none; }
@@ -206,9 +235,10 @@ a.note { display: inline-block; margin-left: 0.2rem; padding: 0.05rem 0.4rem; bo
 
 .pied {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; max-width: 34rem; margin: 0 auto;
-  padding: 1rem 16px calc(env(safe-area-inset-bottom) + 1rem); background: var(--bg); border-top: 2px solid var(--rule);
+  padding: 1rem 16px calc(var(--sa-b) + 1rem); background: var(--bg); border-top: 2px solid var(--rule);
 }
-.pied.ok, .pied.ko { border-color: transparent; animation: monte 0.2s var(--sortie); }
+.pied { transition: background-color 0.2s var(--sortie), border-color 0.2s; }
+.pied.ok, .pied.ko { border-color: transparent; }
 .pied.ok { background: var(--ok-c); color: var(--on-ok-c); }
 .pied.ko { background: var(--ko-c); color: var(--on-ko-c); }
 .verdict { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.5rem; font: 900 1.35rem/1.1 var(--font); }
@@ -219,7 +249,7 @@ a.note { display: inline-block; margin-left: 0.2rem; padding: 0.05rem 0.4rem; bo
 @keyframes monte { from { transform: translateY(100%); } }
 
 /* End of session */
-.fin { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: calc(env(safe-area-inset-top) + 2rem) 16px calc(env(safe-area-inset-bottom) + 1.5rem); }
+.fin { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 0 12rem; }
 .fin .perso.grand { width: 10rem; animation: apparait 0.3s var(--sortie); }
 .fin h1 { margin: 1rem 0 1.2rem; font: 900 1.8rem/1.1 var(--font); color: var(--or-d); }
 .scores { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; width: 100%; margin-bottom: 1.4rem; }
@@ -234,7 +264,11 @@ a.note { display: inline-block; margin-left: 0.2rem; padding: 0.05rem 0.4rem; bo
 @keyframes apparait { from { opacity: 0; transform: scale(0.85); } }
 
 /* Streak screen */
-.ecran-serie { padding: calc(env(safe-area-inset-top) + 0.9rem) 16px calc(env(safe-area-inset-bottom) + 7rem); }
+.couche.serie { padding: calc(var(--sa-t) + 0.9rem) 16px calc(var(--sa-b) + 3rem); }
+.ecran-serie { padding: 0.5rem 0 12rem; }
+.hero-serie.celebre .flamme { animation: flamme 0.6s var(--sortie) both, vacille 2.4s 0.6s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes flamme { from { transform: scale(0.4); opacity: 0; } }
+@keyframes vacille { 50% { transform: scaleY(1.06) rotate(-2deg); } }
 .hero-serie { display: flex; align-items: center; justify-content: space-between; margin: 0.6rem 0 0.4rem; color: var(--feu); }
 .hero-serie b { display: block; font: 900 4.2rem/1 var(--font); }
 .hero-serie span { font: 900 1.2rem/1.2 var(--font); }
@@ -270,10 +304,9 @@ a.note { display: inline-block; margin-left: 0.2rem; padding: 0.05rem 0.4rem; bo
 .stats b { font-weight: 900; font-size: 1.2rem; }
 .stats small { color: var(--ink-2); font-size: 0.78rem; }
 .aide { margin: 1rem 0 0; color: var(--ink-2); font-size: 0.88rem; }
-.pied-fixe { position: fixed; left: 0; right: 0; bottom: 0; max-width: 34rem; margin: 0 auto; padding: 1rem 16px calc(env(safe-area-inset-bottom) + 1rem); background: var(--bg); border-top: 2px solid var(--rule); }
 
 #toast {
-  position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 1.2rem); z-index: 30; transform: translateX(-50%);
+  position: fixed; left: 50%; bottom: calc(var(--sa-b) + 1.2rem); z-index: 30; transform: translateX(-50%);
   padding: 0.7rem 1rem; border-radius: 12px; background: var(--ink); color: var(--bg); font-weight: 800; font-size: 0.9rem; animation: monte 0.2s var(--sortie);
 }
 
