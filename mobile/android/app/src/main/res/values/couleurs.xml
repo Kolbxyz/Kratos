@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Same values as --bg and --pouvoir in public/app/app.css. -->
+    <!-- Same values as the bg and pouvoir tokens in public/app/app.css. -->
     <color name="fond">#FFFFFF</color>
     <color name="colorPrimary">#A560E8</color>
     <color name="colorPrimaryDark">#7E3FC0</color>
