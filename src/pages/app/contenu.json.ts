@@ -5,6 +5,15 @@ import { createHash } from "node:crypto";
 import { PARCOURS } from "../../parcours";
 import { FORMES } from "../../formes";
 import { aRetenir, exercicesDe, type LeconBrute } from "../../lib/exercices";
+import { etapesDe } from "../../lib/etapes";
+
+// The lesson split by chapter; its review draws from the steps' exercises.
+function avecEtapes(lecon: LeconBrute, toutes: LeconBrute[]) {
+  const exercices = exercicesDe(lecon, toutes);
+  const sansPos = ({ pos: _, ...e }: (typeof exercices)[number]) => e;
+  const etapes = etapesDe(lecon, exercices).map((e) => ({ ...e, exercices: e.exercices.map(sansPos) }));
+  return { etapes };
+}
 
 export const GET: APIRoute = async () => {
   const racine = `${import.meta.env.SITE}${import.meta.env.BASE_URL}`.replace(/\/?$/, "/");
@@ -24,7 +33,7 @@ export const GET: APIRoute = async () => {
       url: brutes[i].url,
       verifiee: l.data.verifie_le !== null,
       retenir: aRetenir(brutes[i].body),
-      exercices: exercicesDe(brutes[i], brutes),
+      ...avecEtapes(brutes[i], brutes),
     })),
   };
   const version = createHash("sha1").update(JSON.stringify(contenu)).digest("hex").slice(0, 12);

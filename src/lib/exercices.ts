@@ -4,10 +4,14 @@
 import { estSecondaire } from "./secondaire";
 
 export interface SourceExo { nom: string; url: string; secondaire: boolean }
-export type Exercice =
+// `pos`: offset of the block in the lesson body, used to place the exercise in its chapter.
+export type Exercice = { pos: number } & (
   | { id: string; type: "chiffre"; label: string; periode: string; reponse: string; choix: string[]; source: SourceExo }
   | { id: string; type: "citation"; texte: string; traduction: boolean; reponse: string; choix: string[]; oeuvre: string; source: SourceExo }
-  | { id: string; type: "ordre"; items: { date: string; texte: string }[]; source: SourceExo };
+  | { id: string; type: "ordre"; items: { date: string; texte: string }[]; source: SourceExo }
+  // A sentence of the lesson with one word or figure blanked (built in etapes.ts).
+  | { id: string; type: "trou"; avant: string; apres: string; reponse: string; choix: string[]; source: SourceExo }
+);
 
 export interface LeconBrute { id: string; parcours: string; body: string; url: string }
 
@@ -21,10 +25,10 @@ const RE_NOTE_REF = /\[\^([^\]]+)\](?!:)/g;
 // A quote longer than this does not fit a phone screen; it is skipped, never cut.
 const CITATION_MAX = 450;
 
-const attrs = (s: string) =>
+export const attrs = (s: string) =>
   Object.fromEntries([...s.matchAll(/(\w+)=(?:"([^"]*)"|\{([^}]*)\})/g)].map((m) => [m[1], m[2] ?? m[3].replace(/^["']|["']$/g, "")]));
 
-const texteBrut = (s: string) =>
+export const texteBrut = (s: string) =>
   s.replace(/<[^>]+>/g, "")
     .replace(RE_NOTE_REF, "")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
@@ -36,7 +40,7 @@ const unite = (valeur: string) => valeur.replace(/[\d\s.,+\-−]/g, "").toLowerC
 const norme = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
 
 // Three wrong answers: same lesson first, then same track, then everything; same unit preferred.
-function leurres(bonne: string, pools: string[][], memeType: (a: string) => boolean): string[] {
+export function leurres(bonne: string, pools: string[][], memeType: (a: string) => boolean): string[] {
   const vus = new Set([norme(bonne)]);
   const pris: string[] = [];
   for (const filtre of [memeType, () => true]) {
@@ -86,14 +90,14 @@ export function exercicesDe(lecon: LeconBrute, toutes: LeconBrute[]): Exercice[]
   const autres = toutes.filter((l) => l.parcours !== lecon.parcours);
   const exos: Exercice[] = [];
 
-  const ici = chiffres(lecon);
+  const ici = [...lecon.body.matchAll(RE_CHIFFRE)].map((m) => ({ ...attrs(m[1]), pos: m.index! }));
   const poolsValeurs = [ici, memeParcours.flatMap(chiffres), autres.flatMap(chiffres)].map((p) => p.map((c) => c.valeur));
   ici.forEach((c, i) => {
     // A wrong answer quoted in the question itself would give it away or confuse.
     const choix = leurres(c.valeur, poolsValeurs.map((p) => p.filter((v) => !c.label.includes(v))), (v) => unite(v) === unite(c.valeur));
     if (choix.length < 3) return;
     exos.push({
-      id: `${lecon.id}:chiffre:${i}`, type: "chiffre", label: texteBrut(c.label), periode: c.date, reponse: c.valeur,
+      pos: c.pos, id: `${lecon.id}:chiffre:${i}`, type: "chiffre", label: texteBrut(c.label), periode: c.date, reponse: c.valeur,
       choix: [c.valeur, ...choix], source: { nom: c.source, url: c.url, secondaire: estSecondaire(c.url) },
     });
   });
@@ -106,7 +110,7 @@ export function exercicesDe(lecon: LeconBrute, toutes: LeconBrute[]): Exercice[]
     const choix = leurres(a.auteur, poolsAuteurs, () => true);
     if (choix.length < 3) return;
     exos.push({
-      id: `${lecon.id}:citation:${i}`, type: "citation", texte, traduction: Boolean(a.original), reponse: a.auteur,
+      pos: m.index!, id: `${lecon.id}:citation:${i}`, type: "citation", texte, traduction: Boolean(a.original), reponse: a.auteur,
       choix: [a.auteur, ...choix], oeuvre: `${a.oeuvre}, ${a.annee}. ${a.reference}`,
       source: { nom: a.oeuvre, url: a.url, secondaire: estSecondaire(a.url) },
     });
@@ -128,7 +132,7 @@ export function exercicesDe(lecon: LeconBrute, toutes: LeconBrute[]): Exercice[]
     const source = sourceDesNotes(lecon.body.slice(m.index! + m[0].length), notes)
       ?? { nom: "Sources de la leçon", url: lecon.url, secondaire: false };
     for (let i = 0; i + 3 <= distincts.length && i < 8; i += 4) {
-      exos.push({ id: `${lecon.id}:ordre:${t}:${i}`, type: "ordre", items: distincts.slice(i, i + 4), source });
+      exos.push({ pos: m.index!, id: `${lecon.id}:ordre:${t}:${i}`, type: "ordre", items: distincts.slice(i, i + 4), source });
     }
   });
 
