@@ -51,7 +51,7 @@ npm run build && npm run pdf
 ## 4 bis. Application d'entraînement
 
 - Questions générées par `src/lib/exercices.ts` à partir des `<Chiffre>`, `<Citation>` et `<Timeline>` des leçons : aucune question écrite à la main, chaque réponse affiche la source du bloc d'origine. Une chronologie ne devient exercice que si toutes ses dates se lisent et vont dans l'ordre.
-- `src/pages/app/contenu.json.ts` publie le contenu ; `public/app/` est l'appli (HTML, CSS, JS sans build). Couleurs copiées de `global.css` : les garder alignées.
+- `src/pages/app/contenu.json.ts` publie le contenu ; `public/app/` est l'appli (HTML, CSS, JS sans build). Palette plus vive que le site (même teinte par parcours), chaque ton garde un contraste d'au moins 3:1 avec le texte blanc gras. Animations en sortie douce, sans rebond.
 - APK : `mobile/` (Capacitor) emballe `dist/app`. `.github/workflows/apk.yml` le construit et le publie dans la release `apk`. L'appli installée télécharge le contenu publié au démarrage : une nouvelle leçon n'exige pas de réinstaller.
 
 ## 5. Supports visuels (`src/components/`)

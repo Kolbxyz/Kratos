@@ -72,7 +72,8 @@ function sourceDesNotes(apres: string, notes: Map<string, string>): SourceExo | 
     const note = notes.get(m[1]);
     const url = note?.match(/https?:\/\/[^\s)>,;]+[^\s)>,;.]/)?.[0];
     if (!note || !url) continue;
-    const nom = texteBrut(note.slice(0, note.indexOf(url))).replace(/[\s(:,;]+$/, "").slice(0, 160);
+    const complet = texteBrut(note.slice(0, note.indexOf(url))).replace(/[\s(:,;]+$/, "");
+    const nom = complet.length <= 140 ? complet : `${complet.slice(0, complet.lastIndexOf(" ", 140))}…`;
     return { nom, url, secondaire: estSecondaire(url) };
   }
   return null;

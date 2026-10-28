@@ -15,7 +15,7 @@ export const GET: APIRoute = async () => {
 
   const contenu = {
     distant: `${racine}app/contenu.json`,
-    parcours: Object.entries(PARCOURS).map(([id, p]) => ({ id, nom: p.nom, accroche: p.accroche, forme: FORMES[p.forme] })),
+    parcours: Object.entries(PARCOURS).map(([id, p]) => ({ id, nom: p.nom, accroche: p.accroche, forme: FORMES[p.forme], url: `${racine}parcours/${id}/` })),
     lecons: lecons.map((l, i) => ({
       id: l.id,
       titre: l.data.titre,
