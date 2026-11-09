@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# commit-msg hook: Conventional Commits, no AI attribution, human author.
+# Install: git config core.hooksPath .githooks  (copy this file to .githooks/commit-msg)
+set -euo pipefail
+
+msg_file="$1"
+subject=$(head -n 1 "$msg_file")
+
+# Git-generated subjects are exempt.
+if [[ "$subject" =~ ^(Merge|Revert\ \"|fixup!|squash!|amend!) ]]; then
+  exit 0
+fi
+
+fail() { printf '\033[0;31m[commit-msg] %s\033[0m\n' "$1" >&2; exit 1; }
+
+# 1. No AI attribution (closed list; avoids false positives on ordinary words).
+ai_tools='claude|anthropic|chatgpt|openai|copilot|gemini|codex|cursor|deepseek|qwen|mistral'
+if grep -Eiq "^(co-authored-by|assisted-by):.*(${ai_tools})|generated (with|by) .*(${ai_tools})|^claude-session:" "$msg_file"; then
+  fail "AI attribution found. Remove Co-Authored-By / Generated-with / Claude-Session lines."
+fi
+
+# 2. Human author.
+author=$(git var GIT_AUTHOR_IDENT)
+if echo "$author" | grep -Eiq "(${ai_tools})|noreply@anthropic\.com|\[bot\]"; then
+  fail "Author identity looks automated: ${author%% <*}. Set git user.name/user.email."
+fi
+
+# 3. Conventional Commits subject.
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?!?: [^A-Z].{0,70}[^.]$'
+if ! [[ "$subject" =~ $pattern ]]; then
+  fail "Subject must match 'type(scope): lowercase imperative subject' (≤ 72 chars, no trailing period). Got: $subject"
+fi
+
+exit 0

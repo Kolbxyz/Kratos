@@ -4,3 +4,10 @@ dist/
 
 .cache/
 *.keystore
+
+# --- bootstrap: web ---
+node_modules/
+dist/
+*.local
+.vite/
+coverage/

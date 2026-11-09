@@ -1,0 +1,3 @@
+# Files allowed to exceed the line limit, one repository-relative path per line.
+# This list only shrinks: CI fails when a listed file becomes compliant, so it is removed,
+# and a new file is never added. See rules/20-code.md §1.

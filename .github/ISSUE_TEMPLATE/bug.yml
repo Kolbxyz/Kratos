@@ -1,0 +1,26 @@
+name: Bug report
+description: Something does not work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Security vulnerabilities must not be reported here. See SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what was expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version and platform
+      placeholder: "v1.2.0, Android 16 / Linux x86_64 / Firefox 140"
+    validations:
+      required: true

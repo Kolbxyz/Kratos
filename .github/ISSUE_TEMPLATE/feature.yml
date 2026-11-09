@@ -1,0 +1,19 @@
+name: Feature request
+description: A new capability or a change in behavior.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy impact
+      description: New permissions, third-party calls or stored personal data, if any.

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# pre-commit: conflict markers, secret files, secret scan, file size.
+# Install: scripts/setup-hooks.sh
+set -euo pipefail
+
+fail() { printf '\033[0;31m[pre-commit] %s\033[0m\n' "$1" >&2; exit 1; }
+
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+[[ -z "$staged" ]] && exit 0
+
+# 1. Unresolved conflict markers.
+conflicts=$(while IFS= read -r f; do
+  [[ -f "$f" ]] && grep -Eq '^(<<<<<<< |>>>>>>> )' "$f" && echo "$f"
+done <<< "$staged" || true)
+[[ -n "$conflicts" ]] && fail "Conflict markers in: $conflicts"
+
+# 2. Secret and signing files (.env.example is allowed).
+secrets=$(grep -Ei '(^|/)(\.env(\..+)?|local\.properties)$|\.(pem|key|p12|jks|keystore)$' <<< "$staged" \
+  | grep -Ev '(^|/)\.env\.example$' || true)
+[[ -n "$secrets" ]] && fail "Refusing to commit secret or signing files: $secrets"
+
+# 3. Secret scan of staged content, when gitleaks is installed (CI always runs it).
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks git --staged --no-banner --redact >/dev/null || fail "gitleaks found a secret in staged changes."
+fi
+
+# 4. File size limit.
+if [[ -x scripts/check-file-size.sh ]]; then
+  scripts/check-file-size.sh 300 >/dev/null || fail "A file exceeds 300 lines. Run scripts/check-file-size.sh."
+fi
+
+exit 0
