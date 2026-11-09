@@ -1,0 +1,76 @@
+name: Hygiene
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  file-size:
+    name: File size (≤ 300 lines)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: bash scripts/check-file-size.sh 300
+
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks 8.30.1
+        # Through the API: the public release download URL can return a 504 page.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v8.30.1 -R gitleaks/gitleaks -p gitleaks_8.30.1_linux_x64.tar.gz -O gitleaks.tgz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tgz" | sha256sum -c -
+          tar -xzf gitleaks.tgz gitleaks
+      - run: ./gitleaks git --no-banner --redact .
+
+  commit-policy:
+    name: Commit policy
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: No AI attribution, human authors
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          tools='claude|anthropic|chatgpt|openai|copilot|gemini|codex|cursor|deepseek|qwen|mistral'
+          status=0
+          for c in $(git rev-list "$BASE..$HEAD"); do
+            if git log -1 --format=%B "$c" | grep -Eiq "^(co-authored-by|assisted-by):.*($tools)|generated (with|by) .*($tools)|^claude-session:"; then
+              echo "::error::$c contains AI attribution"; status=1
+            fi
+            author=$(git log -1 --format='%an <%ae>' "$c")
+            if echo "$author" | grep -Eiq "($tools)|noreply@anthropic\.com"; then
+              echo "::error::$c is authored by an automated identity: $author"; status=1
+            fi
+          done
+          exit $status
+      - name: Conventional Commits pull-request title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?!?: [^A-Z].{0,70}[^.]$'
+          if ! [[ "$TITLE" =~ $pattern ]]; then
+            echo "::error::Pull-request title must be 'type(scope): lowercase imperative subject'. Got: $TITLE"
+            exit 1
+          fi

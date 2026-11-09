@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#131f24" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbfaff" />
     <title>Kratos · Entraînement</title>
     <meta name="description" content="Questions tirées des leçons sourcées de Kratos : chiffres, citations, chronologies." />
-    <link rel="preload" href="polices/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Theme before the first paint (same rule as appliquerReglages in js/main.js).
+      try {
+        const r = JSON.parse(localStorage.getItem("kratos-app-reglages") || "{}");
+        const t = r.theme && r.theme !== "systeme" ? r.theme : matchMedia("(prefers-color-scheme: dark)").matches ? "sombre" : "clair";
+        document.documentElement.dataset.theme = t;
+        if (r.calme) document.documentElement.classList.add("calme");
+      } catch {}
+    </script>
+    <link rel="preload" href="polices/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="polices/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="polices/material-symbols-rounded.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
     <div id="app"></div>
-    <div id="toast" role="status" hidden></div>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

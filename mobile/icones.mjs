@@ -7,13 +7,13 @@ import { FORMES } from "../src/formes.ts";
 
 const RES = new URL("./android/app/src/main/res/", import.meta.url).pathname;
 const DENSITES = { mdpi: 1, hdpi: 1.5, xhdpi: 2, xxhdpi: 3, xxxhdpi: 4 };
-// Same as ic_launcher_background.xml and --pouvoir / --pouvoir-d / --pouvoir-c in app.css.
-const FOND = "#f3e6ff";
+// Same as ic_launcher_background.xml, --pouvoir-c and the --m-pouvoir* mascot colours in app.css.
+const FOND = "#efe2ff";
 const svg = perso({ id: "pouvoir", forme: FORMES.soleil });
 const page = (taille, contenu, forme) => `
   <style>
     html, body { margin: 0; background: transparent; }
-    :root { --tone: #a560e8; --tone-d: #7e3fc0; }
+    :root { --m: #8e55e0; --m-l: #c4a0ff; --m-d: #5f2fb0; }
     .icone { width: ${taille}px; height: ${taille}px; display: grid; place-items: center; overflow: hidden; background: ${forme ? FOND : "transparent"}; border-radius: ${forme === "rond" ? "50%" : forme === "carre" ? "22%" : "0"}; }
     svg { width: ${contenu}%; }
   </style>

@@ -6,6 +6,7 @@ import { PARCOURS } from "../../parcours";
 import { FORMES } from "../../formes";
 import { aRetenir, exercicesDe, type LeconBrute } from "../../lib/exercices";
 import { etapesDe } from "../../lib/etapes";
+import { getLivres } from "../../lib/bibliotheque";
 
 // The lesson split by chapter; its review draws from the steps' exercises.
 function avecEtapes(lecon: LeconBrute, toutes: LeconBrute[]) {
@@ -34,6 +35,12 @@ export const GET: APIRoute = async () => {
       verifiee: l.data.verifie_le !== null,
       retenir: aRetenir(brutes[i].body),
       ...avecEtapes(brutes[i], brutes),
+    })),
+    // The site's library (src/lib/bibliotheque.ts): one entry per book, with the lessons that recommend it.
+    // Covers are files of public/couvertures/, bundled in the APK and served by the site.
+    livres: (await getLivres()).map((b) => ({
+      id: b.id, titre: b.titre, auteur: b.auteur, annee: b.annee, url: b.url, incontournable: b.incontournable,
+      couverture: b.couverture, lecons: b.lecons.map((x) => ({ id: x.id, pourquoi: x.pourquoi })),
     })),
   };
   const version = createHash("sha1").update(JSON.stringify(contenu)).digest("hex").slice(0, 12);

@@ -1,4 +1,8 @@
-Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
+Copyright 2022 The Figtree Project Authors (https://github.com/erikdkennedy/figtree)
+Copyright 2020 The Newsreader Project Authors (https://github.com/productiontype/Newsreader)
+
+Figtree and Newsreader: SIL Open Font License 1.1 (below).
+material-symbols-rounded.woff2: Material Symbols by Google, Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0), subset to the icons the app uses.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
