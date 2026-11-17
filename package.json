@@ -14,21 +14,21 @@
     "pdf": "node scripts/build-pdf.mjs"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^7.3.2",
-    "@astrojs/mdx": "^8.0.3",
-    "@observablehq/plot": "^0.6.17",
-    "astro": "^7.3.8",
+    "@astrojs/markdown-remark": "^7.3.6",
+    "@astrojs/mdx": "^8.1.3",
+    "@observablehq/plot": "^0.6.19",
+    "astro": "^7.4.7",
     "d3-dsv": "^3.0.1",
     "d3-geo": "^3.1.1",
-    "linkedom": "^0.18.13",
+    "linkedom": "^0.18.15",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@types/d3-geo": "^3.1.1",
     "@types/topojson-client": "^3.1.5",
-    "pagefind": "^1.5.2",
-    "playwright": "^1.64.1"
+    "pagefind": "^1.6.0",
+    "playwright": "^1.65.0"
   },
   "private": true,
   "type": "module"
