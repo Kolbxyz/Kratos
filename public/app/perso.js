@@ -100,7 +100,7 @@ const ACCESSOIRES = {
       <path d="M43 82l17 28-4 2-19-28zM77 82L60 110l4 2 19-28z" fill="#2f3245"/>
       <g transform="rotate(16 60 95)"><rect x="-10" y="90" width="140" height="9.6" fill="#2f5bd3"/><rect x="-10" y="93.2" width="140" height="3.2" fill="#fff"/><rect x="-10" y="96.4" width="140" height="3.2" fill="#e1303c"/></g>`,
     devant: `<path d="M60 86l-9-4.5v9zM60 86l9-4.5v9z" fill="#1d1f2b"/><rect x="57.6" y="83.6" width="4.8" height="4.8" rx="1.4" fill="#2f3245"/>
-      <circle cx="90" cy="103" r="3.6" fill="#e3b23c" stroke="#b8860b" stroke-width="1"/><path d="M86.5 105h7l1.5 9h-10z" fill="#e3b23c"/><path d="M87.5 107v6.5M89.5 107v6.5M91.5 107v6.5M93.5 107v6.5" stroke="#b8860b" stroke-width=".9"/>
+      <path d="M74.5 102.5h7l1.5 9h-10z" fill="#e3b23c"/><path d="M75.5 104.5v6.5M77.5 104.5v6.5M79.5 104.5v6.5M81.5 104.5v6.5" stroke="#b8860b" stroke-width=".9"/><circle cx="78" cy="100.4" r="3.6" fill="#e3b23c" stroke="#b8860b" stroke-width="1"/>
       <path d="M22 31C20 9 36-9 58-12C70-13 80-12 88-7C96 0 100 14 100 31Q60 20 22 31z" fill="#de3a40"/>
       <path d="M52-9C72-21 104-12 109 12C111 24 109 36 104 45C100 40 98 33 96 27C92 16 82 10 70 8C61 6 55 1 52-9z" fill="#c42f36"/>
       <path d="M58-8C78-12 98-2 104 16M70 7C84 9 95 18 99 30" fill="none" stroke="#a3222a" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>
