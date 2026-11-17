@@ -1,0 +1,150 @@
+---
+titre: "Écrire les nombres"
+resume: "Une espace, jamais un point ni une virgule, entre les tranches de trois chiffres. Mais quelle espace, à partir de combien de chiffres, et pourquoi jamais dans une date ? BIPM, Académie et OQLF."
+parcours: langue
+ordre: 3
+lecture_min: 10
+verifie_le: null
+sources:
+  - titre: "Le Système international d’unités (SI), 9e édition (2019), version 4.01, § 5.4.4 « Écriture des nombres et séparateur décimal »"
+    auteur: "Bureau international des poids et mesures (BIPM)"
+    url: "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Questions de langue : Nombres (écriture, lecture, accord)"
+    auteur: "Académie française"
+    url: "https://www.academie-francaise.fr/questions-de-langue#58_strong-em-nombres-criture-lecture-accord-em-strong"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Espacements dans les nombres"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/25447/la-typographie/nombres/espacements-dans-les-nombres"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Contextes exigeant une espace insécable"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/24566/la-typographie/espacement/contextes-exigeant-une-espace-insecable"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "The Unicode Standard, Version 18.0, General Punctuation (2000-206F)"
+    auteur: "Unicode Consortium"
+    url: "https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+---
+import Citation from "../../components/Citation.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+import Timeline from "../../components/Timeline.astro";
+
+## 43 279,168 29
+
+Ce nombre est l’exemple choisi par le Bureau international des poids et mesures (BIPM), qui publie la Brochure sur le SI « afin d’expliquer et de promouvoir le SI », pour montrer comment on écrit un nombre long. Il l’oppose à une autre graphie, refusée : *43.279,168.29*[^bipm].
+
+La règle tient en une phrase, et elle est internationale. Elle ne vient pas d’un typographe, mais de résolutions de la Conférence générale des poids et mesures (CGPM), que la Brochure reproduit[^bipm].
+
+## Une règle votée par les États
+
+<Timeline items={[
+  { date: "1889", texte: "Première réunion de la Conférence générale des poids et mesures. La Brochure sur le SI regroupe depuis lors ses résolutions les plus importantes." },
+  { date: "1948", texte: "À sa 9e réunion, la CGPM adopte la Résolution 7, que la Brochure cite comme fondement du groupement des chiffres par tranches de trois." },
+  { date: "2003", texte: "À sa 22e réunion, la CGPM adopte la Résolution 10 : « le symbole du séparateur décimal pourra être le point sur la ligne ou la virgule sur la ligne ». La Brochure la cite aussi pour le groupement." },
+  { date: "2019", texte: "La 9e édition de la Brochure sur le SI reprend la règle à son § 5.4.4. Les nouvelles définitions des unités prennent effet le 20 mai." },
+]} />
+
+Source : BIPM, *Le Système international d’unités*, 9e édition, avant-propos et § 5.4.4[^bipm].
+
+Le texte de la Brochure est sans ambiguïté sur le séparateur :
+
+<Citation auteur="Bureau international des poids et mesures" oeuvre="Le Système international d’unités (SI), 9e édition" annee="2019" reference="§ 5.4.4, Écriture des nombres et séparateur décimal" url="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf">
+  Conformément à la décision de la CGPM à sa 9e réunion (1948, Résolution 7) et à sa 22e réunion (2003, Résolution 10), les nombres comportant un grand nombre de chiffres peuvent être partagés en tranches de trois chiffres, séparées par une espace, afin de faciliter la lecture. Ces tranches ne sont jamais séparées par des points, ni par des virgules : par exemple, 43 279,168 29 mais pas 43.279,168.29.
+</Citation>
+
+Le groupement vaut **des deux côtés de la virgule**. L’Office québécois de la langue française (OQLF) sépare les tranches « tant dans la partie des entiers que dans celle des décimales », et l’applique à π : « 3,141 592 653 589 793 »[^oqlf-nombres].
+
+## Quelle espace ?
+
+Les trois références consultées demandent une espace. Elles ne la décrivent pas de la même façon.
+
+<Positions items={[
+  { titre: "« une espace »", sous_titre: "BIPM", forme: "arche", points: [
+    "La Brochure sur le SI parle seulement de tranches « séparées par une espace ».",
+    "Elle ne précise ni sa largeur ni son comportement en fin de ligne.",
+  ]},
+  { titre: "« une espace insécable »", sous_titre: "Académie française", forme: "gemme", points: [
+    "« Dans un souci de lisibilité, on sépare les milliers par une espace insécable dans les nombres exprimant une quantité. »",
+    "Exemples de l’Académie : 1 000 m, 342 234 euros, 1 234 °C.",
+  ]},
+  { titre: "L’insécable, « à partir de la droite »", sous_titre: "OQLF", forme: "fleur", points: [
+    "L’insécable s’emploie « dans les grands nombres, entre chaque tranche de trois chiffres à partir de la droite ».",
+    "Exemple de l’OQLF : 1 564 534.",
+  ]},
+]} />
+
+Sources : BIPM, § 5.4.4[^bipm] ; Académie française[^academie] ; OQLF[^oqlf-contextes].
+
+L’Académie et l’OQLF retiennent l’insécable, qui permet, selon l’OQLF, « de ne pas séparer des groupes de chiffres ou de lettres qui sont indissociables »[^oqlf-contextes]. Unicode offre deux insécables, l’ordinaire (U+00A0) et la fine (U+202F), qu’il décrit comme « a narrow form of a no-break space »[^unicode]. **Aucune des trois références consultées n’impose la fine dans les nombres.** Comme elle reste insécable, elle respecte la consigne de l’Académie et de l’OQLF ; c’est un choix de composition plus serré, non une obligation.
+
+## À partir de combien de chiffres ?
+
+Là, les références divergent nettement. Le BIPM dissuade de séparer un nombre de quatre chiffres :
+
+<Citation auteur="Bureau international des poids et mesures" oeuvre="Le Système international d’unités (SI), 9e édition" annee="2019" reference="§ 5.4.4, Écriture des nombres et séparateur décimal" url="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf">
+  Cependant, lorsqu’il n’y a que quatre chiffres avant ou après le séparateur décimal, il est d’usage de ne pas isoler un chiffre par une espace.
+</Citation>
+
+L’OQLF laisse le choix : cette façon de faire « demeure cependant facultative pour les nombres ne comportant que quatre chiffres », et l’Office accepte aussi bien *8000 exemplaires* que *8 000 exemplaires*[^oqlf-nombres]. L’Académie française, elle, sépare : parmi ses exemples figure *1 234 °C*[^academie].
+
+<div class="chiffres">
+  <Chiffre valeur="3" label="chiffres par tranche, de part et d’autre du séparateur décimal" source="BIPM, Brochure sur le SI, § 5.4.4" url="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf" date="9e édition, 2019" forme="trefle" />
+  <Chiffre valeur="4" label="chiffres seulement avant ou après la virgule : le BIPM juge alors d’usage de ne pas isoler un chiffre par une espace" source="BIPM, Brochure sur le SI, § 5.4.4" url="https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf" date="9e édition, 2019" forme="gemme" />
+</div>
+
+Le BIPM admet aussi que l’habitude de grouper les chiffres « n’est pas toujours suivie dans certains domaines spécialisés tels que le dessin industriel, les documents financiers et les scripts qui doivent être lus par ordinateur »[^bipm].
+
+## Ce qu’on ne sépare jamais
+
+Le groupement concerne les **quantités**. Un nombre qui sert à numéroter ne se découpe pas :
+
+<Citation auteur="Académie française" oeuvre="Questions de langue" annee="s. d." reference="Nombres : écriture, lecture, accord, § 3 « Écriture des nombres en chiffres »" url="https://www.academie-francaise.fr/questions-de-langue#58_strong-em-nombres-criture-lecture-accord-em-strong">
+  En revanche, dans les nombres ayant fonction de numérotage (pages, dates, articles de code), les chiffres ne sont jamais séparés : la page 1254 de l’édition de 1992 ; l’article 1246 du Code civil.
+</Citation>
+
+L’OQLF ajoute les numéros de rue et les matricules : *Il habite au 10985, rue des Érables*, « et non : au 10 985 ». Il montre aussi que tout dépend de la fonction du nombre : on écrit *en 2000 av. J.-C.*, une date, mais *15 000 ans avant notre ère*, « car il s’agit là d’un nombre d’années, d’une durée, et non pas d’une date »[^oqlf-nombres].
+
+## La virgule décimale
+
+Depuis 2003, le SI admet le point ou la virgule comme séparateur décimal ; le choix revient à l’usage de chaque langue : « Le séparateur décimal choisi sera celui qui est d’usage courant selon la langue concernée et le contexte »[^bipm]. En français, l’Académie est nette : « La virgule (et non le point comme chez les anglo-saxons) sépare la partie entière de la partie décimale »[^academie].
+
+Le BIPM ajoute une règle souvent oubliée : si le nombre est compris entre +1 et −1, « le séparateur décimal est toujours précédé d’un zéro » ; on écrit *−0,234*, pas *−,234*[^bipm].
+
+## Le débat : grouper les nombres de quatre chiffres ?
+
+<Positions items={[
+  { titre: "Ne pas séparer", sous_titre: "BIPM", forme: "arche", points: [
+    "Avec quatre chiffres seulement, « il est d’usage de ne pas isoler un chiffre par une espace ».",
+  ]},
+  { titre: "Au choix", sous_titre: "OQLF", forme: "fleur", points: [
+    "Pour quatre chiffres, cette façon de faire « demeure cependant facultative ».",
+    "8000 et 8 000 sont tous deux corrects.",
+  ]},
+  { titre: "Séparer", sous_titre: "Académie française", forme: "gemme", points: [
+    "Les milliers sont séparés « dans les nombres exprimant une quantité ».",
+    "L’exemple retenu, 1 234 °C, groupe un nombre de quatre chiffres.",
+  ]},
+]} />
+
+<ARetenir>
+1. Les nombres longs se groupent par tranches de trois chiffres, de part et d’autre de la virgule, séparées par une espace, jamais par un point ni une virgule (CGPM 1948 et 2003, BIPM).
+2. L’Académie et l’OQLF demandent une espace insécable ; aucune des références consultées n’impose la fine, qui reste admise puisqu’elle est insécable.
+3. Quatre chiffres : le BIPM ne sépare pas, l’OQLF laisse le choix, l’Académie sépare (1 234 °C).
+4. Les numéros ne se séparent jamais : pages, dates, articles de code, numéros de rue.
+5. En français, la virgule est le séparateur décimal, et un nombre entre +1 et −1 commence par un zéro.
+</ARetenir>
+
+[^bipm]: Bureau international des poids et mesures, *Le Système international d’unités (SI)*, 9e édition, 2019 (version 4.01), avant-propos et § 5.4.4 « Écriture des nombres et séparateur décimal », p. 38-39. https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-FR.pdf
+[^academie]: Académie française, « Questions de langue », entrée « Nombres : écriture, lecture, accord », § 3 « Écriture des nombres en chiffres ». https://www.academie-francaise.fr/questions-de-langue#58_strong-em-nombres-criture-lecture-accord-em-strong
+[^oqlf-nombres]: Office québécois de la langue française, « Espacements dans les nombres », Banque de dépannage linguistique, dernière mise à jour 2019. https://vitrinelinguistique.oqlf.gouv.qc.ca/25447/la-typographie/nombres/espacements-dans-les-nombres
+[^oqlf-contextes]: Office québécois de la langue française, « Contextes exigeant une espace insécable », section « Groupes de chiffres ou de lettres ». https://vitrinelinguistique.oqlf.gouv.qc.ca/24566/la-typographie/espacement/contextes-exigeant-une-espace-insecable
+[^unicode]: Unicode Consortium, *The Unicode Standard, Version 18.0*, tableau General Punctuation, entrée 202F NARROW NO-BREAK SPACE. https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf

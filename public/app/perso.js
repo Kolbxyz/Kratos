@@ -48,6 +48,11 @@ const VISAGES = {
     joie: `${taches}${plissés}${etoile(30, 50, 3.4).replace("#fff", "#ffe27a")}${etoile(91, 48, 3).replace("#fff", "#ffe27a")}${bouche("M52 71q8 10 16 0z")}<path d="M56 77q4-3 8 0q-4 2.5-8 0z" fill="#ff7d9c"/>`,
     reflexion: `${taches}${oeil(45, 56, 8.5, 10, 0, 0, 0)}${etoile(44, 51, 3.6)}${oeil(75, 56, 8.5, 10, 0, 0, 0)}${etoile(74, 51, 3.6)}<ellipse cx="60" cy="76" rx="2.4" ry="2.4" fill="${ENCRE}"/><circle cx="99" cy="38" r="2.6" fill="#fff" opacity=".85"/><circle cx="106" cy="29" r="3.6" fill="#fff" opacity=".85"/>`,
     triste: `${taches}${oeil(45, 59, 8, 9.5, 0, 0, 0)}${etoile(47.5, 55, 3.4)}${oeil(75, 59, 8, 9.5, 0, 0, 0)}${etoile(77.5, 55, 3.4)}<path d="M37 64q8 6 16 0M67 64q8 6 16 0" fill="#8fd3ff" opacity=".9"/>${trait("M55 78q5-3 10 0")}`,
+  },  langue: {
+    neutre: `${joues}${oeil(45, 58, 6, 7.5)}${oeil(75, 58, 6, 7.5)}${trait("M37 46q8-4 15-1M68 45q8-3 15 1", 3)}${trait("M53 73q7 5 14 0")}`,
+    joie: `${joues}${plissés}${trait("M37 45q8-5 15-1M68 44q8-4 15 1", 3)}${bouche("M50 70q10 11 20 0z")}`,
+    reflexion: `${joues}${oeil(45, 56, 6, 7.5, 2.6, -4.6)}${oeil(75, 56, 6, 7.5, 2.6, -4.6)}${trait("M68 42q8-4 15 0", 3)}${trait("M55 75q3 2 5 0t5 0")}`,
+    triste: `${joues}${oeil(45, 60, 5.6, 6.8)}${oeil(75, 60, 5.6, 6.8)}${trait("M37 48l13-3M83 48l-13-3", 3)}${trait("M54 78q6-4 12 0")}`,
   },
 };
 
@@ -79,6 +84,10 @@ const ACCESSOIRES = {
   societe: {
     devant: `<g transform="rotate(-12 56 10)"><ellipse cx="56" cy="11" rx="22" ry="7.5" fill="#2b2b3a"/><path d="M56 4v-5" stroke="#2b2b3a" stroke-width="3" stroke-linecap="round"/></g>
       <path d="M27 84q33 13 66 0v8q-33 13-66 0z" fill="#2f6fd6"/><path d="M76 92l7 19h-9l-4-17z" fill="#2f6fd6"/><path d="M75 102h8M77 107h7" stroke="#fff" stroke-width="2" opacity=".7"/>`,
+  },  // Hair bow and a pair of French quotation marks on the chest.
+  langue: {
+    devant: `<g transform="rotate(-8 60 6)"><path d="M60 6L44-4q-4 10 0 20zM60 6l16-10q4 10 0 20z" fill="#e84a5f" stroke="#a8243a" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="6" r="4.2" fill="#c2304f"/></g>
+      <path d="M57 86l-5 5 5 5M65 86l-5 5 5 5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>`,
   },
 };
 
@@ -118,6 +127,12 @@ export const MASCOTTES = {
     juste: ["Oh, joliment pensé !", "Vous voyez plus loin que la question."],
     faux: ["Bonne erreur : elle fait réfléchir.", "Hmm, regardons ça autrement."],
     fini: "Tout lu, tout pensé. On repense ?",
+  },  langue: {
+    nom: "Guillemette", role: "Nœud dans les cheveux et guillemets sur le cœur",
+    accueil: ["Un signe après l'autre, l'écrit s'éclaircit.", "Prêts à traquer l'espace qui manque ?", "On ouvre les guillemets ?"],
+    juste: ["Impeccable, pas une coquille !", "Voilà qui est bien composé."],
+    faux: ["Une coquille, ça se corrige.", "On relit et on recommence."],
+    fini: "Tout est relu. On révise les règles ?",
   },
 };
 

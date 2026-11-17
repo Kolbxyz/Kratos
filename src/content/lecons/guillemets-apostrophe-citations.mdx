@@ -1,0 +1,169 @@
+---
+titre: "Guillemets, apostrophe et citations"
+resume: "Chevrons, guillemets anglais doubles puis simples : trois rangs de citation, trois façons de traiter l’espace. Puis la majuscule, le point final et l’apostrophe courbe."
+parcours: langue
+ordre: 2
+lecture_min: 12
+verifie_le: null
+sources:
+  - titre: "Généralités sur les guillemets"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/23363/la-ponctuation/guillemets/generalites-sur-les-guillemets"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Citation double"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/23247/la-redaction-et-la-communication/bibliographie-et-citations/citations/citation-double"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Guillemets et citation"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/23375/la-ponctuation/guillemets/guillemets-et-citation"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Espacement avant et après les signes de ponctuation et les symboles"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Apostrophe"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/23349/la-ponctuation/autres-signes-graphiques/apostrophe"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Apostrophes typographique et dactylographique"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/25173/la-ponctuation/autres-signes-graphiques/apostrophes-typographique-et-dactylographique"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "The Unicode Standard, Version 18.0, General Punctuation (2000-206F)"
+    auteur: "Unicode Consortium"
+    url: "https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "The Unicode Standard, Version 18.0, C1 Controls and Latin-1 Supplement (0080-00FF)"
+    auteur: "Unicode Consortium"
+    url: "https://www.unicode.org/Public/18.0.0/charts/PDF/U0080.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Signes de ponctuation en français : bien les utiliser"
+    auteur: "Aline Laffont, Projet Voltaire (publié le 21 novembre 2022, mis à jour le 2 février 2026)"
+    url: "https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/"
+    consulte: "2026-11-17"
+    primaire: true
+---
+import Citation from "../../components/Citation.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Positions from "../../components/Positions.astro";
+
+## Le petit Guillaume
+
+Le guillemet porte un prénom. L’Office québécois de la langue française (OQLF) en raconte l’origine, avec la prudence qui s’impose :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Généralités sur les guillemets" annee="s. d." reference="Banque de dépannage linguistique, introduction" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/23363/la-ponctuation/guillemets/generalites-sur-les-guillemets">
+  Les guillemets ont été inventés au XVIe siècle. Ils tirent probablement leur nom de leur inventeur, l’imprimeur Guillaume, guillemet étant le diminutif de Guillaume.
+</Citation>
+
+Ils ont, selon la même page, deux grands rôles : « marquer le discours rapporté (citations et discours directs) et mettre en valeur ou à distance un mot ou un groupe de mots »[^generalites]. Le Projet Voltaire ajoute un troisième usage, les **guillemets d’ironie**, qui indiquent « de manière ironique, que l’expression est détournée de son sens »[^voltaire].
+
+## Trois rangs de guillemets
+
+Une citation peut en contenir une autre, qui en contient une troisième. Le français distingue chaque rang par une forme de guillemet différente :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Citation double" annee="s. d." reference="Banque de dépannage linguistique, section « Citation principale entre guillemets »" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/23247/la-redaction-et-la-communication/bibliographie-et-citations/citations/citation-double">
+  Si la citation principale est entre guillemets, comme c’est généralement le cas en français, on encadre la citation enchâssée, aussi appelée citation de second rang, citation de deuxième rang ou citation incluse, par des guillemets anglais doubles (“ ”). S’il y a une citation à l’intérieur de la citation enchâssée, on emploie les guillemets anglais simples (‘ ’).
+</Citation>
+
+Le Projet Voltaire donne la même consigne pour le deuxième rang : « s’il faut placer des guillemets à l’intérieur d’un texte lui-même encadré par des guillemets, on privilégiera les guillemets anglais »[^voltaire]. Unicode attribue à chacun de ces signes un caractère propre[^unicode0080][^unicode2000] :
+
+<Positions items={[
+  { titre: "1er rang : « »", sous_titre: "U+00AB et U+00BB", forme: "arche", points: [
+    "Les guillemets français, ou chevrons. Unicode les nomme <em>left guillemet</em> et <em>right guillemet</em>.",
+    "OQLF : « Une espace insécable sépare les guillemets ouvrants et fermants du texte guillemeté. »",
+  ]},
+  { titre: "2e rang : “ ”", sous_titre: "U+201C et U+201D", forme: "gemme", points: [
+    "Les guillemets anglais doubles.",
+    "OQLF : « On ne met pas d’espace entre le texte ainsi guillemeté et ces guillemets. »",
+  ]},
+  { titre: "3e rang : ‘ ’", sous_titre: "U+2018 et U+2019", forme: "fleur", points: [
+    "Les guillemets anglais simples : l’ouvrant U+2018, le fermant U+2019.",
+    "OQLF : « Il n’y a pas d’espace entre le texte ainsi guillemeté et ces guillemets. »",
+  ]},
+]} />
+
+Sources : OQLF, « Généralités sur les guillemets »[^generalites] ; Unicode 18.0[^unicode0080][^unicode2000].
+
+L’OQLF donne un exemple à trois rangs, où un journaliste rapporte ses propres paroles, qui rapportaient celles d’une députée, qui citait deux mots :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Généralités sur les guillemets" annee="s. d." reference="Banque de dépannage linguistique, section « Emplois », exemple" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/23363/la-ponctuation/guillemets/generalites-sur-les-guillemets">
+  Voici comment le journaliste rapporte ses propos et ceux de la députée : « J’avais fait la déclaration suivante au bulletin de nouvelles : ‘‘Elle a accusé le ministre d’être ‘menteur et hypocrite’ à la Chambre des communes.’’ Ce n’est donc pas moi qui ai traité le ministre de menteur et d’hypocrite, mais bien la députée. »
+</Citation>
+
+L’OQLF signale enfin d’autres solutions pour la citation enchâssée : « On peut aussi utiliser l’italique ou les petits caractères pour la citation enchâssée, au lieu des guillemets anglais. » L’important, conclut-il, est « d’adopter une méthode logique et cohérente, et de s’y tenir tout au long du texte »[^double].
+
+## La majuscule et le point final
+
+Où mettre le point quand une citation finit la phrase ? L’OQLF reconnaît que la question n’est pas tranchée partout : « les ouvrages de référence ne proposent pas tous les mêmes règles à ce sujet »[^citation]. Il distingue deux cas.
+
+**La citation est une phrase complète.** Elle est annoncée par un deux-points et commence par une majuscule :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Guillemets et citation" annee="s. d." reference="Banque de dépannage linguistique, section « Citation d’une phrase complète »" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/23375/la-ponctuation/guillemets/guillemets-et-citation">
+  Si la citation est une phrase graphique complète, elle est souvent annoncée par un deux-points et elle commence par une majuscule. Elle perd son point final si elle est au début ou au milieu de la phrase où elle s’insère; mais si la citation termine la phrase, elle conserve son point final et aucun point n’est ajouté après le guillemet fermant.
+</Citation>
+
+On écrit donc, selon les exemples de l’OQLF : *Elle affirma : « Je suis à peu près d’accord. »* Le point reste à l’intérieur, et aucun second point n’est ajouté. Les points d’exclamation, d’interrogation et de suspension de la citation sont toujours conservés[^citation].
+
+**La citation est fondue dans la phrase.** Les guillemets n’encadrent que les mots cités, et la ponctuation de la phrase reste dehors : *Il a employé l’expression « mettre la charrue avant les bœufs ».* L’OQLF précise que, si une citation fondue dans le texte se termine par une phrase complète, « le point final est mis à l’extérieur des guillemets »[^citation]. Le Projet Voltaire résume : « On ne met pas de point ou de majuscule à l’intérieur des guillemets, sauf si ceux-ci contiennent une phrase complète »[^voltaire].
+
+Deux détails complètent la règle. Le subordonnant *que* qui introduit la citation reste hors des guillemets, tout comme le déterminant qui précède un mot cité : *On n’en a pas fini avec l’« excellence » et la « qualité totale ».* Et toute modification apportée au texte cité se signale entre crochets[^citation].
+
+## L’apostrophe courbe
+
+L’apostrophe marque d’abord l’**élision**. L’OQLF précise que « seules les voyelles a, e et i sont élidées », dans des mots courts comme *le*, *la*, *de*, *que* ou *si*[^apostrophe]. Le signe est récent : il « n’est apparu dans la langue française qu’au XVIe siècle, voire au XVIIe siècle pour ce qui est de l’écriture manuscrite » ; auparavant, on écrivait *lhéritier* pour *l’héritier*[^apostrophe].
+
+Deux caractères se disputent ce rôle. L’OQLF les distingue :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Apostrophes typographique et dactylographique" annee="2014" reference="Banque de dépannage linguistique, introduction et « Contextes d’emploi »" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/25173/la-ponctuation/autres-signes-graphiques/apostrophes-typographique-et-dactylographique">
+  On distingue l’apostrophe dite typographique, ou traditionnelle, de l’apostrophe dite dactylographique, ou droite. […] En typographie soignée, on préférera l’apostrophe traditionnelle à l’apostrophe droite, particulièrement dans les documents imprimés, mais aussi électroniques.
+</Citation>
+
+Unicode tranche dans le même sens. Le caractère U+2019 (RIGHT SINGLE QUOTATION MARK), le même que le guillemet simple fermant, porte cette note : « this is the preferred character to use for apostrophe », c’est le caractère à préférer pour l’apostrophe. L’apostrophe droite du clavier est un autre caractère, U+0027[^unicode2000].
+
+L’apostrophe droite vient de la machine à écrire. Selon l’OQLF, elle apparaît au XIXe siècle, quand, « pour des raisons d’économie de touches », un seul signe servait à noter l’apostrophe et les guillemets anglais ; les claviers d’ordinateur l’ont ensuite récupérée[^typo].
+
+**Aucune espace** ne l’entoure : le tableau de l’OQLF indique « Pas d’espace » avant comme après l’apostrophe, et ajoute qu’on ne met pas d’espace insécable « entre une apostrophe et un guillemet ouvrant »[^espacement]. On écrit *l’« excellence »*. En fin de ligne, l’usage typographique veut aussi « qu’on ne coupe pas un mot avant ou après une apostrophe »[^apostrophe].
+
+## Le débat : l’apostrophe droite est-elle une faute ?
+
+<Positions items={[
+  { titre: "Non, une tolérance", sous_titre: "OQLF", forme: "arche", points: [
+    "L’apostrophe droite « peut s’imposer d’elle-même dans certains écrits, en raison de lacunes informatiques ».",
+    "« Son utilisation ne peut alors être considérée comme fautive. »",
+    "L’OQLF note qu’on la trouve même dans « les éditions numériques de prestigieux dictionnaires ».",
+  ]},
+  { titre: "Oui, dans un texte soigné", sous_titre: "OQLF et Unicode", forme: "gemme", points: [
+    "« En typographie soignée, on préférera l’apostrophe traditionnelle à l’apostrophe droite ».",
+    "Unicode désigne U+2019 comme le caractère à préférer pour l’apostrophe.",
+    "Mélanger les deux est à éviter : on veillera « à ne pas employer d’apostrophes dactylographiques dans un texte où apparaissent des apostrophes typographiques ».",
+  ]},
+]} />
+
+Sources : OQLF, « Apostrophes typographique et dactylographique »[^typo] ; Unicode 18.0[^unicode2000].
+
+<ARetenir>
+1. Premier rang : « » avec une espace insécable à l’intérieur ; deuxième rang : “ ” ; troisième rang : ‘ ’, ces deux derniers collés au texte (OQLF).
+2. Une citation qui forme une phrase complète, annoncée par un deux-points, commence par une majuscule.
+3. Si cette citation termine la phrase, elle garde son point final à l’intérieur, et on n’en ajoute pas après le guillemet.
+4. Un mot ou un fragment cité laisse la ponctuation de la phrase à l’extérieur des guillemets.
+5. L’apostrophe soignée est la courbe U+2019, sans espace avant ni après ; l’apostrophe droite U+0027 est tolérée quand l’outil l’impose.
+</ARetenir>
+
+[^generalites]: Office québécois de la langue française, « Généralités sur les guillemets », Banque de dépannage linguistique (sections « Rôles », « Principaux types de guillemets » et « Emplois »). https://vitrinelinguistique.oqlf.gouv.qc.ca/23363/la-ponctuation/guillemets/generalites-sur-les-guillemets
+[^double]: Office québécois de la langue française, « Citation double », Banque de dépannage linguistique. https://vitrinelinguistique.oqlf.gouv.qc.ca/23247/la-redaction-et-la-communication/bibliographie-et-citations/citations/citation-double
+[^citation]: Office québécois de la langue française, « Guillemets et citation », Banque de dépannage linguistique (sections « Les principes généraux », « Modification apportée à une citation », « Citation d’une phrase complète » et « Citation d’un mot ou d’un groupe de mots »). https://vitrinelinguistique.oqlf.gouv.qc.ca/23375/la-ponctuation/guillemets/guillemets-et-citation
+[^espacement]: Office québécois de la langue française, « Espacement avant et après les signes de ponctuation et les symboles », tableau (ligne « Apostrophe ») et notes. https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles
+[^apostrophe]: Office québécois de la langue française, « Apostrophe », Banque de dépannage linguistique (sections « Élision », « Dans les locutions figées » et « Apparition de l’apostrophe »). https://vitrinelinguistique.oqlf.gouv.qc.ca/23349/la-ponctuation/autres-signes-graphiques/apostrophe
+[^typo]: Office québécois de la langue française, « Apostrophes typographique et dactylographique », dernière mise à jour 2014. https://vitrinelinguistique.oqlf.gouv.qc.ca/25173/la-ponctuation/autres-signes-graphiques/apostrophes-typographique-et-dactylographique
+[^voltaire]: Aline Laffont, « Signes de ponctuation en français : bien les utiliser », Projet Voltaire, section « Les guillemets ». https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/
+[^unicode2000]: Unicode Consortium, *The Unicode Standard, Version 18.0*, tableau General Punctuation, entrées 2018, 2019 (« this is the preferred character to use for apostrophe »), 201C et 201D. https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf
+[^unicode0080]: Unicode Consortium, *The Unicode Standard, Version 18.0*, tableau C1 Controls and Latin-1 Supplement, entrées 00AB (« left guillemet ») et 00BB (« right guillemet »). https://www.unicode.org/Public/18.0.0/charts/PDF/U0080.pdf

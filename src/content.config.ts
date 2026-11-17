@@ -36,7 +36,7 @@ const lecons = defineCollection({
   schema: z.object({
     titre: z.string(),
     resume: z.string().max(220),
-    parcours: z.enum(["pouvoir", "institutions", "economie", "militaire", "societe"]),
+    parcours: z.enum(["pouvoir", "institutions", "economie", "militaire", "societe", "langue"]),
     ordre: z.number(),
     lecture_min: z.number().int().positive(),
     // A lesson is publishable only once a human has re-checked every figure against its source.
