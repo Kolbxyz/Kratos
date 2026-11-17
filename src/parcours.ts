@@ -30,7 +30,7 @@ export const PARCOURS = {
     a_venir: [],
   },
   langue: {
-    forme: "trefle",
+    forme: "bloc",
     nom: "Langue française",
     accroche: "Les règles qui fixent l’écrit : espaces, ponctuation, guillemets, nombres.",
     a_venir: [],

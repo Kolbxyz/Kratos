@@ -1,5 +1,5 @@
 // Decorative shapes in the spirit of the Material 3 Expressive shape library, drawn in a 100x100 box.
-export type NomForme = "biscuit" | "soleil" | "trefle" | "fleur" | "arche" | "gemme" | "pilule";
+export type NomForme = "biscuit" | "soleil" | "trefle" | "fleur" | "arche" | "gemme" | "pilule" | "bloc";
 
 // Scalloped circles: radius oscillates n times around the centre, peaks touching the box edge.
 function festonne(n: number, amplitude: number) {
@@ -21,4 +21,6 @@ export const FORMES: Record<NomForme, string> = {
   arche: "M0 50A50 50 0 0 1 100 50V88a12 12 0 0 1-12 12H12A12 12 0 0 1 0 88Z",
   gemme: "M50 2a10 10 0 0 1 8 4l36 38a10 10 0 0 1 0 12L58 94a10 10 0 0 1-16 0L6 56a10 10 0 0 1 0-12L42 6a10 10 0 0 1 8-4Z",
   pilule: "M30 8h40a22 22 0 0 1 0 44H30a22 22 0 0 1 0-44Z",
+  // Rounded square, like a block of lead type.
+  bloc: "M24 6h52a18 18 0 0 1 18 18v52a18 18 0 0 1-18 18H24A18 18 0 0 1 6 76V24A18 18 0 0 1 24 6Z",
 };
