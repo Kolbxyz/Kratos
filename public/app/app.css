@@ -40,7 +40,7 @@
   --economie-p: #3a7a12; --economie-c: #d6f3c1; --economie-on-c: #0d2600;
   --militaire-p: #b3302a; --militaire-c: #ffdad5; --militaire-on-c: #410002;
   --societe-p: #9a5300; --societe-c: #ffdcbc; --societe-on-c: #2f1500;
-  --langue-p: #006a6a; --langue-c: #9cf1f0; --langue-on-c: #002020;
+  --langue-p: #3f51c2; --langue-c: #dfe0ff; --langue-on-c: #00105c;
 
   /* Mascot bodies, same in both themes. Each base tone keeps >= 3:1 with bold white text. */
   --m-pouvoir: #8e55e0; --m-pouvoir-l: #c4a0ff; --m-pouvoir-d: #5f2fb0;
@@ -48,7 +48,7 @@
   --m-economie: #4c9a1a; --m-economie-l: #9ade66; --m-economie-d: #2f6a0a;
   --m-militaire: #d9413a; --m-militaire-l: #ff9a8f; --m-militaire-d: #9c2420;
   --m-societe: #e07a00; --m-societe-l: #ffbb5c; --m-societe-d: #a55500;
-  --m-langue: #0e8f8a; --m-langue-l: #6fd6cf; --m-langue-d: #08625e;
+  --m-langue: #4a5fd8; --m-langue-l: #9fb0ff; --m-langue-d: #2f3fa6;
   --m-or: #ffcf3f;
 
   --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
@@ -81,7 +81,7 @@
   --economie-p: #9dd877; --economie-c: #235200; --economie-on-c: #d6f3c1;
   --militaire-p: #ffb4aa; --militaire-c: #8f1916; --militaire-on-c: #ffdad5;
   --societe-p: #ffb871; --societe-c: #713d00; --societe-on-c: #ffdcbc;
-  --langue-p: #80d4d4; --langue-c: #004f4f; --langue-on-c: #9cf1f0;
+  --langue-p: #bcc3ff; --langue-c: #2b3a9e; --langue-on-c: #dfe0ff;
 }
 [data-parcours="pouvoir"] { --p: var(--pouvoir-p); --pc: var(--pouvoir-c); --on-pc: var(--pouvoir-on-c); --m: var(--m-pouvoir); --m-l: var(--m-pouvoir-l); --m-d: var(--m-pouvoir-d); }
 [data-parcours="institutions"] { --p: var(--institutions-p); --pc: var(--institutions-c); --on-pc: var(--institutions-on-c); --m: var(--m-institutions); --m-l: var(--m-institutions-l); --m-d: var(--m-institutions-d); }

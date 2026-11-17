@@ -18,7 +18,7 @@
   --economie: #17705a; --economie-c: #c6eedd; --on-economie-c: #06372a;
   --militaire: #b0441a; --militaire-c: #fcdccc; --on-militaire-c: #4a1803;
   --societe: #8a5a00; --societe-c: #fbe2b6; --on-societe-c: #3a2400;
-  --langue: #00696f; --langue-c: #c4eef0; --on-langue-c: #002022;
+  --langue: #3a4cc0; --langue-c: #dfe0ff; --on-langue-c: #0d1660;
 
   --serif: "Source Serif 4", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
@@ -51,7 +51,7 @@
     --economie: #7fd8b5; --economie-c: #134c3d; --on-economie-c: #cdf3e3;
     --militaire: #f5a37d; --militaire-c: #5e2a12; --on-militaire-c: #fde1d3;
     --societe: #f0bd68; --societe-c: #573806; --on-societe-c: #fdeacb;
-    --langue: #80d4da; --langue-c: #004f54; --on-langue-c: #c4eef0;
+    --langue: #bcc3ff; --langue-c: #2c3a96; --on-langue-c: #dfe0ff;
   }
 }
 :root[data-theme="dark"] {
@@ -72,7 +72,7 @@
   --economie: #7fd8b5; --economie-c: #134c3d; --on-economie-c: #cdf3e3;
   --militaire: #f5a37d; --militaire-c: #5e2a12; --on-militaire-c: #fde1d3;
   --societe: #f0bd68; --societe-c: #573806; --on-societe-c: #fdeacb;
-  --langue: #80d4da; --langue-c: #004f54; --on-langue-c: #c4eef0;
+  --langue: #bcc3ff; --langue-c: #2c3a96; --on-langue-c: #dfe0ff;
 }
 
 /* Track context: components read --tone*, set once by the nearest [data-parcours]. */
