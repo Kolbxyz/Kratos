@@ -86,11 +86,11 @@ const ACCESSOIRES = {
     devant: `<g transform="rotate(-12 56 10)"><ellipse cx="56" cy="11" rx="22" ry="7.5" fill="#2b2b3a"/><path d="M56 4v-5" stroke="#2b2b3a" stroke-width="3" stroke-linecap="round"/></g>
       <path d="M27 84q33 13 66 0v8q-33 13-66 0z" fill="#2f6fd6"/><path d="M76 92l7 19h-9l-4-17z" fill="#2f6fd6"/><path d="M75 102h8M77 107h7" stroke="#fff" stroke-width="2" opacity=".7"/>`,
   },
-  // Hair bow and a blue-white-red rosette on the chest.
+  // Napoleonic bicorne worn sideways, and a blue-white-red rosette pinned to one side of the chest.
   langue: {
-    devant: `<g transform="rotate(-8 60 6)"><path d="M60 6L44-4q-4 10 0 20zM60 6l16-10q4 10 0 20z" fill="#e84a5f" stroke="#a8243a" stroke-width="2" stroke-linejoin="round"/><circle cx="60" cy="6" r="4.2" fill="#c2304f"/></g>
-      <path d="M56 95l-4 12 4.5-2.5 2 4.5 1.5-13zM64 95l4 12-4.5-2.5-2 4.5-1.5-13z" fill="#1f4fbf"/>
-      <circle cx="60" cy="91" r="9" fill="#1f4fbf"/><circle cx="60" cy="91" r="6.2" fill="#fff"/><circle cx="60" cy="91" r="3.2" fill="#e1303c"/>`,
+    devant: `<g transform="rotate(-5 60 8)"><path d="M3 31C19 21 27-12 60-12C93-12 101 21 117 31C97 23 80 17 60 17C40 17 23 23 3 31Z" fill="#1d1d2b"/><path d="M10 27C27 20 43 15 60 15C77 15 93 20 110 27" fill="none" stroke="#3d3d52" stroke-width="2"/><path d="M78-8q5 11 1 23" fill="none" stroke="#e3b23c" stroke-width="3" stroke-linecap="round"/></g>
+      <path d="M38 88l-3.5 10.5 4-2.2 1.8 4 1.2-11.5zM44 88l3.5 10.5-4-2.2-1.8 4-1.2-11.5z" fill="#1f4fbf"/>
+      <circle cx="41" cy="85" r="7.5" fill="#1f4fbf"/><circle cx="41" cy="85" r="5.1" fill="#fff"/><circle cx="41" cy="85" r="2.6" fill="#e1303c"/>`,
   },
 };
 
@@ -132,7 +132,7 @@ export const MASCOTTES = {
     fini: "Tout lu, tout pensé. On repense ?",
   },
   langue: {
-    nom: "Guillemette", role: "Nœud dans les cheveux et cocarde sur le cœur",
+    nom: "Guillemette", role: "Bicorne en bataille et cocarde sur le cœur",
     accueil: ["Un signe après l'autre, l'écrit s'éclaircit.", "Prêts à traquer l'espace qui manque ?", "On ouvre les guillemets ?"],
     juste: ["Impeccable, pas une coquille !", "Voilà qui est bien composé."],
     faux: ["Une coquille, ça se corrige.", "On relit et on recommence."],
