@@ -17,6 +17,21 @@ const miClos = (dy = 0, bx = 0) => `<path d="M37.5 ${56 + dy}h15a7.5 8.5 0 0 1-1
   <circle cx="${48.5 + bx}" cy="${59.5 + dy}" r="2.2" fill="#fff"/><circle cx="${78.5 + bx}" cy="${59.5 + dy}" r="2.2" fill="#fff"/>`;
 const lunettes = `<g fill="#fff" fill-opacity=".2" stroke="#1f2430" stroke-width="2.6"><circle cx="45" cy="58" r="11.5"/><circle cx="75" cy="58" r="11.5"/></g>${trait("M56.5 56q3.5-3 7 0", 2.6).replace(ENCRE, "#1f2430")}`;
 const taches = `<g fill="#9a4a00" opacity=".45"><circle cx="30" cy="70" r="1.3"/><circle cx="34" cy="73.5" r="1.3"/><circle cx="28.5" cy="75" r="1.1"/><circle cx="90" cy="70" r="1.3"/><circle cx="86" cy="73.5" r="1.3"/><circle cx="91.5" cy="75" r="1.1"/></g>`;
+// Sans-culotte: frowning brows, narrowed eyes, bared teeth, pleated rosette.
+const sourcils = (dy = 0) => trait(`M33 ${44 + dy}l19 8M87 ${44 + dy}l-19 8`, 4.6);
+const yeuxPlisses = (dy = 0, bx = 1.5) => `<path d="M37 ${55 + dy}q8-4 16 1q-1 9-8 9t-8-10zM83 ${55 + dy}q-8-4-16 1q1 9 8 9t8-10z" fill="${ENCRE}"/>
+  <circle cx="${46 + bx}" cy="${58 + dy}" r="2" fill="#fff"/><circle cx="${76 + bx}" cy="${58 + dy}" r="2" fill="#fff"/>`;
+const crocs = `<path d="M48 74q12 9 24 0q-1 8-12 9q-11-1-12-9z" fill="${ENCRE}"/><path d="M51 75h18l-1.5 3h-15z" fill="#fff"/>`;
+function cocarde(cx, cy, r) {
+  let d = "";
+  for (let i = 0; i < 36; i++) {
+    const t = (i / 36) * 2 * Math.PI, rr = i % 2 ? r * 0.88 : r;
+    d += `${i ? "L" : "M"}${(cx + rr * Math.sin(t)).toFixed(1)} ${(cy - rr * Math.cos(t)).toFixed(1)}`;
+  }
+  return `<path d="M${cx - 3} ${cy + 2}l-4 12 4-2 2 4 2-12zM${cx + 3} ${cy + 2}l4 12-4-2-2 4-2-12z" fill="#e1303c"/>
+    <path d="${d}Z" fill="#1f4fbf"/><circle cx="${cx}" cy="${cy}" r="${r * 0.62}" fill="#fff" stroke="#d5dde8" stroke-width=".8"/>
+    <circle cx="${cx}" cy="${cy}" r="${r * 0.32}" fill="#e1303c"/><circle cx="${cx - r * 0.12}" cy="${cy - r * 0.12}" r="${r * 0.1}" fill="#fff" opacity=".7"/>`;
+}
 
 const VISAGES = {
   pouvoir: {
@@ -50,10 +65,10 @@ const VISAGES = {
     triste: `${taches}${oeil(45, 59, 8, 9.5, 0, 0, 0)}${etoile(47.5, 55, 3.4)}${oeil(75, 59, 8, 9.5, 0, 0, 0)}${etoile(77.5, 55, 3.4)}<path d="M37 64q8 6 16 0M67 64q8 6 16 0" fill="#8fd3ff" opacity=".9"/>${trait("M55 78q5-3 10 0")}`,
   },
   langue: {
-    neutre: `${joues}${oeil(45, 58, 6, 7.5)}${oeil(75, 58, 6, 7.5)}${trait("M37 46q8-4 15-1M68 45q8-3 15 1", 3)}${trait("M53 73q7 5 14 0")}`,
-    joie: `${joues}${plissés}${trait("M37 45q8-5 15-1M68 44q8-4 15 1", 3)}${bouche("M50 70q10 11 20 0z")}`,
-    reflexion: `${joues}${oeil(45, 56, 6, 7.5, 2.6, -4.6)}${oeil(75, 56, 6, 7.5, 2.6, -4.6)}${trait("M68 42q8-4 15 0", 3)}${trait("M55 75q3 2 5 0t5 0")}`,
-    triste: `${joues}${oeil(45, 60, 5.6, 6.8)}${oeil(75, 60, 5.6, 6.8)}${trait("M37 48l13-3M83 48l-13-3", 3)}${trait("M54 78q6-4 12 0")}`,
+    neutre: `${yeuxPlisses()}${sourcils()}${trait("M51 76q9-4 18 1", 3.6)}`,
+    joie: `${yeuxPlisses(-1)}${sourcils(-2)}${crocs}`,
+    reflexion: `${yeuxPlisses(0, 3.5)}${trait("M33 46l19 6", 4.6)}${trait("M70 44q9-6 17 0", 4.2)}${trait("M52 77q5 2 9-1t8 1", 3.2)}`,
+    triste: `${oeil(45, 60, 5.6, 6.6)}${oeil(75, 60, 5.6, 6.6)}${trait("M34 50l17-5M86 50l-17-5", 4.2)}${trait("M53 77q7-5 14 0", 3.4)}`,
   },
 };
 
@@ -64,7 +79,8 @@ const BRAS = {
   triste: "M24 78q-6 8-6 20M96 78q6 8 6 20",
 };
 
-// Props: drawn behind the body (cape) or in front (hats, glasses, medals).
+// Props: drawn behind the body (cape), in place of the legs (jambes), on the body clipped to its shape (habit)
+// or in front (hats, glasses, medals).
 const ACCESSOIRES = {
   pouvoir: {
     derriere: `<path d="M24 62Q12 110 28 124H92Q108 110 96 62Z" fill="#c2304f"/><path d="M28 124H92" stroke="#8f1d37" stroke-width="3" stroke-linecap="round"/>`,
@@ -86,11 +102,23 @@ const ACCESSOIRES = {
     devant: `<g transform="rotate(-12 56 10)"><ellipse cx="56" cy="11" rx="22" ry="7.5" fill="#2b2b3a"/><path d="M56 4v-5" stroke="#2b2b3a" stroke-width="3" stroke-linecap="round"/></g>
       <path d="M27 84q33 13 66 0v8q-33 13-66 0z" fill="#2f6fd6"/><path d="M76 92l7 19h-9l-4-17z" fill="#2f6fd6"/><path d="M75 102h8M77 107h7" stroke="#fff" stroke-width="2" opacity=".7"/>`,
   },
-  // Napoleonic bicorne worn sideways, and a blue-white-red rosette pinned to one side of the chest.
+  // Sans-culotte: Phrygian cap with a pleated rosette, carmagnole jacket, striped trousers, clogs and a beribboned pike.
   langue: {
-    devant: `<g transform="rotate(-5 60 8)"><path d="M3 31C19 21 27-12 60-12C93-12 101 21 117 31C97 23 80 17 60 17C40 17 23 23 3 31Z" fill="#1d1d2b"/><path d="M10 27C27 20 43 15 60 15C77 15 93 20 110 27" fill="none" stroke="#3d3d52" stroke-width="2"/><path d="M78-8q5 11 1 23" fill="none" stroke="#e3b23c" stroke-width="3" stroke-linecap="round"/></g>
-      <path d="M38 88l-3.5 10.5 4-2.2 1.8 4 1.2-11.5zM44 88l3.5 10.5-4-2.2-1.8 4-1.2-11.5z" fill="#1f4fbf"/>
-      <circle cx="41" cy="85" r="7.5" fill="#1f4fbf"/><circle cx="41" cy="85" r="5.1" fill="#fff"/><circle cx="41" cy="85" r="2.6" fill="#e1303c"/>`,
+    derriere: `<path d="M112 126L110-4" stroke="#7a4a1f" stroke-width="3.6" stroke-linecap="round"/><path d="M110-23l5 15-5 4-5-4z" fill="#c9ccd6" stroke="#7d8597" stroke-width="1.4" stroke-linejoin="round"/>
+      <rect x="107.5" y="-5" width="5" height="5" rx="1" fill="#7d8597"/><g fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M109 2q-8 1-11 7t-9 7" stroke="#1f4fbf"/><path d="M110 3q-6 4-7 10t-6 9" stroke="#fff"/><path d="M111 2q-2 7-1 13t-3 10" stroke="#e1303c"/></g>`,
+    jambes: `<path d="M47 99h10l-4 15H43zM63 99h10l4 15H67z" fill="#f3ede2"/>
+      <path d="M49.5 99l-4 15M53 99l-4 15M56 99l-4 15M65 99l4 15M68 99l4 15M71 99l4 15" stroke-width="1.6" stroke="#1f4fbf"/><path d="M53 99l-4 15M68 99l4 15" stroke-width="1.6" stroke="#e1303c"/>
+      <path d="M57 113q1 8-6 8H38q-6 0-6-5 0-3 3-2 2-4 9-4h8q5 0 5 3zM63 113q-1 8 6 8h13q6 0 6-5 0-3-3-2-2-4-9-4h-8q-5 0-5 3z" fill="#8a5a2b"/>
+      <path d="M36 117q8-2 18 0M84 117q-8-2-18 0" fill="none" stroke="#b07a42" stroke-width="1.6" stroke-linecap="round"/><path d="M33 120.5h22M87 120.5H65" stroke="#5e3a17" stroke-width="1.6"/>`,
+    habit: `<path d="M0 88Q60 79 120 88V130H0z" fill="#26386e"/><path d="M0 88Q60 79 120 88" fill="none" stroke="#1a2752" stroke-width="2"/><path d="M45 82l15 24 15-24z" fill="#f3ede2"/>
+      <path d="M45 82l15 24-4 1-16-23zM75 82L60 106l4 1 16-23z" fill="#3a5296" stroke="#c0222e" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M51 83q9 4 18 0l-2 5q-7 2-14 0z" fill="#c0222e"/><circle cx="60" cy="88" r="3" fill="#a51b27"/><path d="M58 90l-4 9 4-1 2-7zM62 90l4 9-4-1-2-7z" fill="#c0222e"/>
+      <g fill="#e3b23c"><circle cx="39" cy="93" r="1.8"/><circle cx="41" cy="100" r="1.8"/><circle cx="81" cy="93" r="1.8"/><circle cx="79" cy="100" r="1.8"/></g>`,
+    devant: `<path d="M22 30C22 6 42-9 64-9C86-9 99 8 98 30Z" fill="#d42a35"/><path d="M80-6C92 0 98 12 98 30H88C90 16 88 4 80-6z" fill="#a91d2a" opacity=".6"/>
+      <path d="M56 10C62 4 70 2 78 4M60 19C66 13 74 12 82 14" fill="none" stroke="#9c1824" stroke-width="1.8" stroke-linecap="round"/><path d="M40-2C48-6 56-7 62-7" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+      <path d="M52-6C36-14 18-10 10 4C6 12 7 20 12 24C14 26 17 24 17 21C17 12 24 6 34 6C42 6 48 8 54 10z" fill="#c0222e"/><path d="M44-8C32-10 20-6 14 4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".3"/>
+      <path d="M20 37Q60 23 100 37L98 28Q60 16 22 28z" fill="#a51b27"/><path d="M23 32Q60 20 97 32" fill="none" stroke="#f1c4c8" stroke-width="1.2" stroke-dasharray="2.5 2.5" opacity=".7"/>
+      ${cocarde(82, 22, 8.5)}`,
   },
 };
 
@@ -132,30 +160,31 @@ export const MASCOTTES = {
     fini: "Tout lu, tout pensé. On repense ?",
   },
   langue: {
-    nom: "Guillemette", role: "Bicorne en bataille et cocarde sur le cœur",
-    accueil: ["Un signe après l'autre, l'écrit s'éclaircit.", "Prêts à traquer l'espace qui manque ?", "On ouvre les guillemets ?"],
-    juste: ["Impeccable, pas une coquille !", "Voilà qui est bien composé."],
-    faux: ["Une coquille, ça se corrige.", "On relit et on recommence."],
-    fini: "Tout est relu. On révise les règles ?",
+    nom: "Carmagnole", role: "Bonnet phrygien, pique et sabots",
+    accueil: ["Citoyen, la langue vous attend !", "Une règle par jour, et l'écrit est à nous.", "En avant, on prend la ponctuation d'assaut !"],
+    juste: ["Bravo, citoyen !", "Victoire, pas une coquille !"],
+    faux: ["On se relève et on retourne au front.", "Une coquille ? On la renverse !"],
+    fini: "Tout est conquis. On tient la position en révisant ?",
   },
 };
 
 let uid = 0;
 export function perso(parcours, humeur = "neutre", cls = "") {
-  const id = parcours.id, g = `pg${++uid}`, o = `po${uid}`;
+  const id = parcours.id, g = `pg${++uid}`, o = `po${uid}`, c = `pc${uid}`;
   const a = ACCESSOIRES[id] ?? {};
   const main = humeur === "reflexion" ? `<circle cx="73" cy="85" r="5" style="fill:var(--m-l);stroke:var(--m-d)" stroke-width="2.5"/>` : "";
   return `<svg class="perso ${humeur} ${cls}" viewBox="0 -24 120 152" data-parcours="${attr(id)}" aria-hidden="true">
     <defs><radialGradient id="${g}" cx=".32" cy=".26" r=".85"><stop offset="0" style="stop-color:var(--m-l)"/><stop offset=".55" style="stop-color:var(--m)"/><stop offset="1" style="stop-color:var(--m-d)"/></radialGradient>
-    <linearGradient id="${o}" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient></defs>
+    <linearGradient id="${o}" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient>
+    <clipPath id="${c}"><path transform="translate(10 8)" d="${attr(parcours.forme)}"/></clipPath></defs>
     <g class="corps">
       ${a.derriere ?? ""}
-      <path d="M52 100l-4 14M68 100l4 14" style="stroke:var(--m-d)" stroke-width="7" stroke-linecap="round"/>
-      <ellipse cx="46" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/><ellipse cx="74" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/>
+      ${a.jambes ?? `<path d="M52 100l-4 14M68 100l4 14" style="stroke:var(--m-d)" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="46" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/><ellipse cx="74" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/>`}
       <path d="${BRAS[humeur]}" fill="none" style="stroke:var(--m-d)" stroke-width="8" stroke-linecap="round"/>
       <path transform="translate(10 8)" d="${attr(parcours.forme)}" fill="url(#${g})"/>
       <path transform="translate(10 8)" d="${attr(parcours.forme)}" fill="url(#${o})"/>
-      <ellipse cx="60" cy="90" rx="20" ry="11" fill="#fff" opacity=".16"/>
+      ${a.habit ? `<g clip-path="url(#${c})">${a.habit}</g>` : `<ellipse cx="60" cy="90" rx="20" ry="11" fill="#fff" opacity=".16"/>`}
       <g class="visage">${VISAGES[id]?.[humeur] ?? ""}</g>
       ${main}
       ${a.devant ?? ""}
