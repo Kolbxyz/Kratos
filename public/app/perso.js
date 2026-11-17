@@ -63,7 +63,8 @@ const BRAS = {
   triste: "M24 78q-6 8-6 20M96 78q6 8 6 20",
 };
 
-// Props: drawn behind the body (cape), in place of the legs (jambes) or in front (hats, glasses, medals).
+// Props: drawn behind the body (cape), in place of the legs (jambes), on the body clipped to its shape (habit)
+// or in front (hats, glasses, medals); `manches` recolours the arms.
 const ACCESSOIRES = {
   pouvoir: {
     derriere: `<path d="M24 62Q12 110 28 124H92Q108 110 96 62Z" fill="#c2304f"/><path d="M28 124H92" stroke="#8f1d37" stroke-width="3" stroke-linecap="round"/>`,
@@ -85,14 +86,22 @@ const ACCESSOIRES = {
     devant: `<g transform="rotate(-12 56 10)"><ellipse cx="56" cy="11" rx="22" ry="7.5" fill="#2b2b3a"/><path d="M56 4v-5" stroke="#2b2b3a" stroke-width="3" stroke-linecap="round"/></g>
       <path d="M27 84q33 13 66 0v8q-33 13-66 0z" fill="#2f6fd6"/><path d="M76 92l7 19h-9l-4-17z" fill="#2f6fd6"/><path d="M75 102h8M77 107h7" stroke="#fff" stroke-width="2" opacity=".7"/>`,
   },
-  // Sans-culotte: soft Phrygian cap with a rosette, clogs and a beribboned pike.
+  // Republican ceremony: Phrygian cap with a rosette, tailcoat with white shirt front and bow tie,
+  // tricolour sash with a gold tassel, patent shoes and a flag.
   langue: {
-    derriere: `<path d="M8 126L10-4" stroke="#7a4a1f" stroke-width="3.6" stroke-linecap="round"/><path d="M10-23l5 15-5 4-5-4z" fill="#d5d9e2" stroke="#7d8597" stroke-width="1.4" stroke-linejoin="round"/>
-      <rect x="7.5" y="-5" width="5" height="5" rx="1" fill="#7d8597"/><g fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M11 2q8 1 11 7t9 7" stroke="#2f5bd3"/><path d="M10 3q6 4 7 10t6 9" stroke="#fff"/><path d="M9 2q2 7 1 13t3 10" stroke="#e1303c"/></g>`,
-    jambes: `<path d="M52 100l-4 13M68 100l4 13" style="stroke:var(--m-d)" stroke-width="7" stroke-linecap="round"/>
-      <path d="M57 113q1 8-6 8H38q-6 0-6-5 0-3 3-2 2-4 9-4h8q5 0 5 3zM63 113q-1 8 6 8h13q6 0 6-5 0-3-3-2-2-4-9-4h-8q-5 0-5 3z" fill="#9a6634"/>
-      <path d="M36 117q8-2 18 0M84 117q-8-2-18 0" fill="none" stroke="#c48f55" stroke-width="1.6" stroke-linecap="round"/>`,
-    devant: `<path d="M22 31C20 9 36-9 58-12C70-13 80-12 88-7C96 0 100 14 100 31Q60 20 22 31z" fill="#de3a40"/>
+    manches: "#1d1f2b",
+    derriere: `<path d="M8 126L10-14" stroke="#7a4a1f" stroke-width="3.4" stroke-linecap="round"/><path d="M10-24l3.5 7-3.5 3-3.5-3z" fill="#e3b23c" stroke="#b8860b" stroke-width="1"/>
+      <path d="M11-12q9-3 17 0t17 0v20q-8 3-17 0t-17 0z" fill="#fff"/><path d="M11-12q5-2 11-1v20q-6-1-11 1z" fill="#2f5bd3"/><path d="M34-12.5q5 1.5 11 .5v20q-6 1-11-.5z" fill="#e1303c"/>`,
+    jambes: `<path d="M52 100l-4 13M68 100l4 13" stroke="#1d1f2b" stroke-width="7.5" stroke-linecap="round"/>
+      <path d="M53 112q2 9-8 9H37q-6 0-6-4t7-5q4-1 8-1 5 0 7 1zM67 112q-2 9 8 9h8q6 0 6-4t-7-5q-4-1-8-1-5 0-7 1z" fill="#14151d"/>
+      <ellipse cx="40" cy="115.5" rx="3.5" ry="1.4" fill="#fff" opacity=".45"/><ellipse cx="80" cy="115.5" rx="3.5" ry="1.4" fill="#fff" opacity=".45"/>`,
+    habit: `<path d="M0 72Q30 78 43 82L60 110 77 82Q90 78 120 72V130H0z" fill="#1d1f2b"/>
+      <path d="M43 82l17 28 17-28q-17 6-34 0z" fill="#fbf8f2"/><path d="M60 92v18M55 88l5 9 5-9" fill="none" stroke="#e2dccf" stroke-width="1"/><g fill="#1d1f2b"><circle cx="60" cy="96" r="1.1"/><circle cx="60" cy="101" r="1.1"/></g>
+      <path d="M43 82l17 28-4 2-19-28zM77 82L60 110l4 2 19-28z" fill="#2f3245"/>
+      <g transform="rotate(16 60 95)"><rect x="-10" y="90" width="140" height="9.6" fill="#2f5bd3"/><rect x="-10" y="93.2" width="140" height="3.2" fill="#fff"/><rect x="-10" y="96.4" width="140" height="3.2" fill="#e1303c"/></g>`,
+    devant: `<path d="M60 86l-9-4.5v9zM60 86l9-4.5v9z" fill="#1d1f2b"/><rect x="57.6" y="83.6" width="4.8" height="4.8" rx="1.4" fill="#2f3245"/>
+      <circle cx="90" cy="103" r="3.6" fill="#e3b23c" stroke="#b8860b" stroke-width="1"/><path d="M86.5 105h7l1.5 9h-10z" fill="#e3b23c"/><path d="M87.5 107v6.5M89.5 107v6.5M91.5 107v6.5M93.5 107v6.5" stroke="#b8860b" stroke-width=".9"/>
+      <path d="M22 31C20 9 36-9 58-12C70-13 80-12 88-7C96 0 100 14 100 31Q60 20 22 31z" fill="#de3a40"/>
       <path d="M52-9C72-21 104-12 109 12C111 24 109 36 104 45C100 40 98 33 96 27C92 16 82 10 70 8C61 6 55 1 52-9z" fill="#c42f36"/>
       <path d="M58-8C78-12 98-2 104 16M70 7C84 9 95 18 99 30" fill="none" stroke="#a3222a" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>
       <ellipse cx="38" cy="8" rx="9" ry="4.2" transform="rotate(-32 38 8)" fill="#fff" opacity=".22"/>
@@ -139,7 +148,7 @@ export const MASCOTTES = {
     fini: "Tout lu, tout pensé. On repense ?",
   },
   langue: {
-    nom: "Carmagnole", role: "Bonnet phrygien, cocarde et sabots",
+    nom: "Carmagnole", role: "Bonnet phrygien, frac et écharpe tricolore",
     accueil: ["Citoyen, la langue vous attend !", "Une règle par jour, et l'écrit est à nous.", "En avant, on prend la ponctuation d'assaut !"],
     juste: ["Bravo, citoyen !", "Victoire, pas une coquille !"],
     faux: ["On se relève et on retourne au front.", "Une coquille ? On la renverse !"],
@@ -149,20 +158,21 @@ export const MASCOTTES = {
 
 let uid = 0;
 export function perso(parcours, humeur = "neutre", cls = "") {
-  const id = parcours.id, g = `pg${++uid}`, o = `po${uid}`;
+  const id = parcours.id, g = `pg${++uid}`, o = `po${uid}`, c = `pc${uid}`;
   const a = ACCESSOIRES[id] ?? {};
   const main = humeur === "reflexion" ? `<circle cx="73" cy="85" r="5" style="fill:var(--m-l);stroke:var(--m-d)" stroke-width="2.5"/>` : "";
   return `<svg class="perso ${humeur} ${cls}" viewBox="0 -24 120 152" data-parcours="${attr(id)}" aria-hidden="true">
     <defs><radialGradient id="${g}" cx=".32" cy=".26" r=".85"><stop offset="0" style="stop-color:var(--m-l)"/><stop offset=".55" style="stop-color:var(--m)"/><stop offset="1" style="stop-color:var(--m-d)"/></radialGradient>
-    <linearGradient id="${o}" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient></defs>
+    <linearGradient id="${o}" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient>
+    <clipPath id="${c}"><path transform="translate(10 8)" d="${attr(parcours.forme)}"/></clipPath></defs>
     <g class="corps">
       ${a.derriere ?? ""}
       ${a.jambes ?? `<path d="M52 100l-4 14M68 100l4 14" style="stroke:var(--m-d)" stroke-width="7" stroke-linecap="round"/>
       <ellipse cx="46" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/><ellipse cx="74" cy="117" rx="10" ry="5.5" style="fill:var(--m-d)"/>`}
-      <path d="${BRAS[humeur]}" fill="none" style="stroke:var(--m-d)" stroke-width="8" stroke-linecap="round"/>
+      <path d="${BRAS[humeur]}" fill="none" style="stroke:${a.manches ?? "var(--m-d)"}" stroke-width="8" stroke-linecap="round"/>
       <path transform="translate(10 8)" d="${attr(parcours.forme)}" fill="url(#${g})"/>
       <path transform="translate(10 8)" d="${attr(parcours.forme)}" fill="url(#${o})"/>
-      <ellipse cx="60" cy="90" rx="20" ry="11" fill="#fff" opacity=".16"/>
+      ${a.habit ? `<g clip-path="url(#${c})">${a.habit}</g>` : `<ellipse cx="60" cy="90" rx="20" ry="11" fill="#fff" opacity=".16"/>`}
       <g class="visage">${VISAGES[id]?.[humeur] ?? ""}</g>
       ${main}
       ${a.devant ?? ""}
