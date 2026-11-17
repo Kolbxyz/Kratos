@@ -1,0 +1,163 @@
+---
+titre: "Les espaces et la ponctuation haute"
+resume: "Trois espaces que l’œil confond, quatre signes qui en exigent une avant eux. Ce que disent Unicode, l’Office québécois de la langue française et le Projet Voltaire, et là où ils divergent."
+parcours: langue
+ordre: 1
+lecture_min: 11
+verifie_le: null
+sources:
+  - titre: "Espacement avant et après les signes de ponctuation et les symboles"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Types d’espacements"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/24565/la-typographie/espacement/types-despacement"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Contextes exigeant une espace insécable"
+    auteur: "Office québécois de la langue française, Banque de dépannage linguistique"
+    url: "https://vitrinelinguistique.oqlf.gouv.qc.ca/24566/la-typographie/espacement/contextes-exigeant-une-espace-insecable"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "The Unicode Standard, Version 18.0, General Punctuation (2000-206F)"
+    auteur: "Unicode Consortium"
+    url: "https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "The Unicode Standard, Version 18.0, C1 Controls and Latin-1 Supplement (0080-00FF)"
+    auteur: "Unicode Consortium"
+    url: "https://www.unicode.org/Public/18.0.0/charts/PDF/U0080.pdf"
+    consulte: "2026-11-17"
+    primaire: true
+  - titre: "Signes de ponctuation en français : bien les utiliser"
+    auteur: "Aline Laffont, Projet Voltaire (publié le 21 novembre 2022, mis à jour le 2 février 2026)"
+    url: "https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/"
+    consulte: "2026-11-17"
+    primaire: true
+lectures:
+  - auteur: "Imprimerie nationale"
+    titre: "Lexique des règles typographiques en usage à l’Imprimerie nationale"
+    annee: 2002
+    pourquoi: "Le code typographique de l’Imprimerie nationale (première édition en 1971, 5e édition en 2002), qui fixe pour l’édition française les espaces autour de chaque signe."
+---
+import Citation from "../../components/Citation.astro";
+import ARetenir from "../../components/ARetenir.astro";
+import Chiffre from "../../components/Chiffre.astro";
+import Positions from "../../components/Positions.astro";
+
+## Un blanc n’est pas un blanc
+
+Sur une page, l’espace entre deux mots semble n’être rien. Pour un typographe, c’est un objet. Le mot lui-même le rappelle : **espace** est masculin dans la langue courante, mais « traditionnellement de genre féminin en typographie », note l’Office québécois de la langue française (OQLF). En imprimerie, le nom féminin désignait d’abord « la lamelle de métal intercalée entre les caractères de plomb, utilisée pour espacer les mots »[^types].
+
+Le plomb a disparu, mais la distinction est restée. Un ordinateur ne connaît pas « un » blanc : le seul bloc General Punctuation d’Unicode en compte onze, de U+2000 à U+200A, chacun avec un numéro, une largeur et un comportement en fin de ligne[^unicode2000]. Trois d’entre eux suffisent pour écrire correctement le français.
+
+## Trois espaces, trois caractères
+
+Le standard Unicode, qui attribue un numéro à chaque caractère de toutes les écritures, les décrit ainsi[^unicode2000][^unicode0080] :
+
+<Positions items={[
+  { titre: "Espace", sous_titre: "U+0020", forme: "pilule", points: [
+    "L’espace ordinaire, obtenue par la barre d’espacement.",
+    "La ligne peut se couper à cet endroit.",
+    "L’OQLF la nomme <strong>espace sécable</strong> : elle « autorise le retour à la ligne devant le mot ou le signe qui la suit ».",
+  ]},
+  { titre: "Espace insécable", sous_titre: "U+00A0, NO-BREAK SPACE", forme: "arche", points: [
+    "Unicode : elle « should be the same width as the space », la même largeur que l’espace ordinaire.",
+    "Elle interdit la coupure de ligne entre les deux éléments qu’elle relie.",
+    "Abrégée NBSP dans la documentation technique.",
+  ]},
+  { titre: "Espace fine insécable", sous_titre: "U+202F, NARROW NO-BREAK SPACE", forme: "gemme", points: [
+    "Unicode : « a narrow form of a no-break space », une insécable étroite.",
+    "Elle doit avoir la largeur de l’espace fine (U+2009), réglée en général à <strong>1/5 ou 1/6 de cadratin</strong>.",
+    "Abrégée NNBSP. Elle aussi interdit la coupure.",
+  ]},
+]} />
+
+<div class="chiffres">
+  <Chiffre valeur="1/5 à 1/6" label="de cadratin : largeur usuelle de l’espace fine, que l’espace fine insécable U+202F doit reproduire" source="Unicode 18.0, General Punctuation" url="https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf" date="version 18.0" forme="gemme" />
+</div>
+
+Le **cadratin** est l’unité de mesure de la typographie traditionnelle : un carré dont le côté égale le corps du caractère. Dans un texte composé en corps 9, explique l’OQLF, « le cadratin […] sera un blanc de 9 points »[^types]. La fine mesure donc une fraction de la taille de la lettre, pas une fraction fixe de l’espace ordinaire, dont la largeur varie d’une police à l’autre.
+
+L’OQLF définit l’insécable par sa fonction :
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Types d’espacements" annee="s. d." reference="Banque de dépannage linguistique, section « Espace insécable »" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/24565/la-typographie/espacement/types-despacement">
+  L’espace insécable est une espace liante qui empêche de séparer deux mots ou signes indissociables, c’est-à-dire ne devant pas se trouver sur deux lignes différentes.
+</Citation>
+
+Le **danger** que l’insécable écarte est concret : un point d’exclamation ou un deux-points rejeté seul au début de la ligne suivante. Le Projet Voltaire le formule ainsi : grâce à elle, « si le signe de ponctuation glisse à la ligne suivante, le mot précédent glisse avec lui »[^voltaire].
+
+## Quatre signes précédés d’une espace
+
+Le point-virgule (`;`), le deux-points (`:`), le point d’exclamation (`!`) et le point d’interrogation (`?`) posent tous la même question : faut-il une espace entre le mot et le signe, et laquelle ?
+
+**Le deux-points fait consensus.** Le tableau de l’OQLF indique, avant lui, « Une espace insécable », et après lui, « Une espace »[^oqlf]. Le Projet Voltaire écrit : « Il faut mettre une espace avant et après le deux-points »[^voltaire]. Personne, dans ces sources, ne propose la fine devant le deux-points.
+
+**Les trois autres divisent.** Le Projet Voltaire, en France, demande une insécable :
+
+<Citation auteur="Projet Voltaire" oeuvre="Signes de ponctuation en français : bien les utiliser" annee="2026" reference="Aline Laffont, section « Les espaces sont insécables ! »" url="https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/">
+  Par exemple, un point-virgule ou un point d’exclamation doivent toujours être précédés d’une espace insécable.
+</Citation>
+
+L’OQLF, au Québec, prend une autre voie. Pour le point-virgule, le point d’exclamation et le point d’interrogation, son tableau indique avant le signe : « Pas d’espace ou une espace fine »[^oqlf].
+
+<Citation auteur="Office québécois de la langue française" oeuvre="Espacement avant et après les signes de ponctuation et les symboles" annee="2024" reference="Banque de dépannage linguistique, introduction du tableau" url="https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles">
+  L’Office québécois de la langue française opte pour l’absence d’espace devant le point-virgule, le point d’exclamation et le point d’interrogation. Cette pratique, qui est répandue dans l’usage, tend à devenir une convention, notamment parce que certains logiciels ne permettent pas d’insérer l’espace fine (espace insécable réduite) de façon conviviale ou n’arrivent pas à la traiter convenablement. Cela dit, on peut opter pour l’espace fine lorsqu’elle est disponible.
+</Citation>
+
+La même page de l’OQLF sur les types d’espacement présente la fine comme « une espace insécable réduite parfois utilisée devant le point d’interrogation, le point d’exclamation et le point-virgule »[^types].
+
+## Après le signe : une espace ordinaire
+
+Sur ce point, les sources s’accordent. Après le point-virgule, le deux-points, le point d’exclamation et le point d’interrogation, l’OQLF prescrit « Une espace », c’est-à-dire l’espace sécable : la ligne peut se couper après le signe[^oqlf]. Le Projet Voltaire demande de même une espace « avant et après » chacun de ces signes[^voltaire].
+
+L’OQLF ajoute une exception utile : on met une espace après certains signes, « sauf lorsqu’ils sont immédiatement suivis d’une virgule, d’un point-virgule ou d’une ponctuation finale »[^oqlf]. Un point d’interrogation suivi d’un guillemet fermant ou d’une parenthèse fermante ne prend donc pas d’espace ordinaire entre les deux.
+
+## La majuscule après le signe
+
+Ces signes ne se comportent pas tous comme un point. Le Projet Voltaire rappelle qu’on ne met pas de majuscule au mot qui suit le point-virgule, « sauf si le mot en question l’exige (dans le cas d’un nom propre par exemple) ». Pour le deux-points, la règle a une exception majeure :
+
+<Citation auteur="Projet Voltaire" oeuvre="Signes de ponctuation en français : bien les utiliser" annee="2026" reference="Aline Laffont, section « Le deux-points »" url="https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/">
+  Sauf dans le cas de la citation ou du propos rapporté [...], il convient de ne pas mettre de majuscule au mot qui suit le deux-points (sauf si la nature de ce mot le justifie).
+</Citation>
+
+Après un point d’interrogation ou d’exclamation, la majuscule est la règle générale, mais le Projet Voltaire précise qu’elle « n’est pas absolue » : une interrogation suivie d’une incise, ou un point d’exclamation qui suit une interjection, peut laisser la phrase continuer en minuscule[^voltaire].
+
+## Taper ces espaces
+
+Sur un clavier, rien n’indique l’insécable. L’OQLF donne les raccourcis : « Contrôle + Majuscule + Barre d’espacement sur un clavier PC et, sur un clavier Macintosh, les touches Commande + Majuscule + Barre d’espacement »[^contextes]. Dans un document numérique, chacune est un caractère distinct : U+00A0 pour l’insécable, U+202F pour la fine insécable[^unicode2000][^unicode0080].
+
+Sur les plateformes qui ne permettent pas de l’insérer, l’OQLF admet une tolérance : « Sur les réseaux sociaux, s’il n’est pas possible d’insérer une espace insécable, celle-ci peut être omise devant certains signes de ponctuation et certains symboles »[^oqlf].
+
+## Le débat : fine, insécable ou rien ?
+
+<Positions items={[
+  { titre: "L’insécable", sous_titre: "Projet Voltaire", forme: "arche", points: [
+    "Devant le point-virgule et le point d’exclamation, l’espace insécable est demandée « toujours ».",
+    "Elle garantit qu’aucun signe ne commence une ligne.",
+  ]},
+  { titre: "La fine ou rien", sous_titre: "Office québécois de la langue française", forme: "gemme", points: [
+    "Devant le point-virgule, le point d’exclamation et le point d’interrogation : « Pas d’espace ou une espace fine ».",
+    "L’absence d’espace « tend à devenir une convention » parce que certains logiciels gèrent mal la fine.",
+    "La fine reste possible « lorsqu’elle est disponible ».",
+  ]},
+]} />
+
+Les deux positions se rejoignent sur deux points : aucune ne prévoit d’**espace sécable ordinaire** devant ces signes, qui laisserait le signe partir seul à la ligne, et toutes deux placent une insécable de pleine largeur devant le deux-points.
+
+<ARetenir>
+1. Trois espaces : l’ordinaire U+0020 (coupure possible), l’insécable U+00A0 (même largeur, pas de coupure), la fine insécable U+202F (étroite, pas de coupure).
+2. L’espace fine se règle en général à 1/5 ou 1/6 de cadratin (Unicode).
+3. Avant le deux-points : une espace insécable ; après : une espace ordinaire (OQLF, Projet Voltaire).
+4. Avant le point-virgule, le point d’exclamation et le point d’interrogation : insécable pour le Projet Voltaire, rien ou une fine pour l’OQLF. Après : une espace ordinaire.
+5. Après le deux-points, pas de majuscule, sauf citation, propos rapporté ou nom propre.
+</ARetenir>
+
+[^types]: Office québécois de la langue française, « Types d’espacements », Banque de dépannage linguistique (sections « Espace insécable », « Espace fine », « Cadratin » et « Genre du mot espace »). https://vitrinelinguistique.oqlf.gouv.qc.ca/24565/la-typographie/espacement/types-despacement
+[^oqlf]: Office québécois de la langue française, « Espacement avant et après les signes de ponctuation et les symboles », Banque de dépannage linguistique, tableau et notes, dernière mise à jour 2024. https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles
+[^contextes]: Office québécois de la langue française, « Contextes exigeant une espace insécable », section « L’espace insécable sur un ordinateur ». https://vitrinelinguistique.oqlf.gouv.qc.ca/24566/la-typographie/espacement/contextes-exigeant-une-espace-insecable
+[^voltaire]: Aline Laffont, « Signes de ponctuation en français : bien les utiliser », Projet Voltaire, sections « Les espaces sont insécables ! », « Le point-virgule », « Le deux-points », « Le point d’interrogation » et « Le point d’exclamation ». https://www.projet-voltaire.fr/ressources/signes-de-ponctuation-francais/
+[^unicode2000]: Unicode Consortium, *The Unicode Standard, Version 18.0*, tableau General Punctuation, entrées 2009 THIN SPACE (« typically set to 1/5 or 1/6 em ») et 202F NARROW NO-BREAK SPACE (« should be the same width as thin space »). https://www.unicode.org/Public/18.0.0/charts/PDF/U2000.pdf
+[^unicode0080]: Unicode Consortium, *The Unicode Standard, Version 18.0*, tableau C1 Controls and Latin-1 Supplement, entrée 00A0 NO-BREAK SPACE (« should be the same width as the space »). https://www.unicode.org/Public/18.0.0/charts/PDF/U0080.pdf

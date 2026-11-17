@@ -29,6 +29,12 @@ export const PARCOURS = {
     accroche: "Comment les hommes pensent, croient, se rassemblent et se divisent.",
     a_venir: [],
   },
+  langue: {
+    forme: "galet",
+    nom: "Langue française",
+    accroche: "Les règles qui fixent l’écrit : espaces, ponctuation, guillemets, nombres.",
+    a_venir: [],
+  },
 } as const;
 
 export type ParcoursId = keyof typeof PARCOURS;

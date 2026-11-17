@@ -68,7 +68,7 @@ export function confettis() {
   c.width = r.width * dpr; c.height = r.height * dpr;
   const ctx = c.getContext("2d");
   const css = getComputedStyle(document.documentElement);
-  const couleurs = ["pouvoir", "institutions", "economie", "militaire", "societe", "or"].map((n) => css.getPropertyValue(`--m-${n}`).trim() || "#ffcf3f");
+  const couleurs = ["pouvoir", "institutions", "economie", "militaire", "societe", "langue", "or"].map((n) => css.getPropertyValue(`--m-${n}`).trim() || "#ffcf3f");
   const P = Array.from({ length: 90 }, () => ({
     x: r.width / 2 + (Math.random() - 0.5) * 80, y: r.height * 0.32,
     vx: (Math.random() - 0.5) * 10, vy: -Math.random() * 9 - 3,
